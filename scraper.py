@@ -1,10 +1,11 @@
 import urllib.request
 import json
+import urllib.parse
 
-MARGEN_GANANCIA = 1.15  # Tu 15% de ganancia
+MARGEN_GANANCIA = 1.15  # 15% de ganancia
 
-# ID oficial de Vendedor de Venex en Mercado Libre: 61580996 (o búsqueda directa oficial)
-NICKNAME_VENEX = "VENEX"
+# ID de Vendedor Oficial de Venex en Mercado Libre
+SELLER_ID = "61580996"
 
 CATEGORIAS = {
     "Procesadores": "procesador",
@@ -22,30 +23,26 @@ headers = {
 productos_catalogo = []
 vistos = set()
 
-# 1. Obtener el ID de usuario de Venex
-try:
-    url_user = f"https://api.mercadolibre.com/sites/MLA/search?nickname={NICKNAME_VENEX}"
-    req = urllib.request.Request(url_user, headers=headers)
-    with urllib.request.urlopen(req) as resp:
-        data_user = json.loads(resp.read().decode('utf-8'))
-        seller_id = data_user['seller']['id'] if 'seller' in data_user and 'id' in data_user['seller'] else None
-except Exception as e:
-    seller_id = None
-
 for cat_nombre, query_text in CATEGORIAS.items():
-    print(f"Obteniendo {cat_nombre} de Venex...")
+    print(f"Obteniendo {cat_nombre}...")
     
-    # Construir la consulta a la API oficial de Mercado Libre
-    if seller_id:
-        url_api = f"https://api.mercadolibre.com/sites/MLA/search?seller_id={seller_id}&q={urllib.parse.quote(query_text)}&limit=50"
-    else:
-        url_api = f"https://api.mercadolibre.com/sites/MLA/search?q=venex+{urllib.parse.quote(query_text)}&limit=50"
+    # Búsqueda directa en la tienda oficial de Venex
+    query_encoded = urllib.parse.quote(query_text)
+    url_api = f"https://api.mercadolibre.com/sites/MLA/search?seller_id={SELLER_ID}&q={query_encoded}&limit=50"
 
     try:
         req = urllib.request.Request(url_api, headers=headers)
         with urllib.request.urlopen(req) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             results = data.get('results', [])
+
+            # Si devuelve pocos ítems con seller_id, hacemos búsqueda general del término "venex"
+            if len(results) < 5:
+                url_fallback = f"https://api.mercadolibre.com/sites/MLA/search?q=venex+{query_encoded}&limit=50"
+                req_f = urllib.request.Request(url_fallback, headers=headers)
+                with urllib.request.urlopen(req_f) as resp_f:
+                    data = json.loads(resp_f.read().decode('utf-8'))
+                    results = data.get('results', [])
 
             for item in results:
                 titulo = item.get('title', '').strip()
@@ -58,10 +55,12 @@ for cat_nombre, query_text in CATEGORIAS.items():
 
                 precio_venta = round(precio_costo * MARGEN_GANANCIA)
                 
-                # Obtener la foto original HD de alta calidad
-                imagen_url = item.get('thumbnail', '').replace('-I.jpg', '-O.jpg').replace('-V.jpg', '-O.jpg')
-                if not imagen_url.startswith('http'):
-                    imagen_url = item.get('secure_thumbnail', '')
+                # Obtener la foto real en formato seguro e HD sin compresión
+                thumbnail = item.get('thumbnail', '')
+                if '-I.jpg' in thumbnail or '-V.jpg' in thumbnail:
+                    imagen_url = thumbnail.replace('-I.jpg', '-O.jpg').replace('-V.jpg', '-O.jpg')
+                else:
+                    imagen_url = thumbnail.replace('http://', 'https://')
 
                 productos_catalogo.append({
                     "titulo": titulo,
@@ -73,8 +72,13 @@ for cat_nombre, query_text in CATEGORIAS.items():
                 vistos.add(titulo)
 
     except Exception as e:
-        print(f"Error en {cat_nombre}: {e}")
+        print(f"Error cargando {cat_nombre}: {e}")
 
+# Guardar catálogo en productos.json
+with open('productos.json', 'w', encoding='utf-8') as f:
+    json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
+
+print(f"Sincronización finalizada. Total de productos cargados: {len(productos_catalogo)}")
 # Guardar catálogo resultante en productos.json
 with open('productos.json', 'w', encoding='utf-8') as f:
     json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
