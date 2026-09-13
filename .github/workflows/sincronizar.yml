@@ -1,0 +1,30 @@
+name: Sincronizador Automático de Venex
+
+on:
+  schedule:
+    # Se ejecuta automáticamente todos los días a las 08:00 AM UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Permite ejecutarlo manualmente cuando quieras con un clic
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Ejecutar Scraper
+        run: python scraper.py
+
+      - name: Actualizar tienda con los nuevos precios/stock
+        run: |
+          git config --global user.name 'Bot Tienda'
+          git config --global user.email 'bot@tienda.com'
+          git add productos.json
+          git commit -m "Actualización automática de precios y stock desde Venex" || exit 0
+          git push
