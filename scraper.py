@@ -26,7 +26,6 @@ vistos = set()
 for cat_nombre, query_text in CATEGORIAS.items():
     print(f"Obteniendo {cat_nombre}...")
     
-    # Búsqueda directa en la tienda oficial de Venex
     query_encoded = urllib.parse.quote(query_text)
     url_api = f"https://api.mercadolibre.com/sites/MLA/search?seller_id={SELLER_ID}&q={query_encoded}&limit=50"
 
@@ -36,7 +35,6 @@ for cat_nombre, query_text in CATEGORIAS.items():
             data = json.loads(resp.read().decode('utf-8'))
             results = data.get('results', [])
 
-            # Si devuelve pocos ítems con seller_id, hacemos búsqueda general del término "venex"
             if len(results) < 5:
                 url_fallback = f"https://api.mercadolibre.com/sites/MLA/search?q=venex+{query_encoded}&limit=50"
                 req_f = urllib.request.Request(url_fallback, headers=headers)
@@ -55,18 +53,21 @@ for cat_nombre, query_text in CATEGORIAS.items():
 
                 precio_venta = round(precio_costo * MARGEN_GANANCIA)
                 
-                # Obtener la foto real en formato seguro e HD sin compresión
+                # Obtener la foto real
                 thumbnail = item.get('thumbnail', '')
                 if '-I.jpg' in thumbnail or '-V.jpg' in thumbnail:
-                    imagen_url = thumbnail.replace('-I.jpg', '-O.jpg').replace('-V.jpg', '-O.jpg')
+                    imagen_raw = thumbnail.replace('-I.jpg', '-O.jpg').replace('-V.jpg', '-O.jpg')
                 else:
-                    imagen_url = thumbnail.replace('http://', 'https://')
+                    imagen_raw = thumbnail.replace('http://', 'https://')
+
+                # Usar el proxy de imágenes gratuito para saltar el bloqueo CORS de GitHub Pages
+                imagen_desbloqueada = f"https://images.weserv.nl/?url={urllib.parse.quote(imagen_raw)}"
 
                 productos_catalogo.append({
                     "titulo": titulo,
                     "precio_venta": precio_venta,
                     "categoria": cat_nombre,
-                    "imagen": imagen_url,
+                    "imagen": imagen_desbloqueada,
                     "stock": True
                 })
                 vistos.add(titulo)
@@ -79,8 +80,3 @@ with open('productos.json', 'w', encoding='utf-8') as f:
     json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
 
 print(f"Sincronización finalizada. Total de productos cargados: {len(productos_catalogo)}")
-# Guardar catálogo resultante en productos.json
-with open('productos.json', 'w', encoding='utf-8') as f:
-    json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
-
-print(f"Éxito total! Se extrajeron {len(productos_catalogo)} productos reales con sus fotos HD.")
