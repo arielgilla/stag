@@ -1,71 +1,121 @@
 import urllib.request
 import re
 import json
+from bs4 import BeautifulSoup
 
-MARGEN_GANANCIA = 1.15  # Tu 15% de ganancia
+MARGEN_GANANCIA = 1.15  # 15% de ganancia
 
-# Lista ampliada de categorías principales de Venex
-URLS_CATEGORIAS = [
-    "https://www.venex.com.ar/componentes-de-pc/procesadores",
-    "https://www.venex.com.ar/componentes-de-pc/placas-de-video",
-    "https://www.venex.com.ar/componentes-de-pc/memorias-ram",
-    "https://www.venex.com.ar/componentes-de-pc/discos-rigidos-y-solidos",
-    "https://www.venex.com.ar/componentes-de-pc/motherboards",
-    "https://www.venex.com.ar/componentes-de-pc/fuentes-de-alimentacion",
-    "https://www.venex.com.ar/componentes-de-pc/gabinetes",
-    "https://www.venex.com.ar/perifericos/monitores",
-    "https://www.venex.com.ar/notebooks",
-    "https://www.venex.com.ar/perifericos/auriculares",
-    "https://www.venex.com.ar/perifericos/teclados",
-    "https://www.venex.com.ar/perifericos/mouses"
-]
+# Mapeo de categorías principales de Venex
+CATEGORIAS = {
+    "Procesadores": "https://www.venex.com.ar/componentes-de-pc/procesadores",
+    "Placas de Video": "https://www.venex.com.ar/componentes-de-pc/placas-de-video",
+    "Memorias RAM": "https://www.venex.com.ar/componentes-de-pc/memorias-ram",
+    "Almacenamiento": "https://www.venex.com.ar/componentes-de-pc/discos-rigidos-y-solidos",
+    "Motherboards": "https://www.venex.com.ar/componentes-de-pc/motherboards",
+    "Fuentes": "https://www.venex.com.ar/componentes-de-pc/fuentes-de-alimentacion",
+    "Gabinetes": "https://www.venex.com.ar/componentes-de-pc/gabinetes",
+    "Monitores": "https://www.venex.com.ar/perifericos/monitores",
+    "Notebooks": "https://www.venex.com.ar/notebooks",
+    "Periféricos": "https://www.venex.com.ar/perifericos/mouses"
+}
 
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8'
 }
 
 productos_catalogo = []
 vistos = set()
 
-for url in URLS_CATEGORIAS:
+for cat_nombre, url in CATEGORIAS.items():
     try:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req) as response:
             html = response.read().decode('utf-8')
-            
-        # Extraer bloques de producto buscando la imagen, el título, link y el precio
-        # Buscar artículos de productos
-        items = re.findall(r'<div[^>]*class="[^"]*product-box[^"]*"[^>]*>.*?<img[^>]+src="([^"]+)".*?<a[^>]+href="([^"]+)"[^>]*>([^<]+)</a>.*?\$([\d\.\,]+)', html, re.DOTALL)
         
-        # Patrón alternativo más flexible si el HTML varía
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # Buscar contenedores de productos
+        items = soup.find_all('div', class_=re.compile(r'product-box|product-item|item-producto', re.I))
+        
+        # Si la estructura no coincide con clases conocidas, buscar por enlaces de productos
         if not items:
-            items = re.findall(r'src="([^"]+\.(?:jpg|png|webp)[^"]*)".*?href="(https://www\.venex\.com\.ar/[^"]+)".*?>([^<]{10,100})<.*?\$([\d\.\,]+)', html, re.DOTALL)
+            cards = soup.find_all(['div', 'article'])
+            for card in cards:
+                a_tag = card.find('a', href=re.compile(r'venex\.com\.ar'))
+                img_tag = card.find('img')
+                text = card.get_text()
+                
+                if a_tag and img_tag and '$' in text:
+                    titulo = a_tag.get_text(strip=True) or img_tag.get('alt', '')
+                    if len(titulo) > 10 and titulo not in vistos:
+                        # Extraer precio
+                        precio_match = re.search(r'\$\s*([\d\.\,]+)', text)
+                        if precio_match:
+                            try:
+                                p_raw = precio_match.group(1).replace('.', '').replace(',', '.')
+                                precio_venex = float(p_raw)
+                                precio_venta = round(precio_venex * MARGEN_GANANCIA)
+                                
+                                img_src = img_tag.get('src') or img_tag.get('data-src') or ''
+                                if not img_src.startswith('http'):
+                                    img_src = 'https://www.venex.com.ar/' + img_src.lstrip('/')
+                                
+                                productos_catalogo.append({
+                                    "titulo": titulo,
+                                    "precio_venta": precio_venta,
+                                    "categoria": cat_nombre,
+                                    "imagen": img_src,
+                                    "url_origen": a_tag.get('href', ''),
+                                    "stock": True
+                                })
+                                vistos.add(titulo)
+                            except ValueError:
+                                continue
+        else:
+            for item in items:
+                try:
+                    a_tag = item.find('a')
+                    img_tag = item.find('img')
+                    if not a_tag: continue
+                    
+                    titulo = item.find(class_=re.compile(r'title|nombre', re.I))
+                    titulo_str = titulo.get_text(strip=True) if titulo else a_tag.get_text(strip=True)
+                    
+                    precio_tag = item.find(class_=re.compile(r'price|precio', re.I))
+                    precio_str = precio_tag.get_text(strip=True) if precio_tag else item.get_text()
+                    precio_match = re.search(r'([\d\.\,]+)', precio_str)
+                    
+                    if titulo_str and precio_match and titulo_str not in vistos:
+                        p_raw = precio_match.group(1).replace('.', '').replace(',', '.')
+                        precio_venex = float(p_raw)
+                        precio_venta = round(precio_venex * MARGEN_GANANCIA)
+                        
+                        img_src = img_tag.get('src') or img_tag.get('data-src') if img_tag else ''
+                        if img_src and not img_src.startswith('http'):
+                            img_src = 'https://www.venex.com.ar/' + img_src.lstrip('/')
+                        
+                        productos_catalogo.append({
+                            "titulo": titulo_str,
+                            "precio_venta": precio_venta,
+                            "categoria": cat_nombre,
+                            "imagen": img_src,
+                            "url_origen": a_tag.get('href', ''),
+                            "stock": True
+                        })
+                        vistos.add(titulo_str)
+                except Exception:
+                    continue
 
-        for img, link, titulo, precio_raw in items:
-            titulo_limpio = titulo.strip()
-            if titulo_limpio in vistos:
-                continue
-                
-            try:
-                precio_venex = float(precio_raw.replace('.', '').replace(',', '.'))
-                precio_tu_tienda = round(precio_venex * MARGEN_GANANCIA)
-                
-                # Ajustar URL de la imagen si es relativa
-                img_url = img if img.startswith('http') else 'https://www.venex.com.ar/' + img.lstrip('/')
-                
-                productos_catalogo.append({
-                    "titulo": titulo_limpio,
-                    "precio_venta": precio_tu_tienda,
-                    "imagen": img_url,
-                    "url_origen": link,
-                    "stock": True
-                })
-                vistos.add(titulo_limpio)
-            except ValueError:
-                continue
     except Exception as e:
-        print(f"Error cargando {url}: {e}")
+        print(f"Error cargando categoría {cat_nombre}: {e}")
 
+# Guardar resultados
+with open('productos.json', 'w', encoding='utf-8') as f:
+    json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
+
+print(f"Sincronización finalizada. Total productos procesados: {len(productos_catalogo)}")
 # Guardar catálogo completo en productos.json
 with open('productos.json', 'w', encoding='utf-8') as f:
     json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
