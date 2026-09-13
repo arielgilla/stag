@@ -1,1 +1,296 @@
-[]
+[
+    {
+        "titulo": "Elegí tu notebook ideal para trabajar o jugar ver notebooks",
+        "categoria": "Procesadores",
+        "precio_venta": 14604886533512,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 255 G10 Ryzen 5...",
+        "categoria": "Procesadores",
+        "precio_venta": 14604886533512,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
+        "categoria": "Procesadores",
+        "precio_venta": 1460488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G5 Core i7...",
+        "categoria": "Procesadores",
+        "precio_venta": 1592738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo ThinkBook G7...",
+        "categoria": "Procesadores",
+        "precio_venta": 1747988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS Vivobook X1404VA...",
+        "categoria": "Procesadores",
+        "precio_venta": 873988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 255R G10 Ryzen 3...",
+        "categoria": "Procesadores",
+        "precio_venta": 10349886241986,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Aspire Go 15...",
+        "categoria": "Procesadores",
+        "precio_venta": 1437488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Aprovechá y renová tu Pc completa ver pc completas",
+        "categoria": "Procesadores",
+        "precio_venta": 2742208,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC Gamer Powered by MSI...",
+        "categoria": "Procesadores",
+        "precio_venta": 2742208,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC IA Kairos AMD Ryzen 5 9600X...",
+        "categoria": "Procesadores",
+        "precio_venta": 4284358,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC AMD Ryzen 5 3400G 16GB...",
+        "categoria": "Procesadores",
+        "precio_venta": 747488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC Intel Core i3 12100 16GB...",
+        "categoria": "Procesadores",
+        "precio_venta": 1057988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC Gamer Kairos AMD Ryzen 7...",
+        "categoria": "Procesadores",
+        "precio_venta": 1683070,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Potencía tu PC con el mejor almacenamiento ver almacenamiento",
+        "categoria": "Procesadores",
+        "precio_venta": 134538,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Notebook SODIMM...",
+        "categoria": "Procesadores",
+        "precio_venta": 134538,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Disco Solido SSD Copious 1TB...",
+        "categoria": "Procesadores",
+        "precio_venta": 275988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian DDR3 4GB...",
+        "categoria": "Procesadores",
+        "precio_venta": 27013,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian DDR3 8GB...",
+        "categoria": "Procesadores",
+        "precio_venta": 37938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Llevá tus juegos al siguiente nivel!",
+        "categoria": "Procesadores",
+        "precio_venta": 1034999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Combo ASUS Placa de video RX...",
+        "categoria": "Procesadores",
+        "precio_venta": 1034999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Combo ASUS Placa de video RTX...",
+        "categoria": "Procesadores",
+        "precio_venta": 1943499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Cockpit Thermaltake Sim GR500...",
+        "categoria": "Procesadores",
+        "precio_venta": 2587488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Thin B13VE Core...",
+        "categoria": "Procesadores",
+        "precio_venta": 2633488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Katana Core i7...",
+        "categoria": "Procesadores",
+        "precio_venta": 4139988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Vector A8WHG...",
+        "categoria": "Procesadores",
+        "precio_venta": 4944988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video MSI NVIDIA...",
+        "categoria": "Procesadores",
+        "precio_venta": 9947488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Mouse Fantech Crypto II...",
+        "categoria": "Procesadores",
+        "precio_venta": 32188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Fantech MH90 Sonata...",
+        "categoria": "Procesadores",
+        "precio_venta": 91988683977,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Teclado Mecánico Fantech...",
+        "categoria": "Procesadores",
+        "precio_venta": 105788,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Joystick Redragon G831 Wargrip...",
+        "categoria": "Procesadores",
+        "precio_venta": 135699,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor Gamer Gigabyte GS25F14...",
+        "categoria": "Procesadores",
+        "precio_venta": 218488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Micrófono Razer Seiren V3...",
+        "categoria": "Procesadores",
+        "precio_venta": 233449,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor Gamer Arkham...",
+        "categoria": "Procesadores",
+        "precio_venta": 333488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete ASUS ROG Hyperion...",
+        "categoria": "Procesadores",
+        "precio_venta": 804988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Potenciá tu experiencia con lo mejor en Tech y accesorios ver tech",
+        "categoria": "Procesadores",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Ezviz H9C Dual Lens...",
+        "categoria": "Procesadores",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Cerradura Inteligente Ezviz...",
+        "categoria": "Procesadores",
+        "precio_venta": 183999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Scanner Epson Perfection V39II...",
+        "categoria": "Procesadores",
+        "precio_venta": 201249,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Proyector Epson Powerlite E24...",
+        "categoria": "Procesadores",
+        "precio_venta": 1092499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Mi...",
+        "categoria": "Procesadores",
+        "precio_venta": 85088,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Ajustable Notebook...",
+        "categoria": "Procesadores",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    }
+]
