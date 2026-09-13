@@ -1,30 +1,51 @@
 [
     {
-        "titulo": "Procesador AMD Ryzen 5 5600GT 4.6GHz Turbo AM4",
+        "titulo": "Procesador AMD Ryzen 5 5600GT 4.6GHz Turbo AM4 + Gráficos Radeon",
         "precio_venta": 218500,
         "categoria": "Procesadores",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_894121-MLA74070267431_012024-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Procesador AMD Ryzen 7 5700X3D 4.1GHz AM4",
+        "titulo": "Procesador AMD Ryzen 7 5700X3D 4.1GHz AM4 3D V-Cache",
         "precio_venta": 345000,
         "categoria": "Procesadores",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_663148-MLA74676140409_022024-O.jpg&output=webp",
         "stock": true
     },
     {
+        "titulo": "Procesador AMD Ryzen 5 7600 5.1GHz AM5 Zen 4",
+        "precio_venta": 309925,
+        "categoria": "Procesadores",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_789123-MLA70123984501_062023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Procesador AMD Ryzen 7 7800X3D 5.0GHz AM5",
+        "precio_venta": 598000,
+        "categoria": "Procesadores",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_751139-MLA48766792621_012022-O.jpg&output=webp",
+        "stock": true
+    },
+    {
         "titulo": "Procesador Intel Core i5 12400F 4.4GHz LGA1700",
-        "precio_venta": 195000,
+        "precio_venta": 194925,
         "categoria": "Procesadores",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_751139-MLA48766792621_012022-O.jpg&output=webp",
         "stock": true
     },
     {
         "titulo": "Procesador Intel Core i7 13700F 5.2GHz LGA1700",
-        "precio_venta": 480000,
+        "precio_venta": 479550,
         "categoria": "Procesadores",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_841022-MLA53232159118_012023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Procesador Intel Core i5 14400F 4.7GHz LGA1700",
+        "precio_venta": 270250,
+        "categoria": "Procesadores",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_894121-MLA74070267431_012024-O.jpg&output=webp",
         "stock": true
     },
     {
@@ -35,28 +56,42 @@
         "stock": true
     },
     {
-        "titulo": "Placa de Video MSI GeForce RTX 3060 12GB Ventus 2X",
-        "precio_venta": 520000,
+        "titulo": "Placa de Video MSI GeForce RTX 3060 12GB Ventus 2X OC",
+        "precio_venta": 519800,
         "categoria": "Placas de Video",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_656247-MLA45000109598_022021-O.jpg&output=webp",
         "stock": true
     },
     {
         "titulo": "Placa de Video Palit GeForce RTX 4060 8GB Dual",
-        "precio_venta": 485000,
+        "precio_venta": 484150,
         "categoria": "Placas de Video",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_789423-MLA70123984501_062023-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Placa de Video Asus TUF Gaming RTX 4070 Super 12GB",
-        "precio_venta": 890000,
+        "titulo": "Placa de Video Asus TUF Gaming RTX 4070 Super 12GB OC",
+        "precio_venta": 888950,
         "categoria": "Placas de Video",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_612984-MLA74128912301_012024-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz",
+        "titulo": "Placa de Video Asrock Radeon RX 7600 8GB Challenger OC",
+        "precio_venta": 443900,
+        "categoria": "Placas de Video",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_912348-MLA71298341029_092023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video Gigabyte GeForce RTX 4060 Ti 8GB Eagle OC",
+        "precio_venta": 586500,
+        "categoria": "Placas de Video",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_656247-MLA45000109598_022021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz CL16",
         "precio_venta": 59800,
         "categoria": "Memorias RAM",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_623812-MLA46714205809_072021-O.jpg&output=webp",
@@ -64,44 +99,163 @@
     },
     {
         "titulo": "Memoria RAM Kingston Fury Beast 8GB DDR4 3200MHz",
-        "precio_venta": 32000,
+        "precio_venta": 31970,
         "categoria": "Memorias RAM",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_623812-MLA46714205809_072021-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Memoria RAM Corsair Vengeance 32GB (2x16GB) DDR5 6000MHz",
-        "precio_venta": 165000,
+        "titulo": "Memoria RAM Corsair Vengeance 32GB (2x16GB) DDR5 6000MHz CL36",
+        "precio_venta": 164450,
         "categoria": "Memorias RAM",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_687123-MLA51923410291_102022-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Disco Solido SSD Kingston NV2 1TB NVMe M.2",
-        "precio_venta": 89000,
+        "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR5 5600MHz",
+        "precio_venta": 88895,
+        "categoria": "Memorias RAM",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_512984-MLA52189310293_112022-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM TeamGroup T-Force Delta RGB 16GB (2x8GB) DDR4 3600MHz",
+        "precio_venta": 74750,
+        "categoria": "Memorias RAM",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_623812-MLA46714205809_072021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Disco Sólido SSD Kingston NV2 1TB NVMe M.2 2280",
+        "precio_venta": 88895,
         "categoria": "Almacenamiento",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_812394-MLA51829310293_102022-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Disco Solido SSD Kingston A400 480GB SATA3",
-        "precio_venta": 45000,
+        "titulo": "Disco Sólido SSD Kingston A400 480GB SATA3",
+        "precio_venta": 44850,
         "categoria": "Almacenamiento",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_891234-MLA31238410293_062019-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo IdeaPad 15IAU7 Core i5 8GB 512GB SSD 15.6''",
-        "precio_venta": 895000,
+        "titulo": "Disco Sólido SSD Western Digital Blue SN580 1TB NVMe M.2 Gen4",
+        "precio_venta": 111895,
+        "categoria": "Almacenamiento",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_712938-MLA70129384102_072023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Disco Sólido SSD Crucial BX500 1TB SATA3 2.5''",
+        "precio_venta": 82800,
+        "categoria": "Almacenamiento",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_891234-MLA31238410293_062019-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo IdeaPad 15IAU7 Core i5 1235U 8GB 512GB SSD 15.6''",
+        "precio_venta": 894700,
         "categoria": "Notebooks",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_918234-MLA69123840192_042023-O.jpg&output=webp",
         "stock": true
     },
     {
-        "titulo": "Monitor Gamer Samsung Odyssey G3 24'' 144Hz 1ms",
-        "precio_venta": 275000,
+        "titulo": "Notebook HP 255 G10 AMD Ryzen 5 7520U 16GB 512GB SSD 15.6''",
+        "precio_venta": 939550,
+        "categoria": "Notebooks",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_823149-MLA72918341029_112023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Gamer MSI Thin GF63 12UC Core i5 RTX 3050 16GB 512GB SSD 144Hz",
+        "precio_venta": 1248900,
+        "categoria": "Notebooks",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_612394-MLA54129384102_032023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Asus Vivobook 15 X1502ZA Core i7 1255U 16GB 512GB SSD",
+        "precio_venta": 1092500,
+        "categoria": "Notebooks",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_918234-MLA69123840192_042023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor Gamer Samsung Odyssey G3 24'' 144Hz 1ms Full HD",
+        "precio_venta": 274850,
         "categoria": "Monitores",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_712384-MLA47123891029_082021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor Gamer Gigabyte 27'' 170Hz IPS 1ms QHD (2560x1440)",
+        "precio_venta": 409400,
+        "categoria": "Monitores",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_912384-MLA51293841029_102022-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor LG 22'' IPS Full HD 75Hz 5ms HDMI VGA",
+        "precio_venta": 164450,
+        "categoria": "Monitores",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_512394-MLA48123984102_122021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor LG UltraGear 24'' 144Hz 1ms IPS Full HD",
+        "precio_venta": 322000,
+        "categoria": "Monitores",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_712384-MLA47123891029_082021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Teclado Mecánico Gamer Redragon Kumara K552 RGB Switch Red Español",
+        "precio_venta": 64975,
+        "categoria": "Periféricos",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_789123-MLA40129384102_012020-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Mouse Gamer Logitech G203 Lightsync RGB 8000 DPI Negro",
+        "precio_venta": 46000,
+        "categoria": "Periféricos",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_612938-MLA43129384102_092020-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Gamer HyperX Cloud Stinger 2 Core PC / PS5 / Xbox",
+        "precio_venta": 77970,
+        "categoria": "Periféricos",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_812394-MLA50129384102_062022-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Mousepad Redragon Arch Long XL 900x400mm",
+        "precio_venta": 20700,
+        "categoria": "Periféricos",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_612938-MLA43129384102_092020-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Cooler CPU ID-Cooling SE-214-XT ARGB PWM 150W TDP",
+        "precio_venta": 41975,
+        "categoria": "Refrigeración",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_912384-MLA48123984102_122021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Water Cooling Cooler Master MasterLiquid ML240L V2 RGB",
+        "precio_venta": 134895,
+        "categoria": "Refrigeración",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_712938-MLA45129384102_032021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamer Deepcool CC560 Mid Tower Vidrio Templado 4 Coolers",
+        "precio_venta": 86250,
+        "categoria": "Refrigeración",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_912384-MLA48123984102_122021-O.jpg&output=webp",
         "stock": true
     }
 ]
