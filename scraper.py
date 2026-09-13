@@ -1,128 +1,114 @@
 import json
-import urllib.request
-import urllib.parse
-from bs4 import BeautifulSoup
-import random
-import time
+import asyncio
+from playwright.async_api import async_playwright
 
 MARGEN_GANANCIA = 1.15
-catalogo_final = {}
-vistos = set()
 
-# Lista de navegadores reales para rotar y evitar el bloqueo de Cloudflare
-user_agents = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
-]
-
-print("Conectando en tiempo real con el catálogo oficial de Venex...")
-
-base_search_url = "https://www.venex.com.ar/resultado-busqueda.htm?keywords=&limit=48&page="
-max_paginas = 50 
-consecutivos_vacios = 0
-
-for page in range(1, max_paginas + 1):
-    url = f"{base_search_url}{page}"
-    headers = {
-        "User-Agent": random.choice(user_agents),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
-        "Referer": "https://www.venex.com.ar/",
-        "DNT": "1",
-        "Connection": "keep-alive"
-    }
+async def extraer_venex():
+    catalogo_final = {}
+    vistos = set()
     
-    try:
-        req = urllib.request.Request(url, headers=headers)
-        # Pausa aleatoria breve para simular navegación humana y evitar bloqueos por velocidad
-        time.sleep(random.uniform(1.0, 2.5))
-        
-        with urllib.request.urlopen(req, timeout=15) as response:
-            html_content = response.read()
-            
-        soup = BeautifulSoup(html_content, 'html.parser')
-        
-        # Localizar tarjetas de productos
-        items = soup.find_all(['div', 'li'], class_=lambda x: x and ('product' in x.lower() or 'item' in x.lower() or 'card' in x.lower()))
-        if not items:
-            items = soup.find_all('div', {'data-id': True})
+    async with async_playwright() as p:
+        # Lanzar un navegador real en modo headless para burlar protecciones anti-bot
+        browser = await p.chromium.launch(headless=True)
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+            viewport={"width": 1280, "height": 800}
+        )
+        page = await context.new_page()
 
-        if not items:
-            print(f"Fin del catálogo en vivo alcanzado en la página {page}.")
-            break
+        # URLs estratégicas del catálogo de Venex para asegurar una extracción masiva y real
+        urls_a_visitar = [
+            "https://www.venex.com.ar/resultado-busqueda.htm?keywords=&limit=48&page=1",
+            "https://www.venex.com.ar/resultado-busqueda.htm?keywords=&limit=48&page=2",
+            "https://www.venex.com.ar/procesadores",
+            "https://www.venex.com.ar/placas-de-video",
+            "https://www.venex.com.ar/memorias-ram",
+            "https://www.venex.com.ar/discos-rigidos-y-ssds"
+        ]
 
-        nuevos_en_pagina = 0
-
-        for item in items:
+        for url in urls_a_visitar:
             try:
-                # Título oficial
-                title_elem = item.find(['h2', 'h3', 'a'], class_=lambda x: x and ('title' in x.lower() or 'name' in x.lower()))
-                if not title_elem:
-                    title_elem = item.find('a', title=True)
-                
-                titulo = title_elem.get('title') or title_elem.get_text(strip=True) if title_elem else ""
-                
-                if not titulo or len(titulo) < 4 or titulo in vistos:
-                    continue
+                print(f"Navegando a: {url}")
+                # Cargar la página esperando el contenido y el DOM
+                await page.goto(url, timeout=30000, wait_until="domcontentloaded")
+                await page.wait_for_timeout(3000) # Pausa breve para estabilizar renderizado de elementos
 
-                # Precio real
-                price_elem = item.find(class_=lambda x: x and ('price' in x.lower() or 'precio' in x.lower()))
-                if not price_elem:
-                    continue
-                
-                raw_price = price_elem.get_text(strip=True)
-                clean_price = ''.join(c for c in raw_price if c.isdigit() or c == ',' or c == '.')
-                clean_price = clean_price.replace('.', '').replace(',', '.').split('.')[0]
-                
-                if not clean_price:
-                    continue
+                # Extracción mediante JavaScript ejecutado en el contexto del navegador real
+                productos_encontrados = await page.evaluate('''() => {
+                    const items = document.querySelectorAll('div.product, div.item, div.card, div[data-id]');
+                    const results = [];
                     
-                costo = float(clean_price)
-                if costo <= 100:
-                    continue
+                    items.forEach(item => {
+                        const titleEl = item.querySelector('h2, h3, a.title, a.name, [title]');
+                        const priceEl = item.querySelector('.price, .precio, [class*="price"]');
+                        const imgEl = item.querySelector('img');
+                        
+                        const title = titleEl ? (titleEl.getAttribute('title') || titleEl.innerText) : '';
+                        const priceText = priceEl ? priceEl.innerText : '';
+                        const imgSrc = imgEl ? (imgEl.getAttribute('data-src') || imgEl.getAttribute('src') || '') : '';
+                        
+                        if (title && priceText) {
+                            results.push({
+                                title: title.trim(),
+                                price: priceText.trim(),
+                                img: imgSrc.trim()
+                            });
+                        }
+                    });
+                    return results;
+                }''')
 
-                precio_final = round(costo * MARGEN_GANANCIA)
+                for prod in productos_encontrados:
+                    titulo = prod['title']
+                    if not titulo or len(titulo) < 4 or titulo in vistos:
+                        continue
 
-                # Imagen oficial
-                img_elem = item.find('img')
-                img_url = ""
-                if img_elem:
-                    img_url = img_elem.get('data-src') or img_elem.get('src') or img_elem.get('data-lazy') or ""
+                    # Limpieza y conversión del precio real de Venex
+                    raw_price = prod['price']
+                    clean_price = ''.join(c for c in raw_price if c.isdigit() or c == ',' or c == '.')
+                    clean_price = clean_price.replace('.', '').replace(',', '.').split('.')[0]
+                    
+                    if not clean_price:
+                        continue
 
-                if img_url.startswith('/'):
-                    img_url = f"https://www.venex.com.ar{img_url}"
-                elif not img_url.startswith('http'):
-                    continue
+                    try:
+                        costo = float(clean_price)
+                    except ValueError:
+                        continue
 
-                catalogo_final[titulo] = {
-                    "titulo": titulo,
-                    "precio_venta": precio_final,
-                    "imagen": img_url,
-                    "stock": True
-                }
-                vistos.add(titulo)
-                nuevos_en_pagina += 1
-            except Exception:
+                    if costo <= 100:
+                        continue
+
+                    precio_venta = round(costo * MARGEN_GANANCIA)
+
+                    # Procesamiento seguro de la URL de la imagen
+                    img_url = prod['img']
+                    if img_url.startswith('/'):
+                        img_url = f"https://www.venex.com.ar{img_url}"
+                    elif not img_url.startswith('http'):
+                        continue
+
+                    catalogo_final[titulo] = {
+                        "titulo": titulo,
+                        "precio_venta": precio_venta,
+                        "imagen": img_url,
+                        "stock": True
+                    }
+                    vistos.add(titulo)
+
+            except Exception as e:
+                print(f"Error procesando la URL {url}: {e}")
                 continue
 
-        if nuevos_en_pagina == 0:
-            consecutivos_vacios += 1
-            if consecutivos_vacios >= 3:
-                break
-        else:
-            consecutivos_vacios = 0
+        await browser.close()
 
-    except Exception as e:
-        print(f"Aviso de red en página {page}: {e}")
-        continue
+    lista_final = list(catalogo_final.values())
+    print(f"Sincronización en vivo finalizada. Total de productos reales extraídos: {len(lista_final)}")
 
-lista_final = list(catalogo_final.values())
-print(f"Total exacto de productos sincronizados en vivo desde Venex: {len(lista_final)}")
+    # Guardado exclusivo de los datos reales sincronizados
+    with open('productos.json', 'w', encoding='utf-8') as f:
+        json.dump(lista_final, f, ensure_ascii=False, indent=4)
 
-# Guardar estrictamente lo obtenido de la tienda (sin respaldos inventados)
-with open('productos.json', 'w', encoding='utf-8') as f:
-    json.dump(lista_final, f, ensure_ascii=False, indent=4)
-
-print("Archivo productos.json actualizado exclusivamente con datos reales de Venex.")
+if __name__ == "__main__":
+    asyncio.run(extraer_venex())
