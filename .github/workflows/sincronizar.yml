@@ -1,9 +1,9 @@
-name: Sincronizador Automático de Venex
+name: Sincronizar Productos
 
 on:
-  schedule:
-    - cron: '0 8 * * *'
   workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
 
 permissions:
   contents: write
@@ -12,21 +12,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar repositorio
+      - name: Checkout del repositorio
         uses: actions/checkout@v4
 
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.10'
 
       - name: Ejecutar Scraper
         run: python scraper.py
 
-      - name: Actualizar tienda con los nuevos precios/stock
+      - name: Guardar cambios en GitHub
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add productos.json
-          git commit -m "Actualización automática de precios y stock desde Venex" || echo "Sin cambios"
+          git commit -m "Actualización automática de catálogo STAG" || exit 0
           git push
