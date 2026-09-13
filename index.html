@@ -3,86 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda Tech - Hardware & Tecnología</title>
+    <title>STAG - Soluciones Informáticas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; }
-        body { background-color: #f4f6f8; color: #333; }
-        header { background: #1a1a2e; color: white; padding: 25px; text-align: center; }
-        .search-box { margin: 15px auto 0 auto; max-width: 500px; }
-        .search-box input { width: 100%; padding: 12px; border-radius: 25px; border: none; font-size: 1rem; outline: none; }
-        .container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-4px); }
-        .img-container { height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+        :root {
+            --bg-dark: #0b0f19;
+            --bg-card: #131b2e;
+            --accent-cyan: #00d2ff;
+            --accent-blue: #0072ff;
+            --text-light: #e2e8f0;
+            --text-silver: #a0aec0;
+            --border-color: #1e293b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); }
+
+        /* Header & Logo */
+        header { background: linear-gradient(180deg, #070a12 0%, #0d1527 100%); border-bottom: 2px solid var(--accent-cyan); padding: 15px 20px; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 15px; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-container img { height: 60px; filter: drop-shadow(0 0 8px rgba(0,210,255,0.4)); }
+
+        /* Search Bar */
+        .search-box { flex: 1; max-width: 500px; position: relative; }
+        .search-box input { width: 100%; padding: 12px 20px; border-radius: 25px; border: 1px solid var(--accent-cyan); background: #070d1a; color: #fff; font-size: 0.95rem; outline: none; box-shadow: 0 0 10px rgba(0,210,255,0.1); }
+        .search-box input:focus { box-shadow: 0 0 15px rgba(0,210,255,0.3); }
+
+        /* Categorías Menu (Estilo Venex) */
+        nav { background: #080d1a; border-bottom: 1px solid var(--border-color); overflow-x: auto; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 10px; }
+        .nav-container li button { background: none; border: none; color: var(--text-silver); padding: 14px 20px; font-size: 0.9rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: 0.3s; }
+        .nav-container li button:hover, .nav-container li button.active { color: var(--accent-cyan); border-bottom: 3px solid var(--accent-cyan); background: rgba(0,210,255,0.05); }
+
+        /* Grid de Productos */
+        .container { max-width: 1200px; margin: 25px auto; padding: 0 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); padding: 15px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); box-shadow: 0 8px 20px rgba(0,210,255,0.15); }
+        
+        .img-container { height: 180px; display: flex; align-items: center; justify-content: center; background: #0a0f1d; border-radius: 8px; margin-bottom: 12px; padding: 10px; }
         .card img { max-height: 100%; max-width: 100%; object-fit: contain; }
-        .card h3 { font-size: 0.95rem; margin-bottom: 10px; color: #1a1a2e; height: 2.8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-        .price { font-size: 1.3rem; font-weight: bold; color: #00a650; margin: 10px 0; }
-        .btn-ws { background-color: #25d366; color: white; text-decoration: none; padding: 10px; text-align: center; border-radius: 5px; font-weight: bold; }
-        .btn-ws:hover { background-color: #1eb854; }
-        .loading { text-align: center; font-size: 1.2rem; margin: 50px; grid-column: 1 / -1; }
+        
+        .cat-tag { font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
+        .card h3 { font-size: 0.9rem; color: var(--text-light); height: 2.8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 10px; }
+        .price { font-size: 1.4rem; font-weight: 800; color: #fff; text-shadow: 0 0 10px rgba(0,210,255,0.3); margin-bottom: 12px; }
+        
+        .btn-ws { background: linear-gradient(135deg, #00d2ff 0%, #0072ff 100%); color: #fff; text-decoration: none; padding: 10px; text-align: center; border-radius: 6px; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
+        .btn-ws:hover { opacity: 0.9; box-shadow: 0 0 12px rgba(0,210,255,0.4); }
+
+        .loading { text-align: center; font-size: 1.2rem; color: var(--accent-cyan); margin: 50px 0; grid-column: 1 / -1; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Mi Tienda Hardware & Tech</h1>
-    <p>Envíos a todo el país | Productos actualizados</p>
-    <div class="search-box">
-        <input type="text" id="buscador" placeholder="Buscar producto, placa de video, procesador..." onkeyup="filtrarProductos()">
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="logo.png" alt="STAG Soluciones Informáticas" onerror="this.style.display='none'">
+        </div>
+        <div class="search-box">
+            <input type="text" id="buscador" placeholder="Buscar procesador, placa de video, notebook..." onkeyup="filtrarProductos()">
+        </div>
     </div>
 </header>
 
+<nav>
+    <ul class="nav-container" id="menu-categorias">
+        <li><button class="active" onclick="filtrarCategoria('Todas')">Todas las Categorías</button></li>
+    </ul>
+</nav>
+
 <div class="container">
     <div id="catalogo" class="grid">
-        <p class="loading">Cargando catálogo completo de productos...</p>
+        <p class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo actualizado...</p>
     </div>
 </div>
 
 <script>
-    const TELEFONO_WHATSAPP = "5491100000000"; // Tu teléfono real de WhatsApp
+    const TELEFONO_WHATSAPP = "5491100000000"; // Reemplaza por tu número de WhatsApp
     let listaProductos = [];
+    let categoriaActual = 'Todas';
 
     fetch('productos.json')
         .then(response => response.json())
         .then(productos => {
             listaProductos = productos;
+            construirMenuCategorias();
             renderProductos(listaProductos);
         })
         .catch(error => {
-            document.getElementById('catalogo').innerHTML = '<p class="loading">Sincronizando inventario... Refresca la página en 1 minuto.</p>';
+            document.getElementById('catalogo').innerHTML = '<p class="loading">Actualizando stock desde Venex... Vuelve a cargar en unos momentos.</p>';
         });
+
+    function construirMenuCategorias() {
+        const categorias = ['Todas', ...new Set(listaProductos.map(p => p.categoria).filter(Boolean))];
+        const menuNav = document.getElementById('menu-categorias');
+        menuNav.innerHTML = '';
+
+        categorias.forEach(cat => {
+            const li = document.createElement('li');
+            const btn = document.createElement('button');
+            btn.innerText = cat;
+            if(cat === 'Todas') btn.classList.add('active');
+            btn.onclick = (e) => {
+                document.querySelectorAll('.nav-container button').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                filtrarCategoria(cat);
+            };
+            li.appendChild(btn);
+            menuNav.appendChild(li);
+        });
+    }
 
     function renderProductos(items) {
         const contenedor = document.getElementById('catalogo');
         contenedor.innerHTML = '';
 
         if(!items || items.length === 0) {
-            contenedor.innerHTML = '<p class="loading">No se encontraron productos.</p>';
+            contenedor.innerHTML = '<p class="loading">No hay productos en esta categoría.</p>';
             return;
         }
 
         items.forEach(p => {
-            const mensaje = encodeURIComponent(`Hola! Quiero comprar: ${p.titulo} - Precio: $${p.precio_venta}`);
-            const imgSrc = p.imagen || 'https://via.placeholder.com/200?text=Sin+Imagen';
+            const mensaje = encodeURIComponent(`Hola STAG! Me interesa comprar: ${p.titulo} - Precio: $${p.precio_venta.toLocaleString('es-AR')}`);
+            const imgSrc = p.imagen || 'https://via.placeholder.com/200/131b2e/00d2ff?text=STAG+Tech';
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
-                <div class="img-container">
-                    <img src="${imgSrc}" alt="${p.titulo}" onerror="this.src='https://via.placeholder.com/200?text=Imagen+No+Disponible'">
+                <div>
+                    <div class="img-container">
+                        <img src="${imgSrc}" alt="${p.titulo}" onerror="this.src='https://via.placeholder.com/200/131b2e/00d2ff?text=STAG'">
+                    </div>
+                    <div class="cat-tag">${p.categoria || 'Hardware'}</div>
+                    <h3>${p.titulo}</h3>
                 </div>
-                <h3>${p.titulo}</h3>
-                <div class="price">$${p.precio_venta.toLocaleString('es-AR')}</div>
-                <a href="https://wa.me/${TELEFONO_WHATSAPP}?text=${mensaje}" target="_blank" class="btn-ws">Comprar por WhatsApp</a>
+                <div>
+                    <div class="price">$${p.precio_venta.toLocaleString('es-AR')}</div>
+                    <a href="https://wa.me/${TELEFONO_WHATSAPP}?text=${mensaje}" target="_blank" class="btn-ws">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
             `;
             contenedor.appendChild(card);
         });
     }
 
+    function filtrarCategoria(cat) {
+        categoriaActual = cat;
+        aplicarFiltros();
+    }
+
     function filtrarProductos() {
+        aplicarFiltros();
+    }
+
+    function aplicarFiltros() {
         const texto = document.getElementById('buscador').value.toLowerCase();
-        const filtrados = listaProductos.filter(p => p.titulo.toLowerCase().includes(texto));
-        renderProductos(filtrados);
+        let resultado = listaProductos;
+
+        if (categoriaActual !== 'Todas') {
+            resultado = resultado.filter(p => p.categoria === categoriaActual);
+        }
+
+        if (texto.trim() !== '') {
+            resultado = resultado.filter(p => p.titulo.toLowerCase().includes(texto));
+        }
+
+        renderProductos(resultado);
     }
 </script>
 
