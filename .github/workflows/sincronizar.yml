@@ -20,8 +20,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Instalar librerías de extracción
-        run: pip install beautifulsoup4
+      - name: Instalar Playwright y dependencias
+        run: |
+          pip install playwright
+          playwright install chromium
 
       - name: Ejecutar Scraper
         run: python scraper.py
