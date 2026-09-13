@@ -1,1 +1,374 @@
-[]
+[
+    {
+        "titulo": "Notebook HP 255 G10 Ryzen 5...",
+        "precio_venta": 1533512,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
+        "precio_venta": 1460488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G5 Core i7...",
+        "precio_venta": 1592738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo ThinkBook G7...",
+        "precio_venta": 1747988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS Vivobook X1404VA...",
+        "precio_venta": 873988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 255R G10 Ryzen 3...",
+        "precio_venta": 1241986,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Aspire Go 15...",
+        "precio_venta": 1437488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC Gamer Powered by MSI...",
+        "precio_venta": 2742208,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC IA Kairos AMD Ryzen 5 9600X...",
+        "precio_venta": 4284358,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC AMD Ryzen 5 3400G 16GB...",
+        "precio_venta": 747488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC Intel Core i3 12100 16GB...",
+        "precio_venta": 1057988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Pad Gamer de Regalo!",
+        "precio_venta": 1683070,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "PC Gamer Kairos AMD Ryzen 7...",
+        "precio_venta": 1683070,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Notebook SODIMM...",
+        "precio_venta": 134538,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Disco Solido SSD Copious 1TB...",
+        "precio_venta": 275988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian DDR3 4GB...",
+        "precio_venta": 27013,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian DDR3 8GB...",
+        "precio_venta": 37938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Combo ASUS Placa de video RX...",
+        "precio_venta": 1034999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Combo ASUS Placa de video RTX...",
+        "precio_venta": 1943499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Cockpit Thermaltake Sim GR500...",
+        "precio_venta": 2587488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Thin B13VE Core...",
+        "precio_venta": 2633488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Katana Core i7...",
+        "precio_venta": 4139988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Vector A8WHG...",
+        "precio_venta": 4944988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Imperdible!",
+        "precio_venta": 9947488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video MSI NVIDIA...",
+        "precio_venta": 9947488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Mouse Fantech Crypto II...",
+        "precio_venta": 32188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Fantech MH90 Sonata...",
+        "precio_venta": 183977,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Teclado Mecánico Fantech...",
+        "precio_venta": 105788,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Joystick Redragon G831 Wargrip...",
+        "precio_venta": 135699,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor Gamer Gigabyte GS25F14...",
+        "precio_venta": 218488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Micrófono Razer Seiren V3...",
+        "precio_venta": 233449,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Monitor Gamer Arkham...",
+        "precio_venta": 333488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete ASUS ROG Hyperion...",
+        "precio_venta": 804988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Ezviz H9C Dual Lens...",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Cerradura Inteligente Ezviz...",
+        "precio_venta": 183999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Scanner Epson Perfection V39II...",
+        "precio_venta": 201249,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Proyector Epson Powerlite E24...",
+        "precio_venta": 1092499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Mi...",
+        "precio_venta": 85088,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Ajustable Notebook...",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video ASRock Intel Arc A380 ITX 6GB Challenger OC",
+        "precio_venta": 311649,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video MSI NVIDIA GeForce RTX 3050 6GB Low Profile OC",
+        "precio_venta": 505999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video MSI NVIDIA GeForce RTX 3050 6GB Ventus 2X OC",
+        "precio_venta": 538188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video ASUS NVIDIA GeForce RTX 3050 6GB Dual OC",
+        "precio_venta": 546238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video Gigabyte NVIDIA GeForce RTX 3050 6GB Windforce...",
+        "precio_venta": 574999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video ASRock Intel Arc B570 10GB Challenger OC",
+        "precio_venta": 603738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video Gigabyte AMD Radeon RX 7600 8GB Gaming OC",
+        "precio_venta": 655488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video Gigabyte AMD Radeon RX 9050 8GB Gaming OC",
+        "precio_venta": 701499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video Gigabyte NVIDIA GeForce RTX 5050 8GB Windforce...",
+        "precio_venta": 741738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video MSI NVIDIA GeForce RTX 5050 8GB Shadow 2X OC",
+        "precio_venta": 747499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video Gigabyte NVIDIA GeForce RTX 5050 8GB Low Profile...",
+        "precio_venta": 758999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video ASUS NVIDIA GeForce RTX 5050 8GB Dual OC",
+        "precio_venta": 764738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kimota DDR2 2GB 800MHz",
+        "precio_venta": 16088,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian DDR3 4GB 1600MHz",
+        "precio_venta": 27013,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Hiksemi DDR3 4GB 1600MHz",
+        "precio_venta": 28738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian DDR3 8GB 1600MHz",
+        "precio_venta": 37938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Hiksemi DDR3 8GB 1600MHz",
+        "precio_venta": 45988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Notebook SODIMM Hiksemi DDR3 Hiker 8GB 1600MHz",
+        "precio_venta": 56338,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian DDR4 8GB 3200MHz",
+        "precio_venta": 112688,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingdian Heat H41 DDR4 8GB 3200MHz",
+        "precio_venta": 120738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Hiksemi DDR4 8GB 3200MHz",
+        "precio_venta": 126488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Hiksemi Armor DDR4 8GB 3200MHz Black",
+        "precio_venta": 132238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Notebook SODIMM Kimota DDR4 8GB 3200MHz",
+        "precio_venta": 134538,
+        "imagen": "",
+        "stock": true
+    }
+]
