@@ -21,6 +21,13 @@
         "stock": true
     },
     {
+        "titulo": "Procesador Intel Core i7 13700F 5.2GHz LGA1700",
+        "precio_venta": 480000,
+        "categoria": "Procesadores",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_841022-MLA53232159118_012023-O.jpg&output=webp",
+        "stock": true
+    },
+    {
         "titulo": "Placa de Video XFX Radeon RX 6600 8GB Speedster SWFT 210",
         "precio_venta": 391000,
         "categoria": "Placas de Video",
@@ -42,8 +49,22 @@
         "stock": true
     },
     {
+        "titulo": "Placa de Video Asus TUF Gaming RTX 4070 Super 12GB",
+        "precio_venta": 890000,
+        "categoria": "Placas de Video",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_612984-MLA74128912301_012024-O.jpg&output=webp",
+        "stock": true
+    },
+    {
         "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz",
         "precio_venta": 59800,
+        "categoria": "Memorias RAM",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_623812-MLA46714205809_072021-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingston Fury Beast 8GB DDR4 3200MHz",
+        "precio_venta": 32000,
         "categoria": "Memorias RAM",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_623812-MLA46714205809_072021-O.jpg&output=webp",
         "stock": true
@@ -60,6 +81,13 @@
         "precio_venta": 89000,
         "categoria": "Almacenamiento",
         "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_812394-MLA51829310293_102022-O.jpg&output=webp",
+        "stock": true
+    },
+    {
+        "titulo": "Disco Solido SSD Kingston A400 480GB SATA3",
+        "precio_venta": 45000,
+        "categoria": "Almacenamiento",
+        "imagen": "https://images.weserv.nl/?url=https://http2.mlstatic.com/D_NQ_NP_2X_891234-MLA31238410293_062019-O.jpg&output=webp",
         "stock": true
     },
     {
