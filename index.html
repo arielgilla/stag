@@ -17,13 +17,15 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
-        body { background-color: var(--bg-dark); color: var(--text-light); }
+        body { background-color: var(--bg-dark); color: var(--text-light); min-height: 100vh; }
 
         /* Header & Logo */
         header { background: linear-gradient(180deg, #070a12 0%, #0d1527 100%); border-bottom: 2px solid var(--accent-cyan); padding: 15px 20px; }
         .header-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 15px; }
         .logo-container { display: flex; align-items: center; gap: 12px; }
-        .logo-container img { height: 60px; filter: drop-shadow(0 0 8px rgba(0,210,255,0.4)); }
+        .logo-container img { height: 50px; filter: drop-shadow(0 0 8px rgba(0,210,255,0.4)); }
+        .brand-title { font-size: 1.8rem; font-weight: 800; color: #fff; letter-spacing: 1px; }
+        .brand-title span { color: var(--accent-cyan); }
 
         /* Buscador */
         .search-box { flex: 1; max-width: 500px; position: relative; }
@@ -42,11 +44,11 @@
         .card { background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); padding: 15px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
         .card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); box-shadow: 0 8px 20px rgba(0,210,255,0.15); }
         
-        .img-container { height: 180px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-radius: 8px; margin-bottom: 12px; padding: 10px; overflow: hidden; }
+        .img-container { height: 180px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-radius: 8px; margin-bottom: 12px; padding: 10px; overflow: hidden; position: relative; }
         .card img { max-height: 100%; max-width: 100%; object-fit: contain; }
         
         .cat-tag { font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
-        .card h3 { font-size: 0.9rem; color: var(--text-light); height: 2.8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 10px; }
+        .card h3 { font-size: 0.9rem; color: var(--text-light); height: 2.8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 10px; line-height: 1.4; }
         .price { font-size: 1.4rem; font-weight: 800; color: #fff; text-shadow: 0 0 10px rgba(0,210,255,0.3); margin-bottom: 12px; }
         
         .btn-ws { background: linear-gradient(135deg, #00d2ff 0%, #0072ff 100%); color: #fff; text-decoration: none; padding: 10px; text-align: center; border-radius: 6px; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
@@ -60,10 +62,11 @@
 <header>
     <div class="header-container">
         <div class="logo-container">
-            <img src="logo.png" alt="STAG Soluciones Informáticas" onerror="this.style.display='none'">
+            <img src="logo.png" alt="STAG Logo" onerror="this.style.display='none'">
+            <div class="brand-title">STAG <span>Hardware</span></div>
         </div>
         <div class="search-box">
-            <input type="text" id="buscador" placeholder="Buscar procesador, placa de video, notebook..." onkeyup="filtrarProductos()">
+            <input type="text" id="buscador" placeholder="Buscar producto, marca o modelo..." onkeyup="filtrarProductos()">
         </div>
     </div>
 </header>
@@ -76,16 +79,16 @@
 
 <div class="container">
     <div id="catalogo" class="grid">
-        <p class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo STAG...</p>
+        <p class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando productos...</p>
     </div>
 </div>
 
 <script>
-    const TELEFONO_WHATSAPP = "5493513030241"; // Reemplaza por tu número real de WhatsApp
+    const TELEFONO_WHATSAPP = "5493513030241"; // Reemplaza por tu WhatsApp
     let listaProductos = [];
     let categoriaActual = 'Todas';
 
-    // Cargar productos.json generado por scraper.py
+    // Cargar productos.json evitando almacenamiento en caché
     fetch('productos.json?v=' + new Date().getTime())
         .then(res => res.json())
         .then(data => {
@@ -93,12 +96,12 @@
                 listaProductos = data;
                 iniciar();
             } else {
-                document.getElementById('catalogo').innerHTML = '<p class="loading">El catálogo se está sincronizando. Vuelve a intentar en unos minutos.</p>';
+                document.getElementById('catalogo').innerHTML = '<p class="loading">El catálogo está vacío o actualizándose.</p>';
             }
         })
         .catch(err => {
-            console.error(err);
-            document.getElementById('catalogo').innerHTML = '<p class="loading">Error al cargar productos. Verifique productos.json</p>';
+            console.error('Error al cargar productos:', err);
+            document.getElementById('catalogo').innerHTML = '<p class="loading">No se pudieron cargar los productos. Revisa el archivo productos.json</p>';
         });
 
     function iniciar() {
@@ -137,12 +140,19 @@
 
         items.forEach(p => {
             const mensaje = encodeURIComponent(`Hola STAG! Me interesa comprar: ${p.titulo} - Precio: $${p.precio_venta.toLocaleString('es-AR')}`);
+            
+            // Asegurar URL válida de la imagen
+            let imgUrl = p.imagen || '';
+            if (imgUrl.startsWith('http://')) {
+                imgUrl = imgUrl.replace('http://', 'https://');
+            }
+
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
                 <div>
                     <div class="img-container">
-                        <img src="${p.imagen}" alt="${p.titulo}" loading="lazy">
+                        <img src="${imgUrl}" alt="${p.titulo}" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&auto=format&fit=crop';">
                     </div>
                     <div class="cat-tag">${p.categoria || 'Hardware'}</div>
                     <h3>${p.titulo}</h3>
