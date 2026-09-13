@@ -163,19 +163,18 @@
         contenedor.innerHTML = '';
 
         if(!items || items.length === 0) {
-            contenedor.innerHTML = '<p class="loading">No hay productos en esta categoría.</p>';
+            contenedor.innerHTML = '<p class="loading">No hay productos disponibles.</p>';
             return;
         }
 
         items.forEach(p => {
             const mensaje = encodeURIComponent(`Hola STAG! Me interesa comprar: ${p.titulo} - Precio: $${p.precio_venta.toLocaleString('es-AR')}`);
-            const imgSrc = p.imagen || 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80';
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
                 <div>
                     <div class="img-container">
-                        <img src="${imgSrc}" alt="${p.titulo}" onerror="this.src='https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80'">
+                        <img src="${p.imagen}" alt="${p.titulo}">
                     </div>
                     <div class="cat-tag">${p.categoria || 'Hardware'}</div>
                     <h3>${p.titulo}</h3>
