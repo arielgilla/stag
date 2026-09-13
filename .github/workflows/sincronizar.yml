@@ -3,16 +3,15 @@ name: Sincronizar Productos
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
-
-permissions:
-  contents: write
+    - cron: '0 8 * * *'
 
 jobs:
-  build:
+  sincronizar:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout del repositorio
+      - name: Copiar repositorio
         uses: actions/checkout@v4
 
       - name: Configurar Python
@@ -20,13 +19,20 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Ejecutar Scraper
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Ejecutar script de extracción
         run: python scraper.py
 
-      - name: Guardar cambios en GitHub
+      - name: Subir cambios a GitHub Pages
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add productos.json
-          git commit -m "Actualización automática de catálogo STAG" || exit 0
+          git commit -m "Actualización masiva del catálogo de Venex con Playwright" || echo "No hay cambios para subir"
           git push
