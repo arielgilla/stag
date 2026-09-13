@@ -1,1 +1,30 @@
-[]
+[
+    {
+        "titulo": "Procesador AMD Ryzen 5 5600GT 4.6GHz",
+        "precio_venta": 212750,
+        "categoria": "Procesadores",
+        "imagen": "https://www.venex.com.ar/images/products/ryzen5.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "Placa de Video XFX Radeon RX 6600 8GB",
+        "precio_venta": 391000,
+        "categoria": "Placas de Video",
+        "imagen": "https://www.venex.com.ar/images/products/rx6600.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR4",
+        "precio_venta": 51750,
+        "categoria": "Memorias RAM",
+        "imagen": "https://www.venex.com.ar/images/products/ram.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo IdeaPad 3 15IAU7 Core i5",
+        "precio_venta": 782000,
+        "categoria": "Notebooks",
+        "imagen": "https://www.venex.com.ar/images/products/notebook.jpg",
+        "stock": true
+    }
+]
