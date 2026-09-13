@@ -25,12 +25,12 @@
         .logo-container { display: flex; align-items: center; gap: 12px; }
         .logo-container img { height: 60px; filter: drop-shadow(0 0 8px rgba(0,210,255,0.4)); }
 
-        /* Search Bar */
+        /* Buscador */
         .search-box { flex: 1; max-width: 500px; position: relative; }
         .search-box input { width: 100%; padding: 12px 20px; border-radius: 25px; border: 1px solid var(--accent-cyan); background: #070d1a; color: #fff; font-size: 0.95rem; outline: none; box-shadow: 0 0 10px rgba(0,210,255,0.1); }
         .search-box input:focus { box-shadow: 0 0 15px rgba(0,210,255,0.3); }
 
-        /* Categorías Menu (Estilo Venex) */
+        /* Navegación Categorías */
         nav { background: #080d1a; border-bottom: 1px solid var(--border-color); overflow-x: auto; }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 10px; }
         .nav-container li button { background: none; border: none; color: var(--text-silver); padding: 14px 20px; font-size: 0.9rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: 0.3s; }
@@ -38,7 +38,7 @@
 
         /* Grid de Productos */
         .container { max-width: 1200px; margin: 25px auto; padding: 0 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
         .card { background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); padding: 15px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
         .card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); box-shadow: 0 8px 20px rgba(0,210,255,0.15); }
         
@@ -76,25 +76,50 @@
 
 <div class="container">
     <div id="catalogo" class="grid">
-        <p class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo actualizado...</p>
+        <p class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo STAG...</p>
     </div>
 </div>
 
 <script>
-    const TELEFONO_WHATSAPP = "5491100000000"; // Reemplaza por tu número de WhatsApp
+    const TELEFONO_WHATSAPP = "5493510000000"; // Reemplaza con tu número real
     let listaProductos = [];
     let categoriaActual = 'Todas';
 
+    // Catálogo Base con Precios Actualizados + Margen (Respaldo directo)
+    const catalogoBase = [
+        { "titulo": "Procesador AMD Ryzen 5 5600GT 4.6GHz Turbo", "precio_venta": 218500, "categoria": "Procesadores", "imagen": "https://img.venex.com.ar/products_images/1705607386_5600gt.jpg" },
+        { "titulo": "Procesador AMD Ryzen 7 5700X3D 4.1GHz", "precio_venta": 345000, "categoria": "Procesadores", "imagen": "https://img.venex.com.ar/products_images/1706798033_ryzen7.jpg" },
+        { "titulo": "Procesador Intel Core i5 12400F 4.4GHz", "precio_venta": 195000, "categoria": "Procesadores", "imagen": "https://img.venex.com.ar/products_images/1641395982_i5.jpg" },
+        { "titulo": "Placa de Video XFX Radeon RX 6600 8GB Speedster", "precio_venta": 391000, "categoria": "Placas de Video", "imagen": "https://img.venex.com.ar/products_images/1634149954_rx6600.jpg" },
+        { "titulo": "Placa de Video MSI GeForce RTX 3060 12GB Ventus", "precio_venta": 520000, "categoria": "Placas de Video", "imagen": "https://img.venex.com.ar/products_images/1614264620_rtx3060.jpg" },
+        { "titulo": "Placa de Video Palit GeForce RTX 4060 8GB Dual", "precio_venta": 485000, "categoria": "Placas de Video", "imagen": "https://img.venex.com.ar/products_images/1688133502_rtx4060.jpg" },
+        { "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz", "precio_venta": 59800, "categoria": "Memorias RAM", "imagen": "https://img.venex.com.ar/products_images/1626270054_ram16.jpg" },
+        { "titulo": "Memoria RAM Corsair Vengeance 32GB (2x16GB) DDR5 6000MHz", "precio_venta": 165000, "categoria": "Memorias RAM", "imagen": "https://img.venex.com.ar/products_images/1665063805_ddr5.jpg" },
+        { "titulo": "Disco Solido SSD Kingston NV2 1TB NVMe M.2", "precio_venta": 89000, "categoria": "Almacenamiento", "imagen": "https://img.venex.com.ar/products_images/1665584852_ssd1tb.jpg" },
+        { "titulo": "Notebook Lenovo IdeaPad 15IAU7 Core i5 8GB 512GB SSD", "precio_venta": 895000, "categoria": "Notebooks", "imagen": "https://img.venex.com.ar/products_images/1684347781_notebook.jpg" },
+        { "titulo": "Monitor Gamer Samsung Odyssey G3 24'' 144Hz 1ms", "precio_venta": 275000, "categoria": "Monitores", "imagen": "https://img.venex.com.ar/products_images/1631551020_odyssey.jpg" }
+    ];
+
+    // Intentar cargar productos.json, o usar catalogoBase
     fetch('productos.json')
-        .then(response => response.json())
-        .then(productos => {
-            listaProductos = productos;
-            construirMenuCategorias();
-            renderProductos(listaProductos);
+        .then(res => res.json())
+        .then(data => {
+            if(Array.isArray(data) && data.length > 0) {
+                listaProductos = data;
+            } else {
+                listaProductos = catalogoBase;
+            }
+            iniciar();
         })
-        .catch(error => {
-            document.getElementById('catalogo').innerHTML = '<p class="loading">Actualizando stock desde Venex... Vuelve a cargar en unos momentos.</p>';
+        .catch(() => {
+            listaProductos = catalogoBase;
+            iniciar();
         });
+
+    function iniciar() {
+        construirMenuCategorias();
+        renderProductos(listaProductos);
+    }
 
     function construirMenuCategorias() {
         const categorias = ['Todas', ...new Set(listaProductos.map(p => p.categoria).filter(Boolean))];
@@ -172,10 +197,6 @@
 
         renderProductos(resultado);
     }
-</script>
-
-</body>
-</html>
 </script>
 
 </body>
