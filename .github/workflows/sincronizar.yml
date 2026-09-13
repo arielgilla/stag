@@ -1,38 +1,37 @@
-name: Sincronizar Productos
+name: Sincronizar Productos de Venex
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 */6 * * *' # Se ejecuta automáticamente cada 6 horas
+  workflow_dispatch: # Permite dispararlo manualmente desde la pestaña Actions en GitHub
 
 jobs:
   sincronizar:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
-      - name: Copiar repositorio
-        uses: actions/checkout@v4
+    - name: Clonar repositorio
+      uses: actions/checkout@v4
 
-      - name: Configurar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
 
-      - name: Instalar dependencias
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          playwright install chromium
-          playwright install-deps chromium
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install beautifulsoup4
 
-      - name: Ejecutar script de extracción
-        run: python scraper.py
+    - name: Ejecutar script de scraping
+      run: python scraper.py
 
-      - name: Subir cambios a GitHub Pages
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add productos.json
-          git commit -m "Actualización masiva del catálogo de Venex con Playwright" || echo "No hay cambios para subir"
-          git push
+    - name: Configurar identidad de git y subir cambios
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add productos.json
+        git commit -m "Sincronización automática de catálogo y stock [skip ci]" || echo "No hay cambios nuevos en el catálogo"
+        git push
