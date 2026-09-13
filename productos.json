@@ -1,17 +1,1 @@
-[
-    {
-        "titulo": "Procesador AMD Ryzen 5 5600GT 4.6GHz Turbo",
-        "precio_venta": 185000,
-        "stock": true
-    },
-    {
-        "titulo": "Placa de Video XFX Radeon RX 6600 8GB Speedster",
-        "precio_venta": 340000,
-        "stock": true
-    },
-    {
-        "titulo": "Memoria RAM Fury Beast 8GB DDR4 3200MHz",
-        "precio_venta": 32000,
-        "stock": true
-    }
-]
+[]
