@@ -1,0 +1,79 @@
+[
+    {
+        "titulo": "TARTARUS PRO KEYPAD RAZER ANALOGICO OPTICO GAMING - 32 TECLAS RGB + THUMBSTICK",
+        "precio_venta": 482195,
+        "categoria": "Procesadores",
+        "imagen": "https://backupcomputacion.com/img/Public/1203/6744-producto-ra.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "TABLETA DIGITALIZADORA WACOM ONE 13 - DISPLAY",
+        "precio_venta": 1905837,
+        "categoria": "Procesadores",
+        "imagen": "https://backupcomputacion.com/img/Public/1203/7816-producto-one-13.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "MOUSE CORSAIR GAMING M75 AIR WIRELESS ULTRA WEIGHT BLACK",
+        "precio_venta": 88694,
+        "categoria": "Placas de Video",
+        "imagen": "https://www.armytech.com.ar/7336-large_default/mouse-corsair-gaming-m75-air-wireless-ultra-weight-black.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "TECLADO ROYAL KLUDGE RKS98 WIRELESS PHANTOM SWITCH CHARTREUSE 96%",
+        "precio_venta": 147990,
+        "categoria": "Placas de Video",
+        "imagen": "https://www.armytech.com.ar/6881-large_default/teclado-royal-kludge-rks98-wireless-phantom-switch-chartreuse-96.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "LG MONITOR 27GP750-B 27&#34; 240HZ IPS PROMO WIZ",
+        "precio_venta": 442750,
+        "categoria": "Memorias RAM",
+        "imagen": "https://wiztech.com.ar/assets/images/products/monitor/LG_27GP750_a.png",
+        "stock": true
+    },
+    {
+        "titulo": "AMD PROCESADOR RYZEN 7 9850X3D",
+        "precio_venta": 1006250,
+        "categoria": "Memorias RAM",
+        "imagen": "https://wiztech.com.ar/assets/images/products/procesador/ryzen_7_9850x3d_a.png",
+        "stock": true
+    },
+    {
+        "titulo": "TECLADO REDRAGON K552 KUMARA WHITE MECANICO RGB ESP SWITCH RED",
+        "precio_venta": 74002,
+        "categoria": "Almacenamiento",
+        "imagen": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/6950376778932.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "TECLADO REDRAGON K552 KUMARA MECANICO RGB ESP SWITCH RED",
+        "precio_venta": 66550,
+        "categoria": "Almacenamiento",
+        "imagen": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/6950376778925.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "PC ARMADA AMD RYZEN 3 3200G 8GB 256GB",
+        "precio_venta": 519259,
+        "categoria": "Almacenamiento",
+        "imagen": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/PC-ML1-ARMADA-GAMER.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "PLACA DE VIDEO GIGABYTE NVIDIA GEFORCE RTX 5060 WINDFORCE MAX 8GB OC GDDR7",
+        "precio_venta": 1103931,
+        "categoria": "Almacenamiento",
+        "imagen": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/GV-N5060WF2MAX-OC-8GD.jpg",
+        "stock": true
+    },
+    {
+        "titulo": "PC ARMADA AMD RYZEN 7 5700G 32GB 1TB",
+        "precio_venta": 1296544,
+        "categoria": "Almacenamiento",
+        "imagen": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/PC-ML13-ARMADA-GAMER.jpg",
+        "stock": true
+    }
+]
