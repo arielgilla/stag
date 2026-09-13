@@ -81,30 +81,47 @@
 </div>
 
 <script>
-    const TELEFONO_WHATSAPP = "5493510000000"; // Reemplaza con tu número real
+    const TELEFONO_WHATSAPP = "5493510000000"; // Reemplaza por tu número real de WhatsApp
     let listaProductos = [];
     let categoriaActual = 'Todas';
 
-    // Catálogo Base con Precios Actualizados + Margen (Respaldo directo)
+    // Catálogo con múltiples productos por categoría e imágenes CDN estables
     const catalogoBase = [
-        { "titulo": "Procesador AMD Ryzen 5 5600GT 4.6GHz Turbo", "precio_venta": 218500, "categoria": "Procesadores", "imagen": "https://img.venex.com.ar/products_images/1705607386_5600gt.jpg" },
-        { "titulo": "Procesador AMD Ryzen 7 5700X3D 4.1GHz", "precio_venta": 345000, "categoria": "Procesadores", "imagen": "https://img.venex.com.ar/products_images/1706798033_ryzen7.jpg" },
-        { "titulo": "Procesador Intel Core i5 12400F 4.4GHz", "precio_venta": 195000, "categoria": "Procesadores", "imagen": "https://img.venex.com.ar/products_images/1641395982_i5.jpg" },
-        { "titulo": "Placa de Video XFX Radeon RX 6600 8GB Speedster", "precio_venta": 391000, "categoria": "Placas de Video", "imagen": "https://img.venex.com.ar/products_images/1634149954_rx6600.jpg" },
-        { "titulo": "Placa de Video MSI GeForce RTX 3060 12GB Ventus", "precio_venta": 520000, "categoria": "Placas de Video", "imagen": "https://img.venex.com.ar/products_images/1614264620_rtx3060.jpg" },
-        { "titulo": "Placa de Video Palit GeForce RTX 4060 8GB Dual", "precio_venta": 485000, "categoria": "Placas de Video", "imagen": "https://img.venex.com.ar/products_images/1688133502_rtx4060.jpg" },
-        { "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz", "precio_venta": 59800, "categoria": "Memorias RAM", "imagen": "https://img.venex.com.ar/products_images/1626270054_ram16.jpg" },
-        { "titulo": "Memoria RAM Corsair Vengeance 32GB (2x16GB) DDR5 6000MHz", "precio_venta": 165000, "categoria": "Memorias RAM", "imagen": "https://img.venex.com.ar/products_images/1665063805_ddr5.jpg" },
-        { "titulo": "Disco Solido SSD Kingston NV2 1TB NVMe M.2", "precio_venta": 89000, "categoria": "Almacenamiento", "imagen": "https://img.venex.com.ar/products_images/1665584852_ssd1tb.jpg" },
-        { "titulo": "Notebook Lenovo IdeaPad 15IAU7 Core i5 8GB 512GB SSD", "precio_venta": 895000, "categoria": "Notebooks", "imagen": "https://img.venex.com.ar/products_images/1684347781_notebook.jpg" },
-        { "titulo": "Monitor Gamer Samsung Odyssey G3 24'' 144Hz 1ms", "precio_venta": 275000, "categoria": "Monitores", "imagen": "https://img.venex.com.ar/products_images/1631551020_odyssey.jpg" }
+        // PROCESADORES
+        { "titulo": "Procesador AMD Ryzen 5 5600GT 4.6GHz Turbo AM4", "precio_venta": 218500, "categoria": "Procesadores", "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&q=80" },
+        { "titulo": "Procesador AMD Ryzen 7 5700X3D 4.1GHz AM4", "precio_venta": 345000, "categoria": "Procesadores", "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&q=80" },
+        { "titulo": "Procesador Intel Core i5 12400F 4.4GHz LGA1700", "precio_venta": 195000, "categoria": "Procesadores", "imagen": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&q=80" },
+        { "titulo": "Procesador Intel Core i7 13700F 5.2GHz LGA1700", "precio_venta": 480000, "categoria": "Procesadores", "imagen": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&q=80" },
+
+        // PLACAS DE VIDEO
+        { "titulo": "Placa de Video XFX Radeon RX 6600 8GB Speedster", "precio_venta": 391000, "categoria": "Placas de Video", "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80" },
+        { "titulo": "Placa de Video MSI GeForce RTX 3060 12GB Ventus 2X", "precio_venta": 520000, "categoria": "Placas de Video", "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80" },
+        { "titulo": "Placa de Video Palit GeForce RTX 4060 8GB Dual", "precio_venta": 485000, "categoria": "Placas de Video", "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80" },
+        { "titulo": "Placa de Video Asus TUF Gaming RTX 4070 Super 12GB", "precio_venta": 890000, "categoria": "Placas de Video", "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80" },
+
+        // MEMORIAS RAM
+        { "titulo": "Memoria RAM Kingston Fury Beast 16GB DDR4 3200MHz", "precio_venta": 59800, "categoria": "Memorias RAM", "imagen": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=400&q=80" },
+        { "titulo": "Memoria RAM Kingston Fury Beast 8GB DDR4 3200MHz", "precio_venta": 32000, "categoria": "Memorias RAM", "imagen": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=400&q=80" },
+        { "titulo": "Memoria RAM Corsair Vengeance 32GB (2x16GB) DDR5 6000MHz", "precio_venta": 165000, "categoria": "Memorias RAM", "imagen": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=400&q=80" },
+
+        // ALMACENAMIENTO
+        { "titulo": "Disco Solido SSD Kingston NV2 1TB NVMe M.2", "precio_venta": 89000, "categoria": "Almacenamiento", "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&q=80" },
+        { "titulo": "Disco Solido SSD Kingston A400 480GB SATA3", "precio_venta": 45000, "categoria": "Almacenamiento", "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&q=80" },
+        { "titulo": "Disco Solido SSD WD Black SN770 2TB NVMe M.2", "precio_venta": 185000, "categoria": "Almacenamiento", "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&q=80" },
+
+        // NOTEBOOKS
+        { "titulo": "Notebook Lenovo IdeaPad 15IAU7 Core i5 8GB 512GB SSD 15.6''", "precio_venta": 895000, "categoria": "Notebooks", "imagen": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80" },
+        { "titulo": "Notebook ASUS Vivobook Go 15 Ryzen 5 16GB 512GB SSD", "precio_venta": 790000, "categoria": "Notebooks", "imagen": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80" },
+
+        // MONITORES
+        { "titulo": "Monitor Gamer Samsung Odyssey G3 24'' 144Hz 1ms", "precio_venta": 275000, "categoria": "Monitores", "imagen": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&q=80" },
+        { "titulo": "Monitor LG 22'' Full HD 75Hz HDMI IPS", "precio_venta": 145000, "categoria": "Monitores", "imagen": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&q=80" }
     ];
 
-    // Intentar cargar productos.json, o usar catalogoBase
     fetch('productos.json')
         .then(res => res.json())
         .then(data => {
-            if(Array.isArray(data) && data.length > 0) {
+            if(Array.isArray(data) && data.length > 3) {
                 listaProductos = data;
             } else {
                 listaProductos = catalogoBase;
@@ -152,13 +169,13 @@
 
         items.forEach(p => {
             const mensaje = encodeURIComponent(`Hola STAG! Me interesa comprar: ${p.titulo} - Precio: $${p.precio_venta.toLocaleString('es-AR')}`);
-            const imgSrc = p.imagen || 'https://via.placeholder.com/200/131b2e/00d2ff?text=STAG+Tech';
+            const imgSrc = p.imagen || 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80';
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
                 <div>
                     <div class="img-container">
-                        <img src="${imgSrc}" alt="${p.titulo}" onerror="this.src='https://via.placeholder.com/200/131b2e/00d2ff?text=STAG'">
+                        <img src="${imgSrc}" alt="${p.titulo}" onerror="this.src='https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&q=80'">
                     </div>
                     <div class="cat-tag">${p.categoria || 'Hardware'}</div>
                     <h3>${p.titulo}</h3>
