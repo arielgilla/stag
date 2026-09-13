@@ -2,7 +2,7 @@ import urllib.request
 import json
 import urllib.parse
 
-MARGEN_GANANCIA = 1.15  # 15% de ganancia
+MARGEN_GANANCIA = 1.15
 
 CATEGORIAS = {
     "Procesadores": "procesador",
@@ -13,28 +13,20 @@ CATEGORIAS = {
     "Monitores": "monitor"
 }
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
-}
-
+headers = {'User-Agent': 'Mozilla/5.0'}
 productos_catalogo = []
 vistos = set()
 
 for cat_nombre, query_text in CATEGORIAS.items():
-    print(f"Buscando {cat_nombre}...")
     url = f"https://api.mercadolibre.com/sites/MLA/search?q={urllib.parse.quote(query_text)}&limit=30"
-    
     try:
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=8) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode('utf-8'))
-            results = data.get('results', [])
-            
-            for item in results:
+            for item in data.get('results', []):
                 titulo = item.get('title', '').strip()
                 if not titulo or titulo in vistos:
                     continue
-                
                 precio = float(item.get('price', 0))
                 if precio <= 0:
                     continue
@@ -43,7 +35,6 @@ for cat_nombre, query_text in CATEGORIAS.items():
                 for s in ['-I.jpg', '-V.jpg']:
                     thumb = thumb.replace(s, '-O.jpg')
                 
-                # Proxy de imágenes para GitHub Pages
                 img_url = f"https://images.weserv.nl/?url={urllib.parse.quote(thumb)}&output=webp"
                 
                 productos_catalogo.append({
@@ -55,10 +46,12 @@ for cat_nombre, query_text in CATEGORIAS.items():
                 })
                 vistos.add(titulo)
     except Exception as e:
-        print(f"Error procesando {cat_nombre}: {e}")
+        print(f"Error en {cat_nombre}: {e}")
 
-# Guardar productos.json siempre
-with open('productos.json', 'w', encoding='utf-8') as f:
-    json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
-
-print(f"Proceso finalizado. Total productos: {len(productos_catalogo)}")
+# Solo sobrescribir si trajo productos (evita que se guarde un JSON vacío)
+if len(productos_catalogo) > 0:
+    with open('productos.json', 'w', encoding='utf-8') as f:
+        json.dump(productos_catalogo, f, ensure_ascii=False, indent=4)
+    print(f"Éxito: {len(productos_catalogo)} productos guardados.")
+else:
+    print("No se sobrescribió productos.json para preservar los datos actuales.")
