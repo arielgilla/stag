@@ -55,7 +55,7 @@ async def extraer_venex():
                     await page.goto(url_paginada, timeout=40000, wait_until="domcontentloaded")
                     await page.wait_for_timeout(3000) 
                     
-                    # Scroll vertical completo para activar cargas perezosas (lazy load)
+                    # Scroll vertical completo para activar cargas perezosas
                     await page.evaluate("""async () => {
                         await new Promise((resolve) => {
                             let totalHeight = 0;
@@ -72,7 +72,8 @@ async def extraer_venex():
                     }""")
                     await page.wait_for_timeout(2500)
                     
-                    tarjetas = await page.query_selector_all('div[class*="product"], article[class*="product"], div[class*="item"]')
+                    # Selector amplio y robusto para capturar las tarjetas de producto en Venex
+                    tarjetas = await page.query_selector_all('div.item-box, div.product-item, div[class*="item"], div[class*="product"], article')
                     
                     if not tarjetas:
                         print(f"✅ Fin de resultados para la categoría {categoria}.")
@@ -87,7 +88,7 @@ async def extraer_venex():
                                 continue
                                 
                             # Título
-                            title_el = await tarjeta.query_selector('h2, h3, h4, h5, a')
+                            title_el = await tarjeta.query_selector('h2, h3, h4, h5, a[class*="title"], a')
                             if not title_el:
                                 continue
                             titulo = (await title_el.inner_text()).replace('\n', ' ').strip()
@@ -112,27 +113,23 @@ async def extraer_venex():
                             
                             precio_venta = round(costo * MARGEN_GANANCIA)
                             
-                            # Extracción estricta de la imagen propia del producto en el DOM
+                            # Extracción de la imagen propia del producto
                             img_url = ""
                             img_el = await tarjeta.query_selector('img')
                             if img_el:
-                                # Revisar todos los atributos posibles donde el navegador almacena la URL real
                                 for attr in ['src', 'data-src', 'data-lazy-src', 'data-original', 'data-image', 'srcset']:
                                     val = await img_el.get_attribute(attr)
                                     if val and val.strip():
-                                        # Si es un srcset, tomar la primera URL válida
                                         if attr == 'srcset':
                                             parts = val.split(',')
                                             if parts:
                                                 val = parts[0].strip().split(' ')[0]
                                         
-                                        # Filtrar placeholders, logos institucionales o SVGs vacíos
                                         val_lower = val.lower()
                                         if not any(x in val_lower for x in ['placeholder', 'logo', 'loading', 'svg', 'data:image']):
                                             img_url = val.strip()
                                             break
 
-                            # Normalizar URL de la imagen
                             if img_url:
                                 if img_url.startswith('//'):
                                     img_url = "https:" + img_url
@@ -141,7 +138,6 @@ async def extraer_venex():
                                 elif not img_url.startswith('http'):
                                     img_url = ""
                             
-                            # Si aun así no se detecta imagen real, dejarlo vacío en lugar de inventar una falsa
                             if not img_url or any(x in img_url.lower() for x in ['placeholder', 'logo', 'svg']):
                                 img_url = ""
 
@@ -172,7 +168,7 @@ async def extraer_venex():
 
     lista_final = list(catalogo_final.values())
     con_imagen = len([p for p in lista_final if p['imagen']])
-    print(f"\n🚀 Proceso finalizado. Total productos: {len(lista_final)} | Con imagen real propia: {con_imagen}")
+    print(f"\n🚀 Proceso finalizado. Total productos: {len(lista_final)} | Con imagen real: {con_imagen}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
