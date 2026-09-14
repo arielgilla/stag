@@ -26,6 +26,7 @@ async def extraer_venex():
         )
         page = await context.new_page()
 
+        # Diccionario ampliado con la totalidad de categorías y subcategorías de Venex
         categorias = {
             "Procesadores": "/componentes-de-pc/microprocesadores",
             "Placas de Video": "/componentes-de-pc/placas-de-video",
@@ -62,7 +63,7 @@ async def extraer_venex():
                     await page.goto(url_paginada, timeout=40000, wait_until="domcontentloaded")
                     await page.wait_for_timeout(3000) 
                     
-                    # Scroll vertical completo para activar cargas dinámicas
+                    # Scroll vertical fluido para activar el lazy loading de las imágenes
                     await page.evaluate("""async () => {
                         await new Promise((resolve) => {
                             let totalHeight = 0;
@@ -70,14 +71,14 @@ async def extraer_venex():
                             let timer = setInterval(() => {
                                 window.scrollBy(0, distance);
                                 totalHeight += distance;
-                                if (totalHeight >= document.body.scrollHeight) {
+                                if (totalHeight >= document.body.scrollHeight / 2) {
                                     clearInterval(timer);
                                     resolve();
                                 }
                             }, 100);
                         });
                     }""")
-                    await page.wait_for_timeout(2500)
+                    await page.wait_for_timeout(2000)
                     
                     html = await page.content()
                     soup = BeautifulSoup(html, 'html.parser')
@@ -119,42 +120,26 @@ async def extraer_venex():
                         
                         precio_venta = round(costo * MARGEN_GANANCIA)
                         
-                        # Extraer Imagen
-                        img_url = ""
+                        # Extraer Imagen (con soporte exhaustivo para atributos lazy)
                         img_tag = tarjeta.find('img')
+                        img_url = ""
                         if img_tag:
-                            for attr in ['src', 'data-src', 'data-original', 'data-lazy-src', 'data-image', 'data-url']:
-                                val = img_tag.get(attr)
-                                if val and val.strip() and 'placeholder' not in val.lower() and 'logo' not in val.lower() and 'svg' not in val.lower():
-                                    img_url = val.strip()
-                                    break
+                            img_url = (
+                                img_tag.get('src') or 
+                                img_tag.get('data-src') or 
+                                img_tag.get('data-original') or 
+                                img_tag.get('data-lazy-src') or ""
+                            )
                             
                             if not img_url and img_tag.get('srcset'):
                                 srcset = img_tag.get('srcset')
-                                parts = srcset.split(',')
-                                if parts:
-                                    img_url = parts[0].strip().split(' ')[0]
+                                img_url = srcset.split(',')[0].strip().split(' ')[0]
 
-                        if not img_url:
-                            for el in [tarjeta] + tarjeta.find_all(True):
-                                style = el.get('style', '')
-                                if 'background-image' in style:
-                                    match_bg = re.search(r'url\(([\'"]?)(.*?)\1\)', style)
-                                    if match_bg:
-                                        img_url = match_bg.group(2)
-                                        break
-
-                        if img_url:
-                            if img_url.startswith('//'):
-                                img_url = "https:" + img_url
-                            elif img_url.startswith('/'):
+                            if img_url.startswith('/'):
                                 img_url = urljoin(URL_BASE, img_url)
-                            elif not img_url.startswith('http'):
+                            elif not img_url.startswith('http') or 'placeholder' in img_url.lower() or 'logo' in img_url.lower() or 'svg' in img_url.lower():
                                 img_url = ""
-                        
-                        if 'placeholder' in img_url.lower() or 'logo' in img_url.lower() or 'svg' in img_url.lower():
-                            img_url = ""
-
+                                
                         catalogo_final[titulo.lower()] = {
                             "titulo": titulo,
                             "categoria": categoria,
@@ -178,8 +163,7 @@ async def extraer_venex():
         await browser.close()
 
     lista_final = list(catalogo_final.values())
-    con_imagen = len([p for p in lista_final if p['imagen']])
-    print(f"\n🚀 Proceso finalizado. Total productos: {len(lista_final)} | Con imagen: {con_imagen}")
+    print(f"\n🚀 Proceso finalizado. Total de productos recolectados: {len(lista_final)}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
