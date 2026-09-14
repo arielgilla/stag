@@ -24,14 +24,28 @@ async def extraer_venex():
             args=[
                 "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
-                "--disable-setuid-sandbox"
+                "--disable-setuid-sandbox",
+                "--disable-infobars",
+                "--window-size=1920,1080"
             ]
         )
+        
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
             viewport={"width": 1920, "height": 1080},
-            locale="es-AR"
+            extra_http_headers={
+                "Accept-Language": "es-AR,es;q=0.9,en-US;q=0.8,en;q=0.7",
+                "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+                "Sec-Ch-Ua-Mobile": "?0",
+                "Sec-Ch-Ua-Platform": '"Windows"',
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "none",
+                "Sec-Fetch-User": "?1",
+                "Upgrade-Insecure-Requests": "1"
+            }
         )
+        
         page = await context.new_page()
         await page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 
@@ -69,13 +83,19 @@ async def extraer_venex():
                 
                 try:
                     await page.goto(url_paginada, timeout=60000, wait_until="domcontentloaded")
-                    await page.wait_for_timeout(4000) 
                     
-                    # Scroll vertical completo para activar cargas dinámicas
+                    content_check = await page.content()
+                    if "Just a moment..." in content_check or "Attention Required!" in content_check:
+                        print("⚠️ Bloqueo de Cloudflare detectado. Aguardando...")
+                        await page.wait_for_timeout(5000)
+                    
+                    await page.wait_for_timeout(3000)
+                    
+                    # Scroll vertical suave para forzar la carga dinámica
                     await page.evaluate("""async () => {
                         await new Promise((resolve) => {
                             let totalHeight = 0;
-                            let distance = 300;
+                            let distance = 400;
                             let timer = setInterval(() => {
                                 window.scrollBy(0, distance);
                                 totalHeight += distance;
@@ -83,43 +103,44 @@ async def extraer_venex():
                                     clearInterval(timer);
                                     resolve();
                                 }
-                            }, 100);
+                            }, 150);
                         });
                     }""")
-                    await page.wait_for_timeout(3000)
+                    await page.wait_for_timeout(2000)
                     
                     html = await page.content()
                     soup = BeautifulSoup(html, 'html.parser')
                     
                     productos_nuevos = 0
                     
-                    # Búsqueda ampliada de etiquetas de producto
-                    tarjetas = soup.find_all(
-                        lambda tag: tag.name in ['div', 'article', 'li', 'a'] and 
-                        (
-                            (tag.has_attr('class') and any(k in ' '.join(tag['class']).lower() for k in ['product', 'item', 'card', 'box', 'prod'])) or
-                            ('$' in tag.get_text())
-                        )
-                    )
+                    # Identificación flexible de contenedores de productos
+                    todos_los_elementos = soup.find_all(['div', 'article', 'li'])
+                    tarjetas = []
                     
-                    tarjetas_validas = []
-                    for t in tarjetas:
-                        texto = t.get_text(separator=' ', strip=True)
-                        if '$' in texto and len(texto) < 1000:
-                            tarjetas_validas.append(t)
+                    for el in todos_los_elementos:
+                        clases = ' '.join(el.get('class', [])).lower() if el.has_attr('class') else ''
+                        texto = el.get_text(separator=' ', strip=True)
+                        
+                        if ('product' in clases or 'item' in clases or 'card' in clases) and '$' in texto:
+                            if len(texto) < 1500:
+                                tarjetas.append(el)
                     
-                    for tarjeta in tarjetas_validas:
+                    if not tarjetas:
+                        for el in todos_los_elementos:
+                            texto = el.get_text(separator=' ', strip=True)
+                            if '$' in texto and 20 < len(texto) < 800:
+                                tarjetas.append(el)
+
+                    for tarjeta in tarjetas:
                         texto_completo = tarjeta.get_text(separator=' ', strip=True)
                         
                         # Extraer Título
-                        title_tag = tarjeta.find(['h2', 'h3', 'h4', 'h5'])
+                        title_tag = tarjeta.find(['h2', 'h3', 'h4', 'h5', 'a'])
                         if not title_tag:
                             enlaces = tarjeta.find_all('a')
                             if enlaces:
                                 title_tag = max(enlaces, key=lambda a: len(a.get_text(strip=True)))
-                        if not title_tag and tarjeta.name == 'a':
-                            title_tag = tarjeta
-                                
+                        
                         if not title_tag:
                             continue
                             
