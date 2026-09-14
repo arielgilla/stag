@@ -21,11 +21,16 @@ async def extraer_venex():
     async with async_playwright() as p:
         browser = await p.chromium.launch(
             headless=True,
-            args=["--disable-blink-features=AutomationControlled"]
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-setuid-sandbox"
+            ]
         )
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-            viewport={"width": 1920, "height": 1080}
+            viewport={"width": 1920, "height": 1080},
+            locale="es-AR"
         )
         page = await context.new_page()
         await page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
@@ -63,15 +68,10 @@ async def extraer_venex():
                 print(f"Explorando: {categoria.upper()} - Página {pagina_actual}")
                 
                 try:
-                    await page.goto(url_paginada, timeout=60000, wait_until="networkidle")
+                    await page.goto(url_paginada, timeout=60000, wait_until="domcontentloaded")
+                    await page.wait_for_timeout(4000) 
                     
-                    # Espera a que los precios se rendericen en pantalla
-                    try:
-                        await page.wait_for_selector("text=$", timeout=8000)
-                    except:
-                        pass
-                    
-                    # Scroll vertical para disparar la carga dinámica
+                    # Scroll vertical completo para activar cargas dinámicas
                     await page.evaluate("""async () => {
                         await new Promise((resolve) => {
                             let totalHeight = 0;
@@ -86,35 +86,41 @@ async def extraer_venex():
                             }, 100);
                         });
                     }""")
-                    await page.wait_for_timeout(2000)
+                    await page.wait_for_timeout(3000)
                     
                     html = await page.content()
                     soup = BeautifulSoup(html, 'html.parser')
                     
                     productos_nuevos = 0
                     
+                    # Búsqueda ampliada de etiquetas de producto
                     tarjetas = soup.find_all(
-                        lambda tag: tag.name in ['div', 'article', 'a'] and 
-                        tag.has_attr('class') and 
-                        any(k in ' '.join(tag['class']).lower() for k in ['product', 'item', 'card', 'box'])
+                        lambda tag: tag.name in ['div', 'article', 'li', 'a'] and 
+                        (
+                            (tag.has_attr('class') and any(k in ' '.join(tag['class']).lower() for k in ['product', 'item', 'card', 'box', 'prod'])) or
+                            ('$' in tag.get_text())
+                        )
                     )
                     
-                    for tarjeta in tarjetas:
+                    tarjetas_validas = []
+                    for t in tarjetas:
+                        texto = t.get_text(separator=' ', strip=True)
+                        if '$' in texto and len(texto) < 1000:
+                            tarjetas_validas.append(t)
+                    
+                    for tarjeta in tarjetas_validas:
                         texto_completo = tarjeta.get_text(separator=' ', strip=True)
                         
-                        if '$' not in texto_completo:
-                            continue
-                            
+                        # Extraer Título
                         title_tag = tarjeta.find(['h2', 'h3', 'h4', 'h5'])
                         if not title_tag:
                             enlaces = tarjeta.find_all('a')
                             if enlaces:
                                 title_tag = max(enlaces, key=lambda a: len(a.get_text(strip=True)))
-                        
                         if not title_tag and tarjeta.name == 'a':
                             title_tag = tarjeta
                                 
-                        if not title_tag: 
+                        if not title_tag:
                             continue
                             
                         titulo = title_tag.get_text(strip=True).replace('\n', ' ')
@@ -122,6 +128,7 @@ async def extraer_venex():
                         if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
                             continue
                             
+                        # Extraer Precio
                         precios_encontrados = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{1,2})?)', texto_completo)
                         if not precios_encontrados:
                             continue
@@ -129,15 +136,16 @@ async def extraer_venex():
                         raw_price = precios_encontrados[0]
                         clean_price = raw_price.replace('.', '').replace(',', '.').split('.')[0]
                         
-                        if not clean_price.isdigit(): 
+                        if not clean_price.isdigit():
                             continue
                         
                         costo = float(clean_price)
-                        if costo <= 1000: 
+                        if costo <= 1000:
                             continue 
                         
                         precio_venta = round(costo * MARGEN_GANANCIA)
                         
+                        # Extraer Imagen
                         img_url = ""
                         img_tag = tarjeta.find('img')
                         if img_tag:
