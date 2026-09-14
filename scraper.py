@@ -36,7 +36,7 @@ def extraer_venex():
     catalogo_final = {}
     vistos = set()
 
-    driver = uc.Chrome(headless=True)
+    driver = uc.Chrome(use_subprocess=True, headless=True)
 
     for categoria, path in CATEGORIAS.items():
         print(f"🔄 Extrayendo categoría: {categoria.upper()}")
