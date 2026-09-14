@@ -46,25 +46,19 @@ def extraer_imagen(tarjeta):
     img_tag = tarjeta.find('img')
     if not img_tag:
         return ""
-    
-    # Atributos donde Venex y frameworks web suelen guardar las imágenes dinámicas
     atributos = ['data-src', 'data-original', 'data-lazy-src', 'data-image', 'src']
-    
     for attr in atributos:
         val = img_tag.get(attr)
         if val and isinstance(val, str):
             val = val.strip()
             if val and not any(x in val.lower() for x in ['placeholder', 'loading', 'logo', 'blank', 'svg', 'data:image']):
                 return val
-                
-    # Probar con srcset si existe
     srcset = img_tag.get('srcset')
     if srcset and isinstance(srcset, str):
         urls = [part.strip().split(' ')[0] for part in srcset.split(',') if part.strip()]
         for u in urls:
             if u and not any(x in u.lower() for x in ['placeholder', 'loading', 'logo', 'svg']):
                 return u
-                
     return ""
 
 def extraer_venex():
@@ -75,58 +69,41 @@ def extraer_venex():
     for categoria, path in CATEGORIAS.items():
         pagina = 1
         print(f"🔄 Extrayendo categoría: {categoria.upper()}")
-        
+
         while pagina <= 15:
             url = f"{URL_BASE}{path}?page={pagina}"
             try:
                 res = session.get(url, timeout=15)
                 if res.status_code != 200:
                     break
-                    
+
                 soup = BeautifulSoup(res.text, 'html.parser')
-                
-                # Detectar contenedores
-                tarjetas = soup.find_all(['div', 'article'], class_=re.compile(r'product|item|card|box', re.I))
-                if not tarjetas:
-                    tarjetas = soup.find_all(lambda tag: tag.name in ['div', 'article'] and '$' in tag.get_text())
-                    
+                tarjetas = soup.select('div.product-item')
                 if not tarjetas:
                     break
-                    
+
                 nuevos_en_pagina = 0
                 for t in tarjetas:
-                    texto = t.get_text(separator=' ', strip=True)
-                    if '$' not in texto:
-                        continue
-                        
-                    # Extraer Título
-                    title_tag = t.find(['h2', 'h3', 'h4', 'h5']) or t.find('a', class_=re.compile(r'title|nombre|heading|product', re.I))
-                    if not title_tag:
-                        enlaces = t.find_all('a')
-                        if enlaces:
-                            title_tag = max(enlaces, key=lambda a: len(a.get_text(strip=True)))
-                            
+                    # Título
+                    title_tag = t.select_one('h2 a, h3 a, .product-title a')
                     if not title_tag:
                         continue
-                        
-                    titulo = title_tag.get_text(strip=True).replace('\n', ' ')
+                    titulo = title_tag.get_text(strip=True)
                     if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
                         continue
-                        
-                    # Extraer Precio
-                    precios = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*)', texto)
-                    if not precios:
+
+                    # Precio
+                    price_tag = t.select_one('.price')
+                    if not price_tag:
                         continue
-                        
-                    raw_price = precios[0].replace('.', '').replace(',', '')
+                    raw_price = re.sub(r'[^\d]', '', price_tag.get_text())
                     if not raw_price.isdigit():
                         continue
-                        
                     val = float(raw_price)
                     if val < 1000:
                         continue
-                        
-                    # Extraer Imagen
+
+                    # Imagen
                     img_url = extraer_imagen(t)
                     if img_url:
                         if img_url.startswith('//'):
@@ -143,11 +120,11 @@ def extraer_venex():
                     }
                     vistos.add(titulo.lower())
                     nuevos_en_pagina += 1
-                    
+
                 if nuevos_en_pagina == 0 and pagina > 1:
                     break
-                    
                 pagina += 1
+
             except Exception as e:
                 print(f"⚠️ Error en {url}: {e}")
                 break
@@ -155,7 +132,7 @@ def extraer_venex():
     lista = list(catalogo_final.values())
     con_img = len([p for p in lista if p['imagen']])
     print(f"\n🚀 Finalizado. Productos totales: {len(lista)} | Con imagen: {con_img}")
-    
+
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista, f, ensure_ascii=False, indent=4)
 
