@@ -27,8 +27,6 @@ jobs:
 
       - name: Instalar ChromeDriver que coincide con Chrome
         run: |
-          sudo apt-get update || true
-          sudo apt-get install -y wget unzip google-chrome-stable || true
           CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
           CHROME_MAJOR=$(echo $CHROME_VERSION | cut -d. -f1)
           DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_MAJOR}")
