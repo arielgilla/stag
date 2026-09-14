@@ -27,14 +27,16 @@ jobs:
 
       - name: Instalar Chrome y Chromedriver correctos
         run: |
-          sudo apt-get update
-          sudo apt-get install -y wget unzip google-chrome-stable
+          set -e
+          sudo apt-get update || true
+          sudo apt-get install -y wget unzip
+          sudo apt-get install -y google-chrome-stable || true
           CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
           CHROME_MAJOR=$(echo $CHROME_VERSION | cut -d. -f1)
           DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_MAJOR}")
           wget -q "https://chromedriver.storage.googleapis.com/${DRIVER_VERSION}/chromedriver_linux64.zip" -O /tmp/chromedriver.zip
-          unzip /tmp/chromedriver.zip -d /tmp/
-          sudo mv /tmp/chromedriver /usr/local/bin/chromedriver
+          unzip -o /tmp/chromedriver.zip -d /tmp/
+          sudo mv -f /tmp/chromedriver /usr/local/bin/chromedriver
 
       - name: Ejecutar scraper con undetected-chromedriver
         run: python scraper.py
