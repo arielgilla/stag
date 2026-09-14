@@ -8,6 +8,8 @@ MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
 
 CATEGORIAS = {
+    "Notebooks": "/computadoras/notebooks",
+    "PCs Armadas": "/computadoras/pc-armadas",
     "Procesadores": "/componentes-de-pc/microprocesadores",
     "Placas de Video": "/componentes-de-pc/placas-de-video",
     "Memorias RAM": "/componentes-de-pc/memorias-ram",
@@ -18,8 +20,6 @@ CATEGORIAS = {
     "Gabinetes": "/componentes-de-pc/gabinetes",
     "Coolers y Refrigeracion": "/componentes-de-pc/coolers-y-refrigeracion",
     "Monitores": "/monitores",
-    "Notebooks": "/computadoras/notebooks",
-    "PCs Armadas": "/computadoras/pc-armadas",
     "Teclados": "/perifericos/teclados",
     "Mouses": "/perifericos/mouses",
     "Auriculares": "/perifericos/auriculares",
@@ -34,11 +34,9 @@ CATEGORIAS = {
 def crear_sesion():
     s = requests.Session()
     s.headers.update({
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-        "Accept-Language": "es-AR,es;q=0.9,en;q=0.8",
-        "Cache-Control": "no-cache",
-        "Pragma": "no-cache"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/122 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "es-AR,es;q=0.9,en;q=0.8"
     })
     return s
 
@@ -46,20 +44,12 @@ def extraer_imagen(tarjeta):
     img_tag = tarjeta.find('img')
     if not img_tag:
         return ""
-    atributos = ['data-src', 'data-original', 'data-lazy-src', 'data-image', 'src']
-    for attr in atributos:
-        val = img_tag.get(attr)
-        if val and isinstance(val, str):
-            val = val.strip()
-            if val and not any(x in val.lower() for x in ['placeholder', 'loading', 'logo', 'blank', 'svg', 'data:image']):
-                return val
-    srcset = img_tag.get('srcset')
-    if srcset and isinstance(srcset, str):
-        urls = [part.strip().split(' ')[0] for part in srcset.split(',') if part.strip()]
-        for u in urls:
-            if u and not any(x in u.lower() for x in ['placeholder', 'loading', 'logo', 'svg']):
-                return u
-    return ""
+    val = img_tag.get('src') or img_tag.get('data-src')
+    if val and val.startswith('//'):
+        val = "https:" + val
+    elif val and val.startswith('/'):
+        val = urljoin(URL_BASE, val)
+    return val or ""
 
 def extraer_venex():
     session = crear_sesion()
@@ -78,7 +68,7 @@ def extraer_venex():
                     break
 
                 soup = BeautifulSoup(res.text, 'html.parser')
-                tarjetas = soup.select('div.product-item')
+                tarjetas = soup.select('div.item-product')
                 if not tarjetas:
                     break
 
@@ -89,7 +79,7 @@ def extraer_venex():
                     if not title_tag:
                         continue
                     titulo = title_tag.get_text(strip=True)
-                    if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
+                    if not titulo or titulo.lower() in vistos:
                         continue
 
                     # Precio
@@ -100,16 +90,9 @@ def extraer_venex():
                     if not raw_price.isdigit():
                         continue
                     val = float(raw_price)
-                    if val < 1000:
-                        continue
 
                     # Imagen
                     img_url = extraer_imagen(t)
-                    if img_url:
-                        if img_url.startswith('//'):
-                            img_url = "https:" + img_url
-                        elif img_url.startswith('/'):
-                            img_url = urljoin(URL_BASE, img_url)
 
                     catalogo_final[titulo.lower()] = {
                         "titulo": titulo,
@@ -130,9 +113,7 @@ def extraer_venex():
                 break
 
     lista = list(catalogo_final.values())
-    con_img = len([p for p in lista if p['imagen']])
-    print(f"\n🚀 Finalizado. Productos totales: {len(lista)} | Con imagen: {con_img}")
-
+    print(f"\n🚀 Finalizado. Productos totales: {len(lista)}")
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista, f, ensure_ascii=False, indent=4)
 
