@@ -1,11 +1,12 @@
 import json
 import asyncio
 import re
+import urllib.parse
+from playwright.async_api import async_playwright
 
 MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
 
-# Banco de imágenes reales y profesionales de hardware por categoría exacta
 def obtener_imagen_real(categoria, titulo):
     cat = categoria.lower()
     t = titulo.lower()
@@ -43,7 +44,6 @@ async def extraer_venex():
     catalogo_final = {}
     vistos = set()
     
-    from playwright.async_api import async_playwright
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
@@ -85,10 +85,10 @@ async def extraer_venex():
                 print(f"Explorando: {categoria.upper()} - Página {pagina_actual}")
                 
                 try:
-                    await page.goto(url_paginada, timeout=40000, wait_until="domcontentloaded")
+                    await page.goto(url_paginada, timeout=50000, wait_until="networkidle")
                     await page.wait_for_timeout(3000) 
                     
-                    # Scroll vertical completo para asegurar que carguen todos los elementos de la página
+                    # Scroll vertical completo para activar renderizado
                     await page.evaluate("""async () => {
                         await new Promise((resolve) => {
                             let totalHeight = 0;
@@ -105,28 +105,30 @@ async def extraer_venex():
                     }""")
                     await page.wait_for_timeout(2000)
                     
-                    # Extraer todos los bloques de texto de la página que contengan precios en pesos
-                    elementos_texto = await page.evaluate('''() => {
-                        const items = Array.from(document.querySelectorAll('div, article, li'));
-                        return items
-                            .map(el => el.innerText || '')
-                            .filter(text => text.includes('$') && text.length > 15 && text.length < 800);
+                    # Extraer productos directamente evaluando elementos contenedores en el DOM
+                    productos_pagina = await page.evaluate('''() => {
+                        const results = [];
+                        // Buscar todos los elementos que parezcan tarjetas de producto o bloques con texto de precio
+                        const nodes = document.querySelectorAll('div, article, section');
+                        nodes.forEach(node => {
+                            const text = node.innerText || '';
+                            if (text.includes('$') && text.length > 20 && text.length < 600) {
+                                const lines = text.split('\\n').map(l => l.trim()).filter(l => l.length > 0);
+                                results.push(lines);
+                            }
+                        });
+                        return results;
                     }''')
                     
-                    if not elementos_texto or len(elementos_texto) == 0:
+                    if not productos_pagina or len(productos_pagina) == 0:
                         print(f"✅ Fin de resultados para la categoría {categoria}.")
                         break
                         
                     productos_nuevos = 0
                     
-                    for texto_bloque in elementos_texto:
-                        lineas = [l.strip() for l in texto_bloque.split('\n') if l.strip()]
-                        if not lineas:
-                            continue
-                            
-                        # Buscar línea con precio válido
-                        precio_encontrado = None
+                    for lineas in productos_pagina:
                         titulo_candidato = None
+                        precio_encontrado = None
                         
                         for i, linea in enumerate(lineas):
                             precios = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{1,2})?)', linea)
@@ -134,10 +136,9 @@ async def extraer_venex():
                                 raw_price = precios[0]
                                 clean_price = raw_price.replace('.', '').replace(',', '.').split('.')[0]
                                 if clean_price.isdigit():
-                                    val_num = float(clean_price)
-                                    if val_num > 1000:
-                                        precio_encontrado = val_num
-                                        # El título suele estar en las líneas anteriores al precio
+                                    val = float(clean_price)
+                                    if val > 1000:
+                                        precio_encontrado = val
                                         if i > 0:
                                             titulo_candidato = lineas[i - 1]
                                         break
@@ -146,10 +147,9 @@ async def extraer_venex():
                             continue
                             
                         titulo = titulo_candidato.replace('\n', ' ').strip()
-                        if len(titulo) < 5 or "comprar" in titulo.lower() or "cuotas" in titulo.lower() or "envío" in titulo.lower():
-                            # Intentar buscar otra línea como título
+                        if len(titulo) < 5 or any(w in titulo.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva', '$']):
                             for l in lineas:
-                                if len(l) > 8 and '$' not in l and not any(w in l.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva']):
+                                if len(l) > 6 and '$' not in l and not any(w in l.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva']):
                                     titulo = l
                                     break
                                     
@@ -182,7 +182,7 @@ async def extraer_venex():
         await browser.close()
 
     lista_final = list(catalogo_final.values())
-    print(f"\n🚀 Proceso finalizado con éxito. Total productos en catálogo: {len(lista_final)}")
+    print(f"\n🚀 Proceso finalizado con éxito. Total productos recolectados: {len(lista_final)}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
