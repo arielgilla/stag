@@ -1,172 +1,120 @@
 import json
-import asyncio
+import urllib.request
+import urllib.parse
 import re
-import subprocess
-from urllib.parse import urljoin
-from playwright.async_api import async_playwright
-
-try:
-    from bs4 import BeautifulSoup
-except ImportError:
-    subprocess.run(["pip", "install", "beautifulsoup4"], check=True)
-    from bs4 import BeautifulSoup
 
 MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
 
-async def extraer_venex():
+def extraer_venex():
     catalogo_final = {}
     vistos = set()
     
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-            viewport={"width": 1920, "height": 1080}
-        )
-        page = await context.new_page()
+    # Categorías y sus rutas en Venex
+    categorias = {
+        "Procesadores": "/componentes-de-pc/microprocesadores",
+        "Placas de Video": "/componentes-de-pc/placas-de-video",
+        "Memorias RAM": "/componentes-de-pc/memorias-ram",
+        "Almacenamiento SSD": "/componentes-de-pc/discos-solidos-ssd",
+        "Discos Rigidos": "/componentes-de-pc/discos-rigidos",
+        "Motherboards": "/componentes-de-pc/motherboards",
+        "Fuentes": "/componentes-de-pc/fuentes",
+        "Gabinetes": "/componentes-de-pc/gabinetes",
+        "Coolers y Refrigeracion": "/componentes-de-pc/coolers-y-refrigeracion",
+        "Monitores": "/monitores",
+        "Notebooks": "/computadoras/notebooks",
+        "PCs Armadas": "/computadoras/pc-armadas",
+        "Teclados": "/perifericos/teclados",
+        "Mouses": "/perifericos/mouses",
+        "Auriculares": "/perifericos/auriculares",
+        "Mousepads": "/perifericos/mousepads",
+        "Sillas Gamer": "/gaming/sillas-gamer",
+        "Consolas y Videojuegos": "/gaming/consolas-y-videojuegos",
+        "Audio y Parlantes": "/audio-y-video/parlantes",
+        "Almacenamiento Externo": "/almacenamiento/pendrives-y-tarjetas-de-memoria",
+        "Conectividad y Redes": "/conectividad/routers-y-repetidores"
+    }
 
-        # Diccionario ampliado con la totalidad de categorías y subcategorías de Venex
-        categorias = {
-            "Procesadores": "/componentes-de-pc/microprocesadores",
-            "Placas de Video": "/componentes-de-pc/placas-de-video",
-            "Memorias RAM": "/componentes-de-pc/memorias-ram",
-            "Almacenamiento SSD": "/componentes-de-pc/discos-solidos-ssd",
-            "Discos Rigidos": "/componentes-de-pc/discos-rigidos",
-            "Motherboards": "/componentes-de-pc/motherboards",
-            "Fuentes": "/componentes-de-pc/fuentes",
-            "Gabinetes": "/componentes-de-pc/gabinetes",
-            "Coolers y Refrigeracion": "/componentes-de-pc/coolers-y-refrigeracion",
-            "Monitores": "/monitores",
-            "Notebooks": "/computadoras/notebooks",
-            "PCs Armadas": "/computadoras/pc-armadas",
-            "Teclados": "/perifericos/teclados",
-            "Mouses": "/perifericos/mouses",
-            "Auriculares": "/perifericos/auriculares",
-            "Mousepads": "/perifericos/mousepads",
-            "Sillas Gamer": "/gaming/sillas-gamer",
-            "Consolas y Videojuegos": "/gaming/consolas-y-videojuegos",
-            "Audio y Parlantes": "/audio-y-video/parlantes",
-            "Almacenamiento Externo": "/almacenamiento/pendrives-y-tarjetas-de-memoria",
-            "Conectividad y Redes": "/conectividad/routers-y-repetidores"
-        }
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "es-ES,es;q=0.9,en;q=0.8"
+    }
 
-        for categoria, path in categorias.items():
-            url_categoria = f"{URL_BASE}{path}"
-            pagina_actual = 1
+    for categoria, path in categorias.items():
+        pagina_actual = 1
+        while pagina_actual <= 10:  # Límite de seguridad por categoría
+            url_paginada = f"{URL_BASE}{path}?page={pagina_actual}"
+            print(f"Consultando: {categoria.upper()} - Página {pagina_actual}")
             
-            while True:
-                url_paginada = f"{url_categoria}?page={pagina_actual}"
-                print(f"Explorando: {categoria.upper()} - Página {pagina_actual}")
+            try:
+                req = urllib.request.Request(url_paginada, headers=headers)
+                with urllib.request.urlopen(req, timeout=30) as response:
+                    html = response.read().decode('utf-8', errors='ignore')
                 
-                try:
-                    await page.goto(url_paginada, timeout=40000, wait_until="domcontentloaded")
-                    await page.wait_for_timeout(3000) 
-                    
-                    # Scroll vertical fluido para activar el lazy loading de las imágenes
-                    await page.evaluate("""async () => {
-                        await new Promise((resolve) => {
-                            let totalHeight = 0;
-                            let distance = 300;
-                            let timer = setInterval(() => {
-                                window.scrollBy(0, distance);
-                                totalHeight += distance;
-                                if (totalHeight >= document.body.scrollHeight / 2) {
-                                    clearInterval(timer);
-                                    resolve();
-                                }
-                            }, 100);
-                        });
-                    }""")
-                    await page.wait_for_timeout(2000)
-                    
-                    html = await page.content()
-                    soup = BeautifulSoup(html, 'html.parser')
-                    
-                    productos_nuevos = 0
-                    tarjetas = soup.find_all(lambda tag: tag.name in ['div', 'article'] and tag.has_attr('class') and any('product' in c.lower() or 'item' in c.lower() for c in tag['class']))
-                    
-                    for tarjeta in tarjetas:
-                        texto_completo = tarjeta.get_text(separator=' ', strip=True)
-                        
-                        if '$' not in texto_completo:
-                            continue
-                            
-                        # Extraer Título
-                        title_tag = tarjeta.find(['h2', 'h3', 'h4', 'h5'])
-                        if not title_tag:
-                            enlaces = tarjeta.find_all('a')
-                            if enlaces:
-                                title_tag = max(enlaces, key=lambda a: len(a.get_text(strip=True)))
-                                
-                        if not title_tag: continue
-                        titulo = title_tag.get_text(strip=True).replace('\n', ' ')
-                        
-                        if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
-                            continue
-                            
-                        # Extraer Precio
-                        precios_encontrados = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{1,2})?)', texto_completo)
-                        if not precios_encontrados:
-                            continue
-                            
-                        raw_price = precios_encontrados[0]
-                        clean_price = raw_price.replace('.', '').replace(',', '.').split('.')[0]
-                        
-                        if not clean_price.isdigit(): continue
-                        
-                        costo = float(clean_price)
-                        if costo <= 1000: continue 
-                        
-                        precio_venta = round(costo * MARGEN_GANANCIA)
-                        
-                        # Extraer Imagen (con soporte exhaustivo para atributos lazy)
-                        img_tag = tarjeta.find('img')
-                        img_url = ""
-                        if img_tag:
-                            img_url = (
-                                img_tag.get('src') or 
-                                img_tag.get('data-src') or 
-                                img_tag.get('data-original') or 
-                                img_tag.get('data-lazy-src') or ""
-                            )
-                            
-                            if not img_url and img_tag.get('srcset'):
-                                srcset = img_tag.get('srcset')
-                                img_url = srcset.split(',')[0].strip().split(' ')[0]
-
-                            if img_url.startswith('/'):
-                                img_url = urljoin(URL_BASE, img_url)
-                            elif not img_url.startswith('http') or 'placeholder' in img_url.lower() or 'logo' in img_url.lower() or 'svg' in img_url.lower():
-                                img_url = ""
-                                
-                        catalogo_final[titulo.lower()] = {
-                            "titulo": titulo,
-                            "categoria": categoria,
-                            "precio_venta": precio_venta,
-                            "imagen": img_url,
-                            "stock": True
-                        }
-                        vistos.add(titulo.lower())
-                        productos_nuevos += 1
-                        
-                    if productos_nuevos == 0:
-                        print(f"✅ Fin de resultados para la categoría {categoria}.")
-                        break
-                        
-                    pagina_actual += 1
-                    
-                except Exception as e:
-                    print(f"Error procesando {url_paginada}: {e}")
+                # Si la página no devuelve contenido útil o nos redirige/bloquea
+                if not html or "cloudflare" in html.lower() or len(html) < 5000:
+                    print(f"⚠️ Posible bloqueo o fin de páginas en {categoria}.")
                     break
 
-        await browser.close()
+                # Extraer bloques de productos mediante expresiones regulares seguras sobre el HTML
+                # Buscamos patrones típicos de títulos y precios en el código fuente
+                productos_nuevos = 0
+                
+                # Extraer todos los fragmentos que contengan precios en pesos argentinos
+                # Buscamos precios en formato $ X.XXX o similar
+                fragmentos = re.findall(r'<[a-zA-Z0-9]+[^>]*>(?:(?!<\/[a-zA-Z0-9]+>).)*?\$[0-9]{1,3}(?:\.[0-9]{3})*(?:,\d{2})?</[a-zA-Z0-9]+>', html)
+                
+                # Método alternativo general si el HTML está minificado: extraer texto plano de etiquetas h2, h3, a, span con precios cercanos
+                # Buscamos precios numéricos acompañados de textos largos (títulos)
+                titulos_precios = re.findall(r'title="([^"]+)"[^>]*>.*?\$([0-9]{1,3}(?:\.[0-9]{3})*)', html, re.DOTALL)
+                
+                if not titulos_precios:
+                    # Búsqueda alternativa por estructura genérica de enlaces y precios en texto
+                    titulos_precios = re.findall(r'class="[^"]*(?:title|name|producto)[^"]*">([^<]+)</(?:h2|h3|a|span)>.*?\$([0-9]{1,3}(?:\.[0-9]{3})*)', html, re.DOTALL)
+
+                for titulo_raw, precio_raw in titulos_precios:
+                    titulo = titulo_raw.replace('\n', ' ').strip()
+                    clean_precio = precio_raw.replace('.', '').replace(',', '.')
+                    
+                    if not clean_precio.isdigit():
+                        continue
+                        
+                    costo = float(clean_precio)
+                    if costo <= 1000 or len(titulo) < 5:
+                        continue
+                        
+                    if titulo.lower() in vistos:
+                        continue
+                        
+                    precio_venta = round(costo * MARGEN_GANANCIA)
+                    
+                    catalogo_final[titulo.lower()] = {
+                        "titulo": titulo,
+                        "categoria": categoria,
+                        "precio_venta": precio_venta,
+                        "imagen": "", 
+                        "stock": True
+                    }
+                    vistos.add(titulo.lower())
+                    productos_nuevos += 1
+
+                print(f"-> Encontrados {productos_nuevos} productos nuevos en esta página.")
+                
+                if productos_nuevos == 0 and pagina_actual > 1:
+                    break
+                    
+                pagina_actual += 1
+                
+            except Exception as e:
+                print(f"Error al conectar con {url_paginada}: {e}")
+                break
 
     lista_final = list(catalogo_final.values())
-    print(f"\n🚀 Proceso finalizado. Total de productos recolectados: {len(lista_final)}")
+    print(f"\n🚀 Proceso finalizado. Total productos obtenidos: {len(lista_final)}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
-    asyncio.run(extraer_venex())
+    extraer_venex()
