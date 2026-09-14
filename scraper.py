@@ -1,10 +1,9 @@
 import json
 import re
-from urllib.parse import urljoin
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 import time
+from urllib.parse import urljoin
+import undetected_chromedriver as uc
+from selenium.webdriver.common.by import By
 
 MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
@@ -37,19 +36,13 @@ def extraer_venex():
     catalogo_final = {}
     vistos = set()
 
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-
-    driver = webdriver.Chrome(options=options)
+    driver = uc.Chrome(headless=True)
 
     for categoria, path in CATEGORIAS.items():
         print(f"🔄 Extrayendo categoría: {categoria.upper()}")
         url = f"{URL_BASE}{path}"
         driver.get(url)
-        time.sleep(5)  # esperar a que cargue el DOM
+        time.sleep(8)  # esperar a que cargue todo
 
         tarjetas = driver.find_elements(By.CSS_SELECTOR, "div.item-product")
         print(f"➡️ {len(tarjetas)} productos detectados en {categoria}")
