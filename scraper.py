@@ -1,5 +1,6 @@
 import json
 import asyncio
+import re
 from playwright.async_api import async_playwright
 
 MARGEN_GANANCIA = 1.15
@@ -10,26 +11,12 @@ async def extraer_venex():
     vistos = set()
     
     async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox",
-                "--disable-setuid-sandbox",
-                "--disable-infobars"
-            ]
-        )
-        
+        browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-            viewport={"width": 1920, "height": 1080},
-            locale="es-AR"
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            viewport={"width": 1920, "height": 1080}
         )
-        
         page = await context.new_page()
-        
-        # Ocultar huellas de automatización
-        await page.add_init_script("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });")
 
         categorias = {
             "Procesadores": "/componentes-de-pc/microprocesadores",
@@ -53,97 +40,80 @@ async def extraer_venex():
             url_categoria = f"{URL_BASE}{path}"
             pagina_actual = 1
             
-            while pagina_actual <= 5: # Límite por categoría para asegurar velocidad
+            while pagina_actual <= 5:
                 url_paginada = f"{url_categoria}?page={pagina_actual}"
-                print(f"Explorando: {categoria.upper()} - Página {pagina_actual}")
+                print(f"Extrayendo: {categoria.upper()} - Página {pagina_actual}")
                 
                 try:
-                    productos_en_pagina = []
-                    
-                    # Interceptar las respuestas de red para capturar el JSON del catálogo directamente
-                    async def handle_response(response):
-                        if "api" in response.url or "search" in response.url or "product" in response.url:
-                            try:
-                                json_data = await response.json()
-                                if isinstance(json_data, list):
-                                    productos_en_pagina.extend(json_data)
-                                elif isinstance(json_data, dict) and "products" in json_data:
-                                    productos_en_pagina.extend(json_data["products"])
-                            except:
-                                pass
-
-                    page.on("response", handle_response)
-                    
-                    await page.goto(url_paginada, timeout=45000, wait_until="domcontentloaded")
+                    await page.goto(url_paginada, timeout=60000, wait_until="networkidle")
                     await page.wait_for_timeout(3000)
                     
-                    # Desvincular el evento para la siguiente iteración
-                    page.remove_listener("response", handle_response)
+                    # Scroll para disparar la carga de elementos
+                    await page.evaluate("window.scrollTo(0, document.body.scrollHeight);")
+                    await page.wait_for_timeout(2000)
                     
-                    # Extraer también directamente del DOM visual por si el JSON no se capturó completo
-                    elementos_tarjetas = await page.query_selector_all('div[class*="item"], div[class*="product"], article')
+                    tarjetas = await page.query_selector_all('div[class*="summary"], div[class*="item"], div[class*="product"], article, li[class*="item"]')
                     
+                    if not tarjetas:
+                        print(f"Fin de resultados para {categoria} en página {pagina_actual}.")
+                        break
+                        
                     productos_nuevos = 0
                     
-                    # Procesar datos visuales del DOM como respaldo infalible
-                    for tarjeta in elementos_tarjetas:
+                    for tarjeta in tarjetas:
                         try:
                             texto = await tarjeta.inner_text()
                             if not texto or '$' not in texto:
                                 continue
-                            
+                                
                             lineas = [l.strip() for l in texto.split('\n') if l.strip()]
-                            titulo = ""
+                            if len(lineas) < 2:
+                                continue
+                                
                             precio_val = None
+                            titulo_candidato = None
                             
-                            for i, l in enumerate(lineas):
-                                if '$' in l:
-                                    import re
-                                    precios = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*)', l)
-                                    if precios:
-                                        clean = precios[0].replace('.', '').replace(',', '')
-                                        if clean.isdigit():
-                                            val = float(clean)
-                                            if val > 1000:
-                                                precio_val = val
-                                                if i > 0:
-                                                    titulo = lineas[i - 1]
-                                                break
-                            
-                            if not titulo and len(lineas) > 0:
-                                titulo = lineas[0]
-                                
-                            if not titulo or not precio_val or len(titulo) < 5:
+                            for i, linea in enumerate(lineas):
+                                precios = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{1,2})?)', linea)
+                                if precios:
+                                    raw = precios[0].replace('.', '').replace(',', '.').split('.')[0]
+                                    if raw.isdigit():
+                                        val = float(raw)
+                                        if val > 1000:
+                                            precio_val = val
+                                            if i > 0:
+                                                titulo_candidato = lineas[i - 1]
+                                            break
+                                            
+                            if not precio_val or not titulo_candidato:
                                 continue
                                 
-                            if titulo.lower() in vistos:
-                                continue
-                                
-                            # Buscar imagen real dentro de la tarjeta
-                            img_el = await tarjeta.query_selector('img')
-                            img_url = ""
-                            if img_el:
-                                for attr in ['src', 'data-src', 'data-lazy-src']:
-                                    val = await img_el.get_attribute(attr)
-                                    if val and val.startswith('http'):
-                                        img_url = val
+                            titulo = titulo_candidato.replace('\n', ' ').strip()
+                            if len(titulo) < 5 or any(w in titulo.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva', '$']):
+                                for l in lineas:
+                                    if len(l) > 6 and '$' not in l and not any(w in l.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva']):
+                                        titulo = l
                                         break
                                         
+                            if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
+                                continue
+                                
                             precio_venta = round(precio_val * MARGEN_GANANCIA)
                             
                             catalogo_final[titulo.lower()] = {
                                 "titulo": titulo,
                                 "categoria": categoria,
                                 "precio_venta": precio_venta,
-                                "imagen": img_url,
+                                "imagen": "", # Se resolverá en el siguiente paso
                                 "stock": True
                             }
                             vistos.add(titulo.lower())
                             productos_nuevos += 1
-                        except:
+                            
+                        except Exception:
                             continue
                             
-                    if productos_nuevos == 0 and pagina_actual > 1:
+                    if productos_nuevos == 0:
                         break
                         
                     pagina_actual += 1
@@ -155,7 +125,7 @@ async def extraer_venex():
         await browser.close()
 
     lista_final = list(catalogo_final.values())
-    print(f"\n🚀 Sincronización finalizada. Total de productos reales obtenidos: {len(lista_final)}")
+    print(f"\nExtracción finalizada. Total de productos obtenidos: {len(lista_final)}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
