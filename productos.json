@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "titulo": "Procesador AMD Ryzen 7 5700G",
+    "categoria": "Procesadores",
+    "precio_venta": 281750,
+    "imagen": "",
+    "stock": true
+  }
+]
