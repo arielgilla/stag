@@ -119,10 +119,8 @@ async def extraer_venex():
                         
                         precio_venta = round(costo * MARGEN_GANANCIA)
                         
-                        # 🖼️ EXTRACCIÓN DE IMAGEN MEJORADA (Busca en fuentes, data-attributes, estilos y enlaces internos)
+                        # Extraer Imagen
                         img_url = ""
-                        
-                        # 1. Buscar en la etiqueta <img> dentro de la tarjeta
                         img_tag = tarjeta.find('img')
                         if img_tag:
                             for attr in ['src', 'data-src', 'data-original', 'data-lazy-src', 'data-image', 'data-url']:
@@ -137,7 +135,6 @@ async def extraer_venex():
                                 if parts:
                                     img_url = parts[0].strip().split(' ')[0]
 
-                        # 2. Si no apareció, buscar en estilos CSS de fondo de la tarjeta o contenedor de imagen
                         if not img_url:
                             for el in [tarjeta] + tarjeta.find_all(True):
                                 style = el.get('style', '')
@@ -147,7 +144,6 @@ async def extraer_venex():
                                         img_url = match_bg.group(2)
                                         break
 
-                        # 3. Limpieza y validación final de la URL obtenida
                         if img_url:
                             if img_url.startswith('//'):
                                 img_url = "https:" + img_url
@@ -184,70 +180,6 @@ async def extraer_venex():
     lista_final = list(catalogo_final.values())
     con_imagen = len([p for p in lista_final if p['imagen']])
     print(f"\n🚀 Proceso finalizado. Total productos: {len(lista_final)} | Con imagen: {con_imagen}")
-
-    with open('productos.json', 'w', encoding='utf-8') as f:
-        json.dump(lista_final, f, ensure_ascii=False, indent=4)
-
-if __name__ == "__main__":
-    asyncio.run(extraer_venex())    # Extraer Precio
-                        precios_encontrados = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{1,2})?)', texto_completo)
-                        if not precios_encontrados:
-                            continue
-                            
-                        raw_price = precios_encontrados[0]
-                        clean_price = raw_price.replace('.', '').replace(',', '.').split('.')[0]
-                        
-                        if not clean_price.isdigit(): continue
-                        
-                        costo = float(clean_price)
-                        if costo <= 1000: continue 
-                        
-                        precio_venta = round(costo * MARGEN_GANANCIA)
-                        
-                        # Extraer Imagen (con soporte exhaustivo para atributos lazy)
-                        img_tag = tarjeta.find('img')
-                        img_url = ""
-                        if img_tag:
-                            img_url = (
-                                img_tag.get('src') or 
-                                img_tag.get('data-src') or 
-                                img_tag.get('data-original') or 
-                                img_tag.get('data-lazy-src') or ""
-                            )
-                            
-                            if not img_url and img_tag.get('srcset'):
-                                srcset = img_tag.get('srcset')
-                                img_url = srcset.split(',')[0].strip().split(' ')[0]
-
-                            if img_url.startswith('/'):
-                                img_url = urljoin(URL_BASE, img_url)
-                            elif not img_url.startswith('http') or 'placeholder' in img_url.lower() or 'logo' in img_url.lower() or 'svg' in img_url.lower():
-                                img_url = ""
-                                
-                        catalogo_final[titulo.lower()] = {
-                            "titulo": titulo,
-                            "categoria": categoria,
-                            "precio_venta": precio_venta,
-                            "imagen": img_url,
-                            "stock": True
-                        }
-                        vistos.add(titulo.lower())
-                        productos_nuevos += 1
-                        
-                    if productos_nuevos == 0:
-                        print(f"✅ Fin de resultados para la categoría {categoria}.")
-                        break
-                        
-                    pagina_actual += 1
-                    
-                except Exception as e:
-                    print(f"Error procesando {url_paginada}: {e}")
-                    break
-
-        await browser.close()
-
-    lista_final = list(catalogo_final.values())
-    print(f"\n🚀 Proceso finalizado. Total de productos recolectados: {len(lista_final)}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
