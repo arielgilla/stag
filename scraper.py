@@ -2,9 +2,13 @@ import json
 import re
 import time
 from urllib.parse import urljoin
+import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+
+# Instala automáticamente el ChromeDriver correcto
+chromedriver_autoinstaller.install()
 
 MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
