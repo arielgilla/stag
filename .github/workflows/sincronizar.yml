@@ -24,10 +24,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          # Instalar navegadores para Playwright
-          python -m playwright install chromium
 
-      - name: Ejecutar scraper con Playwright
+      - name: Instalar Chrome y Chromedriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip xvfb
+          sudo apt-get install -y google-chrome-stable || true
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
+          wget -q "https://chromedriver.storage.googleapis.com/${CHROME_VERSION}/chromedriver_linux64.zip" -O /tmp/chromedriver.zip || true
+          unzip /tmp/chromedriver.zip -d /tmp/ || true
+          sudo mv /tmp/chromedriver /usr/local/bin/chromedriver || true
+
+      - name: Ejecutar scraper con Selenium
         run: python scraper.py
 
       - name: Debug productos.json
