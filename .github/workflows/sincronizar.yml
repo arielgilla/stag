@@ -25,16 +25,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Instalar ChromeDriver que coincide con Chrome exacto
+      - name: Instalar ChromeDriver que coincide con Chrome major
         run: |
           CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
+          CHROME_MAJOR=$(echo $CHROME_VERSION | cut -d. -f1)
           echo "Versión de Chrome detectada: $CHROME_VERSION"
-          DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-          if [ -z "$DRIVER_VERSION" ]; then
-            # fallback: usar el major version si no existe exacto
-            CHROME_MAJOR=$(echo $CHROME_VERSION | cut -d. -f1)
-            DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_MAJOR}")
-          fi
+          echo "Major version: $CHROME_MAJOR"
+          DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_MAJOR}")
           echo "Versión de ChromeDriver a instalar: $DRIVER_VERSION"
           wget -q "https://chromedriver.storage.googleapis.com/${DRIVER_VERSION}/chromedriver_linux64.zip" -O /tmp/chromedriver.zip
           unzip -o /tmp/chromedriver.zip -d /tmp/
