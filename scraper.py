@@ -1,6 +1,5 @@
 import json
 import asyncio
-import re
 from urllib.parse import urljoin
 from playwright.async_api import async_playwright
 
@@ -13,60 +12,54 @@ async def extraer_venex():
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
+        # Usamos un User-Agent de Mac para reducir la probabilidad de bloqueo por Cloudflare
         context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-            viewport={"width": 1280, "height": 800}
+            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            viewport={"width": 1920, "height": 1080}
         )
         page = await context.new_page()
 
-        print("Navegando a la página principal para descubrir categorías...")
-        try:
-            await page.goto(URL_BASE, timeout=40000, wait_until="domcontentloaded")
-            await page.wait_for_timeout(5000)
-        except Exception as e:
-            print(f"Error al cargar la página principal: {e}")
-            await browser.close()
-            return
+        # Puntos de entrada principales (cubre la totalidad del catálogo)
+        categorias_base = [
+            "componentes-de-pc",
+            "perifericos",
+            "monitores",
+            "computadoras",
+            "notebooks",
+            "almacenamiento",
+            "accesorios",
+            "conectividad",
+            "energia",
+            "gaming"
+        ]
 
-        # Descubrimiento dinámico de enlaces del menú de navegación
-        enlaces = await page.query_selector_all('nav a, header a, .menu a')
-        categorias_urls = {}
-        
-        for enlace in enlaces:
-            texto = (await enlace.inner_text()).strip()
-            href = await enlace.get_attribute('href')
-            
-            if href and texto and len(texto) > 2:
-                # Filtrar enlaces irrelevantes
-                href_lower = href.lower()
-                if not any(x in href_lower for x in ['contacto', 'login', 'carrito', '#', 'javascript']):
-                    full_url = urljoin(URL_BASE, href)
-                    if full_url.startswith(URL_BASE):
-                        categorias_urls[texto] = full_url
-
-        print(f"Se descubrieron {len(categorias_urls)} categorías para explorar.")
-
-        for categoria, url in categorias_urls.items():
+        for categoria in categorias_base:
+            url_categoria = f"{URL_BASE}/{categoria}"
             pagina_actual = 1
+            
             while True:
-                url_paginada = f"{url}?page={pagina_actual}" if "?" not in url else f"{url}&page={pagina_actual}"
-                print(f"Explorando: {categoria} - Página {pagina_actual} ({url_paginada})")
+                # Venex suele usar ?page=X o &page=X
+                url_paginada = f"{url_categoria}?page={pagina_actual}"
+                print(f"Explorando: {categoria.upper()} - Página {pagina_actual}")
                 
                 try:
                     await page.goto(url_paginada, timeout=30000, wait_until="domcontentloaded")
-                    await page.wait_for_timeout(3000)
                     
-                    tarjetas = await page.query_selector_all('.item, .product-item, .box-product, [class*="product"]')
+                    # Esperamos explícitamente a que aparezca al menos un precio o pase el timeout
+                    try:
+                        await page.wait_for_selector('.price, .precio, [class*="price"]', timeout=5000)
+                    except Exception:
+                        print(f"Fin de resultados detectado en {categoria} (página {pagina_actual}).")
+                        break # Si no carga ningún precio en 5 segundos, ya no hay más productos
                     
-                    if not tarjetas:
-                        print(f"No hay más productos en {categoria}.")
-                        break
+                    # Selectores súper amplios para capturar cualquier tarjeta
+                    tarjetas = await page.query_selector_all('div.product-box, div.item, article, [class*="product-item"]')
                     
                     productos_nuevos = 0
                     
                     for tarjeta in tarjetas:
                         try:
-                            # Título
+                            # Extraer Título
                             title_el = await tarjeta.query_selector('h2, h3, h4, .name, .title, a')
                             if not title_el: continue
                             titulo = (await title_el.inner_text()).replace('\n', ' ').strip()
@@ -74,7 +67,7 @@ async def extraer_venex():
                             if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
                                 continue
 
-                            # Precio
+                            # Extraer Precio
                             price_el = await tarjeta.query_selector('.price, .precio, [class*="price"]')
                             if not price_el: continue
                             raw_price = await price_el.inner_text()
@@ -91,7 +84,7 @@ async def extraer_venex():
                             
                             precio_venta = round(costo * MARGEN_GANANCIA)
 
-                            # Imagen
+                            # Extraer Imagen
                             img_el = await tarjeta.query_selector('img')
                             img_url = ""
                             if img_el:
@@ -103,7 +96,7 @@ async def extraer_venex():
 
                             catalogo_final[titulo.lower()] = {
                                 "titulo": titulo,
-                                "categoria": categoria,
+                                "categoria": categoria.replace('-', ' ').title(),
                                 "precio_venta": precio_venta,
                                 "imagen": img_url,
                                 "stock": True
@@ -115,7 +108,7 @@ async def extraer_venex():
                             continue
                             
                     if productos_nuevos == 0:
-                        break # Fin de la paginación para esta categoría
+                        break # Si no se extrajo nada nuevo, la página está vacía
                         
                     pagina_actual += 1
                     
