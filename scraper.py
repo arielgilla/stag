@@ -2,27 +2,19 @@
 # -*- coding: utf-8 -*-
 """
 Web Scraper para Venex (https://www.venex.com.ar)
-Descubre dinámicamente todas las categorías de productos y extrae el catálogo completo
-con margen de ganancia del 15% (costo * 1.15)
-
-Arquitectura:
-- Descubrimiento dinámico de categorías y subcategorías
-- Control inteligente de paginación
-- Prevención de timeouts con domcontentloaded
-- Extracción limpia de datos sin errores de sintaxis
-- Consolidación en productos.json
+Descubre dinámicamente categorías, subcategorías y extrae catálogo completo
+con margen de ganancia 15% y estructura de categorías jerárquica
 """
 
 import asyncio
 import json
 import re
-from typing import List, Set, Dict, Any, Optional
+from typing import List, Set, Dict, Any, Optional, Tuple
 from urllib.parse import urljoin
 import logging
 
 from playwright.async_api import async_playwright, Page, Browser, BrowserContext
 
-# Configurar logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
@@ -31,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 
 class VenexScraper:
-    """Web scraper completo para catálogo de productos de Venex"""
+    """Web scraper completo para Venex con categorías jerárquicas"""
     
     def __init__(self):
         self.base_url = "https://www.venex.com.ar"
@@ -40,9 +32,10 @@ class VenexScraper:
         self.visited_urls: Set[str] = set()
         self.browser: Optional[Browser] = None
         self.context: Optional[BrowserContext] = None
+        self.categories_tree: Dict[str, List[Tuple[str, str]]] = {}
         
     async def init_browser(self):
-        """Inicializar navegador Playwright"""
+        """Inicializar navegador"""
         try:
             playwright = await async_playwright().start()
             self.browser = await playwright.chromium.launch(headless=True)
@@ -55,7 +48,7 @@ class VenexScraper:
             raise
         
     async def close_browser(self):
-        """Cerrar recursos del navegador"""
+        """Cerrar navegador"""
         try:
             if self.context:
                 await self.context.close()
@@ -66,141 +59,157 @@ class VenexScraper:
             logger.error(f"✗ Error cerrando navegador: {e}")
         
     async def goto_page(self, page: Page, url: str, wait_time: int = 3000) -> bool:
-        """Navegar a URL con manejo robusto de errores"""
+        """Navegar a URL"""
         try:
             await page.goto(url, wait_until="domcontentloaded", timeout=30000)
             await page.wait_for_timeout(wait_time)
             return True
         except Exception as e:
-            logger.error(f"✗ Fallo navegando a {url}: {e}")
+            logger.error(f"✗ Error navegando a {url}: {e}")
             return False
-            
-    async def discover_categories(self, page: Page) -> List[str]:
-        """Descubrir dinámicamente todas las URLs de categorías desde navegación principal"""
-        category_urls = []
+    
+    async def discover_categories_structure(self, page: Page) -> Dict[str, List[Tuple[str, str]]]:
+        """Descubrir estructura de categorías y subcategorías desde menú principal"""
+        categories = {}
         try:
-            if not await self.goto_page(page, self.base_url, wait_time=2000):
-                logger.warning("✗ No se pudo acceder a la página principal")
-                return category_urls
+            await self.goto_page(page, self.base_url, wait_time=2000)
             
-            # Intenta encontrar menú de navegación y extractar enlaces de categorías
-            try:
-                category_links = await page.query_selector_all(
-                    "nav a, .menu a, .navbar a, [class*='category'] a, [class*='menu'] a, [class*='nav'] a"
+            logger.info("🔍 Buscando estructura de categorías...")
+            
+            # Buscar elementos del menú principal
+            menu_items = await page.query_selector_all("nav a, .navbar a, [class*='menu'] > a, [class*='nav'] > a")
+            
+            for menu_item in menu_items:
+                try:
+                    # Obtener texto e href de categoría principal
+                    text = await menu_item.text_content()
+                    href = await menu_item.get_attribute("href")
+                    
+                    if not text or not href or text.strip() in ['', 'Home', 'Inicio']:
+                        continue
+                    
+                    if href.startswith('#') or 'javascript:' in href:
+                        continue
+                    
+                    cat_name = text.strip()
+                    cat_url = urljoin(self.base_url, href)
+                    
+                    if 'venex.com.ar' not in cat_url or cat_url in self.visited_urls:
+                        continue
+                    
+                    logger.info(f"✓ Categoría encontrada: {cat_name}")
+                    categories[cat_name] = [(cat_name, cat_url)]
+                    
+                except Exception as e:
+                    logger.debug(f"Error procesando elemento de menú: {e}")
+            
+            # Si no encontramos suficientes categorías, buscar alternativas
+            if len(categories) < 5:
+                logger.info("⚠ Pocas categorías encontradas, buscando alternativas...")
+                alt_links = await page.query_selector_all(
+                    "a[href*='/categoria'], a[href*='/departamento'], a[href*='/seccion']"
                 )
                 
-                for link in category_links:
+                for link in alt_links:
                     try:
-                        href = await link.get_attribute("href")
                         text = await link.text_content()
+                        href = await link.get_attribute("href")
                         
-                        if href and text and not href.startswith("#") and "javascript:" not in href:
-                            full_url = urljoin(self.base_url, href)
-                            if "venex.com.ar" in full_url and full_url not in self.visited_urls:
-                                category_urls.append(full_url)
-                                logger.info(f"✓ Categoría descubierta: {text.strip()}")
-                    except Exception as e:
-                        logger.debug(f"Error extrayendo enlace de categoría: {e}")
-                        
-            except Exception as e:
-                logger.warning(f"✗ No se encontraron elementos de navegación: {e}")
-            
-            # Selectores alternativos si no se encuentran categorías
-            if not category_urls:
-                logger.info("⚠ Intentando selectores alternativos...")
-                alt_patterns = [
-                    "a[href*='/categoria']",
-                    "a[href*='/departamento']",
-                    "a[href*='/productos']",
-                    "a[href*='/seccion']"
-                ]
-                
-                for pattern in alt_patterns:
-                    try:
-                        alt_links = await page.query_selector_all(pattern)
-                        for link in alt_links:
-                            try:
-                                href = await link.get_attribute("href")
-                                if href and href not in category_urls:
-                                    full_url = urljoin(self.base_url, href)
-                                    if full_url not in category_urls:
-                                        category_urls.append(full_url)
-                            except:
-                                pass
+                        if text and href and 'venex.com.ar' in urljoin(self.base_url, href):
+                            cat_name = text.strip()[:50]
+                            cat_url = urljoin(self.base_url, href)
+                            
+                            if cat_name not in categories:
+                                categories[cat_name] = [(cat_name, cat_url)]
                     except:
                         pass
             
-            # Eliminar duplicados
-            category_urls = list(set(category_urls))
-            logger.info(f"✓ Total de categorías descubiertas: {len(category_urls)}")
+            logger.info(f"✓ Total de categorías descubiertas: {len(categories)}")
+            return categories
             
         except Exception as e:
             logger.error(f"✗ Error descubriendo categorías: {e}")
-            
-        return category_urls
-        
-    async def extract_price(self, price_text: str) -> Optional[float]:
-        """Extraer y convertir precio desde texto"""
+            return categories
+    
+    async def extract_price_robust(self, price_text: str) -> Optional[float]:
+        """Extraer precio con limpieza robusta - evita números gigantes"""
         try:
             if not price_text:
                 return None
-                
-            # Eliminar símbolos de moneda y espacios
-            cleaned = re.sub(r'[$\s]', '', price_text)
-            # Eliminar separador de miles (punto en formato Argentina)
-            cleaned = re.sub(r'\.(?=\d{3})', '', cleaned)
-            # Reemplazar coma con punto para decimal
-            cleaned = cleaned.replace(',', '.')
             
-            price = float(cleaned)
+            # Eliminar espacios en blanco
+            price_text = price_text.strip()
             
-            # Descartar precios menores a 100
-            if price < 100:
+            # Buscar patrón de precio: $ seguido de dígitos
+            # Pueden haber miles separados por . o ,
+            price_match = re.search(r'\$?\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{2})?)', price_text)
+            
+            if not price_match:
                 return None
-                
-            return price
-        except (ValueError, AttributeError) as e:
-            logger.debug(f"No se pudo parsear precio '{price_text}': {e}")
-            return None
             
+            price_str = price_match.group(1)
+            
+            # Detectar si usa punto o coma como separador de miles
+            if price_str.count('.') > 1 or (price_str.count('.') == 1 and price_str.count(',') == 0):
+                # Formato: 1.234.567,89 (Argentina)
+                price_str = price_str.replace('.', '').replace(',', '.')
+            elif price_str.count(',') > 1:
+                # Formato anómalo, limpiar
+                price_str = price_str.replace(',', '')
+            else:
+                # Formato: 1,234.56 o 1.234,56
+                if price_str.endswith(',00') or price_str.endswith('.00'):
+                    price_str = price_str[:-3]
+                price_str = price_str.replace(',', '.')
+            
+            # Convertir a float
+            price = float(price_str)
+            
+            # Validar rango sensato (> 100 y < 100 millones)
+            if price < 100 or price > 100_000_000:
+                logger.debug(f"Precio fuera de rango: {price}")
+                return None
+            
+            return price
+            
+        except Exception as e:
+            logger.debug(f"Error parseando precio '{price_text}': {e}")
+            return None
+    
     async def extract_image_url(self, page: Page, product_element) -> Optional[str]:
-        """Extraer URL absoluta de imagen desde elemento de producto"""
+        """Extraer URL de imagen"""
         try:
-            # Buscar tag img
             img = await product_element.query_selector("img")
             if not img:
                 return None
-                
-            # Intentar atributo src primero
+            
             src = await img.get_attribute("src")
             if not src:
                 src = await img.get_attribute("data-src")
             if not src:
                 src = await img.get_attribute("data-original")
-                
+            
             if not src:
                 return None
-                
-            # Saltar placeholders e imágenes institucionales
-            if any(skip in src.lower() for skip in ['placeholder', 'loading', 'icon', 'logo', 'blank', 'default']):
+            
+            # Filtrar placeholders
+            if any(skip in src.lower() for skip in ['placeholder', 'loading', 'icon', 'logo', 'blank', 'default', 'no-image']):
                 return None
-                
-            # Convertir a URL absoluta
+            
             full_url = urljoin(self.base_url, src)
             return full_url
             
         except Exception as e:
             logger.debug(f"Error extrayendo imagen: {e}")
             return None
-            
-    async def extract_category_from_breadcrumb(self, page: Page) -> Optional[str]:
-        """Extraer categoría desde migas de pan (breadcrumb)"""
+    
+    async def extract_category_from_page(self, page: Page) -> Optional[Tuple[str, str]]:
+        """Extraer categoría y subcategoría desde breadcrumb o URL"""
         try:
+            # Intenta desde breadcrumb
             breadcrumb_selectors = [
                 ".breadcrumb a:nth-last-child(2)",
                 "[class*='breadcrumb'] a:nth-last-child(2)",
-                ".breadcrumb .active",
-                "[aria-label='breadcrumb'] li:nth-last-child(2) a",
                 ".breadcrumbs a:nth-last-child(2)"
             ]
             
@@ -210,27 +219,34 @@ class VenexScraper:
                     if element:
                         text = await element.text_content()
                         if text and text.strip():
-                            return text.strip()
+                            return (text.strip(), None)
                 except:
-                    continue
-                    
-        except Exception as e:
-            logger.debug(f"Error extrayendo breadcrumb: {e}")
+                    pass
             
-        return None
+            # Intenta desde la URL
+            current_url = page.url
+            parts = current_url.split('/')
+            if len(parts) > 3:
+                category = parts[-1].replace('-', ' ').title()
+                return (category, None)
+            
+        except Exception as e:
+            logger.debug(f"Error extrayendo categoría: {e}")
         
-    async def extract_products_from_page(self, page: Page, category: Optional[str] = None) -> List[Dict[str, Any]]:
-        """Extraer todos los productos de la página actual"""
+        return None
+    
+    async def extract_products_from_page(self, page: Page, category_name: str = "General") -> List[Dict[str, Any]]:
+        """Extraer productos de la página actual"""
         products = []
         try:
-            # Esperar a que carguen productos
+            # Esperar productos
             try:
                 await page.wait_for_selector("[class*='product'], [class*='item'], article", timeout=5000)
             except:
-                logger.warning("⚠ No se encontraron productos en la página")
+                logger.warning(f"⚠ No hay productos en {page.url}")
                 return products
-                
-            # Múltiples selectores de productos
+            
+            # Selectores de productos
             product_selectors = [
                 "[class*='product-card']",
                 "[class*='product-item']",
@@ -239,32 +255,28 @@ class VenexScraper:
                 ".product",
                 "[data-product]",
                 "article",
-                "[class*='box-product']",
-                "[class*='item']"
+                "[class*='box-product']"
             ]
             
             product_elements = []
             for selector in product_selectors:
                 try:
                     elements = await page.query_selector_all(selector)
-                    if elements and len(elements) > 0:
+                    if elements:
                         product_elements = elements
-                        logger.info(f"✓ Encontrados {len(elements)} productos con selector: {selector}")
+                        logger.info(f"✓ {len(elements)} productos encontrados")
                         break
                 except:
-                    continue
-                    
+                    pass
+            
             if not product_elements:
-                logger.warning("⚠ No se pudieron encontrar elementos de producto")
                 return products
-                
-            for product_el in product_elements:
+            
+            for idx, product_el in enumerate(product_elements):
                 try:
-                    # Extraer título
-                    title_selectors = ["h2", "h3", "h4", ".title", "[class*='title']", ".name", "[class*='name']", "a"]
+                    # Título
                     title = None
-                    
-                    for sel in title_selectors:
+                    for sel in ["h2", "h3", "h4", ".title", ".name", "a"]:
                         try:
                             el = await product_el.query_selector(sel)
                             if el:
@@ -272,66 +284,70 @@ class VenexScraper:
                                 if title:
                                     break
                         except:
-                            continue
-                            
-                    if not title:
+                            pass
+                    
+                    if not title or len(title.strip()) < 3:
                         continue
-                        
-                    # Limpiar título
+                    
                     title = title.strip()
-                    title = re.sub(r'\s+', ' ', title)
-                    title = title[:200]  # Limitar longitud
+                    title = re.sub(r'\s+', ' ', title)[:250]
                     
-                    if len(title) < 3:
+                    # Duplicados
+                    norm_title = title.lower().strip()
+                    if norm_title in self.seen_titles:
                         continue
+                    self.seen_titles.add(norm_title)
                     
-                    # Verificar duplicados
-                    normalized_title = title.lower().strip()
-                    if normalized_title in self.seen_titles:
-                        continue
-                        
-                    self.seen_titles.add(normalized_title)
-                    
-                    # Extraer precio
+                    # Precio - CRÍTICO
+                    price_text = None
                     price_selectors = [
                         "[class*='price']",
                         ".precio",
                         "span[class*='price']",
                         "[data-price]",
-                        ".amount"
+                        ".amount",
+                        ".valor",
+                        "[class*='valor']"
                     ]
-                    price_text = None
                     
                     for sel in price_selectors:
                         try:
                             el = await product_el.query_selector(sel)
                             if el:
                                 price_text = await el.text_content()
-                                if price_text:
+                                if price_text and '$' in price_text:
                                     break
                         except:
-                            continue
-                            
-                    cost = None
-                    if price_text:
-                        cost = await self.extract_price(price_text)
-                        
+                            pass
+                    
+                    # Si no encontramos precio en selectores, buscar cualquier texto con $
+                    if not price_text:
+                        inner_text = await product_el.inner_text()
+                        prices = re.findall(r'\$\s*[0-9,.]+', inner_text)
+                        if prices:
+                            price_text = prices[0]
+                    
+                    if not price_text:
+                        continue
+                    
+                    cost = await self.extract_price_robust(price_text)
                     if cost is None:
                         continue
-                        
-                    # Calcular precio de venta (margen 15%)
+                    
+                    # Precio venta
                     selling_price = round(cost * 1.15, 2)
                     
-                    # Extraer imagen
+                    # Imagen
                     image_url = await self.extract_image_url(page, product_el)
                     
-                    # Extraer categoría si no se proporcionó
-                    if not category:
-                        category = await self.extract_category_from_breadcrumb(page)
-                        
+                    # Categoría
+                    cat_info = await self.extract_category_from_page(page)
+                    if cat_info:
+                        category_name = cat_info[0]
+                    
                     product = {
                         "titulo": title,
-                        "categoria": category or "General",
+                        "categoria": category_name,
                         "precio_costo": cost,
                         "precio_venta": selling_price,
                         "imagen": image_url or "",
@@ -339,188 +355,157 @@ class VenexScraper:
                     }
                     
                     products.append(product)
-                    logger.info(f"✓ Extraído: {title[:50]}... → ${selling_price}")
+                    logger.info(f"✓ [{len(products)}] {title[:40]}... → ${selling_price}")
                     
                 except Exception as e:
-                    logger.debug(f"Error extrayendo producto: {e}")
+                    logger.debug(f"Error en producto {idx}: {e}")
                     continue
-                    
+            
         except Exception as e:
             logger.error(f"✗ Error en extract_products_from_page: {e}")
-            
-        return products
         
-    async def handle_pagination(self, page: Page, category: Optional[str] = None) -> List[Dict[str, Any]]:
-        """Manejar paginación y extraer productos de todas las páginas"""
+        return products
+    
+    async def handle_pagination(self, page: Page, category: str) -> List[Dict[str, Any]]:
+        """Manejar paginación"""
         all_products = []
         page_num = 1
-        max_pages = 50  # Límite de seguridad
+        max_pages = 50
         
         try:
             while page_num <= max_pages:
-                logger.info(f"📄 Scrapeando página {page_num}")
+                logger.info(f"📄 Página {page_num}")
                 
-                # Extraer productos de página actual
                 products = await self.extract_products_from_page(page, category)
                 all_products.extend(products)
                 
                 if not products:
-                    logger.info("ℹ No se encontraron productos en esta página")
+                    logger.info("ℹ Página vacía")
                     break
                 
-                # Verificar siguiente página
-                next_page_found = False
+                # Siguiente página
+                next_found = False
                 try:
-                    # Múltiples selectores para siguiente página
                     next_selectors = [
                         "a[class*='next']",
                         "a[aria-label*='next']",
                         ".pagination a[href]:last-child",
-                        "[class*='pagination'] a[class*='next']",
-                        "a:contains('Siguiente')",
-                        ".pagination li:last-child a"
+                        "a:contains('Siguiente')"
                     ]
                     
-                    next_link = None
                     for selector in next_selectors:
-                        try:
-                            links = await page.query_selector_all(selector)
-                            for link in links:
-                                try:
-                                    # Verificar si está deshabilitado
-                                    disabled = await link.get_attribute("class")
-                                    if disabled and "disabled" in disabled:
-                                        continue
-                                    
-                                    aria_disabled = await link.get_attribute("aria-disabled")
-                                    if aria_disabled == "true":
-                                        continue
-                                        
-                                    next_link = link
-                                    break
-                                except:
-                                    pass
-                            
-                            if next_link:
-                                break
-                        except:
-                            continue
-                            
-                    if next_link:
-                        try:
-                            next_url = await next_link.get_attribute("href")
-                            if next_url:
-                                full_url = urljoin(self.base_url, next_url)
-                                if await self.goto_page(page, full_url, wait_time=2000):
-                                    page_num += 1
-                                    next_page_found = True
-                                    await page.wait_for_timeout(1000)
-                        except:
-                            pass
-                            
+                        links = await page.query_selector_all(selector)
+                        for link in links:
+                            try:
+                                cls = await link.get_attribute("class")
+                                if cls and "disabled" in cls:
+                                    continue
+                                
+                                next_url = await link.get_attribute("href")
+                                if next_url:
+                                    full_url = urljoin(self.base_url, next_url)
+                                    if await self.goto_page(page, full_url, wait_time=2000):
+                                        page_num += 1
+                                        next_found = True
+                                        break
+                            except:
+                                pass
+                        
+                        if next_found:
+                            break
                 except Exception as e:
-                    logger.debug(f"Error buscando siguiente página: {e}")
-                    
-                if not next_page_found:
-                    # Intentar scroll infinito
-                    try:
-                        old_height = await page.evaluate("document.body.scrollHeight")
-                        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-                        await page.wait_for_timeout(2000)
-                        new_height = await page.evaluate("document.body.scrollHeight")
-                        
-                        if new_height > old_height:
-                            page_num += 1
-                            new_products = await self.extract_products_from_page(page, category)
-                            if new_products:
-                                all_products.extend(new_products)
-                                continue
-                    except:
-                        pass
-                        
-                    logger.info("✓ No hay más páginas")
+                    logger.debug(f"Error buscando siguiente: {e}")
+                
+                if not next_found:
                     break
-                    
+            
         except Exception as e:
             logger.error(f"✗ Error en handle_pagination: {e}")
-            
-        return all_products
         
-    async def scrape_category(self, page: Page, category_url: str) -> List[Dict[str, Any]]:
-        """Scrapear todos los productos de una categoría"""
+        return all_products
+    
+    async def scrape_category(self, page: Page, category_name: str, category_url: str) -> List[Dict[str, Any]]:
+        """Scrapear una categoría completa"""
         try:
             if category_url in self.visited_urls:
-                logger.debug(f"⊘ URL ya visitada: {category_url}")
                 return []
-                
+            
             self.visited_urls.add(category_url)
-            logger.info(f"🔗 Scrapeando categoría: {category_url}")
+            logger.info(f"🔗 Scrapeando: {category_name}")
             
-            if not await self.goto_page(page, category_url, wait_time=2000):
+            if not await self.goto_page(page, category_url, wait_time=2500):
                 return []
-                
-            # Extraer nombre de categoría desde breadcrumb
-            category_name = await self.extract_category_from_breadcrumb(page)
             
-            # Extraer todos los productos con paginación
             products = await self.handle_pagination(page, category_name)
             
-            logger.info(f"✓ Extraídos {len(products)} productos de {category_url[:60]}...")
+            logger.info(f"✓ {len(products)} productos de '{category_name}'")
             return products
             
         except Exception as e:
-            logger.error(f"✗ Error scrapeando categoría {category_url}: {e}")
+            logger.error(f"✗ Error en scrape_category: {e}")
             return []
-            
+    
     async def save_products(self, filename: str = "productos.json"):
-        """Guardar productos en archivo JSON"""
+        """Guardar productos"""
         try:
             with open(filename, 'w', encoding='utf-8') as f:
                 json.dump(self.products, f, ensure_ascii=False, indent=4)
-            logger.info(f"✓ Guardados {len(self.products)} productos en {filename}")
+            logger.info(f"✓ {len(self.products)} productos guardados en {filename}")
             return True
         except Exception as e:
-            logger.error(f"✗ Error guardando productos: {e}")
+            logger.error(f"✗ Error guardando: {e}")
             return False
-            
+    
     async def run(self):
-        """Método de ejecución principal"""
+        """Ejecutar scraper completo"""
         try:
             await self.init_browser()
             page = await self.context.new_page()
             
-            logger.info("🚀 Iniciando scraper de Venex...")
+            logger.info("🚀 Iniciando scraper Venex...")
             
             # Descubrir categorías
-            categories = await self.discover_categories(page)
+            categories = await self.discover_categories_structure(page)
             
             if not categories:
-                logger.warning("⚠ No se descubrieron categorías, intentando scraping directo")
-                products = await self.handle_pagination(page)
-                self.products.extend(products)
-            else:
-                # Scrapear cada categoría
-                for idx, category_url in enumerate(categories, 1):
-                    logger.info(f"📊 Procesando categoría {idx}/{len(categories)}")
-                    try:
-                        products = await self.scrape_category(page, category_url)
-                        self.products.extend(products)
-                    except Exception as e:
-                        logger.error(f"✗ Error procesando categoría {idx}: {e}")
-                        continue
-                    
-            logger.info(f"📈 Total de productos extraídos: {len(self.products)}")
+                logger.warning("⚠ No se descubrieron categorías")
+                return 1
             
-            # Guardar resultados
+            logger.info(f"✓ {len(categories)} categorías descubiertas\n")
+            
+            # Scrapear cada categoría
+            for idx, (cat_name, cat_urls) in enumerate(categories.items(), 1):
+                logger.info(f"\n{'='*60}")
+                logger.info(f"[{idx}/{len(categories)}] Categoría: {cat_name}")
+                logger.info(f"{'='*60}")
+                
+                try:
+                    for subcategory_name, subcategory_url in cat_urls:
+                        products = await self.scrape_category(
+                            page, 
+                            subcategory_name, 
+                            subcategory_url
+                        )
+                        self.products.extend(products)
+                except Exception as e:
+                    logger.error(f"✗ Error procesando {cat_name}: {e}")
+                    continue
+            
+            logger.info(f"\n{'='*60}")
+            logger.info(f"📊 RESUMEN FINAL")
+            logger.info(f"{'='*60}")
+            logger.info(f"Total de productos extraídos: {len(self.products)}")
+            logger.info(f"Categorías únicas: {len(set(p.get('categoria', 'General') for p in self.products))}")
+            
+            # Guardar
             if await self.save_products():
                 logger.info("✅ Scraping completado exitosamente")
                 return 0
             else:
-                logger.error("❌ Error guardando resultados")
                 return 1
             
         except Exception as e:
-            logger.error(f"❌ Error fatal en scraper: {e}")
+            logger.error(f"❌ Error fatal: {e}")
             return 1
         finally:
             await self.close_browser()
