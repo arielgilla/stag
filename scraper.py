@@ -1,117 +1,113 @@
 import json
 import urllib.request
 import urllib.parse
-import re
 
 MARGEN_GANANCIA = 1.15
-URL_BASE = "https://www.venex.com.ar"
+# Endpoint oficial de búsqueda y catálogo de VTEX para Venex
+URL_API = "https://www.venex.com.ar/api/catalog_system/pub/products/search"
 
 def extraer_venex():
     catalogo_final = {}
     vistos = set()
     
-    # Categorías y sus rutas en Venex
-    categorias = {
-        "Procesadores": "/componentes-de-pc/microprocesadores",
-        "Placas de Video": "/componentes-de-pc/placas-de-video",
-        "Memorias RAM": "/componentes-de-pc/memorias-ram",
-        "Almacenamiento SSD": "/componentes-de-pc/discos-solidos-ssd",
-        "Discos Rigidos": "/componentes-de-pc/discos-rigidos",
-        "Motherboards": "/componentes-de-pc/motherboards",
-        "Fuentes": "/componentes-de-pc/fuentes",
-        "Gabinetes": "/componentes-de-pc/gabinetes",
-        "Coolers y Refrigeracion": "/componentes-de-pc/coolers-y-refrigeracion",
-        "Monitores": "/monitores",
-        "Notebooks": "/computadoras/notebooks",
-        "PCs Armadas": "/computadoras/pc-armadas",
-        "Teclados": "/perifericos/teclados",
-        "Mouses": "/perifericos/mouses",
-        "Auriculares": "/perifericos/auriculares",
-        "Mousepads": "/perifericos/mousepads",
-        "Sillas Gamer": "/gaming/sillas-gamer",
-        "Consolas y Videojuegos": "/gaming/consolas-y-videojuegos",
-        "Audio y Parlantes": "/audio-y-video/parlantes",
-        "Almacenamiento Externo": "/almacenamiento/pendrives-y-tarjetas-de-memoria",
-        "Conectividad y Redes": "/conectividad/routers-y-repetidores"
+    # Categorías clave y sus términos de búsqueda en la API de VTEX
+    terminos_busqueda = {
+        "Procesadores": "microprocesadores",
+        "Placas de Video": "placas de video",
+        "Memorias RAM": "memorias ram",
+        "Almacenamiento SSD": "disco ssd",
+        "Discos Rigidos": "disco rigido",
+        "Motherboards": "motherboard",
+        "Fuentes": "fuente",
+        "Gabinetes": "gabinete",
+        "Coolers y Refrigeracion": "cooler",
+        "Monitores": "monitor",
+        "Notebooks": "notebook",
+        "Teclados": "teclado",
+        "Mouses": "mouse",
+        "Auriculares": "auricular",
+        "Sillas Gamer": "silla gamer"
     }
 
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "es-ES,es;q=0.9,en;q=0.8"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "application/json"
     }
 
-    for categoria, path in categorias.items():
-        pagina_actual = 1
-        while pagina_actual <= 10:  # Límite de seguridad por categoría
-            url_paginada = f"{URL_BASE}{path}?page={pagina_actual}"
-            print(f"Consultando: {categoria.upper()} - Página {pagina_actual}")
+    for categoria, termino in terminos_busqueda.glob_items() if hasattr(terminos_busqueda, 'glob_items') else terminos_busqueda.items():
+        from_val = 0
+        to_val = 49  # Lote por consulta de la API
+        
+        print(f"Consultando API de Venex para: {categoria.upper()}")
+        
+        while True:
+            params = {
+                "ft": termino,
+                "_from": from_val,
+                "_to": to_val
+            }
+            url_query = f"{URL_API}?{urllib.parse.urlencode(params)}"
             
             try:
-                req = urllib.request.Request(url_paginada, headers=headers)
+                req = urllib.request.Request(url_query, headers=headers)
                 with urllib.request.urlopen(req, timeout=30) as response:
-                    html = response.read().decode('utf-8', errors='ignore')
+                    data = json.loads(response.read().decode('utf-8'))
                 
-                # Si la página no devuelve contenido útil o nos redirige/bloquea
-                if not html or "cloudflare" in html.lower() or len(html) < 5000:
-                    print(f"⚠️ Posible bloqueo o fin de páginas en {categoria}.")
+                if not data or not isinstance(data, list) or len(data) == 0:
                     break
-
-                # Extraer bloques de productos mediante expresiones regulares seguras sobre el HTML
-                # Buscamos patrones típicos de títulos y precios en el código fuente
+                    
                 productos_nuevos = 0
                 
-                # Extraer todos los fragmentos que contengan precios en pesos argentinos
-                # Buscamos precios en formato $ X.XXX o similar
-                fragmentos = re.findall(r'<[a-zA-Z0-9]+[^>]*>(?:(?!<\/[a-zA-Z0-9]+>).)*?\$[0-9]{1,3}(?:\.[0-9]{3})*(?:,\d{2})?</[a-zA-Z0-9]+>', html)
-                
-                # Método alternativo general si el HTML está minificado: extraer texto plano de etiquetas h2, h3, a, span con precios cercanos
-                # Buscamos precios numéricos acompañados de textos largos (títulos)
-                titulos_precios = re.findall(r'title="([^"]+)"[^>]*>.*?\$([0-9]{1,3}(?:\.[0-9]{3})*)', html, re.DOTALL)
-                
-                if not titulos_precios:
-                    # Búsqueda alternativa por estructura genérica de enlaces y precios en texto
-                    titulos_precios = re.findall(r'class="[^"]*(?:title|name|producto)[^"]*">([^<]+)</(?:h2|h3|a|span)>.*?\$([0-9]{1,3}(?:\.[0-9]{3})*)', html, re.DOTALL)
-
-                for titulo_raw, precio_raw in titulos_precios:
-                    titulo = titulo_raw.replace('\n', ' ').strip()
-                    clean_precio = precio_raw.replace('.', '').replace(',', '.')
+                for item in data:
+                    titulo = item.get("productName", "").strip()
+                    if not titulo or titulo.lower() in vistos:
+                        continue
+                        
+                    # Extraer el precio real del primer SKU disponible
+                    items_sku = item.get("items", [])
+                    if not items_sku:
+                        continue
+                        
+                    sellers = items_sku[0].get("sellers", [])
+                    if not sellers:
+                        continue
+                        
+                    offer = sellers[0].get("commertialOffer", {})
+                    precio_lista = offer.get("Price", 0)
+                    disponible = offer.get("IsAvailable", False)
                     
-                    if not clean_precio.isdigit():
+                    if precio_lista <= 1000 or not disponible:
                         continue
                         
-                    costo = float(clean_precio)
-                    if costo <= 1000 or len(titulo) < 5:
-                        continue
-                        
-                    if titulo.lower() in vistos:
-                        continue
-                        
-                    precio_venta = round(costo * MARGEN_GANANCIA)
+                    # Extraer imagen real del producto directamente desde la API de VTEX
+                    imagenes = items_sku[0].get("images", [])
+                    imagen_url = imagenes[0].get("imageUrl", "") if imagenes else ""
+                    
+                    precio_venta = round(precio_lista * MARGEN_GANANCIA)
                     
                     catalogo_final[titulo.lower()] = {
                         "titulo": titulo,
                         "categoria": categoria,
                         "precio_venta": precio_venta,
-                        "imagen": "", 
+                        "imagen": imagen_url,
                         "stock": True
                     }
                     vistos.add(titulo.lower())
                     productos_nuevos += 1
-
-                print(f"-> Encontrados {productos_nuevos} productos nuevos en esta página.")
                 
-                if productos_nuevos == 0 and pagina_actual > 1:
+                # Si la API devuelve menos de los solicitados o ya no hay más lotes
+                if len(data) < 50 or productos_nuevos == 0:
                     break
                     
-                pagina_actual += 1
+                from_val += 50
+                to_val += 50
                 
             except Exception as e:
-                print(f"Error al conectar con {url_paginada}: {e}")
+                print(f"Error consultando la API para {categoria}: {e}")
                 break
 
     lista_final = list(catalogo_final.values())
-    print(f"\n🚀 Proceso finalizado. Total productos obtenidos: {len(lista_final)}")
+    print(f"\n🚀 Sincronización completa vía API. Total de productos reales obtenidos: {len(lista_final)}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
