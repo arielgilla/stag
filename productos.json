@@ -1261,295 +1261,1121 @@
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Wave S 120GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 58638,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Solido SSD 240Gb Adata SU650 Sata III",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 73588,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Wave S 240GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 80488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD MSI Spatium S270 240GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Wave 256GB M.2 NVMe PCIe 3.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 100038,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston A400 240GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 126488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Adata SU630 480GB SATA III 2.5\" 520MB/s",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 137988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Adata SU650 480GB SATA III 2.5\" 520MB/s",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 137988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Patriot Burst Elite 480GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 144198,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Sólido SSD MSI Spatium S270 480GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 144888,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Wave S 480GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 148338,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Wave 512GB M.2 NVMe PCIe 3.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 170188,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston A400 480GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 183988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Future Lite 512GB M.2 NVMe PCIe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 194338,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Solido SSD WD Green SN3000 500GB M.2 NVMe 5000MB/s",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 212738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Adata Legend 860 500GB M.2 NVMe PCIe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 218488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Crucial E100 480GB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 218488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Wave S 960GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 227688,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Adata XPG Gammix S70 Blade 512GB M.2...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 252988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Solido SSD Copious 1TB M.2 NVMe PCIe 3.0 3500MB/s",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 275988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Wave 1TB M.2 NVMe PCIe 3.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 310488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston A400 960GB SATA III 2.5\"...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 316238,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston KC3000 512GB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 316238,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston NV3 1TB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 317388,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD WD Green SN350 1TB M.2 NVMe PCIe 3.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 318538,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Solido SSD WD Green SN350 1TB NVMe 3200MB/s",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 318538,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Adata Legend 860 1TB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 344988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Future Lite 1TB M.2 NVMe PCIe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 367988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Hiksemi Future X Lite 1TB M.2 NVMe PCIe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 367988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Adata XPG Gammix S70 Blade 1TB M.2 NVMe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 390988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Solido SSD Klevv Cras C925G 1TB M.2 NVMe 7400MB/s",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 413988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston Fury Renegade G5 1TB M.2 NVMe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 505988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston KC3000 1TB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 574988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Solido SSD WD Green SN3000 2TB NVMe 5000MB/s",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 574988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD WD Green SN350 2TB M.2 NVMe PCIe 3.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 574988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston NV3 2TB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 602588,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Adata XPG Gammix S70 Blade 2TB M.2 NVMe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 701488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco Solido SSD Hiksemi FUTURE X LITE 2TB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 793488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston Fury Renegade G5 2TB M.2 NVMe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 1034988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston KC3000 2TB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 1052238,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston NV3 4TB M.2 NVMe PCIe 4.0...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 1056838,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Disco sólido SSD Kingston Fury Renegade 2TB M.2 NVMe...",
-        "categoria": "Almacenamiento",
+        "categoria": "Almacenamiento SSD",
         "precio_venta": 1207488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Base Notebook Genius G-Stand M250 Grey de Aluminio",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 21849,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Base para Notebook Fantech NC14 C/Cooler USB A RGB Negro",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 34488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Ajustable para Microfono Fantech AC902S",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 37938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Tp-Link Cloud Tapo C110",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 37949,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Base para Notebook Fantech NC21 C/Cooler USB A-C RGB Negro",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 45988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Redragon Celestial Para Auriculares y Joystick 18Cm",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 45988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Redragon Comet Para Table Celular Ajustable Metalico",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 45988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Cloud Tp-Link TAPO C210",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 49449,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Ezviz H6C 4MM 360 2MP Interior",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 55199,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Smartwatch Xiaomi MI Smart Band 9 Active Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 51738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Base para Notebook Fantech NC22 C/Cooler x1 USB-A Black RGB",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 57488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Redragon Zenith Para Monitor Con Cargador Inalambrico",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 60938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Cloud TP-Link Tapo C220 2K QHD",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 63824,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara Ip Cloud TP-Link Tapo C500 P/Exterior Domo",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 73599,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Monitor Fantech Promount MBS1 13\" a 32\" Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 74738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Smartwatch Xiaomi Smart Band 9 Silver",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 68999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Ezviz H3C 2.8mm 2K Exterior",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 80499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Smartwatch Samsung Galaxy Fit 3 Silver",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 80488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Ezviz H8C 4MM PT 360 2MP Exterior",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 89699,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Mi Smart Band 10 Midnight Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 85088,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara Ip Ezviz H7C Dual Lens Cam 2k + 4Mp Interior",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 94299,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara Wifi Ezviz BM1 2mp Baby Call Monitor",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 94299,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Redragon Crystal Para Monitor con RGB y USB",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 109238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Botonera Redragon Streamcraft SS-550 15 Botones",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 103499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Smart Band 10 Ceramic Edition Pearl...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Monitor Fantech Promount MBD1 13\" a 32\" Doble Brazo...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 137988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara IP Ezviz H9C Dual Lens Cam 2K 3EMP Exterior",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Ajustable Notebook Razer Aluminio Color Mercury",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Camara Ip Cloud TP-LINK Tapo C425 2K QHD",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 142599,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Redragon Cosmos RDRK03 para Joystick Auricular y...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 143738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Ajustable Notebook Razer Aluminio Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Redragon Volcano Para PC Acero Con ARGB",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 152949,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Mi Smart Band 10 Pro Glacier Silver",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 157549,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Mi Smart Band 10 Pro Midnight Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 157549,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Tablet 7 Deutech Astronaut Infantil 32GB 2GB Android 12 Blue",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 160988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Tablet 7 Deutech Astronauta Infantil 32GB 2GB Android 12 Pink",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 160988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Tablet Deutech Dinosaurio Infantil 32gb 2gb 7 Funda",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 160988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Cerradura Inteligente Ezviz DL03 Con Huella",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 183999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Redmi Watch 6 Obsidian Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 169038,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Redmi Watch 6 Silver Gray",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 169038,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Scanner Epson Perfection V39II Cama Plana A4 USB",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 201249,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Redragon Stellar Con Aro de Luz para Streaming y...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 229988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Soporte Base Para Wacom Cintiq Pro ACK62701K",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 209954,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Tablet Deutech Infantil 64gb 4gb 10 Pulgadas Funda",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 218488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Cerradura Ezviz Inteligente DL05 Con Huella Multilock",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 293249,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Mesa de TV Redragon Tipo Rack Tectonic RGB Carbono con Soporte",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 304738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Watch S4 Strap 41mm Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 319699,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Reloj Xiaomi Smartwatch Watch 2 Black",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 321988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Tablet 10.1\" Lenovo Tab M10 TB311FU Helio G85 4Gb 128Gb Folio...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 471488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Silla Gamer Corsair T3 RUSH Charcoal / Grey V2 2023",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 678488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Tabla Digitalizadora XP-PEN Artist 12 Pro Easy",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 623230,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Tablet Lenovo Idea Tab K11 TB336FU 128GB 8GB 11\" + Teclado +...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 747488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo IdeaPad Slim 3 15IAN8 Intel N100 8GB 128GB...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 770488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS Vivobook X1404VA Core i3 1315U 8GB 128GB 14\" W11...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 873988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 255R G10 Ryzen 3 7335U 16GB 256GB 15.6\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1034988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Silla Gamer Corsair TC500 Luxe Green/Sherwood",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1207488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Silla Gamer Corsair TC500 Luxe Shadow",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1207488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Silla Gamer Corsair TC500 Luxe White/Frost",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1207488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 245 G10 Ryzen 3 7330U 8GB 512GB 14\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1115488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook CX CX30682 Core i5 12450H 8GB 256GB 15.6\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1126988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo Ideapad Slim 3 15AMN8 Ryzen 5 7520U 8GB 256GB...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1149988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G5 Core i3 1315U 8GB 512GB 15.6\" Luna Gray",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1149988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 245 G10 Ryzen 3 7330U 16GB 512GB 14\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1207488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo IdeaPad Slim 3 15AMN8 Ryzen 3 7320U 16GB 256GB...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1207488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G4 Ryzen 5 7520U 8Gb SSD 512Gb 15.6 Free",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1241988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook CX CX30682 Core i5 12450H 16GB 256GB 15.6\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1264988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G4 Ryzen 3 7320U 16GB 512GB 15.6\" Arctic...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1264988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS Vivobook X1404VA Core i5 1334U 12GB 256GB 14\" W11...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1310988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 15-FC0251LA Ryzen 5 7520U 8GB SSD 512GB 15.6\" W11 +...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1322488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G5 Core i3 1315U 16GB 512GB 15.6\" Arctic...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1356988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Aspire 3 A315 Ryzen 5 7520U 16GB 512GB 15.6\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1379988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Aspire Go 15 Ryzen 7 7730U 16GB 512GB W11 15.6\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1437488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 250R G10 Core 5 120U 16GB 512GB 15.6\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1437488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 255 G10 Ryzen 5 7535U 16GB 512GB 15.6\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1460488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G4 Ryzen 5 7520U 16GB 512GB 15.6\" Arctic...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1460488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP OmniBook 3 Ryzen 5 40 16GB 256GB W11 16\" 2K Glacier...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1494988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo Ideapad 1 15IRU7 Core I5 1335U 16GB 256GB 15.6\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1575488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G5 Core i7 13620H 8GB 512GB 15.6\" Luna Grey",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1592738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP Omnibook 3 Ryzen 5 40 APU 16GB 512GB 16\" W11...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1609988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo IdeaPad Slim 3 15AMN8 Ryzen 5 7520U 16GB 512GB...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1609988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS Vivobook F1605VA Core i7 1355U 16GB 512GB 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1724988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo ThinkBook G7 Ryzen 5 7535HS 8GB 512GB 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1747988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Dell Inspiron 15 DC15255 Ryzen 7 7730U 16GB 512GB...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1782488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo Ideapad Slim 3 15ARP10 Ryzen 7 170 16GB 512GB...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1782488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP Victus 15-FB2063DX Ryzen 5 7535HS 8GB 512GB RX...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1837688,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Dell Inspiron DC15250 Core I7 1335U 16GB 512GB 15.6\" ...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1874488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo LOQ 15IAX9E Core i5 12450HX 8GB 512GB RTX 3050...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1897488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G5 Intel i7 13620H 16GB 512GB 15.6\" Luna...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1897488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP Victus 15-FA2013DX Core i5 13420H 8GB 512GB RTX...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 1954988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo Thinkbook 16 G7 Ryzen 5 7535HS 16GB 512GB 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2035488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo V15 G5 Core i7 13620H 24GB 512GB 15.6\" Luna...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2115988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP 15-FB2063DX Ryzen 5 7535HS 16GB 512GB RX 6550M...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2127488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Thin A15 B13VE Ryzen 5 7535HS 8GB 512GB RTX 4050...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2127488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo ThinkBook 16 G8 Core Ultra 5 225U 8GB 512GB 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2138988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo LOQ 15IAX9E Core I5 12450HX 16GB 512GB RTX 3050...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2184988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP ProBook 440 G11 Core i5 125U 8GB 512GB 14\" W11",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2242488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo Thinkbook 16 G7 Ryzen 5 7535HS 24GB 512GB 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2242488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP Victus 15-FA2013DX Core i5 13420H 24GB 512GB RTX...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2299988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook HP Victus 15-FB2063 Ryzen 5 7535HS 24GB 512GB RX 6550M...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2299988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo ThinkBook 16 G8 Core i7 240H 16GB 512GB 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2414988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenvo Thinkbook 16 G8 Core Ultra 5 225U 16GB 512GB 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2414988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Nitro V 15 Core i5 13420H 16GB 512GB RTX 5050...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2529988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Thin B13VE Core i5 13420H 16GB 512GB W11 RTX 4050...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2633488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo ThinkPad E16 G3 Ryzen 7 250 16GB 512GB 16\"",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2644988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Nitro V 16 Ryzen 5 240 16GB 512GB RTX 5050 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 2874988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Cyborg B2RWEK Core i5 210H 16GB 512GB W11 RTX 5050...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 3162488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Gigabyte Gaming A16 Ryzen 7 260 16GB 512GB RTX 5060...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 3219988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo LOQ 15AHP10 Ryzen 7 250 16GB 512GB RTX 5050...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 3219988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Gigabyte Gaming A16 Core i7 13620H 16GB 1TB RTX 5060...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 3334988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Gigabyte Gaming A16 Ryzen 7 260 16GB 1TB RTX 5060 16",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 3334988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Nitro V 16 Ryzen AI 7 350 16GB 1TB RTX 5060 16\"...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 3564988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Acer Nitro V 16S Ryzen 7 260 16GB 1TB RTX 5070 16\" W11",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 3794988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Katana Core i7 14650HX 16GB 1TB RTX 5070 15.6\" W11",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 4139988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS ROG Strix G16 Ryzen 9 8940HX 16GB 1TB RTX 5070...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 4484988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook Lenovo Legion 5 15IRX10 Core i9 14900HX 16GB 1TB RTX...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 4829988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook MSI Vector A8WHG Ryzen 9 8940HZ 16GB 1TB W11 RTX 5070...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 4944988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS ROG Strix G16 Ryzen 9 8940HX 16GB 1TB RTX 5070 Ti...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 5059988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Notebook ASUS ROG Strix G16 Nebula Ryzen 9 9955HX 32GB 1TB  RTX...",
+        "categoria": "Discos Rigidos",
+        "precio_venta": 6094988,
         "imagen": "",
         "stock": true
     },
@@ -3346,6 +4172,1028 @@
         "stock": true
     },
     {
+        "titulo": "Gabinete Genérico Con Kit Fuente Mouse Y Teclado",
+        "categoria": "Gabinetes",
+        "precio_venta": 43699,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey H10 TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 45758,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey H30 TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 45758,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Nova N5 RGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 47138,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey H30 TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 48288,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Lnz M10 TG C/Coolers x3 FRGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 50588,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Raptor Blaze Force TG C/Coolers x1 RGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 51738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Raptor Nova Prime TG C/Coolers x3 RGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 51738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Mousepad Corsair MM350 M 320x270x5mm",
+        "categoria": "Gabinetes",
+        "precio_venta": 57488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Nova N6 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 55188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey T5 TG C/Coolers x3 ARGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 56338,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Argus E4 Elite TG C/Coolers x1 Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 57488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey M12 Coyote Mesh TG C/Coolers x3 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 57488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Hunter Mesh TG C/Coolers x4 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 58638,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Talos E3 TG C/Coolers x3 Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 60938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Raptor Sentinel Rg C/Coolers x4 RGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 63238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Cozu ATX C/Coolers x4 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 64388,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey H30 TG C/Coolers x5 ARGB Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 64388,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Mel ATX C/Coolers x4 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 66688,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Raptor Thunder Strike TG C/Coolers x1 RGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 66688,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Elite 301 TG Black",
+        "categoria": "Gabinetes",
+        "precio_venta": 68988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Talos E3 TG C/Coolers x3 Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 68988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Storm TG ARGB Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 68988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey H10 TG C/Coolers x5 ARGB Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 68988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey T10 F80 TG C/Coolers x4 ARGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 68988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Genérico Kit Slim - Varias Marcas",
+        "categoria": "Gabinetes",
+        "precio_venta": 68999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Adata XPG Valor Air TG C/Coolers x4 Vidrio Templado...",
+        "categoria": "Gabinetes",
+        "precio_venta": 72438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Fantech Aero Ii CG83 C/Coolers x4 FRGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 72438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Zeus TG C/Coolers x5 Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 72438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Vorus C/Coolers x4 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 74738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Elite 350 C/Cooler x4",
+        "categoria": "Gabinetes",
+        "precio_venta": 74738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Aura GC9ME Elite ARGB White",
+        "categoria": "Gabinetes",
+        "precio_venta": 74738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Raptor Blaze Force V2 TG C/Coolers x3 RGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 74738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey T15 F70 TG C/Coolers x4 ARGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 74738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Backfire Mesh TG C/Coolers x4 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 78188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey M40 Strega Mesh TG C/Coolers x4 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 79338,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gigabyte C102 TG ICE C/Coolers x2",
+        "categoria": "Gabinetes",
+        "precio_venta": 80488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Raptor Infinity Glass Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 80488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Raptor Infinity Mesh",
+        "categoria": "Gabinetes",
+        "precio_venta": 80488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Solarmax Cm-W300 TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 80488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake S100 TG C/Coolers x1 Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 80488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Diamond Cp",
+        "categoria": "Gabinetes",
+        "precio_venta": 86238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Diamond Cp White",
+        "categoria": "Gabinetes",
+        "precio_venta": 86238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Spark Pro Wb",
+        "categoria": "Gabinetes",
+        "precio_venta": 86238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete MSI MAG FORGE M100A C/Coolers x4",
+        "categoria": "Gabinetes",
+        "precio_venta": 86238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Solarmax Cm-B300 TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 86238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake Versa H16 TG ARGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 86238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Athena M1 C/Coolers x3 RGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 89688,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake View 170 TG C/Coolers x3 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 90838,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Revolt",
+        "categoria": "Gabinetes",
+        "precio_venta": 91988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Draco Xd",
+        "categoria": "Gabinetes",
+        "precio_venta": 93138,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Talos E3 Cg ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 95438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Talos E3 Cg ARGB White",
+        "categoria": "Gabinetes",
+        "precio_venta": 95438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Diamond COC White",
+        "categoria": "Gabinetes",
+        "precio_venta": 95438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Striker PWM TG C/Coolers x4 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 95438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Adata XPG Invader X Mini TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 97738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Elite 302 C/Coolers x3 White",
+        "categoria": "Gabinetes",
+        "precio_venta": 97738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Destroyer TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 97738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Hole A363-TB ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 97738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey A20 PWM F75 TG C/Coolers x3 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 97738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Cmp 320",
+        "categoria": "Gabinetes",
+        "precio_venta": 97749,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Defender TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 98888,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Elite 502 C/Coolers x3 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 100049,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Lotor C/Coolers x6 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 101188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Aero TG ARGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 101188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Infinity TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 101188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Infinity TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 101188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey A10 Gs-8000 TG C/Coolers x5 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 101188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey A35 PWM TG C/Coolers x4 ARGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 103488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Adata XPG Invader X Mini TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 106938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax F36 C/Coolers x3 ARGB White",
+        "categoria": "Gabinetes",
+        "precio_venta": 106938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Walker 360 Airflow TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 106938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Destroyer TG White",
+        "categoria": "Gabinetes",
+        "precio_venta": 109238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax F46 Dark",
+        "categoria": "Gabinetes",
+        "precio_venta": 109238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Infinity Plus Full TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 109238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Prism Infinity TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 109238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey A35 Pro TG C/Coolers x7 ARGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 109238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamdias Talos M3 Mesh White",
+        "categoria": "Gabinetes",
+        "precio_venta": 110388,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax F35 Bw",
+        "categoria": "Gabinetes",
+        "precio_venta": 112688,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax F46 TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 112688,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax F35 Ww White",
+        "categoria": "Gabinetes",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax F46 TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete MSI MAG Forge 120A Airflow",
+        "categoria": "Gabinetes",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey A20 Pro F75 TG C/Coolers x6 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Bearer Pro C/Coolers x4 ARGB TG White",
+        "categoria": "Gabinetes",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Solarmax Cm-W930 TG Vidrio Templado White C/Coolers...",
+        "categoria": "Gabinetes",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey A30 Gs-8100 TG C/Coolers x4 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 118438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Rakun C/Coolers X4 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 120738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Brufen COC",
+        "categoria": "Gabinetes",
+        "precio_venta": 120738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax F45 Bw C/Coolers x4",
+        "categoria": "Gabinetes",
+        "precio_venta": 120738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax T20 TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 120738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Bearer Pro C/Coolers x7 ARGB TG Black",
+        "categoria": "Gabinetes",
+        "precio_venta": 120738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Minor Bk C/Coolers x7 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 124188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Minor C/Coolers x7 ARGB White",
+        "categoria": "Gabinetes",
+        "precio_venta": 126488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax T20 TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 126488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gigabyte C201 Black TG",
+        "categoria": "Gabinetes",
+        "precio_venta": 126488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gigabyte C201 White TG",
+        "categoria": "Gabinetes",
+        "precio_venta": 126488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Elite 600 White",
+        "categoria": "Gabinetes",
+        "precio_venta": 132238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey Bearer Pro TG C/Coolers x7 ARGB Vidrio Templado...",
+        "categoria": "Gabinetes",
+        "precio_venta": 132238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake View 270 Plus C/Coolers x3 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 132238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Elite 600",
+        "categoria": "Gabinetes",
+        "precio_venta": 136838,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Hype-M TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 137988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Sentey A40 Gs-8200 TG C/Coolers x7 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 137988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake View 270 Plus TG C/Coolers x3 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 137988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete ASUS A31 Plus TG ARGB Blanco",
+        "categoria": "Gabinetes",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Redragon Wheeljack + Fuente 600W 80+ Bronze C/fuente...",
+        "categoria": "Gabinetes",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master MB520 White",
+        "categoria": "Gabinetes",
+        "precio_venta": 141438,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Adata XPG Starker Air TG C/Coolers x2 Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 143738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Adata XPG Starker Air TG C/Coolers x2 Vidrio Templado...",
+        "categoria": "Gabinetes",
+        "precio_venta": 143738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 3200D RS C/Coolers x2 ARGB Vidrio Templado...",
+        "categoria": "Gabinetes",
+        "precio_venta": 143738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax Hype-M TG Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 143738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Procyon C/Coolers x7 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 147188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 2800X RS-R C/Coolers x3 ARGB Vidrio Templado...",
+        "categoria": "Gabinetes",
+        "precio_venta": 147188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Arkham Rascal C/Coolers X4 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 155238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Fantech Lumina L CG86 C/Coolers x6 ARGB Negro",
+        "categoria": "Gabinetes",
+        "precio_venta": 160988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Fantech Lumina X CG85X C/Coolers X6 ARGB Blanco",
+        "categoria": "Gabinetes",
+        "precio_venta": 166738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Fantech Lumina X CG85X C/Coolers X6 ARGB Negro",
+        "categoria": "Gabinetes",
+        "precio_venta": 166738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake View 380 WS ARGB Black",
+        "categoria": "Gabinetes",
+        "precio_venta": 193188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Adata XPG Invader X TG C/Coolers x5 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 218488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Haf 500 White",
+        "categoria": "Gabinetes",
+        "precio_venta": 229988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 4000X Frame RS C/Cooler x3 Negro",
+        "categoria": "Gabinetes",
+        "precio_venta": 235738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair Frame 4000X RS C/Coolers x3 Vidrio Templado...",
+        "categoria": "Gabinetes",
+        "precio_venta": 235738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake View 390 Air Curvo TG C/Coolers x2 ARGB...",
+        "categoria": "Gabinetes",
+        "precio_venta": 235738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake View 390 AIR C/Cooler x2 TG Black",
+        "categoria": "Gabinetes",
+        "precio_venta": 241488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake View 380 XL TG C/Coolers ARGB X1 Reverse...",
+        "categoria": "Gabinetes",
+        "precio_venta": 247238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 3500X LX-R RGB White",
+        "categoria": "Gabinetes",
+        "precio_venta": 270238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake The Tower 300 TG C/Coolers x2 Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 275988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake Cte E550 TG Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 281738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake Cte E550 TG Vidrio Templado Gravel Sand",
+        "categoria": "Gabinetes",
+        "precio_venta": 281738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake Cte E550 TG Vidrio Templado Matcha Green",
+        "categoria": "Gabinetes",
+        "precio_venta": 281738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake Cte E550 TG Vidrio Templado Snow White",
+        "categoria": "Gabinetes",
+        "precio_venta": 281738,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax N80 TG C/Coolers x6 Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 293238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Gamemax N80 TG C/Coolers x6 Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 293238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Masterframe 500 Mesh 3 ARGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 298988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Thermaltake The Tower 600 TG C/Coolers x2 ARGB Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 298988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Masterframe 360 Panorama",
+        "categoria": "Gabinetes",
+        "precio_venta": 340388,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair Air 5400 RS-R ARGB C/Coolers x3 Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 354188,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Masterframe 600",
+        "categoria": "Gabinetes",
+        "precio_venta": 362238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 4500X Frame LX-R TG RGB Vidrio Templado",
+        "categoria": "Gabinetes",
+        "precio_venta": 362238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Masterframe 600 Silver",
+        "categoria": "Gabinetes",
+        "precio_venta": 367988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete ASUS GX601 ROG Strix Helios TG C/Coolers x4 ARGB...",
+        "categoria": "Gabinetes",
+        "precio_venta": 494488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 5000T TG RGB Vidrio Templado White",
+        "categoria": "Gabinetes",
+        "precio_venta": 574988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Cooler Master Cosmos Alpha C/Coolers x3 Vidrio...",
+        "categoria": "Gabinetes",
+        "precio_venta": 632488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete ASUS ROG Hyperion GR701 TG RGB",
+        "categoria": "Gabinetes",
+        "precio_venta": 804988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 9000D Airflow TG RGB Vidrio Templado Blanco",
+        "categoria": "Gabinetes",
+        "precio_venta": 804988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Gabinete Corsair 9000D Airflow TG RGB Vidrio Templado Negro",
+        "categoria": "Gabinetes",
+        "precio_venta": 804988,
+        "imagen": "",
+        "stock": true
+    },
+    {
         "titulo": "Monitor Performance 19\" HD PF185R",
         "categoria": "Monitores",
         "precio_venta": 70138,
@@ -3941,3530 +5789,1759 @@
         "stock": true
     },
     {
-        "titulo": "Mousepad Raptor Ultra Glide S 260x210x3mm",
-        "categoria": "Perifericos",
-        "precio_venta": 4013,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech MP64 Basic 640x210x2mm Black",
-        "categoria": "Perifericos",
-        "precio_venta": 5738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Genius Dx-123 Usb Negro/Azul",
-        "categoria": "Perifericos",
-        "precio_venta": 5749,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Genius Dx-123 Usb Negro/Rojo",
-        "categoria": "Perifericos",
-        "precio_venta": 5749,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Aula MP-W Small Speed 250 X 210 X 2mm Black/Red",
-        "categoria": "Perifericos",
-        "precio_venta": 6899,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech M90",
-        "categoria": "Perifericos",
-        "precio_venta": 7244,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Kanata VX9 Led Black",
-        "categoria": "Perifericos",
-        "precio_venta": 7463,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech M110 Silent Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 9889,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Genius NX-7000XE Wireless Black",
-        "categoria": "Perifericos",
-        "precio_venta": 10004,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech M100 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 10119,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech M110 Silent Black",
-        "categoria": "Perifericos",
-        "precio_venta": 10119,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Genius Nx-7000Se Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 10349,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Raptor Ultra Glide L 450x400x3mm",
-        "categoria": "Perifericos",
-        "precio_venta": 11488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Redragon Flick M",
-        "categoria": "Perifericos",
-        "precio_venta": 11499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Genius NX-7000X Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 10579,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Genius KB-113 Español USB Negro",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 10924,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Fantech Crypto II VX7V2 Rainbow RGB Black",
-        "categoria": "Perifericos",
-        "precio_venta": 11488,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Genius KB-100 Español USB Negro",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 11499,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Genius KB-117 Español USB Negro",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 11499,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Pad Venex Con Gel Cristal",
-        "categoria": "Perifericos",
-        "precio_venta": 13097,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Genius KB-118 II SP USB Black",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 12074,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Pad Fantech Agile MP353 350X300X4mm Speed Edition Black",
-        "categoria": "Perifericos",
-        "precio_venta": 13788,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech Agile MP353 350X300X4mm Speed Edition Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 13788,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech Vigil MP356 M 350x300x4mm Control Edition...",
-        "categoria": "Perifericos",
-        "precio_venta": 13788,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Raptor Ultra Glide L 700x300x3mm",
-        "categoria": "Perifericos",
-        "precio_venta": 13788,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Kanata S VX9S ARGB Black",
-        "categoria": "Perifericos",
-        "precio_venta": 12638,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Kanata S VX9S ARGB White",
-        "categoria": "Perifericos",
-        "precio_venta": 12638,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Genius Numerico NumPad 110 USB Negro",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 12649,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Base Para Lector Newland HR-1550 / HR-100",
-        "categoria": "Perifericos",
-        "precio_venta": 13109,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M170 Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 13454,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M170 Azul",
-        "categoria": "Perifericos",
-        "precio_venta": 13799,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M170 Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 13799,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M170 Rojo",
-        "categoria": "Perifericos",
-        "precio_venta": 13799,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Raptor Ultra Glide XL 900x400x3mm",
-        "categoria": "Perifericos",
-        "precio_venta": 16088,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Apoyamuñeca Aula Wrist Rest F75 Degrade Blue",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 14949,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Apoyamuñeca Aula Wrist Rest F75 Degrade Gray",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 14949,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Genius Numerico NumPad 1000 Wireless Negro",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 14949,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Blue",
-        "categoria": "Perifericos",
-        "precio_venta": 17238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Pink",
-        "categoria": "Perifericos",
-        "precio_venta": 17238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Purple",
-        "categoria": "Perifericos",
-        "precio_venta": 17238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Yellow",
-        "categoria": "Perifericos",
-        "precio_venta": 17238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Fantech Vigil MP456 L 450x450x4mm",
-        "categoria": "Perifericos",
-        "precio_venta": 17238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M185 Swift Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 16088,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Logitech K120 USB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 16099,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Parlante Genius SP-HF180 USB Nordic Pine",
-        "categoria": "Perifericos",
-        "precio_venta": 17824,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Genius KM-100SE Español USB Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 16214,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Genius Usb SP-HF180 Dark Coffe",
-        "categoria": "Perifericos",
-        "precio_venta": 17939,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Genius G-PAD 700S",
-        "categoria": "Perifericos",
-        "precio_venta": 18399,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Raptor Storm Grip 9 Botones 8000DPI",
-        "categoria": "Perifericos",
-        "precio_venta": 17238,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Genius Slimstar 820 Español USB Negro RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 17249,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Combo Teclado y Mouse Redragon BS-7092 USB",
-        "categoria": "Perifericos",
-        "precio_venta": 17594,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Redragon Flick L",
-        "categoria": "Perifericos",
-        "precio_venta": 19894,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Genius Kit Teclado y Mouse Slimstar C126...",
-        "categoria": "Perifericos",
-        "precio_venta": 18399,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Genius KM-160 Español USB Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 18399,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Genius HS-04S Dual Plug",
-        "categoria": "Perifericos",
-        "precio_venta": 21159,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Aula S12 Pro 12800 DPI RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 19538,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M280 Gris",
-        "categoria": "Perifericos",
-        "precio_venta": 20124,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M280 Rojo",
-        "categoria": "Perifericos",
-        "precio_venta": 20124,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech Agile MP453 450X350X4mm Speed Edition Black",
-        "categoria": "Perifericos",
-        "precio_venta": 22988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech Agile MP453 450X350X4mm Spped Edition Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 22988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech Vigil MP806 800X300X3mm Speed Edition...",
-        "categoria": "Perifericos",
-        "precio_venta": 22988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Genius Eco-8150 Bateria Recargable Black/Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 21274,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon M607 Griffin RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 24149,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalámbrico Fantech Crypto II WG7V2 ARGB White",
-        "categoria": "Perifericos",
-        "precio_venta": 25288,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Gaming Kit Mouse + Pad Redragon M601 Wireless M601WL-BA",
-        "categoria": "Perifericos",
-        "precio_venta": 25299,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon Centrophorus 2 M601 RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 25759,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon M607 Griffin RGB White",
-        "categoria": "Perifericos",
-        "precio_venta": 25874,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Fantech HQ54 Mars II Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech MMT454 Motion Wind Kaze 400x450x5mm XL Black",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech MMT455 Motion Lightning Kaminari 400x450x5mm...",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Fantech STRIKEPAD MST491 L 490x420x3mm Speed...",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Genius HS-220U USB Digital",
-        "categoria": "Perifericos",
-        "precio_venta": 28749,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Genius Slimstar KM-8101 Español...",
-        "categoria": "Perifericos",
-        "precio_venta": 26449,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon K1ng M724 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 26449,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon King M724 White",
-        "categoria": "Perifericos",
-        "precio_venta": 26449,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Raptor Storm Grip 12800DPI",
-        "categoria": "Perifericos",
-        "precio_venta": 27013,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Genius Luxemate Q8100 Español...",
-        "categoria": "Perifericos",
-        "precio_venta": 27139,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon H120 Ares RGB C/Microfono S/Adaptador",
-        "categoria": "Perifericos",
-        "precio_venta": 31049,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado Mecánico y Mouse Fantech Go Mochi85 WK898...",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Fantech Go MOCHI101 Wireless Blue",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Fantech Go MOCHI101 Wireless Pink",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Fantech Go MOCHI101 Wireless Yellow",
-        "categoria": "Perifericos",
-        "precio_venta": 28738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M240 Silent BT Graphite",
-        "categoria": "Perifericos",
-        "precio_venta": 28749,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Logitech K250 Español Wireless Blanco",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 28749,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech Agile MP903 900X400X3MM Speed Edition Black",
-        "categoria": "Perifericos",
-        "precio_venta": 32188,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech Agile MP903 900X400X3MM Speed Edition Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 32188,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Genius HS-230U USB-A",
-        "categoria": "Perifericos",
-        "precio_venta": 32199,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Redragon Saturn Pc USB G807",
-        "categoria": "Perifericos",
-        "precio_venta": 32199,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Gaming Kit Fantech Hero P31 3 en 1 TEC+MOU+PAD Black",
-        "categoria": "Perifericos",
-        "precio_venta": 29888,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech M317 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 29899,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon Cobra White M711 RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 29899,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Genius HS-235U AI USB",
-        "categoria": "Perifericos",
-        "precio_venta": 32889,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Redragon Flick XL",
-        "categoria": "Perifericos",
-        "precio_venta": 33349,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Razer Gigantus V2 L 450x400x3mm",
-        "categoria": "Perifericos",
-        "precio_venta": 34039,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Fantech MH89 Valor II Black 3.5MM",
-        "categoria": "Perifericos",
-        "precio_venta": 34488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Fantech HQ55 Portal Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 34488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Redragon KUNLUN L 880x420x4mm",
-        "categoria": "Perifericos",
-        "precio_venta": 34499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon Cronius H211 RGB Black",
-        "categoria": "Perifericos",
-        "precio_venta": 35189,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon Cronus H211 RGB White",
-        "categoria": "Perifericos",
-        "precio_venta": 35189,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Crypto II WG7V2RD Wireless Blanco ARGB",
-        "categoria": "Perifericos",
-        "precio_venta": 32188,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Crypto II WG7V2RD Wireless Negro ARGB",
-        "categoria": "Perifericos",
-        "precio_venta": 32188,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Raptor Strom Grip 9 Botones 24000DPI...",
-        "categoria": "Perifericos",
-        "precio_venta": 33338,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech G203 Lightsync Black RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 34384,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech G203 Lightsync White RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 34384,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Redragon Rift G710 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 34488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech ATO MP905 900X400X4mm Speed Katsuyama Edition",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech ATO MP905 900X400X4mm Speed Kujira Nami...",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech ATO MP905 900X400X4mm Speed Kujira Umi...",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fantech ATO MP905 Super Maxfit 900X400X4mm Speed Grey...",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Pad Fanteche ATO MP905 900X400X4mm Speed Pink Edition",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Fantech Ato London Tour MP905 XXL 900x400x4mm",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Fantech Ato Royal Prince MP905 XXL 900x400x4mm",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon Impact M908 RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 34844,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Bluetooth Genius Hs-820Bt Black",
-        "categoria": "Perifericos",
-        "precio_venta": 39674,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Genius HS-810BT Black",
-        "categoria": "Perifericos",
-        "precio_venta": 39674,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Logitech Mk235 Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 36339,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Fantech HG25 Orbit 7.1 Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Fantech GP12 Revolver Black PC/PS3 Dual Mode",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Fantech GP13 Shooter II PC/PS3 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Fantech GS304 GROOVE RGB Dual Mode Black",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Fantech GS304 GROOVE RGB Dual Mode White",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Portatil Klipstreme Bluetooth Titan 12W",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Kanata S WG9S Wireless Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Kanata S WG9S Wireless Orange",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Fantech ARIA XD7E 2.4GHZ White",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalámbrico Fantech Kanata S WG9S 2.4GHz Black",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Raptor Storm Grip 7 Botones 24000DPI RGB...",
-        "categoria": "Perifericos",
-        "precio_venta": 37938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Logitech F310 Gaming Gamepad PC USB",
-        "categoria": "Perifericos",
-        "precio_venta": 37949,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Redragon K509 Dyaus 2 Español",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 38639,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular Redragon H260 Hylas Black RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 42549,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Webcam Logitech C270",
-        "categoria": "Perifericos",
-        "precio_venta": 42549,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Kanata WG9RD Wireless Blue ARGB",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Kanata WG9RD Wireless Pink ARGB",
-        "categoria": "Perifericos",
-        "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Fantech ATOM63 MK874V2 MORI Edition...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 40238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Asus TUF P309 M3 Gen II USB Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 40249,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalámbrico Fantech Tanto E WG13E BT 2.4GHz White",
-        "categoria": "Perifericos",
-        "precio_venta": 41388,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Barra de Sonido Fantech BS160 Groove Bar Wireless RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Portatil Moonki Sound Bluetooth MO-R88BT Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Aula SC380 Pro Wireless 1200 DPI White",
-        "categoria": "Perifericos",
-        "precio_venta": 42078,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Aula SC380 Pro Black",
-        "categoria": "Perifericos",
-        "precio_venta": 42078,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon H260 Hylas Blanco RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 47149,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM 104S Taro Switch Blue",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 43688,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Raptor Fireclaw M87 Red Switch Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 43688,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Raptor Fireclaw M87 Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 43688,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Combo Teclado y Mouse Logitech MK250 Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 44389,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Gaming Kit Thermaltake Talon Elite RGB + Pad Dasher",
-        "categoria": "Perifericos",
-        "precio_venta": 44838,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Razer Deathadder Essential Ergonomic White",
-        "categoria": "Perifericos",
-        "precio_venta": 44849,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Aula SC390 Pro Wireless 20.000 DPI White",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Yari E WG14E Wireless Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Yari E WG14E Wireless Rosa",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Gamer HyperX Pulsefire CORE RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalámbrico Fantech Tanto E WG13E BT/ 2.4GHz Black",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecanico Fantech Atom X63 Taro Switch Blue/White RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM63 Taro Switch Sky Blue RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM81 MK875V2 Taro Switch Ingles...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM87S Taro Switch Ingles Blue RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM87S Taro Switch White RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Raptor Fireclaw M104 Red Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Raptor Fireclaw M104 Red Switch...",
-        "categoria": "Perifericos",
-        "precio_venta": 45988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Teclado Mecánico Raptor Fireclaw M68 Red Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Logitech K400 Plus Wireless",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 45999,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Inalambrico Logitech G G305 Mint Lightspeed",
-        "categoria": "Perifericos",
-        "precio_venta": 47149,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Aula SC590 Pro Wireless 20.000 DPI Black",
-        "categoria": "Perifericos",
-        "precio_venta": 49438,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Aula SC590 Pro Wireless 20.000 DPI White",
-        "categoria": "Perifericos",
-        "precio_venta": 49438,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech G G305 Black Lightspeed",
-        "categoria": "Perifericos",
-        "precio_venta": 50369,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Logitech Mk295 Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 50599,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Aula S100 Pro Brown Blue Light Brown...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 50599,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula S100 Pro Red White Blue Purple...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 50599,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Redragon Inalambrico M808 Storm Pro",
-        "categoria": "Perifericos",
-        "precio_venta": 51634,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon Inalambrico M808 Storm Pro White",
-        "categoria": "Perifericos",
-        "precio_venta": 51634,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecanico Fantech ATOM87S Rosie Switch Ingles White RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 51738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM96 Taro Switch Sky Blue RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 51738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Redragon Cove K733 Grey Switch Wireless RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 51749,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular Fantech MH91 Alto Black",
-        "categoria": "Perifericos",
-        "precio_venta": 57488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Hyperx Cloud Mini White",
-        "categoria": "Perifericos",
-        "precio_venta": 57488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Gaming Kit Tec + Mouse Thermaltake TT Challenger Elite RGB...",
-        "categoria": "Perifericos",
-        "precio_venta": 52888,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Logitech H390 USB",
-        "categoria": "Perifericos",
-        "precio_venta": 59109,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Barra de Sonido Redragon GS570 Darknet",
-        "categoria": "Perifericos",
-        "precio_venta": 59799,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech G G305 Blue Lightspeed",
-        "categoria": "Perifericos",
-        "precio_venta": 54394,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnetico Aula WIN60HE Greywood Switch Ingles White",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 55188,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM X83 Taro Switch Ingles White RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 55188,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular Aula S6 Wireless Blue/White",
-        "categoria": "Perifericos",
-        "precio_venta": 60938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Aula S6 Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 60938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Aula S6 Wireless White",
-        "categoria": "Perifericos",
-        "precio_venta": 60938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Microfono Fantech MCX01 Leviosa RGB Black USB",
-        "categoria": "Perifericos",
-        "precio_venta": 60938,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Logitech K380S Pebble Keys 2 Español Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 55429,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular Logitech H390 Usb-C Black",
-        "categoria": "Perifericos",
-        "precio_venta": 62099,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Aula F75 Wired Blanco Rainbow Rgb Sw Red",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 57488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula F2088Air Degradé Blue...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 57488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula F75 Red Switch Inglés USB...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 57488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM X66 Ice Apricot Switch Beige...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 57488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM X66 Ice Apricot Switch Black ARGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 57488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Redragon K552 Kumara 2 Red Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 57488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular Fantech HG30 Carbon 7.1 Black USB-A",
-        "categoria": "Perifericos",
-        "precio_venta": 63238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Fantech HG30 Carbon 7.1 White USB-A",
-        "categoria": "Perifericos",
-        "precio_venta": 63238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Webcam Fantech C30 Luminous 2K USB",
-        "categoria": "Perifericos",
-        "precio_venta": 63238,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Aula F2058 Blue Switch Inglés...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 57499,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Joystick Redragon Harrow G808 Pro Inalambrico",
-        "categoria": "Perifericos",
-        "precio_venta": 63249,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecanico Redragon K552 Kumara 2 Red Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 58189,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Inalambrico Redragon K1ng Pro M916 1k White",
-        "categoria": "Perifericos",
-        "precio_venta": 58879,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Redragon K1ng Pro m916 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 58879,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Razer Gigantus V2 XXL 940x410x4mm",
-        "categoria": "Perifericos",
-        "precio_venta": 66688,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Aula F2088Air Degradé Red Axis...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 60938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Gaming Kit Redragon Tec+Moise S143 KS17RGB SP / M724 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 60949,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Razer Orochi V2 Hyperspeed White",
-        "categoria": "Perifericos",
-        "precio_venta": 60949,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Razer Orochi V2 Hyperspeed Wireless Black",
-        "categoria": "Perifericos",
-        "precio_venta": 60949,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Inalambrico Logitech G F710 Para PC",
-        "categoria": "Perifericos",
-        "precio_venta": 61869,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Redragon K1NG ULTRA M999 Wireless Black",
-        "categoria": "Perifericos",
-        "precio_venta": 62099,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Fantech WGP13S Super Maxfit Inalambrico Shooter III...",
-        "categoria": "Perifericos",
-        "precio_venta": 68988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Inalambrico Fantech WGP12S Revolver III Anti Drift...",
-        "categoria": "Perifericos",
-        "precio_venta": 68988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Inalambrico Fantech WGP13S Shooter III Anti Drift...",
-        "categoria": "Perifericos",
-        "precio_venta": 68988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Microfono Fantech MCX04 Leviosa Aura USB C RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 68988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular JBL Quantum 50C White",
-        "categoria": "Perifericos",
-        "precio_venta": 68999,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Webcam Redragon GW800 Hitman 1080P Usb",
-        "categoria": "Perifericos",
-        "precio_venta": 68999,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnetico Raptor Fireclaw M68 Red Outemu Switch Ingles",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 63238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Razer Cobra 8500 DPI RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 63249,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular JBL Quantum 50C Black",
-        "categoria": "Perifericos",
-        "precio_venta": 69919,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Redragon Juno Bluetooth G818 PC / PS4 / PS3",
-        "categoria": "Perifericos",
-        "precio_venta": 71299,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Redragon Horus Mini Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 65538,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Razer Ornata V3 X Español RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 65549,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Redragon Fizz K617Rgb-mp...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 66699,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular JBL Quantum 100M2 Gaming Black",
-        "categoria": "Perifericos",
-        "precio_venta": 73599,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular JBL Quantum 100M2 Gaming White",
-        "categoria": "Perifericos",
-        "precio_venta": 73599,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular JBL Quantum 100P PS5",
-        "categoria": "Perifericos",
-        "precio_venta": 73599,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon Vibecore H610 ANC Bluetooth Gris",
-        "categoria": "Perifericos",
-        "precio_venta": 73829,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon Vibecore H610 ANC Bluetooth Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 73829,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Hyperx Pulsefire Haste 2 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 68988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Hyperx Pulsefire Haste 2 Core Black",
-        "categoria": "Perifericos",
-        "precio_venta": 68988,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado HyperX Alloy Core Español RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula Mini60 He Stormrise Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnetico Fantech ATOM HE68 Emerald Switch Ingles USB...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnetico Fantech ATOM HE68 Emerald Switch Ingles USB-C...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech MAXPOWER II Lemon Switch Ingles Black...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech MAXPOWER II Lemon Switch Ingles Pink...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech MAXPOWER II Yellow Zest Switch White...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Logitech G G403 Hero 25k RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 68999,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Redragon K552 Kumara Red DP Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 68999,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Redragon H848 IRE Pro",
-        "categoria": "Perifericos",
-        "precio_venta": 78429,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon H320 Lamia 2 RGB 7.1",
-        "categoria": "Perifericos",
-        "precio_venta": 79349,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inlamabrico Redragon K1NG 4K PRO M916 Pink",
-        "categoria": "Perifericos",
-        "precio_venta": 72438,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Logitech MK540 Wireless Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 72449,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Webcam Genius Facecam Open Black Face Recognition Fhd",
-        "categoria": "Perifericos",
-        "precio_venta": 80499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado y Mouse Logitech Mk470 Wireless Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 73369,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon H320W Lamia 2 White RGB 7.1",
-        "categoria": "Perifericos",
-        "precio_venta": 81649,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Gaming Kit Fantech P51 5 en 1 TEC+MOU+PAD+AUR+STAND BLACK ENG",
-        "categoria": "Perifericos",
-        "precio_venta": 74738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Gaming Kit Fantech P51 5 en 1 TEC+MOU+PAD+AUR+STAND PINK ENG",
-        "categoria": "Perifericos",
-        "precio_venta": 74738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Gaming Kit Fantech P51 5 en 1 TEC+MOU+PAD+AUR+STAND WHITE ENG",
-        "categoria": "Perifericos",
-        "precio_venta": 74738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula Win68he Standard Greywood V3...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 74738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Redragon K616 Fizz Pro Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 74738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Redragon K616 Fizz Pro Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 74738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Redragon K616 Fizz Pro White...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 74738,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula Mini60 He Pro Mistcloud Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 75888,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Irok MARS68 PRO Purple Star Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 75888,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Combo Teclado y Mouse Redragon Essentials K552RGB / M724-S145...",
-        "categoria": "Perifericos",
-        "precio_venta": 76474,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Fantech WGP15V2 Eos Pro II Inalambrico Anti Drift Grey",
-        "categoria": "Perifericos",
-        "precio_venta": 86238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Inalambrico Fantech WGP13X Shooter III X Anti Drift...",
-        "categoria": "Perifericos",
-        "precio_venta": 86238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Inalambrico Fantech WGP15V2 Eos Pro II Tri-mode 2.4GHz...",
-        "categoria": "Perifericos",
-        "precio_venta": 86238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Kit Mejora Thermaltake Sim Para Pedales 3 Damper",
-        "categoria": "Perifericos",
-        "precio_venta": 86238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Aula V9 Pro Wireless 26000 DPI White",
-        "categoria": "Perifericos",
-        "precio_venta": 79338,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse ASUS TUF P306 M4 Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 80488,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnético Redragon Kumara K552 Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 80844,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mousepad Razer Gigantus V2 Counter Strike 2 L 450x400X3mm",
-        "categoria": "Perifericos",
-        "precio_venta": 90849,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Redragon K1ng Pro M916P 4K Black",
-        "categoria": "Perifericos",
-        "precio_venta": 83144,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Fantech MH90 Sonata Black",
-        "categoria": "Perifericos",
-        "precio_venta": 91988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Barra de Sonido Fantech BS151 Groove Bar Pro Wireless RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 91988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Barra de Sonido Inalambrico Fantech BS163 GROOVE BAR PRO RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 91988,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnético Aula Win68He Max Wing Chun Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 85088,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Irok MERCURY68 Purple Star Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 85088,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Aula X9 Ultra Wireless 42.000 DPI Black",
-        "categoria": "Perifericos",
-        "precio_venta": 86238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Aula X9 ULTRA Wireless 42.000 DPI White",
-        "categoria": "Perifericos",
-        "precio_venta": 86238,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Aula F87 Gray White Black Gray Switch Inglés...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 86238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech G G502 HERO RGB 25600DPI 1Ms",
-        "categoria": "Perifericos",
-        "precio_venta": 86249,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Hyperx Clutch Gladiate RGB Transparente XBOX",
-        "categoria": "Perifericos",
-        "precio_venta": 95438,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Hyperx Pulsfire Haste 2 Core Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 87388,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Redragon Ucal K673Rgb-m Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 87399,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula HERO 68 HE Meteor Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 88538,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Joystick Fantech WGP14V2 Nova Pro Inalambrico Anti Drift Motion...",
-        "categoria": "Perifericos",
-        "precio_venta": 97738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Fantech WGP18 Zenith Pro Inalambrico Anti Drift White...",
-        "categoria": "Perifericos",
-        "precio_venta": 97738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Inalambrico Fantech WGP14V2 Nova Pro Anti Drift Motion...",
-        "categoria": "Perifericos",
-        "precio_venta": 97738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Razer Blackshark V2 X 7.1 Black Jack 3.5mm",
-        "categoria": "Perifericos",
-        "precio_venta": 97749,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Redragon Horus K622 Con Red Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 89688,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Redragon Horus Mini Pro Con Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 89688,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular Redragon Cybill H312 Black Red",
-        "categoria": "Perifericos",
-        "precio_venta": 98888,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon Zeus X Stereo Pink RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 100038,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Tanto S WG13S Wireless Rosa",
-        "categoria": "Perifericos",
-        "precio_venta": 91988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Yari Pro WG14P Wireless Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 91988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Fantech Yari Pro WG14P Wireless Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 91988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalámbrico Fantech Tanto S WG13S BT 2.4GHz 8000Hz...",
-        "categoria": "Perifericos",
-        "precio_venta": 91988,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnetico Fantech ATOM HE68 PRO Emerald Switch Ingles...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnetico Fantech ATOM HE68 PRO Emerald Switch Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnetico Fantech ATOM HE68 PRO Super Maxfit Emerald...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula F75 Reaper Switch Inglés...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula F75 Reaper Switch Wireless Blue...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM PRO83 Blue Switch Ingles Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Palanca De Cambios Logitech G Volante G920 G29 G923 Para...",
-        "categoria": "Perifericos",
-        "precio_venta": 101188,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Webcam Redragon GW911 4K Usb",
-        "categoria": "Perifericos",
-        "precio_venta": 102349,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Aula  A600 Wireless White RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 103488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Hyperx Cloud Stinger Core PS5 Version 2 Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 103488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Guantes Thermaltake Sim P/Simulador L Black",
-        "categoria": "Perifericos",
-        "precio_venta": 103488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Fantech WGP15V2S EOS Pro II Inalambrico Anti Drift...",
-        "categoria": "Perifericos",
-        "precio_venta": 103488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Inalambrico Fantech WGP15V2S Eos Pro II S Tri-Mode...",
-        "categoria": "Perifericos",
-        "precio_venta": 103488,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecanico Fantech ATOM PRO96 Blue Switch Wireless Grey...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 95438,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM PRO96 Red Switch Ingles Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 95438,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Corsair Ironclaw RGB Fps MOBA",
-        "categoria": "Perifericos",
-        "precio_venta": 97738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico COrsair Harpoon RGB Slipstream",
-        "categoria": "Perifericos",
-        "precio_venta": 97738,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Aula F75 Pro Star Vector Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 97738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Webcam Logitech Brio 300 Full HD",
-        "categoria": "Perifericos",
-        "precio_venta": 107639,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Genius SP-HF520BT Pine Wood",
-        "categoria": "Perifericos",
-        "precio_venta": 109249,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Redragon Zeus X Stereo Black RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 110388,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula Hero 68 He Gradient Pluto Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 101188,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Razer Basilisk V3 Wired Ergonomic Black",
-        "categoria": "Perifericos",
-        "precio_venta": 103488,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnético Aula Hero 68 He White Silver Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 103488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula Hero 84 He Pink Switch Pink RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 103488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech ATOM PRO97 Red Switch Ingles Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 103488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Fantech MAXFIT6 Brown Switch Ingles...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 103488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Combo Teclado y Mouse Logitech Pop Icon Wireless Rosa",
-        "categoria": "Perifericos",
-        "precio_venta": 103499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Razer Gigantus V2 Pro Mat Balance L",
-        "categoria": "Perifericos",
-        "precio_venta": 113849,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Razer Gigantus V2 Pro Mat Control L",
-        "categoria": "Perifericos",
-        "precio_venta": 113849,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Razer Gigantus V2 Pro Mat Speed L",
-        "categoria": "Perifericos",
-        "precio_venta": 113849,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Hyperx Cloud Stinger 2 PS5 Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 114988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Redragon Zeus X Stereo White RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 114988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Microfono Redragon Blazar GM300",
-        "categoria": "Perifericos",
-        "precio_venta": 114988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Razer Gigantus V2 3XL 1200x550x4mm",
-        "categoria": "Perifericos",
-        "precio_venta": 114999,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Redragon Eisa Pro K686WB EN Blue Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 104649,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Redragon Eisa Max K686WBG White Black Inglés...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 104649,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech MAXFIT8 Brown Switch Ingles Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 105788,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech MAXFIT8 Brown Switch Wireless Rosie...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 105788,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Fantech Maxfit8 MK921 Brown Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 105788,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Fantech MAXFIT8 White Switch Wireless White...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 105788,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Redragon UCAL PRO K673 White Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 105799,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Redragon Ucal Pro K673 Cream Purple Cream Purple Green",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 105799,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auricular JBL Quantum 250 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 118449,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Jbl Quantum 250 White",
-        "categoria": "Perifericos",
-        "precio_venta": 118449,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Redragon Eisa Max K686SP Gris RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 108099,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auriculares Asus TUF Gaming A302 H1 Gen II USB Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 119599,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Aula F75 Max Star Vector Switch Español Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 110388,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Aula F75 Max Reaper Switch Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 110388,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula Nova 75 Dream Sakura Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 110388,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Teclado Magnético Redragon Eisa K686Rgb-m Español...",
-        "categoria": "Perifericos",
-        "precio_venta": 110399,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Redragon Horus K621 Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 111089,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Aula F75 Max Reaper Switch Español Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 112688,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula F75 Max Blue White Dark Reaper...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 112688,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula F75 Max Light Blue White Reaper...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 112688,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula Hero 99 White Wing Chun Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 112699,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Redragon YAMA K550 Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 112929,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Fantech Tanto Pro WG13P Wireless Rojo",
-        "categoria": "Perifericos",
-        "precio_venta": 114988,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Aula F75 Comic Star Vector Switch Español White...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 114988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Magnético Aula Hero 99 White Graywood V3 Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 114988,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Fantech SUPER MAXFIT AIR83 MK915 Red...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 114988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Gaming Kit Tec+Mouse Redragon S136 Inalambrico",
-        "categoria": "Perifericos",
-        "precio_venta": 114999,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Cooler Master CH351 Verde Rosa",
-        "categoria": "Perifericos",
-        "precio_venta": 127638,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Fantech WHG02 Harmony WHG02 RGB White...",
-        "categoria": "Perifericos",
-        "precio_venta": 132238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Fantech WHG07 Orbita Wireless 7.1 Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 132238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares JBL Wave Beam 2 True Pink Bluetooh",
-        "categoria": "Perifericos",
-        "precio_venta": 132249,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares JBL Wave Beam 2 True White Bluetooh",
-        "categoria": "Perifericos",
-        "precio_venta": 132249,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mousepad Corsair MM ProControl L 450x400x4mm",
-        "categoria": "Perifericos",
-        "precio_venta": 135688,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Redragon G831 Wargrip PC/PS5 + Base de Carga",
-        "categoria": "Perifericos",
-        "precio_venta": 135699,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Fantech WHG02P Harmony Pro RGB Tri-Mode...",
-        "categoria": "Perifericos",
-        "precio_venta": 137988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Hyperx Cloud Stinger Core Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 137988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Logitech G G321 Lightspeed Wireless White",
-        "categoria": "Perifericos",
-        "precio_venta": 137999,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Corsair Ironclaw Rgb Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 126488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Hyperx Pulsefire Haste 2 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 126488,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Aula F108 Pro Rain Switch Español Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 126488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Aula F108 Pro Reaper Switch Español Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 126488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Aula F108 Pro Wind Spirit Switch Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 126488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Corsair Katar Elite Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 129938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Corsair M75 Air Wireless Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 129938,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Base Piso Thermaltake Sim GR500",
-        "categoria": "Perifericos",
-        "precio_venta": 143738,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecanico ASUS TUF Gaming RA07 K3 Gen II Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 132249,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Auriculares JBL Wave Beam 2 True Negro Bluetooth",
-        "categoria": "Perifericos",
-        "precio_venta": 149499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares JBL Wave Buds 2 Black Bluetooth",
-        "categoria": "Perifericos",
-        "precio_venta": 149499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Redragon Inalambrico G832 Kaiser PC/PS5",
-        "categoria": "Perifericos",
-        "precio_venta": 149499,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Hyperx Alloy Origins Core ABS Switch Red Ing",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 137988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Kit Gamer Razer On Bundle Mouse + Auriculares + Bungee",
-        "categoria": "Perifericos",
-        "precio_venta": 137999,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Webcam Logitech C920s 1080p HD Stereo C/Tapa",
-        "categoria": "Perifericos",
-        "precio_venta": 156399,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Logitech G G413 SE Gaming Mecanico SW Tactile",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 142599,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Gaming Kit Hyperx Teclado Y Mouse Pulsefire Haste 2 Alloy Core...",
-        "categoria": "Perifericos",
-        "precio_venta": 143738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Corsair Dark Core Rgb Pro Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 143738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Microfono Hyperx Solocast",
-        "categoria": "Perifericos",
-        "precio_venta": 158814,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse ASUS ROG P713 Harpe Ace Aim Lab Wireless Negro",
-        "categoria": "Perifericos",
-        "precio_venta": 149499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Razer Cobra Hyperspeed Wireless 26000 DPI Black",
-        "categoria": "Perifericos",
-        "precio_venta": 149499,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Razer Huntsman Mini Purple Switch Español USB...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 149499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech G G502 Lightspeed",
-        "categoria": "Perifericos",
-        "precio_venta": 152938,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Corsair K70 Core Red MLX Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 152938,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Logitech G Pro RGB Lightsync Mech",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 157549,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Webcam Logitech C922 Pro Stream Usb FHD",
-        "categoria": "Perifericos",
-        "precio_venta": 175949,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech G G903 Hero Lightspeed Hero 25k",
-        "categoria": "Perifericos",
-        "precio_venta": 160999,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnetico Redragon Venom K753 Ingles Wireless RGB",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 166749,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Alfombra Thermaltake Sim Para Cockpits y Simulador Black",
-        "categoria": "Perifericos",
-        "precio_venta": 183988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Parlante Genius Sw-G2 1 2000 II",
-        "categoria": "Perifericos",
-        "precio_venta": 183999,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecánico Corsair K70 Core MLX Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 172488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Mouse Inalambrico Corsair Sabre V2 Pro Ultralight Black",
-        "categoria": "Perifericos",
-        "precio_venta": 183988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Corsair Sabre V2 Pro Ultralight White",
-        "categoria": "Perifericos",
-        "precio_venta": 183988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Soporte Monitor Thermaltake Sim Para GR300",
-        "categoria": "Perifericos",
-        "precio_venta": 206988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Razer Cobra Pro Wireless White",
-        "categoria": "Perifericos",
-        "precio_venta": 194349,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Corsair M65 Rgb Ultra Aluminio Black",
-        "categoria": "Perifericos",
-        "precio_venta": 195488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Logitech G G325 Lightspeed White",
-        "categoria": "Perifericos",
-        "precio_venta": 215049,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Cockpit Raptor Overdrive Simulador Con Apoya Volante y Pedalera",
-        "categoria": "Perifericos",
-        "precio_venta": 218488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares JBL Quantum 360 Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 218499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares JBL Quantum 360P Wireless Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 218499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Micrófono Razer Seiren V3 Chroma USB Tipo-A RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 233449,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Logitech G Pro X Superlight 2C Black",
-        "categoria": "Perifericos",
-        "precio_venta": 213888,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Logitech G Pro X Superlight 2C Wireless 44000 DPI Blanco",
-        "categoria": "Perifericos",
-        "precio_venta": 213899,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Microfono Razer Seiren V3 Chroma USB Tipo-A RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 238049,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Volante Genius Speedmaster x2 Pedalera + Palanca USB",
-        "categoria": "Perifericos",
-        "precio_venta": 241499,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Mouse Corsair M75 Wireless Amarillo + Pad Negro y...",
-        "categoria": "Perifericos",
-        "precio_venta": 224238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Razer Basilisk V3 Pro Wireless 35000 DPI White",
-        "categoria": "Perifericos",
-        "precio_venta": 229999,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Corsair VOID V2 White",
-        "categoria": "Perifericos",
-        "precio_venta": 275988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Mouse Inalambrico Corsair MMO Scimitar Elite Se Black",
-        "categoria": "Perifericos",
-        "precio_venta": 258738,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Magnético Aula AG60 PRO Aether Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 258738,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Joystick Razer Wolverine V3 Pro 8K PC Inalambrico",
-        "categoria": "Perifericos",
-        "precio_venta": 293238,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico JBL Quantum 650 White PC PS5 Nintendo...",
-        "categoria": "Perifericos",
-        "precio_venta": 298999,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico Aula L99 Caramel Latte Switch Wireless...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 281738,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Cockpit Raptor Overdrive Pulse Simulador C/Butaca Hilo Plegable",
-        "categoria": "Perifericos",
-        "precio_venta": 310488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Corsair HS80 RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 333488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Microfono Hyperx Quadcast 2S USB RGB",
-        "categoria": "Perifericos",
-        "precio_venta": 356488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Microfono HyperX Quadcast 2 Black",
-        "categoria": "Perifericos",
-        "precio_venta": 371449,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Palanca Logitech RS Shifter y Handbrake",
-        "categoria": "Perifericos",
-        "precio_venta": 379488,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Logitech G G522 Lightspeed Wireless",
-        "categoria": "Perifericos",
-        "precio_venta": 390999,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Combo Teclado Mouse y Mousepad MSI Frieren Edition",
-        "categoria": "Perifericos",
-        "precio_venta": 367988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auricular Inalambrico Logitech Astro A20x Black",
-        "categoria": "Perifericos",
-        "precio_venta": 404799,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Auriculares Logitech ASTRO A20X LIGHTSPEED White...",
-        "categoria": "Perifericos",
-        "precio_venta": 404799,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Palanca Logitech RS H-Shifter",
-        "categoria": "Perifericos",
-        "precio_venta": 413988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Pedalera Logitech RS Pc/Box/Rs",
-        "categoria": "Perifericos",
-        "precio_venta": 459988,
-        "imagen": "",
-        "stock": true
-    },
-    {
         "titulo": "Teclado Mecanico Corsair K100 Air Cherry Switch Español...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 448488,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecanico Corsair Vanguard Air 96 Wireless Negro...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 454238,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Teclado Mecánico HyperX Alloy Rise Red Switch...",
-        "categoria": "Perifericos",
+        "categoria": "Teclados",
         "precio_venta": 454594,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Carrito Movil Thermaltake Sim PC Con Bandeja de Teclado y Mouse",
-        "categoria": "Perifericos",
-        "precio_venta": 540488,
+        "titulo": "Auricular Genius HS-04S Dual Plug",
+        "categoria": "Auriculares",
+        "precio_venta": 21159,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Volante Thermaltake Sim Formula F1 F100 Racing Wheel",
-        "categoria": "Perifericos",
-        "precio_venta": 500238,
+        "titulo": "Auriculares Fantech HQ54 Mars II Negro",
+        "categoria": "Auriculares",
+        "precio_venta": 28738,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Volante Logitech G G920 Con Pedalera",
-        "categoria": "Perifericos",
-        "precio_venta": 569238,
+        "titulo": "Auricular Genius HS-220U USB Digital",
+        "categoria": "Auriculares",
+        "precio_venta": 28749,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Cockpit Raptor Overdrive Pro Simulador C/Butaca",
-        "categoria": "Perifericos",
-        "precio_venta": 574988,
+        "titulo": "Auricular Redragon H120 Ares RGB C/Microfono S/Adaptador",
+        "categoria": "Auriculares",
+        "precio_venta": 31049,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Volante Logitech G29 PS5 PC Con Pedalera",
-        "categoria": "Perifericos",
-        "precio_venta": 574988,
+        "titulo": "Auriculares Genius HS-230U USB-A",
+        "categoria": "Auriculares",
+        "precio_venta": 32199,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Soporte Monitor Thermaltake Sim Para Cockpit Triple Monitor...",
-        "categoria": "Perifericos",
-        "precio_venta": 661238,
+        "titulo": "Auricular Genius HS-235U AI USB",
+        "categoria": "Auriculares",
+        "precio_venta": 32889,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Volante Logitech G G923 PS5/PC Black Con Pedalera",
-        "categoria": "Perifericos",
-        "precio_venta": 689988,
+        "titulo": "Auricular Fantech MH89 Valor II Black 3.5MM",
+        "categoria": "Auriculares",
+        "precio_venta": 34488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Fantech HQ55 Portal Negro",
+        "categoria": "Auriculares",
+        "precio_venta": 34488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon Cronius H211 RGB Black",
+        "categoria": "Auriculares",
+        "precio_venta": 35189,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon Cronus H211 RGB White",
+        "categoria": "Auriculares",
+        "precio_venta": 35189,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Bluetooth Genius Hs-820Bt Black",
+        "categoria": "Auriculares",
+        "precio_venta": 39674,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Genius HS-810BT Black",
+        "categoria": "Auriculares",
+        "precio_venta": 39674,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Fantech HG25 Orbit 7.1 Negro",
+        "categoria": "Auriculares",
+        "precio_venta": 40238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon H260 Hylas Black RGB",
+        "categoria": "Auriculares",
+        "precio_venta": 42549,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon H260 Hylas Blanco RGB",
+        "categoria": "Auriculares",
+        "precio_venta": 47149,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Fantech MH91 Alto Black",
+        "categoria": "Auriculares",
+        "precio_venta": 57488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Hyperx Cloud Mini White",
+        "categoria": "Auriculares",
+        "precio_venta": 57488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Logitech H390 USB",
+        "categoria": "Auriculares",
+        "precio_venta": 59109,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Aula S6 Wireless Blue/White",
+        "categoria": "Auriculares",
+        "precio_venta": 60938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Aula S6 Wireless",
+        "categoria": "Auriculares",
+        "precio_venta": 60938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Aula S6 Wireless White",
+        "categoria": "Auriculares",
+        "precio_venta": 60938,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Logitech H390 Usb-C Black",
+        "categoria": "Auriculares",
+        "precio_venta": 62099,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Fantech HG30 Carbon 7.1 Black USB-A",
+        "categoria": "Auriculares",
+        "precio_venta": 63238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Fantech HG30 Carbon 7.1 White USB-A",
+        "categoria": "Auriculares",
+        "precio_venta": 63238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular JBL Quantum 50C White",
+        "categoria": "Auriculares",
+        "precio_venta": 68999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular JBL Quantum 50C Black",
+        "categoria": "Auriculares",
+        "precio_venta": 69919,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular JBL Quantum 100M2 Gaming Black",
+        "categoria": "Auriculares",
+        "precio_venta": 73599,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular JBL Quantum 100M2 Gaming White",
+        "categoria": "Auriculares",
+        "precio_venta": 73599,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular JBL Quantum 100P PS5",
+        "categoria": "Auriculares",
+        "precio_venta": 73599,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon Vibecore H610 ANC Bluetooth Gris",
+        "categoria": "Auriculares",
+        "precio_venta": 73829,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon Vibecore H610 ANC Bluetooth Negro",
+        "categoria": "Auriculares",
+        "precio_venta": 73829,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Redragon H848 IRE Pro",
+        "categoria": "Auriculares",
+        "precio_venta": 78429,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon H320 Lamia 2 RGB 7.1",
+        "categoria": "Auriculares",
+        "precio_venta": 79349,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon H320W Lamia 2 White RGB 7.1",
+        "categoria": "Auriculares",
+        "precio_venta": 81649,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Fantech MH90 Sonata Black",
+        "categoria": "Auriculares",
+        "precio_venta": 91988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Razer Blackshark V2 X 7.1 Black Jack 3.5mm",
+        "categoria": "Auriculares",
+        "precio_venta": 97749,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon Cybill H312 Black Red",
+        "categoria": "Auriculares",
+        "precio_venta": 98888,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon Zeus X Stereo Pink RGB",
+        "categoria": "Auriculares",
+        "precio_venta": 100038,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Aula  A600 Wireless White RGB",
+        "categoria": "Auriculares",
+        "precio_venta": 103488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Hyperx Cloud Stinger Core PS5 Version 2 Blanco",
+        "categoria": "Auriculares",
+        "precio_venta": 103488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Redragon Zeus X Stereo Black RGB",
+        "categoria": "Auriculares",
+        "precio_venta": 110388,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Hyperx Cloud Stinger 2 PS5 Blanco",
+        "categoria": "Auriculares",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Redragon Zeus X Stereo White RGB",
+        "categoria": "Auriculares",
+        "precio_venta": 114988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular JBL Quantum 250 Black",
+        "categoria": "Auriculares",
+        "precio_venta": 118449,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Jbl Quantum 250 White",
+        "categoria": "Auriculares",
+        "precio_venta": 118449,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Asus TUF Gaming A302 H1 Gen II USB Negro",
+        "categoria": "Auriculares",
+        "precio_venta": 119599,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Cooler Master CH351 Verde Rosa",
+        "categoria": "Auriculares",
+        "precio_venta": 127638,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Fantech WHG02 Harmony WHG02 RGB White...",
+        "categoria": "Auriculares",
+        "precio_venta": 132238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Fantech WHG07 Orbita Wireless 7.1 Negro",
+        "categoria": "Auriculares",
+        "precio_venta": 132238,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares JBL Wave Beam 2 True Pink Bluetooh",
+        "categoria": "Auriculares",
+        "precio_venta": 132249,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares JBL Wave Beam 2 True White Bluetooh",
+        "categoria": "Auriculares",
+        "precio_venta": 132249,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Fantech WHG02P Harmony Pro RGB Tri-Mode...",
+        "categoria": "Auriculares",
+        "precio_venta": 137988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Hyperx Cloud Stinger Core Blanco",
+        "categoria": "Auriculares",
+        "precio_venta": 137988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Logitech G G321 Lightspeed Wireless White",
+        "categoria": "Auriculares",
+        "precio_venta": 137999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares JBL Wave Beam 2 True Negro Bluetooth",
+        "categoria": "Auriculares",
+        "precio_venta": 149499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares JBL Wave Buds 2 Black Bluetooth",
+        "categoria": "Auriculares",
+        "precio_venta": 149499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Logitech G G325 Lightspeed White",
+        "categoria": "Auriculares",
+        "precio_venta": 215049,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares JBL Quantum 360 Wireless",
+        "categoria": "Auriculares",
+        "precio_venta": 218499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares JBL Quantum 360P Wireless Blanco",
+        "categoria": "Auriculares",
+        "precio_venta": 218499,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Corsair VOID V2 White",
+        "categoria": "Auriculares",
+        "precio_venta": 275988,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico JBL Quantum 650 White PC PS5 Nintendo...",
+        "categoria": "Auriculares",
+        "precio_venta": 298999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Corsair HS80 RGB",
+        "categoria": "Auriculares",
+        "precio_venta": 333488,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Logitech G G522 Lightspeed Wireless",
+        "categoria": "Auriculares",
+        "precio_venta": 390999,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auricular Inalambrico Logitech Astro A20x Black",
+        "categoria": "Auriculares",
+        "precio_venta": 404799,
+        "imagen": "",
+        "stock": true
+    },
+    {
+        "titulo": "Auriculares Logitech ASTRO A20X LIGHTSPEED White...",
+        "categoria": "Auriculares",
+        "precio_venta": 404799,
         "imagen": "",
         "stock": true
     },
     {
         "titulo": "Auricular Inalambrico JBL Quantum 950 Black",
-        "categoria": "Perifericos",
+        "categoria": "Auriculares",
         "precio_venta": 735999,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Cockpit Thermaltake Sim GR300 Racing Simulator Black",
-        "categoria": "Perifericos",
-        "precio_venta": 1609988,
+        "titulo": "Mousepad Raptor Ultra Glide S 260x210x3mm",
+        "categoria": "Mousepads",
+        "precio_venta": 4013,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Volante Thermaltake G6 Direct Drive Racing Wheel Con Pedales",
-        "categoria": "Perifericos",
-        "precio_venta": 1558238,
+        "titulo": "Mouse Pad Fantech MP64 Basic 640x210x2mm Black",
+        "categoria": "Mousepads",
+        "precio_venta": 5738,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Volante Thermaltake Sim G15 Drive Racing Wheel 15NM 16BITS Con...",
-        "categoria": "Perifericos",
-        "precio_venta": 2184988,
+        "titulo": "Mousepad Aula MP-W Small Speed 250 X 210 X 2mm Black/Red",
+        "categoria": "Mousepads",
+        "precio_venta": 6899,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Cockpit Thermaltake Sim GR500 Premium RGB Racing Simulator",
-        "categoria": "Perifericos",
-        "precio_venta": 2587488,
+        "titulo": "Mousepad Raptor Ultra Glide L 450x400x3mm",
+        "categoria": "Mousepads",
+        "precio_venta": 11488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Pedalera Italiana Thermaltake Sim Premium XRP-L1 Con Pedales y...",
-        "categoria": "Perifericos",
-        "precio_venta": 2817488,
+        "titulo": "Mouse Pad Redragon Flick M",
+        "categoria": "Mousepads",
+        "precio_venta": 11499,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Volante Thermaltake Sim Premium XRW-G1 GT Con Pantalla Touch...",
-        "categoria": "Perifericos",
-        "precio_venta": 4714988,
+        "titulo": "Mouse Pad Venex Con Gel Cristal",
+        "categoria": "Mousepads",
+        "precio_venta": 13097,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo IdeaPad Slim 3 15IAN8 Intel N100 8GB 128GB...",
-        "categoria": "Notebooks",
-        "precio_venta": 770488,
+        "titulo": "Mouse Pad Fantech Agile MP353 350X300X4mm Speed Edition Black",
+        "categoria": "Mousepads",
+        "precio_venta": 13788,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook ASUS Vivobook X1404VA Core i3 1315U 8GB 128GB 14\" W11...",
-        "categoria": "Notebooks",
-        "precio_venta": 873988,
+        "titulo": "Mouse Pad Fantech Agile MP353 350X300X4mm Speed Edition Grey",
+        "categoria": "Mousepads",
+        "precio_venta": 13788,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP 255R G10 Ryzen 3 7335U 16GB 256GB 15.6\"",
-        "categoria": "Notebooks",
-        "precio_venta": 1034988,
+        "titulo": "Mouse Pad Fantech Vigil MP356 M 350x300x4mm Control Edition...",
+        "categoria": "Mousepads",
+        "precio_venta": 13788,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP 245 G10 Ryzen 3 7330U 8GB 512GB 14\"",
-        "categoria": "Notebooks",
-        "precio_venta": 1115488,
+        "titulo": "Mousepad Raptor Ultra Glide L 700x300x3mm",
+        "categoria": "Mousepads",
+        "precio_venta": 13788,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook CX CX30682 Core i5 12450H 8GB 256GB 15.6\"",
-        "categoria": "Notebooks",
-        "precio_venta": 1126988,
+        "titulo": "Mousepad Raptor Ultra Glide XL 900x400x3mm",
+        "categoria": "Mousepads",
+        "precio_venta": 16088,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo Ideapad Slim 3 15AMN8 Ryzen 5 7520U 8GB 256GB...",
-        "categoria": "Notebooks",
-        "precio_venta": 1149988,
+        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Blue",
+        "categoria": "Mousepads",
+        "precio_venta": 17238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G5 Core i3 1315U 8GB 512GB 15.6\" Luna Gray",
-        "categoria": "Notebooks",
-        "precio_venta": 1149988,
+        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Pink",
+        "categoria": "Mousepads",
+        "precio_venta": 17238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP 245 G10 Ryzen 3 7330U 16GB 512GB 14\"",
-        "categoria": "Notebooks",
-        "precio_venta": 1207488,
+        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Purple",
+        "categoria": "Mousepads",
+        "precio_venta": 17238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo IdeaPad Slim 3 15AMN8 Ryzen 3 7320U 16GB 256GB...",
-        "categoria": "Notebooks",
-        "precio_venta": 1207488,
+        "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Yellow",
+        "categoria": "Mousepads",
+        "precio_venta": 17238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G4 Ryzen 5 7520U 8Gb SSD 512Gb 15.6 Free",
-        "categoria": "Notebooks",
-        "precio_venta": 1241988,
+        "titulo": "Mousepad Fantech Vigil MP456 L 450x450x4mm",
+        "categoria": "Mousepads",
+        "precio_venta": 17238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook CX CX30682 Core i5 12450H 16GB 256GB 15.6\"",
-        "categoria": "Notebooks",
-        "precio_venta": 1264988,
+        "titulo": "Mouse Pad Genius G-PAD 700S",
+        "categoria": "Mousepads",
+        "precio_venta": 18399,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G4 Ryzen 3 7320U 16GB 512GB 15.6\" Arctic...",
-        "categoria": "Notebooks",
-        "precio_venta": 1264988,
+        "titulo": "Mousepad Redragon Flick L",
+        "categoria": "Mousepads",
+        "precio_venta": 19894,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook ASUS Vivobook X1404VA Core i5 1334U 12GB 256GB 14\" W11...",
-        "categoria": "Notebooks",
-        "precio_venta": 1310988,
+        "titulo": "Mouse Pad Fantech Agile MP453 450X350X4mm Speed Edition Black",
+        "categoria": "Mousepads",
+        "precio_venta": 22988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP 15-FC0251LA Ryzen 5 7520U 8GB SSD 512GB 15.6\" W11 +...",
-        "categoria": "Notebooks",
-        "precio_venta": 1322488,
+        "titulo": "Mouse Pad Fantech Agile MP453 450X350X4mm Spped Edition Grey",
+        "categoria": "Mousepads",
+        "precio_venta": 22988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G5 Core i3 1315U 16GB 512GB 15.6\" Arctic...",
-        "categoria": "Notebooks",
-        "precio_venta": 1356988,
+        "titulo": "Mouse Pad Fantech Vigil MP806 800X300X3mm Speed Edition...",
+        "categoria": "Mousepads",
+        "precio_venta": 22988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Acer Aspire 3 A315 Ryzen 5 7520U 16GB 512GB 15.6\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 1379988,
+        "titulo": "Mouse Pad Fantech MMT454 Motion Wind Kaze 400x450x5mm XL Black",
+        "categoria": "Mousepads",
+        "precio_venta": 28738,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Acer Aspire Go 15 Ryzen 7 7730U 16GB 512GB W11 15.6\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 1437488,
+        "titulo": "Mouse Pad Fantech MMT455 Motion Lightning Kaminari 400x450x5mm...",
+        "categoria": "Mousepads",
+        "precio_venta": 28738,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP 250R G10 Core 5 120U 16GB 512GB 15.6\"",
-        "categoria": "Notebooks",
-        "precio_venta": 1437488,
+        "titulo": "Mousepad Fantech STRIKEPAD MST491 L 490x420x3mm Speed...",
+        "categoria": "Mousepads",
+        "precio_venta": 28738,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP 255 G10 Ryzen 5 7535U 16GB 512GB 15.6\"",
-        "categoria": "Notebooks",
-        "precio_venta": 1460488,
+        "titulo": "Mouse Pad Fantech Agile MP903 900X400X3MM Speed Edition Black",
+        "categoria": "Mousepads",
+        "precio_venta": 32188,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G4 Ryzen 5 7520U 16GB 512GB 15.6\" Arctic...",
-        "categoria": "Notebooks",
-        "precio_venta": 1460488,
+        "titulo": "Mouse Pad Fantech Agile MP903 900X400X3MM Speed Edition Grey",
+        "categoria": "Mousepads",
+        "precio_venta": 32188,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP OmniBook 3 Ryzen 5 40 16GB 256GB W11 16\" 2K Glacier...",
-        "categoria": "Notebooks",
-        "precio_venta": 1494988,
+        "titulo": "Mousepad Redragon Flick XL",
+        "categoria": "Mousepads",
+        "precio_venta": 33349,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo Ideapad 1 15IRU7 Core I5 1335U 16GB 256GB 15.6\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 1575488,
+        "titulo": "Mousepad Razer Gigantus V2 L 450x400x3mm",
+        "categoria": "Mousepads",
+        "precio_venta": 34039,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G5 Core i7 13620H 8GB 512GB 15.6\" Luna Grey",
-        "categoria": "Notebooks",
-        "precio_venta": 1592738,
+        "titulo": "Mousepad Redragon KUNLUN L 880x420x4mm",
+        "categoria": "Mousepads",
+        "precio_venta": 34499,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP Omnibook 3 Ryzen 5 40 APU 16GB 512GB 16\" W11...",
-        "categoria": "Notebooks",
-        "precio_venta": 1609988,
+        "titulo": "Mouse Pad Fantech ATO MP905 900X400X4mm Speed Katsuyama Edition",
+        "categoria": "Mousepads",
+        "precio_venta": 37938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo IdeaPad Slim 3 15AMN8 Ryzen 5 7520U 16GB 512GB...",
-        "categoria": "Notebooks",
-        "precio_venta": 1609988,
+        "titulo": "Mouse Pad Fantech ATO MP905 900X400X4mm Speed Kujira Nami...",
+        "categoria": "Mousepads",
+        "precio_venta": 37938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook ASUS Vivobook F1605VA Core i7 1355U 16GB 512GB 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 1724988,
+        "titulo": "Mouse Pad Fantech ATO MP905 900X400X4mm Speed Kujira Umi...",
+        "categoria": "Mousepads",
+        "precio_venta": 37938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo ThinkBook G7 Ryzen 5 7535HS 8GB 512GB 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 1747988,
+        "titulo": "Mouse Pad Fantech ATO MP905 Super Maxfit 900X400X4mm Speed Grey...",
+        "categoria": "Mousepads",
+        "precio_venta": 37938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Dell Inspiron 15 DC15255 Ryzen 7 7730U 16GB 512GB...",
-        "categoria": "Notebooks",
-        "precio_venta": 1782488,
+        "titulo": "Mouse Pad Fanteche ATO MP905 900X400X4mm Speed Pink Edition",
+        "categoria": "Mousepads",
+        "precio_venta": 37938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo Ideapad Slim 3 15ARP10 Ryzen 7 170 16GB 512GB...",
-        "categoria": "Notebooks",
-        "precio_venta": 1782488,
+        "titulo": "Mousepad Fantech Ato London Tour MP905 XXL 900x400x4mm",
+        "categoria": "Mousepads",
+        "precio_venta": 37938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP Victus 15-FB2063DX Ryzen 5 7535HS 8GB 512GB RX...",
-        "categoria": "Notebooks",
-        "precio_venta": 1837688,
+        "titulo": "Mousepad Fantech Ato Royal Prince MP905 XXL 900x400x4mm",
+        "categoria": "Mousepads",
+        "precio_venta": 37938,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Dell Inspiron DC15250 Core I7 1335U 16GB 512GB 15.6\" ...",
-        "categoria": "Notebooks",
-        "precio_venta": 1874488,
+        "titulo": "Gaming Kit Thermaltake Talon Elite RGB + Pad Dasher",
+        "categoria": "Mousepads",
+        "precio_venta": 44838,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo LOQ 15IAX9E Core i5 12450HX 8GB 512GB RTX 3050...",
-        "categoria": "Notebooks",
-        "precio_venta": 1897488,
+        "titulo": "Mousepad Razer Gigantus V2 XXL 940x410x4mm",
+        "categoria": "Mousepads",
+        "precio_venta": 66688,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G5 Intel i7 13620H 16GB 512GB 15.6\" Luna...",
-        "categoria": "Notebooks",
-        "precio_venta": 1897488,
+        "titulo": "Mousepad Razer Gigantus V2 Counter Strike 2 L 450x400X3mm",
+        "categoria": "Mousepads",
+        "precio_venta": 90849,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP Victus 15-FA2013DX Core i5 13420H 8GB 512GB RTX...",
-        "categoria": "Notebooks",
-        "precio_venta": 1954988,
+        "titulo": "Mousepad Razer Gigantus V2 Pro Mat Balance L",
+        "categoria": "Mousepads",
+        "precio_venta": 113849,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo Thinkbook 16 G7 Ryzen 5 7535HS 16GB 512GB 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 2035488,
+        "titulo": "Mousepad Razer Gigantus V2 Pro Mat Control L",
+        "categoria": "Mousepads",
+        "precio_venta": 113849,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo V15 G5 Core i7 13620H 24GB 512GB 15.6\" Luna...",
-        "categoria": "Notebooks",
-        "precio_venta": 2115988,
+        "titulo": "Mousepad Razer Gigantus V2 Pro Mat Speed L",
+        "categoria": "Mousepads",
+        "precio_venta": 113849,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP 15-FB2063DX Ryzen 5 7535HS 16GB 512GB RX 6550M...",
-        "categoria": "Notebooks",
-        "precio_venta": 2127488,
+        "titulo": "Mousepad Razer Gigantus V2 3XL 1200x550x4mm",
+        "categoria": "Mousepads",
+        "precio_venta": 114999,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook MSI Thin A15 B13VE Ryzen 5 7535HS 8GB 512GB RTX 4050...",
-        "categoria": "Notebooks",
-        "precio_venta": 2127488,
+        "titulo": "Mousepad Corsair MM ProControl L 450x400x4mm",
+        "categoria": "Mousepads",
+        "precio_venta": 135688,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo ThinkBook 16 G8 Core Ultra 5 225U 8GB 512GB 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 2138988,
+        "titulo": "Silla Gamer Solarmax SXGC-6001 Black",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 193188,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo LOQ 15IAX9E Core I5 12450HX 16GB 512GB RTX 3050...",
-        "categoria": "Notebooks",
-        "precio_venta": 2184988,
+        "titulo": "Escritorio Gamer Redragon Nebula RGB con Soporte de Auricular y...",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 258738,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP ProBook 440 G11 Core i5 125U 8GB 512GB 14\" W11",
-        "categoria": "Notebooks",
-        "precio_venta": 2242488,
+        "titulo": "Silla Gamer Raptor Throne R1 Tela Gris",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 310488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo Thinkbook 16 G7 Ryzen 5 7535HS 24GB 512GB 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 2242488,
+        "titulo": "Silla Gamer Raptor Throne R1 Tela Negra",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 310488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP Victus 15-FA2013DX Core i5 13420H 24GB 512GB RTX...",
-        "categoria": "Notebooks",
-        "precio_venta": 2299988,
+        "titulo": "Silla Gamer Raptor Throne R20 Tela Gris",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 390988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook HP Victus 15-FB2063 Ryzen 5 7535HS 24GB 512GB RX 6550M...",
-        "categoria": "Notebooks",
-        "precio_venta": 2299988,
+        "titulo": "Silla Gamer Lamborghini Veneno Noctis",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 402488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo ThinkBook 16 G8 Core i7 240H 16GB 512GB 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 2414988,
+        "titulo": "Silla Gamer Fantech Ledare Tank Midnight Black",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 459988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenvo Thinkbook 16 G8 Core Ultra 5 225U 16GB 512GB 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 2414988,
+        "titulo": "Silla Gamer Fantech Ledare Tank Primastitch Grey Tela",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 459988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Acer Nitro V 15 Core i5 13420H 16GB 512GB RTX 5050...",
-        "categoria": "Notebooks",
-        "precio_venta": 2529988,
+        "titulo": "Silla Gamer Corsair TC100 Relaxed Cuero Negra",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 540488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook MSI Thin B13VE Core i5 13420H 16GB 512GB W11 RTX 4050...",
-        "categoria": "Notebooks",
-        "precio_venta": 2633488,
+        "titulo": "Silla Gamer Corsair TC100 Relaxed Fabric Negra",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 540488,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo ThinkPad E16 G3 Ryzen 7 250 16GB 512GB 16\"",
-        "categoria": "Notebooks",
-        "precio_venta": 2644988,
+        "titulo": "Silla Gamer Corsair T3 Rush Carbon V2 2024",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 689988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Acer Nitro V 16 Ryzen 5 240 16GB 512GB RTX 5050 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 2874988,
+        "titulo": "Silla Gamer Corsair T3 RUSH Grey / White V2 2023",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 689988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook MSI Cyborg B2RWEK Core i5 210H 16GB 512GB W11 RTX 5050...",
-        "categoria": "Notebooks",
-        "precio_venta": 3162488,
+        "titulo": "Estructura Regragon Simulador Carreras Cyclone Asiento Bucket y...",
+        "categoria": "Sillas Gamer",
+        "precio_venta": 1213238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Gigabyte Gaming A16 Ryzen 7 260 16GB 512GB RTX 5060...",
-        "categoria": "Notebooks",
-        "precio_venta": 3219988,
+        "titulo": "Parlante Genius SP-HF180 USB Nordic Pine",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 17824,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo LOQ 15AHP10 Ryzen 7 250 16GB 512GB RTX 5050...",
-        "categoria": "Notebooks",
-        "precio_venta": 3219988,
+        "titulo": "Parlante Genius Usb SP-HF180 Dark Coffe",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 17939,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Gigabyte Gaming A16 Core i7 13620H 16GB 1TB RTX 5060...",
-        "categoria": "Notebooks",
-        "precio_venta": 3334988,
+        "titulo": "Parlante Fantech GS304 GROOVE RGB Dual Mode Black",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 40238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Gigabyte Gaming A16 Ryzen 7 260 16GB 1TB RTX 5060 16",
-        "categoria": "Notebooks",
-        "precio_venta": 3334988,
+        "titulo": "Parlante Fantech GS304 GROOVE RGB Dual Mode White",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 40238,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Acer Nitro V 16 Ryzen AI 7 350 16GB 1TB RTX 5060 16\"...",
-        "categoria": "Notebooks",
-        "precio_venta": 3564988,
+        "titulo": "Barra de Sonido Fantech BS160 Groove Bar Wireless RGB",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 45988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Acer Nitro V 16S Ryzen 7 260 16GB 1TB RTX 5070 16\" W11",
-        "categoria": "Notebooks",
-        "precio_venta": 3794988,
+        "titulo": "Parlante Barra de Sonido Redragon GS570 Darknet",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 59799,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook MSI Katana Core i7 14650HX 16GB 1TB RTX 5070 15.6\" W11",
-        "categoria": "Notebooks",
-        "precio_venta": 4139988,
+        "titulo": "Barra de Sonido Fantech BS151 Groove Bar Pro Wireless RGB",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook ASUS ROG Strix G16 Ryzen 9 8940HX 16GB 1TB RTX 5070...",
-        "categoria": "Notebooks",
-        "precio_venta": 4484988,
+        "titulo": "Barra de Sonido Inalambrico Fantech BS163 GROOVE BAR PRO RGB",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 91988,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook Lenovo Legion 5 15IRX10 Core i9 14900HX 16GB 1TB RTX...",
-        "categoria": "Notebooks",
-        "precio_venta": 4829988,
+        "titulo": "Parlante Genius SP-HF520BT Pine Wood",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 109249,
         "imagen": "",
         "stock": true
     },
     {
-        "titulo": "Notebook MSI Vector A8WHG Ryzen 9 8940HZ 16GB 1TB W11 RTX 5070...",
-        "categoria": "Notebooks",
-        "precio_venta": 4944988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Notebook ASUS ROG Strix G16 Ryzen 9 8940HX 16GB 1TB RTX 5070 Ti...",
-        "categoria": "Notebooks",
-        "precio_venta": 5059988,
-        "imagen": "",
-        "stock": true
-    },
-    {
-        "titulo": "Notebook ASUS ROG Strix G16 Nebula Ryzen 9 9955HX 32GB 1TB  RTX...",
-        "categoria": "Notebooks",
-        "precio_venta": 6094988,
+        "titulo": "Parlante Genius Sw-G2 1 2000 II",
+        "categoria": "Audio y Parlantes",
+        "precio_venta": 183999,
         "imagen": "",
         "stock": true
     }
