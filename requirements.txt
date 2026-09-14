@@ -1,2 +1,1 @@
 curl_cffi>=0.6.0
-beautifulsoup4>=4.12.0
