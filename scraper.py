@@ -7,43 +7,6 @@ from playwright.async_api import async_playwright
 MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
 
-# Función para generar una imagen limpia y vendedora basada en el título y categoría
-def generar_imagen_fallback(titulo, categoria):
-    # Codificar el título para usarlo en un servicio de imágenes o placeholder estilizado
-    query = urllib.parse.quote(f"{categoria} {titulo}".strip())
-    
-    # Opción A: Usar imágenes de stock temáticas de alta calidad de Unsplash según la categoría
-    cat_lower = categoria.lower()
-    if "procesador" in cat_lower or "cpu" in cat_lower:
-        return "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&auto=format&fit=crop&q=80"
-    elif "placa" in cat_lower or "video" in cat_lower:
-        return "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&auto=format&fit=crop&q=80"
-    elif "memoria" in cat_lower or "ram" in cat_lower:
-        return "https://images.unsplash.com/photo-1562976540-1e02c414c14d?w=600&auto=format&fit=crop&q=80"
-    elif "disco" in cat_lower or "ssd" in cat_lower or "almacenamiento" in cat_lower:
-        return "https://images.unsplash.com/photo-1531492383244-6720448108a9?w=600&auto=format&fit=crop&q=80"
-    elif "motherboard" in cat_lower:
-        return "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=80"
-    elif "fuente" in cat_lower:
-        return "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=600&auto=format&fit=crop&q=80"
-    elif "gabinete" in cat_lower:
-        return "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80"
-    elif "cooler" in cat_lower or "refrigeracion" in cat_lower:
-        return "https://images.unsplash.com/photo-1610438235354-a6aeef1983e5?w=600&auto=format&fit=crop&q=80"
-    elif "monitor" in cat_lower:
-        return "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80"
-    elif "notebook" in cat_lower or "pc" in cat_lower:
-        return "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80"
-    elif "teclado" in cat_lower or "mouse" in cat_lower or "perifericos" in cat_lower:
-        return "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80"
-    elif "auricular" in cat_lower or "audio" in cat_lower:
-        return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80"
-    elif "silla" in cat_lower:
-        return "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&auto=format&fit=crop&q=80"
-    else:
-        # Imagen genérica de hardware tecnológico de alta calidad
-        return "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=600&auto=format&fit=crop&q=80"
-
 async def extraer_venex():
     catalogo_final = {}
     vistos = set()
@@ -92,7 +55,7 @@ async def extraer_venex():
                     await page.goto(url_paginada, timeout=40000, wait_until="domcontentloaded")
                     await page.wait_for_timeout(3000) 
                     
-                    # Scroll vertical completo para activar cargas dinámicas
+                    # Scroll vertical completo para activar cargas perezosas (lazy load)
                     await page.evaluate("""async () => {
                         await new Promise((resolve) => {
                             let totalHeight = 0;
@@ -149,16 +112,27 @@ async def extraer_venex():
                             
                             precio_venta = round(costo * MARGEN_GANANCIA)
                             
-                            # Intentar capturar la imagen original de la web
+                            # Extracción estricta de la imagen propia del producto en el DOM
                             img_url = ""
                             img_el = await tarjeta.query_selector('img')
                             if img_el:
-                                for attr in ['src', 'data-src', 'data-original', 'data-lazy-src', 'data-url']:
+                                # Revisar todos los atributos posibles donde el navegador almacena la URL real
+                                for attr in ['src', 'data-src', 'data-lazy-src', 'data-original', 'data-image', 'srcset']:
                                     val = await img_el.get_attribute(attr)
-                                    if val and val.strip() and 'placeholder' not in val.lower() and 'logo' not in val.lower() and 'svg' not in val.lower():
-                                        img_url = val.strip()
-                                        break
+                                    if val and val.strip():
+                                        # Si es un srcset, tomar la primera URL válida
+                                        if attr == 'srcset':
+                                            parts = val.split(',')
+                                            if parts:
+                                                val = parts[0].strip().split(' ')[0]
+                                        
+                                        # Filtrar placeholders, logos institucionales o SVGs vacíos
+                                        val_lower = val.lower()
+                                        if not any(x in val_lower for x in ['placeholder', 'logo', 'loading', 'svg', 'data:image']):
+                                            img_url = val.strip()
+                                            break
 
+                            # Normalizar URL de la imagen
                             if img_url:
                                 if img_url.startswith('//'):
                                     img_url = "https:" + img_url
@@ -167,9 +141,9 @@ async def extraer_venex():
                                 elif not img_url.startswith('http'):
                                     img_url = ""
                             
-                            if not img_url or 'placeholder' in img_url.lower() or 'logo' in img_url.lower() or 'svg' in img_url.lower():
-                                # Asignar imagen profesional de respaldo según categoría
-                                img_url = generar_imagen_fallback(titulo, categoria)
+                            # Si aun así no se detecta imagen real, dejarlo vacío en lugar de inventar una falsa
+                            if not img_url or any(x in img_url.lower() for x in ['placeholder', 'logo', 'svg']):
+                                img_url = ""
 
                             catalogo_final[titulo.lower()] = {
                                 "titulo": titulo,
@@ -197,7 +171,8 @@ async def extraer_venex():
         await browser.close()
 
     lista_final = list(catalogo_final.values())
-    print(f"\n🚀 Proceso finalizado con éxito. Total productos recolectados con imagen asegurada: {len(lista_final)}")
+    con_imagen = len([p for p in lista_final if p['imagen']])
+    print(f"\n🚀 Proceso finalizado. Total productos: {len(lista_final)} | Con imagen real propia: {con_imagen}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
