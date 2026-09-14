@@ -36,6 +36,7 @@ def extraer_venex():
     catalogo_final = {}
     vistos = set()
 
+    # undetected-chromedriver maneja la versión de ChromeDriver automáticamente
     driver = uc.Chrome(use_subprocess=True, headless=True)
 
     for categoria, path in CATEGORIAS.items():
