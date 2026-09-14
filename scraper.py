@@ -1,16 +1,19 @@
 import json
 import re
 from urllib.parse import urljoin
-from playwright.sync_api import sync_playwright
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
 
 MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
 
 CATEGORIAS = {
     "Notebooks": "/computadoras/notebooks",
-    "PCs Armadas": "/computadoras/pc-armadas",
-    "Procesadores": "/componentes-de-pc/microprocesadores",
     "Placas de Video": "/componentes-de-pc/placas-de-video",
+    "Monitores": "/monitores",
+    "Procesadores": "/componentes-de-pc/microprocesadores",
     "Memorias RAM": "/componentes-de-pc/memorias-ram",
     "Almacenamiento SSD": "/componentes-de-pc/discos-solidos-ssd",
     "Discos Rigidos": "/componentes-de-pc/discos-rigidos",
@@ -18,7 +21,7 @@ CATEGORIAS = {
     "Fuentes": "/componentes-de-pc/fuentes",
     "Gabinetes": "/componentes-de-pc/gabinetes",
     "Coolers y Refrigeracion": "/componentes-de-pc/coolers-y-refrigeracion",
-    "Monitores": "/monitores",
+    "PCs Armadas": "/computadoras/pc-armadas",
     "Teclados": "/perifericos/teclados",
     "Mouses": "/perifericos/mouses",
     "Auriculares": "/perifericos/auriculares",
@@ -34,74 +37,55 @@ def extraer_venex():
     catalogo_final = {}
     vistos = set()
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
 
-        for categoria, path in CATEGORIAS.items():
-            pagina = 1
-            print(f"🔄 Extrayendo categoría: {categoria.upper()}")
+    driver = webdriver.Chrome(options=options)
 
-            while pagina <= 15:
-                url = f"{URL_BASE}{path}?page={pagina}"
-                try:
-                    page.goto(url, timeout=60000)
-                    page.wait_for_selector("div.item-product", timeout=15000)
+    for categoria, path in CATEGORIAS.items():
+        print(f"🔄 Extrayendo categoría: {categoria.upper()}")
+        url = f"{URL_BASE}{path}"
+        driver.get(url)
+        time.sleep(5)  # esperar a que cargue el DOM
 
-                    tarjetas = page.query_selector_all("div.item-product")
-                    if not tarjetas:
-                        break
+        tarjetas = driver.find_elements(By.CSS_SELECTOR, "div.item-product")
+        print(f"➡️ {len(tarjetas)} productos detectados en {categoria}")
 
-                    nuevos_en_pagina = 0
-                    for t in tarjetas:
-                        # Título
-                        title_tag = t.query_selector("h2 a, h3 a, .product-title a")
-                        if not title_tag:
-                            continue
-                        titulo = title_tag.inner_text().strip()
-                        if not titulo or titulo.lower() in vistos:
-                            continue
+        for t in tarjetas:
+            try:
+                titulo_elem = t.find_element(By.CSS_SELECTOR, "h2 a, h3 a, .product-title a")
+                titulo = titulo_elem.text.strip()
+                if not titulo or titulo.lower() in vistos:
+                    continue
 
-                        # Precio
-                        price_tag = t.query_selector(".price")
-                        if not price_tag:
-                            continue
-                        raw_price = re.sub(r"[^\d]", "", price_tag.inner_text())
-                        if not raw_price.isdigit():
-                            continue
-                        val = float(raw_price)
+                precio_elem = t.find_element(By.CSS_SELECTOR, ".price")
+                raw_price = re.sub(r"[^\d]", "", precio_elem.text)
+                if not raw_price.isdigit():
+                    continue
+                val = float(raw_price)
 
-                        # Imagen
-                        img_tag = t.query_selector("img")
-                        img_url = ""
-                        if img_tag:
-                            src = img_tag.get_attribute("src") or img_tag.get_attribute("data-src")
-                            if src:
-                                if src.startswith("//"):
-                                    src = "https:" + src
-                                elif src.startswith("/"):
-                                    src = urljoin(URL_BASE, src)
-                                img_url = src
+                img_elem = t.find_element(By.CSS_SELECTOR, "img")
+                img_url = img_elem.get_attribute("src") or ""
+                if img_url.startswith("//"):
+                    img_url = "https:" + img_url
+                elif img_url.startswith("/"):
+                    img_url = urljoin(URL_BASE, img_url)
 
-                        catalogo_final[titulo.lower()] = {
-                            "titulo": titulo,
-                            "categoria": categoria,
-                            "precio_venta": round(val * MARGEN_GANANCIA),
-                            "imagen": img_url,
-                            "stock": True
-                        }
-                        vistos.add(titulo.lower())
-                        nuevos_en_pagina += 1
+                catalogo_final[titulo.lower()] = {
+                    "titulo": titulo,
+                    "categoria": categoria,
+                    "precio_venta": round(val * MARGEN_GANANCIA),
+                    "imagen": img_url,
+                    "stock": True
+                }
+                vistos.add(titulo.lower())
+            except Exception as e:
+                print(f"⚠️ Error procesando producto: {e}")
 
-                    if nuevos_en_pagina == 0 and pagina > 1:
-                        break
-                    pagina += 1
-
-                except Exception as e:
-                    print(f"⚠️ Error en {url}: {e}")
-                    break
-
-        browser.close()
+    driver.quit()
 
     lista = list(catalogo_final.values())
     print(f"\n🚀 Finalizado. Productos totales: {len(lista)}")
