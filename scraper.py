@@ -1,44 +1,10 @@
 import json
 import asyncio
 import re
-import urllib.parse
 from playwright.async_api import async_playwright
 
 MARGEN_GANANCIA = 1.15
 URL_BASE = "https://www.venex.com.ar"
-
-def obtener_imagen_real(categoria, titulo):
-    cat = categoria.lower()
-    t = titulo.lower()
-    
-    if "procesador" in cat or "cpu" in cat:
-        return "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop&q=80"
-    elif "placa" in cat or "video" in cat or "gpu" in t:
-        return "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80"
-    elif "memoria" in cat or "ram" in cat:
-        return "https://images.unsplash.com/photo-1562976540-1e02c414c14d?w=800&auto=format&fit=crop&q=80"
-    elif "ssd" in cat or "disco" in cat or "almacenamiento" in cat:
-        return "https://images.unsplash.com/photo-1531492383244-6720448108a9?w=800&auto=format&fit=crop&q=80"
-    elif "motherboard" in cat or "mother" in cat:
-        return "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80"
-    elif "fuente" in cat:
-        return "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&auto=format&fit=crop&q=80"
-    elif "gabinete" in cat:
-        return "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&auto=format&fit=crop&q=80"
-    elif "cooler" in cat or "refrigeracion" in cat:
-        return "https://images.unsplash.com/photo-1610438235354-a6aeef1983e5?w=800&auto=format&fit=crop&q=80"
-    elif "monitor" in cat:
-        return "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80"
-    elif "notebook" in cat or "pc" in cat:
-        return "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80"
-    elif "teclado" in cat or "mouse" in cat or "perifericos" in cat:
-        return "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&auto=format&fit=crop&q=80"
-    elif "auricular" in cat or "audio" in cat:
-        return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80"
-    elif "silla" in cat:
-        return "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&auto=format&fit=crop&q=80"
-    else:
-        return "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&auto=format&fit=crop&q=80"
 
 async def extraer_venex():
     catalogo_final = {}
@@ -85,90 +51,77 @@ async def extraer_venex():
                 print(f"Explorando: {categoria.upper()} - Página {pagina_actual}")
                 
                 try:
-                    await page.goto(url_paginada, timeout=50000, wait_until="networkidle")
+                    await page.goto(url_paginada, timeout=40000, wait_until="domcontentloaded")
                     await page.wait_for_timeout(3000) 
                     
-                    # Scroll vertical completo para activar renderizado
-                    await page.evaluate("""async () => {
-                        await new Promise((resolve) => {
-                            let totalHeight = 0;
-                            let distance = 300;
-                            let timer = setInterval(() => {
-                                window.scrollBy(0, distance);
-                                totalHeight += distance;
-                                if (totalHeight >= document.body.scrollHeight) {
-                                    clearInterval(timer);
-                                    resolve();
-                                }
-                            }, 100);
-                        });
-                    }""")
+                    # Scroll para forzar carga de elementos
+                    await page.evaluate("window.scrollTo(0, document.body.scrollHeight);")
                     await page.wait_for_timeout(2000)
                     
-                    # Extraer productos directamente evaluando elementos contenedores en el DOM
-                    productos_pagina = await page.evaluate('''() => {
-                        const results = [];
-                        // Buscar todos los elementos que parezcan tarjetas de producto o bloques con texto de precio
-                        const nodes = document.querySelectorAll('div, article, section');
-                        nodes.forEach(node => {
-                            const text = node.innerText || '';
-                            if (text.includes('$') && text.length > 20 && text.length < 600) {
-                                const lines = text.split('\\n').map(l => l.trim()).filter(l => l.length > 0);
-                                results.push(lines);
-                            }
-                        });
-                        return results;
-                    }''')
+                    # Capturar todos los elementos contenedores de productos en la grilla
+                    tarjetas = await page.query_selector_all('div[class*="item"], div[class*="product"], article, li[class*="item"]')
                     
-                    if not productos_pagina or len(productos_pagina) == 0:
+                    if not tarjetas:
                         print(f"✅ Fin de resultados para la categoría {categoria}.")
                         break
                         
                     productos_nuevos = 0
                     
-                    for lineas in productos_pagina:
-                        titulo_candidato = None
-                        precio_encontrado = None
-                        
-                        for i, linea in enumerate(lineas):
-                            precios = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{1,2})?)', linea)
-                            if precios:
-                                raw_price = precios[0]
-                                clean_price = raw_price.replace('.', '').replace(',', '.').split('.')[0]
-                                if clean_price.isdigit():
-                                    val = float(clean_price)
-                                    if val > 1000:
-                                        precio_encontrado = val
-                                        if i > 0:
-                                            titulo_candidato = lineas[i - 1]
+                    for tarjeta in tarjetas:
+                        try:
+                            texto = await tarjeta.inner_text()
+                            if not texto or '$' not in texto:
+                                continue
+                                
+                            lineas = [l.strip() for l in texto.split('\n') if l.strip()]
+                            if len(lineas) < 2:
+                                continue
+                                
+                            # Buscar el precio dentro de las líneas
+                            precio_val = None
+                            titulo_candidato = None
+                            
+                            for i, linea in enumerate(lineas):
+                                precios = re.findall(r'\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*(?:[.,][0-9]{1,2})?)', linea)
+                                if precios:
+                                    raw = precios[0].replace('.', '').replace(',', '.').split('.')[0]
+                                    if raw.isdigit():
+                                        val = float(raw)
+                                        if val > 1000:
+                                            precio_val = val
+                                            if i > 0:
+                                                titulo_candidato = lineas[i - 1]
+                                            break
+                                            
+                            if not precio_val or not titulo_candidato:
+                                continue
+                                
+                            titulo = titulo_candidato.replace('\n', ' ').strip()
+                            if len(titulo) < 5 or any(w in titulo.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva', '$']):
+                                # Buscar un título válido en las líneas adyacentes
+                                for l in lineas:
+                                    if len(l) > 6 and '$' not in l and not any(w in l.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva']):
+                                        titulo = l
                                         break
                                         
-                        if not precio_encontrado or not titulo_candidato:
+                            if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
+                                continue
+                                
+                            precio_venta = round(precio_val * MARGEN_GANANCIA)
+                            
+                            catalogo_final[titulo.lower()] = {
+                                "titulo": titulo,
+                                "categoria": categoria,
+                                "precio_venta": precio_venta,
+                                "imagen": "", # Se resolverá en el siguiente paso
+                                "stock": True
+                            }
+                            vistos.add(titulo.lower())
+                            productos_nuevos += 1
+                            
+                        except Exception:
                             continue
                             
-                        titulo = titulo_candidato.replace('\n', ' ').strip()
-                        if len(titulo) < 5 or any(w in titulo.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva', '$']):
-                            for l in lineas:
-                                if len(l) > 6 and '$' not in l and not any(w in l.lower() for w in ['cuotas', 'comprar', 'envío', 'stock', 'iva']):
-                                    titulo = l
-                                    break
-                                    
-                        if not titulo or len(titulo) < 5 or titulo.lower() in vistos:
-                            continue
-                            
-                        precio_venta = round(precio_encontrado * MARGEN_GANANCIA)
-                        imagen_url = obtener_imagen_real(categoria, titulo)
-                        
-                        catalogo_final[titulo.lower()] = {
-                            "titulo": titulo,
-                            "categoria": categoria,
-                            "precio_venta": precio_venta,
-                            "imagen": imagen_url,
-                            "stock": True
-                        }
-                        vistos.add(titulo.lower())
-                        productos_nuevos += 1
-                        
                     if productos_nuevos == 0:
                         print(f"✅ Fin de resultados para la categoría {categoria}.")
                         break
@@ -182,7 +135,7 @@ async def extraer_venex():
         await browser.close()
 
     lista_final = list(catalogo_final.values())
-    print(f"\n🚀 Proceso finalizado con éxito. Total productos recolectados: {len(lista_final)}")
+    print(f"\n🚀 Extracción completa. Total de productos obtenidos: {len(lista_final)}")
 
     with open('productos.json', 'w', encoding='utf-8') as f:
         json.dump(lista_final, f, ensure_ascii=False, indent=4)
