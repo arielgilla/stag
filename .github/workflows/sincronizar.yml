@@ -28,6 +28,11 @@ jobs:
       - name: Ejecutar scraper
         run: python scraper.py
 
+      - name: Debug productos.json
+        run: |
+          echo "Contenido de productos.json:"
+          head -n 50 productos.json
+
       - name: Commit y push de cambios
         run: |
           git config --global user.name "github-actions[bot]"
