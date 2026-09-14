@@ -27,9 +27,8 @@ jobs:
 
       - name: Instalar Chrome y Chromedriver correctos
         run: |
-          set -e
           sudo apt-get update || true
-          sudo apt-get install -y wget unzip
+          sudo apt-get install -y wget unzip || true
           sudo apt-get install -y google-chrome-stable || true
           CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
           CHROME_MAJOR=$(echo $CHROME_VERSION | cut -d. -f1)
