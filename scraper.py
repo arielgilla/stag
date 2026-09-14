@@ -1,11 +1,12 @@
 import json
 import re
-import time
 from urllib.parse import urljoin
 import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # Instala automáticamente el ChromeDriver correcto
 chromedriver_autoinstaller.install()
@@ -52,7 +53,15 @@ def extraer_venex():
         print(f"🔄 Extrayendo categoría: {categoria.upper()}")
         url = f"{URL_BASE}{path}"
         driver.get(url)
-        time.sleep(8)
+
+        try:
+            # Esperar explícitamente a que aparezcan los productos
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.item-product"))
+            )
+        except Exception:
+            print(f"⚠️ No se encontraron productos en {categoria}")
+            continue
 
         tarjetas = driver.find_elements(By.CSS_SELECTOR, "div.item-product")
         print(f"➡️ {len(tarjetas)} productos detectados en {categoria}")
