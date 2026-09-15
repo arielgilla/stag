@@ -1,5 +1,6 @@
 import time
 import json
+import re
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -25,7 +26,6 @@ links = driver.find_elements("css selector", "a")
 for link in links:
     href = link.get_attribute("href")
     if href and "venex.com.ar" in href:
-        # Filtrar solo categorías y subcategorías relevantes
         if any(x in href for x in ["componentes-de-pc", "computadoras", "perifericos", "almacenamiento", "monitores"]):
             categorias.append(href)
 
@@ -37,9 +37,8 @@ productos_totales = []
 # Paso 2: recorrer cada categoría
 for url in categorias:
     driver.get(url)
-    time.sleep(15)  # esperar que cargue productos
+    time.sleep(15)
 
-    # Usamos el contenedor correcto del listado
     productos = driver.find_elements("css selector", "div.product-box")
 
     for p in productos:
@@ -50,17 +49,16 @@ for url in categorias:
             titulo = None
 
         # Precio
+        precio_final = None
         try:
             precio_texto = p.find_element("css selector", ".product-box-price, .price").text
+            # Limpiar texto: dejar solo dígitos
+            numeros = re.sub(r"[^\d]", "", precio_texto)
+            if numeros.isdigit():
+                precio_num = int(numeros)
+                precio_final = round(precio_num * MARGEN)
         except:
-            precio_texto = None
-
-        if precio_texto:
-            # Extraer solo números y convertir
-            precio_num = int("".join([c for c in precio_texto if c.isdigit()]))
-            precio_final = round(precio_num * MARGEN)
-        else:
-            precio_final = None
+            pass
 
         # Imagen
         try:
