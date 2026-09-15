@@ -51,7 +51,7 @@ for url in categorias:
 
         # Título (más robusto)
         try:
-            titulo = p.find_element("css selector", ".product-box-name a, .product-box-body a, a").text.strip()
+            titulo = p.find_element("css selector", ".product-box-name a, .product-box-body a").text.strip()
         except:
             pass
 
@@ -82,7 +82,8 @@ for url in categorias:
         })
 
     # Guardar productos agrupados por categoría/subcategoría
-    productos_por_categoria[url] = productos_lista
+    cat_key = url.replace("https://www.venex.com.ar/", "")
+    productos_por_categoria[cat_key] = productos_lista
 
 driver.quit()
 
