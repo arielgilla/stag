@@ -32,7 +32,7 @@ for link in links:
 categorias = list(set(categorias))
 print(f"Se encontraron {len(categorias)} categorías/subcategorías")
 
-productos_totales = []
+productos_por_categoria = {}
 
 # Paso 2: recorrer cada categoría
 for url in categorias:
@@ -42,14 +42,16 @@ for url in categorias:
     productos = driver.find_elements("css selector", "div.product-box")
     print(f"Procesando categoría: {url} - encontrados {len(productos)} productos")
 
+    productos_lista = []
+
     for p in productos:
         titulo = None
         precio_final = None
         imagen = None
 
-        # Título
+        # Título (más robusto)
         try:
-            titulo = p.find_element("css selector", "a").text.strip()
+            titulo = p.find_element("css selector", ".product-box-name a, .product-box-body a, a").text.strip()
         except:
             pass
 
@@ -73,17 +75,19 @@ for url in categorias:
         except:
             pass
 
-        productos_totales.append({
-            "categoria": url,
+        productos_lista.append({
             "titulo": titulo,
             "precio_final": precio_final,
             "imagen": imagen
         })
 
+    # Guardar productos agrupados por categoría/subcategoría
+    productos_por_categoria[url] = productos_lista
+
 driver.quit()
 
 # Paso 3: guardar resultados en productos.json
 with open("productos.json", "w", encoding="utf-8") as f:
-    json.dump(productos_totales, f, ensure_ascii=False, indent=4)
+    json.dump(productos_por_categoria, f, ensure_ascii=False, indent=4)
 
-print(f"✅ Archivo 'productos.json' generado con {len(productos_totales)} productos.")
+print(f"✅ Archivo 'productos.json' generado con {sum(len(v) for v in productos_por_categoria.values())} productos.")
