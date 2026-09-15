@@ -1,27 +1,44 @@
-import chromedriver_autoinstaller
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+import json
+import requests
 
-# Instala automáticamente el ChromeDriver correcto
-chromedriver_autoinstaller.install()
+MARGEN_GANANCIA = 1.15
+URL_BASE = "https://www.venex.com.ar"
 
-URL_BASE = "https://www.venex.com.ar/computadoras/notebooks"  # ejemplo: categoría Notebooks
+CATEGORIAS = {
+    "Notebooks": "/computadoras/notebooks",
+    "Placas de Video": "/componentes-de-pc/placas-de-video",
+    # ...
+}
 
-def guardar_html():
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
+def extraer_venex():
+    catalogo_final = {}
 
-    driver = webdriver.Chrome(options=options)
-    driver.get(URL_BASE)
+    for categoria, path in CATEGORIAS.items():
+        print(f"🔄 Extrayendo categoría: {categoria.upper()}")
+        url = f"{URL_BASE}{path}"
+        # ⚠️ Este URL no trae productos directamente, hay que descubrir el endpoint JSON
+        # Ejemplo ficticio:
+        api_url = f"{URL_BASE}/api/catalogo{path}?page=1"
+        resp = requests.get(api_url)
+        data = resp.json()
 
-    # Guardar el HTML completo que ve Selenium
-    with open("debug_pagina.html", "w", encoding="utf-8") as f:
-        f.write(driver.page_source)
+        for item in data["products"]:
+            titulo = item["name"]
+            precio = float(item["price"])
+            img_url = item["image"]
 
-    driver.quit()
-    print("✅ Archivo 'debug_pagina.html' generado. Abrilo en tu navegador para inspeccionar.")
+            catalogo_final[titulo.lower()] = {
+                "titulo": titulo,
+                "categoria": categoria,
+                "precio_venta": round(precio * MARGEN_GANANCIA),
+                "imagen": img_url,
+                "stock": item.get("stock", True)
+            }
+
+    lista = list(catalogo_final.values())
+    print(f"\n🚀 Finalizado. Productos totales: {len(lista)}")
+    with open("productos.json", "w", encoding="utf-8") as f:
+        json.dump(lista, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
-    guardar_html()
+    extraer_venex()
