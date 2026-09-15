@@ -1,6 +1,7 @@
 import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import time
 
 # Instala automáticamente el ChromeDriver correcto
 chromedriver_autoinstaller.install()
@@ -15,6 +16,10 @@ def guardar_html():
 
     driver = webdriver.Chrome(options=options)
     driver.get(URL_BASE)
+
+    # Esperar más tiempo para que se ejecute el JavaScript y se carguen los productos
+    print("⏳ Esperando 15 segundos para que cargue la página completa...")
+    time.sleep(15)
 
     # Guardar el HTML completo que ve Selenium
     with open("debug_pagina.html", "w", encoding="utf-8") as f:
