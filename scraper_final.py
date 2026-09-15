@@ -8,16 +8,15 @@ from selenium.webdriver.chrome.options import Options
 URL_HOME = "https://www.venex.com.ar/"
 MARGEN = 1.15
 
-# Configuración de Selenium para usar Chromium en GitHub Actions
 options = Options()
 options.add_argument("--headless=new")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
-service = Service("/usr/bin/chromedriver")  # ruta de chromedriver en el runner
+service = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-# Paso 1: obtener todas las categorías y subcategorías desde el home
+# Paso 1: obtener todas las categorías y subcategorías
 driver.get(URL_HOME)
 time.sleep(10)
 
@@ -41,20 +40,25 @@ for url in categorias:
 
     productos = driver.find_elements("css selector", "div.product-box")
 
+    print(f"Procesando categoría: {url} - encontrados {len(productos)} productos")
+
     for p in productos:
+        titulo = None
+        precio_final = None
+        imagen = None
+
         # Título
         try:
             titulo = p.find_element("css selector", "a").text.strip()
         except:
-            titulo = None
+            pass
 
         # Precio
-        precio_final = None
         try:
             precio_texto = p.find_element("css selector", ".product-box-price, .price").text
-            # Limpiar texto: dejar solo dígitos
+            print(f"Precio bruto capturado: {precio_texto}")
             numeros = re.sub(r"[^\d]", "", precio_texto)
-            if numeros.isdigit():
+            if numeros:
                 precio_num = int(numeros)
                 precio_final = round(precio_num * MARGEN)
         except:
@@ -64,7 +68,7 @@ for url in categorias:
         try:
             imagen = p.find_element("css selector", "img").get_attribute("src")
         except:
-            imagen = None
+            pass
 
         productos_totales.append({
             "categoria": url,
@@ -79,4 +83,4 @@ driver.quit()
 with open("productos.json", "w", encoding="utf-8") as f:
     json.dump(productos_totales, f, ensure_ascii=False, indent=4)
 
-print("✅ Archivo 'productos.json' generado con todos los productos (precio especial Venex + 15%).")
+print(f"✅ Archivo 'productos.json' generado con {len(productos_totales)} productos.")
