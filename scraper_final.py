@@ -1,17 +1,20 @@
 import time
 import json
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 URL_HOME = "https://www.venex.com.ar/"
 MARGEN = 1.15
 
+# Configuración de Selenium para usar Chromium en GitHub Actions
 options = Options()
 options.add_argument("--headless=new")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
-driver = webdriver.Chrome(options=options)
+service = Service("/usr/bin/chromedriver")  # ruta de chromedriver en el runner
+driver = webdriver.Chrome(service=service, options=options)
 
 # Paso 1: obtener todas las categorías y subcategorías desde el home
 driver.get(URL_HOME)
