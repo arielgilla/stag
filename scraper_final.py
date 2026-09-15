@@ -22,6 +22,7 @@ links = driver.find_elements("css selector", "a")
 for link in links:
     href = link.get_attribute("href")
     if href and "venex.com.ar" in href:
+        # Filtrar solo categorías y subcategorías relevantes
         if any(x in href for x in ["componentes-de-pc", "computadoras", "perifericos", "almacenamiento", "monitores"]):
             categorias.append(href)
 
@@ -35,36 +36,34 @@ for url in categorias:
     driver.get(url)
     time.sleep(15)  # esperar que cargue productos
 
-    productos = driver.find_elements("css selector", "div.contenedorDetalleProd")
+    # Usamos el contenedor correcto del listado
+    productos = driver.find_elements("css selector", "div.product-box")
 
     for p in productos:
         # Título
-        titulo = p.find_element("css selector", "h1.tituloProducto").text
+        try:
+            titulo = p.find_element("css selector", "a").text.strip()
+        except:
+            titulo = None
 
-        # Precio especial Venex
-        precios = p.find_elements("css selector", ".precioProducto, .price, .special-price")
-        precio_especial = None
-        for pr in precios:
-            texto = pr.text
-            if "Venex" in texto or "Precio especial" in texto:
-                precio_especial = texto
-                break
+        # Precio
+        try:
+            precio_texto = p.find_element("css selector", ".product-box-price, .price").text
+        except:
+            precio_texto = None
 
-        if not precio_especial:
-            continue
-
-        # Convertir precio a número y aplicar margen
-        precio_num = int("".join([c for c in precio_especial if c.isdigit()]))
-        precio_final = round(precio_num * MARGEN)
+        if precio_texto:
+            # Extraer solo números y convertir
+            precio_num = int("".join([c for c in precio_texto if c.isdigit()]))
+            precio_final = round(precio_num * MARGEN)
+        else:
+            precio_final = None
 
         # Imagen
         try:
             imagen = p.find_element("css selector", "img").get_attribute("src")
         except:
-            try:
-                imagen = p.find_element("css selector", "div.detalle-producto-gal-item").get_attribute("style")
-            except:
-                imagen = None
+            imagen = None
 
         productos_totales.append({
             "categoria": url,
