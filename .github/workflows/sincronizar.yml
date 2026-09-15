@@ -1,9 +1,9 @@
 name: Scraper Venex Productos
 
 on:
-  workflow_dispatch:   # lo lanzás manualmente desde la pestaña Actions
+  workflow_dispatch:
   schedule:
-    - cron: "0 7 * * *"   # opcional: corre todos los días a las 7 AM UTC (4 AM Argentina)
+    - cron: "0 7 * * *"   # todos los días a las 7 AM UTC (4 AM Argentina)
 
 permissions:
   contents: write
@@ -25,14 +25,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium requests
 
-      - name: Instalar Chrome y driver
+      - name: Instalar Chromium y Chromedriver
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser chromium-chromedriver
-          echo "CHROME_PATH=$(which chromium-browser)" >> $GITHUB_ENV
-          echo "CHROMEDRIVER_PATH=$(which chromedriver)" >> $GITHUB_ENV
+          which chromium-browser
+          which chromedriver
 
       - name: Ejecutar scraper_final
+        env:
+          CHROME_BIN: /usr/bin/chromium-browser
+          CHROMEDRIVER_PATH: /usr/bin/chromedriver
         run: python scraper_final.py
 
       - name: Commit y push de productos.json
