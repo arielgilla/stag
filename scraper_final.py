@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.options import Options
 URL_HOME = "https://www.venex.com.ar/"
 MARGEN = 1.15
 
+# Configuración de Selenium para usar Chromium en GitHub Actions
 options = Options()
 options.add_argument("--headless=new")
 options.add_argument("--no-sandbox")
@@ -39,7 +40,6 @@ for url in categorias:
     time.sleep(15)
 
     productos = driver.find_elements("css selector", "div.product-box")
-
     print(f"Procesando categoría: {url} - encontrados {len(productos)} productos")
 
     for p in productos:
@@ -53,14 +53,17 @@ for url in categorias:
         except:
             pass
 
-        # Precio
+        # Precio (más robusto)
         try:
-            precio_texto = p.find_element("css selector", ".product-box-price, .price").text
-            print(f"Precio bruto capturado: {precio_texto}")
-            numeros = re.sub(r"[^\d]", "", precio_texto)
-            if numeros:
-                precio_num = int(numeros)
-                precio_final = round(precio_num * MARGEN)
+            precio_elementos = p.find_elements("css selector", ".product-box-price span, .price")
+            for elem in precio_elementos:
+                texto = elem.text.strip()
+                if any(c.isdigit() for c in texto):
+                    numeros = re.sub(r"[^\d]", "", texto)
+                    if numeros:
+                        precio_num = int(numeros)
+                        precio_final = round(precio_num * MARGEN)
+                        break
         except:
             pass
 
