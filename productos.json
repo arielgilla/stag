@@ -3817,8 +3817,8 @@
             "url": "https://www.venex.com.ar/perifericos/teclados/teclado-inalambrico-fantech-maxfit8-mk921-black-brown-switch-rgb.html"
         },
         {
-            "titulo": "Joystick Redragon G831 Wargrip...",
-            "precio_final": 135699,
+            "titulo": "",
+            "precio_final": null,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788967846_joystick_redragon_g831_wargrip_pcps5___base_de_carga_1png",
             "url": "https://www.venex.com.ar/perifericos/joysticks-volantes-y-simuladores/joystick-redragon-g831-wargrip-pc-ps5-base-de-carga.html"
         },
@@ -3835,8 +3835,8 @@
             "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-razer-seiren-v3-chroma-usb-rgb.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Monitor Gamer Arkham...",
+            "precio_final": 333488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1785863184_monitor_gamer_arkham_ark25320f18_25_1png",
             "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-25-arkham-ark25320f18-ips-fhd-1ms-hdmi-dp-320hz.html"
         },
