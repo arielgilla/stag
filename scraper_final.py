@@ -8,7 +8,6 @@ from selenium.webdriver.chrome.options import Options
 URL_HOME = "https://www.venex.com.ar/"
 MARGEN = 1.15
 
-# Configuración de Selenium para usar Chromium en GitHub Actions
 options = Options()
 options.add_argument("--headless=new")
 options.add_argument("--no-sandbox")
@@ -17,7 +16,6 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-# Paso 1: obtener todas las categorías y subcategorías
 driver.get(URL_HOME)
 time.sleep(10)
 
@@ -34,7 +32,6 @@ print(f"Se encontraron {len(categorias)} categorías/subcategorías")
 
 productos_por_categoria = {}
 
-# Paso 2: recorrer cada categoría
 for url in categorias:
     driver.get(url)
     time.sleep(15)
@@ -49,13 +46,13 @@ for url in categorias:
         precio_final = None
         imagen = None
 
-        # Título (más robusto)
+        # Título
         try:
             titulo = p.find_element("css selector", ".product-box-name a, .product-box-body a").text.strip()
         except:
             pass
 
-        # Precio (más robusto)
+        # Precio
         try:
             precio_elementos = p.find_elements("css selector", ".product-box-price span, .price")
             for elem in precio_elementos:
@@ -81,13 +78,11 @@ for url in categorias:
             "imagen": imagen
         })
 
-    # Guardar productos agrupados por categoría/subcategoría
     cat_key = url.replace("https://www.venex.com.ar/", "")
     productos_por_categoria[cat_key] = productos_lista
 
 driver.quit()
 
-# Paso 3: guardar resultados en productos.json
 with open("productos.json", "w", encoding="utf-8") as f:
     json.dump(productos_por_categoria, f, ensure_ascii=False, indent=4)
 
