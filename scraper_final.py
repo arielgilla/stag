@@ -16,28 +16,83 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-driver.get(URL_HOME)
-time.sleep(10)
+# Lista completa de categorías y subcategorías
+CATEGORIAS = [
+    # Componentes de PC
+    "componentes-de-pc/motherboards/intel",
+    "componentes-de-pc/motherboards/amd",
+    "componentes-de-pc/microprocesadores/intel",
+    "componentes-de-pc/microprocesadores/amd",
+    "componentes-de-pc/memorias-ram/desktop",
+    "componentes-de-pc/memorias-ram/notebook",
+    "componentes-de-pc/placas-de-video",
+    "componentes-de-pc/placas-de-sonido",
+    "componentes-de-pc/placas-de-red",
+    "componentes-de-pc/discos-solidos-ssd",
+    "componentes-de-pc/discos-duros-mecanicos",
+    "componentes-de-pc/fuentes",
+    "componentes-de-pc/gabinetes",
+    "componentes-de-pc/refrigeracion",
+    "componentes-de-pc/pastas-termicas",
+    "componentes-de-pc/combos-de-actualizacion",
 
-categorias = []
-links = driver.find_elements("css selector", "a")
-for link in links:
-    href = link.get_attribute("href")
-    if href and "venex.com.ar" in href:
-        if any(x in href for x in ["componentes-de-pc", "computadoras", "perifericos", "almacenamiento", "monitores"]):
-            categorias.append(href)
+    # Notebooks
+    "notebooks",
 
-categorias = list(set(categorias))
-print(f"Se encontraron {len(categorias)} categorías/subcategorías")
+    # Monitores
+    "monitores/19-a-28-pulgadas",
+    "monitores/27-a-32-pulgadas",
+    "monitores/33-pulgadas-y-superior",
+    "monitores/proyectores-y-pantallas",
+
+    # Periféricos
+    "perifericos/teclados",
+    "perifericos/mousepads",
+    "perifericos/auriculares/gamer",
+    "perifericos/auriculares/oficina-y-urbano",
+    "perifericos/microfonos",
+    "perifericos/webcams",
+    "perifericos/joysticks-volantes-y-simuladores",
+    "perifericos/audio/portatiles",
+    "perifericos/placas-de-sonido",
+
+    # Almacenamiento portátil
+    "almacenamiento-portatil/pendrives",
+    "almacenamiento-portatil/microsd",
+    "almacenamiento-portatil/discos-externos",
+
+    # Impresión
+    "impresion/impresoras-laser",
+    "impresion/inyeccion-de-tinta",
+    "impresion/termicas",
+    "impresion/impresion-3d",
+    "impresion/consumibles",
+
+    # Redes
+    "redes/routers",
+    "redes/switchs",
+    "redes/access-point",
+    "redes/modem-router",
+
+    # Otros
+    "sillas-gamers",
+    "software",
+    "televisores",
+    "tablets",
+    "smartwatch",
+    "camaras-ip",
+    "accesorios"
+]
 
 productos_por_categoria = {}
 
-for url in categorias:
+for cat in CATEGORIAS:
+    url = f"{URL_HOME}{cat}"
     driver.get(url)
     time.sleep(15)
 
     productos = driver.find_elements("css selector", "div.product-box")
-    print(f"Procesando categoría: {url} - encontrados {len(productos)} productos")
+    print(f"Procesando categoría: {cat} - encontrados {len(productos)} productos")
 
     productos_lista = []
 
@@ -78,8 +133,7 @@ for url in categorias:
             "imagen": imagen
         })
 
-    cat_key = url.replace("https://www.venex.com.ar/", "")
-    productos_por_categoria[cat_key] = productos_lista
+    productos_por_categoria[cat] = productos_lista
 
 driver.quit()
 
