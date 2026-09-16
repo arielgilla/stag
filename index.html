@@ -6,7 +6,53 @@
   <title>STAG - Soluciones Informáticas</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* estilos iguales a los que ya tenías */
+    :root {
+      --bg-dark: #000000;
+      --bg-card: #111111;
+      --accent-cyan: #00d2ff;
+      --accent-blue: #0072ff;
+      --text-light: #e2e8f0;
+      --text-silver: #a0aec0;
+      --border-color: #1e293b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-light); min-height: 100vh; }
+
+    header { background: linear-gradient(180deg, #000 0%, #111 100%); border-bottom: 2px solid var(--accent-cyan); padding: 15px 20px; }
+    .header-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 15px; }
+    .logo-container { display: flex; align-items: center; gap: 12px; }
+    .logo-container img { height: 50px; filter: drop-shadow(0 0 8px rgba(0,210,255,0.4)); }
+    .brand-title { font-size: 1.8rem; font-weight: 800; color: #fff; letter-spacing: 1px; }
+    .brand-title span { color: var(--accent-cyan); }
+
+    nav { background: #111; border-bottom: 1px solid var(--border-color); }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 10px; }
+    .nav-container li { position: relative; }
+    .nav-container li button { background: none; border: none; color: var(--text-silver); padding: 14px 20px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: 0.3s; }
+    .nav-container li button:hover, .nav-container li button.active { color: var(--accent-cyan); border-bottom: 3px solid var(--accent-blue); background: rgba(0,210,255,0.05); }
+
+    .submenu { display: none; position: absolute; background: #111; border: 1px solid var(--accent-blue); list-style: none; padding: 0; margin: 0; min-width: 180px; z-index: 1000; }
+    .submenu li button { display: block; width: 100%; text-align: left; padding: 10px 15px; color: var(--text-silver); background: none; border: none; }
+    .submenu li button:hover { background: rgba(0,210,255,0.1); color: var(--accent-cyan); }
+    .nav-container li:hover > .submenu { display: block; }
+
+    .container { max-width: 1200px; margin: 25px auto; padding: 0 15px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .card { background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); padding: 15px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
+    .card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); box-shadow: 0 8px 20px rgba(0,210,255,0.3); }
+
+    .img-container { height: 180px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 8px; margin-bottom: 12px; padding: 10px; overflow: hidden; }
+    .card img { max-height: 100%; max-width: 100%; object-fit: contain; }
+
+    .cat-tag { font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
+    .card h3 { font-size: 0.9rem; color: var(--text-light); height: 2.8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 10px; line-height: 1.4; }
+    .price { font-size: 1.4rem; font-weight: 800; color: var(--accent-blue); text-shadow: 0 0 10px rgba(0,210,255,0.3); margin-bottom: 12px; }
+
+    .btn-ws { background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%); color: #fff; text-decoration: none; padding: 10px; text-align: center; border-radius: 6px; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
+    .btn-ws:hover { opacity: 0.9; box-shadow: 0 0 12px rgba(0,210,255,0.4); }
+
+    .loading { text-align: center; font-size: 1.2rem; color: var(--accent-cyan); margin: 50px 0; grid-column: 1 / -1; }
   </style>
 </head>
 <body>
@@ -34,11 +80,40 @@
     <p class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando productos...</p>
   </div>
 </div>
-
 <script>
   const TELEFONO_WHATSAPP = "5493513030241"; 
-  let listaProductos = {};   // ahora es objeto con categorías
+  let listaProductos = {};   
   let categoriaActual = 'Todas';
+
+  // Diccionario jerárquico de categorías y subcategorías
+  const categoriasJerarquicas = {
+    "Placas Madres": {
+      "componentes-de-pc/motherboards/intel": "Intel",
+      "componentes-de-pc/motherboards/amd": "AMD"
+    },
+    "Microprocesadores": {
+      "componentes-de-pc/microprocesadores/intel": "Intel",
+      "componentes-de-pc/microprocesadores/amd": "AMD"
+    },
+    "Memorias RAM": {
+      "componentes-de-pc/memorias-ram/desktop": "Desktop",
+      "componentes-de-pc/memorias-ram/notebook": "Notebook"
+    },
+    "Placas de Video": {
+      "componentes-de-pc/placas-de-video": "Todas"
+    },
+    "Auriculares": {
+      "perifericos/auriculares/gamer": "Gamer",
+      "perifericos/auriculares/oficina-y-urbano": "Oficina/Urbano"
+    },
+    "Micrófonos": {
+      "perifericos/microfonos": "Todos"
+    },
+    "Monitores": {
+      "monitores/19-a-28-pulgadas": "19-28\"",
+      "monitores/proyectores-y-pantallas": "Proyectores y Pantallas"
+    }
+  };
 
   // Cargar productos.json
   fetch('productos.json?v=' + new Date().getTime())
@@ -61,26 +136,43 @@
     renderProductos('Todas');
   }
 
+  // Construcción del menú jerárquico
   function construirMenuCategorias() {
-    const categorias = ['Todas', ...Object.keys(listaProductos)];
     const menuNav = document.getElementById('menu-categorias');
     menuNav.innerHTML = '';
 
-    categorias.forEach(cat => {
+    // Botón "Todas"
+    const liTodas = document.createElement('li');
+    const btnTodas = document.createElement('button');
+    btnTodas.innerText = "Todas las Categorías";
+    btnTodas.classList.add('active');
+    btnTodas.onclick = () => filtrarCategoria('Todas');
+    liTodas.appendChild(btnTodas);
+    menuNav.appendChild(liTodas);
+
+    // Categorías principales con subcategorías
+    Object.keys(categoriasJerarquicas).forEach(catPrincipal => {
       const li = document.createElement('li');
       const btn = document.createElement('button');
-      btn.innerText = cat;
-      if (cat === 'Todas') btn.classList.add('active');
-      btn.onclick = (e) => {
-        document.querySelectorAll('.nav-container button').forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        filtrarCategoria(cat);
-      };
+      btn.innerText = catPrincipal;
       li.appendChild(btn);
+
+      const subMenu = document.createElement('ul');
+      subMenu.classList.add('submenu');
+
+      Object.entries(categoriasJerarquicas[catPrincipal]).forEach(([ruta, nombre]) => {
+        const subLi = document.createElement('li');
+        const subBtn = document.createElement('button');
+        subBtn.innerText = nombre;
+        subBtn.onclick = () => filtrarCategoria(ruta);
+        subLi.appendChild(subBtn);
+        subMenu.appendChild(subLi);
+      });
+
+      li.appendChild(subMenu);
       menuNav.appendChild(li);
     });
   }
-
   function renderProductos(cat) {
     const contenedor = document.getElementById('catalogo');
     contenedor.innerHTML = '';
@@ -148,9 +240,7 @@
       items = items.filter(p => p.titulo && p.titulo.toLowerCase().includes(texto));
     }
 
-    // render con la categoría actual
-    const cat = categoriaActual === 'Todas' ? 'Todas' : categoriaActual;
-    renderProductos(cat);
+    renderProductos(categoriaActual);
   }
 </script>
 
