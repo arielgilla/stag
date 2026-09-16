@@ -50,7 +50,7 @@ jobs:
           name: productos-json
           path: productos.json
 
-      # 🔹 convertir JSON a CSV
+      # 🔹 NUEVO: convertir JSON a CSV
       - name: Convertir JSON a CSV
         run: python convertir_json_csv.py
 
