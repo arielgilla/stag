@@ -109,50 +109,54 @@
 
   // Construcción del menú jerárquico usando nombres amigables
   function construirMenuCategorias() {
-    const menuNav = document.getElementById('menu-categorias');
-    menuNav.innerHTML = '';
+  const menuNav = document.getElementById('menu-categorias');
+  menuNav.innerHTML = '';
 
-    // Botón "Todas"
-    const liTodas = document.createElement('li');
-    const btnTodas = document.createElement('button');
-    btnTodas.innerText = "Todas las Categorías";
-    btnTodas.classList.add('active');
-    btnTodas.onclick = () => filtrarCategoria('Todas');
-    liTodas.appendChild(btnTodas);
-    menuNav.appendChild(liTodas);
+  // Botón "Todas"
+  const liTodas = document.createElement('li');
+  const btnTodas = document.createElement('button');
+  btnTodas.innerText = "Todas las Categorías";
+  btnTodas.classList.add('active');
+  btnTodas.onclick = () => filtrarCategoria('Todas');
+  liTodas.appendChild(btnTodas);
+  menuNav.appendChild(liTodas);
 
-    // Agrupar categorías por prefijo
-    const grupos = {};
-    Object.keys(nombresCategorias).forEach(cat => {
+  // Agrupar categorías por prefijo
+  const grupos = {};
+  Object.keys(nombresCategorias).forEach(cat => {
+    // ⚠️ Mostrar solo si hay productos en esa categoría
+    if (listaProductos[cat] && listaProductos[cat].length > 0) {
       const partes = cat.split('/');
       const principal = partes[0];
       if (!grupos[principal]) grupos[principal] = {};
       grupos[principal][cat] = nombresCategorias[cat];
+    }
+  });
+
+  // Crear menú principal con submenús
+  Object.keys(grupos).forEach(catPrincipal => {
+    const li = document.createElement('li');
+    const btn = document.createElement('button');
+    btn.innerText = catPrincipal.replace('-', ' ').toUpperCase();
+    li.appendChild(btn);
+
+    const subMenu = document.createElement('ul');
+    subMenu.classList.add('submenu');
+
+    Object.entries(grupos[catPrincipal]).forEach(([ruta, nombre]) => {
+      const subLi = document.createElement('li');
+      const subBtn = document.createElement('button');
+      subBtn.innerText = nombre;
+      subBtn.onclick = () => filtrarCategoria(ruta);
+      subLi.appendChild(subBtn);
+      subMenu.appendChild(subLi);
     });
 
-    // Crear menú principal con submenús
-    Object.keys(grupos).forEach(catPrincipal => {
-      const li = document.createElement('li');
-      const btn = document.createElement('button');
-      btn.innerText = catPrincipal.replace('-', ' ').toUpperCase();
-      li.appendChild(btn);
+    li.appendChild(subMenu);
+    menuNav.appendChild(li);
+  });
+}
 
-      const subMenu = document.createElement('ul');
-      subMenu.classList.add('submenu');
-
-      Object.entries(grupos[catPrincipal]).forEach(([ruta, nombre]) => {
-        const subLi = document.createElement('li');
-        const subBtn = document.createElement('button');
-        subBtn.innerText = nombre;
-        subBtn.onclick = () => filtrarCategoria(ruta);
-        subLi.appendChild(subBtn);
-        subMenu.appendChild(subLi);
-      });
-
-      li.appendChild(subMenu);
-      menuNav.appendChild(li);
-    });
-  }
 
   function nombreAmigable(cat) {
     return nombresCategorias[cat] || cat;
