@@ -80,76 +80,11 @@
     <p class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando productos...</p>
   </div>
 </div>
+<script src="categorias.js"></script>
 <script>
   const TELEFONO_WHATSAPP = "5493513030241"; 
   let listaProductos = {};   
   let categoriaActual = 'Todas';
-
-  // Diccionario jerárquico de categorías y subcategorías
-  const categoriasJerarquicas = {
-    "Componentes de PC": {
-      "componentes-de-pc/motherboards/intel": "Motherboards Intel",
-      "componentes-de-pc/motherboards/amd": "Motherboards AMD",
-      "componentes-de-pc/microprocesadores/intel": "Microprocesadores Intel",
-      "componentes-de-pc/microprocesadores/amd": "Microprocesadores AMD",
-      "componentes-de-pc/memorias-ram/desktop": "Memorias RAM Desktop",
-      "componentes-de-pc/memorias-ram/notebook": "Memorias RAM Notebook",
-      "componentes-de-pc/placas-de-video": "Placas de Video",
-      "componentes-de-pc/placas-de-sonido": "Placas de Sonido",
-      "componentes-de-pc/placas-de-red": "Placas de Red",
-      "componentes-de-pc/discos-solidos-ssd": "Discos SSD",
-      "componentes-de-pc/discos-duros-mecanicos": "Discos Mecánicos",
-      "componentes-de-pc/fuentes": "Fuentes",
-      "componentes-de-pc/gabinetes": "Gabinetes",
-      "componentes-de-pc/refrigeracion": "Refrigeración",
-      "componentes-de-pc/pastas-termicas": "Pastas Térmicas",
-      "componentes-de-pc/combos-de-actualizacion": "Combos de Actualización"
-    },
-    "Periféricos": {
-      "perifericos/teclados": "Teclados",
-      "perifericos/mousepads": "Mousepads",
-      "perifericos/auriculares/gamer": "Auriculares Gamer",
-      "perifericos/auriculares/oficina-y-urbano": "Auriculares Oficina/Urbano",
-      "perifericos/microfonos": "Micrófonos",
-      "perifericos/webcams": "Webcams",
-      "perifericos/joysticks-volantes-y-simuladores": "Joysticks y Volantes",
-      "perifericos/audio/portatiles": "Audio Portátil",
-      "perifericos/placas-de-sonido": "Placas de Sonido"
-    },
-    "Monitores": {
-      "monitores/19-a-28-pulgadas": "Monitores 19-28\"",
-      "monitores/27-a-32-pulgadas": "Monitores 27-32\"",
-      "monitores/33-pulgadas-y-superior": "Monitores 33\"+",
-      "monitores/proyectores-y-pantallas": "Proyectores y Pantallas"
-    },
-    "Almacenamiento Portátil": {
-      "almacenamiento-portatil/pendrives": "Pendrives",
-      "almacenamiento-portatil/microsd": "MicroSD",
-      "almacenamiento-portatil/discos-externos": "Discos Externos"
-    },
-    "Impresión y Scanners": {
-      "impresion/impresoras-laser": "Impresoras Láser",
-      "impresion/inyeccion-de-tinta": "Impresoras Inkjet",
-      "impresion/termicas": "Impresoras Térmicas",
-      "impresion/impresion-3d": "Impresoras 3D",
-      "impresion/consumibles": "Consumibles"
-    },
-    "Redes y Conectividad": {
-      "redes/routers": "Routers",
-      "redes/switchs": "Switchs",
-      "redes/access-point": "Access Point",
-      "redes/modem-router": "Modem Router"
-    },
-    "Otros": {
-      "sillas-gamers": "Sillas Gamers",
-      "software": "Software",
-      "televisores": "Televisores",
-      "tablets": "Tablets",
-      "smartwatch": "Smartwatch",
-      "camaras-ip": "Cámaras IP",
-      "accesorios": "Accesorios"
-    }
-  };
 
   // Cargar productos.json
   fetch('productos.json?v=' + new Date().getTime())
@@ -172,7 +107,7 @@
     renderProductos('Todas');
   }
 
-  // Construcción del menú jerárquico
+  // Construcción del menú jerárquico usando nombres amigables
   function construirMenuCategorias() {
     const menuNav = document.getElementById('menu-categorias');
     menuNav.innerHTML = '';
@@ -186,17 +121,26 @@
     liTodas.appendChild(btnTodas);
     menuNav.appendChild(liTodas);
 
-    // Categorías principales con subcategorías
-    Object.keys(categoriasJerarquicas).forEach(catPrincipal => {
+    // Agrupar categorías por prefijo
+    const grupos = {};
+    Object.keys(nombresCategorias).forEach(cat => {
+      const partes = cat.split('/');
+      const principal = partes[0];
+      if (!grupos[principal]) grupos[principal] = {};
+      grupos[principal][cat] = nombresCategorias[cat];
+    });
+
+    // Crear menú principal con submenús
+    Object.keys(grupos).forEach(catPrincipal => {
       const li = document.createElement('li');
       const btn = document.createElement('button');
-      btn.innerText = catPrincipal;
+      btn.innerText = catPrincipal.replace('-', ' ').toUpperCase();
       li.appendChild(btn);
 
       const subMenu = document.createElement('ul');
       subMenu.classList.add('submenu');
 
-      Object.entries(categoriasJerarquicas[catPrincipal]).forEach(([ruta, nombre]) => {
+      Object.entries(grupos[catPrincipal]).forEach(([ruta, nombre]) => {
         const subLi = document.createElement('li');
         const subBtn = document.createElement('button');
         subBtn.innerText = nombre;
@@ -208,6 +152,10 @@
       li.appendChild(subMenu);
       menuNav.appendChild(li);
     });
+  }
+
+  function nombreAmigable(cat) {
+    return nombresCategorias[cat] || cat;
   }
   function renderProductos(cat) {
     const contenedor = document.getElementById('catalogo');
@@ -239,7 +187,7 @@
             <img src="${imgUrl}" alt="${p.titulo}" loading="lazy" 
                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&auto=format&fit=crop';">
           </div>
-          <div class="cat-tag">${cat}</div>
+          <div class="cat-tag">${nombreAmigable(cat)}</div>
           <h3>${p.titulo}</h3>
         </div>
         <div>
