@@ -1,99 +1,94 @@
+import time
 import json
 import re
-import time
-from urllib.parse import urljoin
-import chromedriver_autoinstaller
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
-# Instala automáticamente el ChromeDriver correcto
-chromedriver_autoinstaller.install()
+URL_HOME = "https://www.venex.com.ar/"
+MARGEN = 1.15
 
-MARGEN_GANANCIA = 1.15
-URL_BASE = "https://www.venex.com.ar"
+# Configuración de Selenium para usar Chromium en GitHub Actions
+options = Options()
+options.add_argument("--headless=new")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
 
-CATEGORIAS = {
-    "Notebooks": "/computadoras/notebooks",
-    "Placas de Video": "/componentes-de-pc/placas-de-video",
-    "Monitores": "/monitores",
-    "Procesadores": "/componentes-de-pc/microprocesadores",
-    "Memorias RAM": "/componentes-de-pc/memorias-ram",
-    "Almacenamiento SSD": "/componentes-de-pc/discos-solidos-ssd",
-    "Discos Rigidos": "/componentes-de-pc/discos-rigidos",
-    "Motherboards": "/componentes-de-pc/motherboards",
-    "Fuentes": "/componentes-de-pc/fuentes",
-    "Gabinetes": "/componentes-de-pc/gabinetes",
-    "Coolers y Refrigeracion": "/componentes-de-pc/coolers-y-refrigeracion",
-    "PCs Armadas": "/computadoras/pc-armadas",
-    "Teclados": "/perifericos/teclados",
-    "Mouses": "/perifericos/mouses",
-    "Auriculares": "/perifericos/auriculares",
-    "Mousepads": "/perifericos/mousepads",
-    "Sillas Gamer": "/gaming/sillas-gamer",
-    "Consolas y Videojuegos": "/gaming/consolas-y-videojuegos",
-    "Audio y Parlantes": "/audio-y-video/parlantes",
-    "Almacenamiento Externo": "/almacenamiento/pendrives-y-tarjetas-de-memoria",
-    "Conectividad y Redes": "/conectividad/routers-y-repetidores"
-}
+service = Service("/usr/bin/chromedriver")
+driver = webdriver.Chrome(service=service, options=options)
 
-def extraer_venex():
-    catalogo_final = {}
-    vistos = set()
+# Paso 1: obtener todas las categorías y subcategorías
+driver.get(URL_HOME)
+time.sleep(10)
 
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
+categorias = []
+links = driver.find_elements("css selector", "a")
+for link in links:
+    href = link.get_attribute("href")
+    if href and "venex.com.ar" in href:
+        if any(x in href for x in ["componentes-de-pc", "computadoras", "perifericos", "almacenamiento", "monitores"]):
+            categorias.append(href)
 
-    driver = webdriver.Chrome(options=options)
+categorias = list(set(categorias))
+print(f"Se encontraron {len(categorias)} categorías/subcategorías")
 
-    for categoria, path in CATEGORIAS.items():
-        print(f"🔄 Extrayendo categoría: {categoria.upper()}")
-        url = f"{URL_BASE}{path}"
-        driver.get(url)
-        time.sleep(8)
+productos_por_categoria = {}
 
-        tarjetas = driver.find_elements(By.CSS_SELECTOR, "div.item-product")
-        print(f"➡️ {len(tarjetas)} productos detectados en {categoria}")
+# Paso 2: recorrer cada categoría
+for url in categorias:
+    driver.get(url)
+    time.sleep(15)
 
-        for t in tarjetas:
-            try:
-                titulo_elem = t.find_element(By.CSS_SELECTOR, "h2 a, h3 a, .product-title a")
-                titulo = titulo_elem.text.strip()
-                if not titulo or titulo.lower() in vistos:
-                    continue
+    productos = driver.find_elements("css selector", "div.product-box")
+    print(f"Procesando categoría: {url} - encontrados {len(productos)} productos")
 
-                precio_elem = t.find_element(By.CSS_SELECTOR, ".price")
-                raw_price = re.sub(r"[^\d]", "", precio_elem.text)
-                if not raw_price.isdigit():
-                    continue
-                val = float(raw_price)
+    productos_lista = []
 
-                img_elem = t.find_element(By.CSS_SELECTOR, "img")
-                img_url = img_elem.get_attribute("src") or ""
-                if img_url.startswith("//"):
-                    img_url = "https:" + img_url
-                elif img_url.startswith("/"):
-                    img_url = urljoin(URL_BASE, img_url)
+    for p in productos:
+        titulo = None
+        precio_final = None
+        imagen = None
 
-                catalogo_final[titulo.lower()] = {
-                    "titulo": titulo,
-                    "categoria": categoria,
-                    "precio_venta": round(val * MARGEN_GANANCIA),
-                    "imagen": img_url,
-                    "stock": True
-                }
-                vistos.add(titulo.lower())
-            except Exception as e:
-                print(f"⚠️ Error procesando producto: {e}")
+        # Título (más robusto)
+        try:
+            titulo = p.find_element("css selector", ".product-box-name a, .product-box-body a").text.strip()
+        except:
+            pass
 
-    driver.quit()
+        # Precio (más robusto)
+        try:
+            precio_elementos = p.find_elements("css selector", ".product-box-price span, .price")
+            for elem in precio_elementos:
+                texto = elem.text.strip()
+                if any(c.isdigit() for c in texto):
+                    numeros = re.sub(r"[^\d]", "", texto)
+                    if numeros:
+                        precio_num = int(numeros)
+                        precio_final = round(precio_num * MARGEN)
+                        break
+        except:
+            pass
 
-    lista = list(catalogo_final.values())
-    print(f"\n🚀 Finalizado. Productos totales: {len(lista)}")
-    with open("productos.json", "w", encoding="utf-8") as f:
-        json.dump(lista, f, ensure_ascii=False, indent=4)
+        # Imagen
+        try:
+            imagen = p.find_element("css selector", "img").get_attribute("src")
+        except:
+            pass
 
-if __name__ == "__main__":
-    extraer_venex()
+        productos_lista.append({
+            "titulo": titulo,
+            "precio_final": precio_final,
+            "imagen": imagen
+        })
+
+    # Guardar productos agrupados por categoría/subcategoría
+    cat_key = url.replace("https://www.venex.com.ar/", "")
+    productos_por_categoria[cat_key] = productos_lista
+
+driver.quit()
+
+# Paso 3: guardar resultados en productos.json
+with open("productos.json", "w", encoding="utf-8") as f:
+    json.dump(productos_por_categoria, f, ensure_ascii=False, indent=4)
+
+print(f"✅ Archivo 'productos.json' generado con {sum(len(v) for v in productos_por_categoria.values())} productos.")
