@@ -690,18 +690,6 @@
             "precio_final": 436999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1585583667_hd_4_tb_sata_iii_64mb_wd_blue_2.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/discos-duros-mecanicos/hd-4-tb-s-ata-iii-64mb-western-digital.html"
-        },
-        {
-            "titulo": "Caddy Para DIscos NB Grabadora 9.5 MM",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1590019094_1585848959_caddy_notebook.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/discos-duros-mecanicos/caddy-para-discos-nb-grabadora-95-mm.html"
-        },
-        {
-            "titulo": "Disco Duro HDD 2TB Western Digital WD Sata III Blue",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1585582201_hd_2_tb_sata_iii_64mb_wd_blue.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/discos-duros-mecanicos/disco-duro-2-tb-s-ata-iii-varias-marcas.html"
         }
     ],
     "componentes-de-pc/fuentes": [
@@ -1668,24 +1656,6 @@
             "precio_final": 356488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1745332922_1.jpg",
             "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-hyperx-quadcast-2s-usb-rgb.html"
-        },
-        {
-            "titulo": "Microfono P/Conferencia Genius MIC-100U USB",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1765301009_470.jpg",
-            "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-p-conferencia-genius-mic-100u-usb.html"
-        },
-        {
-            "titulo": "Microfono Redragon Quasar GM200",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1599252138_gm200quazar512x512.jpg",
-            "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-redragon-quasar-gm200.html"
-        },
-        {
-            "titulo": "Micrófono Maono DGM20",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1759844343_39.jpg",
-            "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-maono-dgm20.html"
         }
     ],
     "perifericos/webcams": [
@@ -1736,30 +1706,6 @@
             "precio_final": 175949,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1510063639_sdgsdg.jpg",
             "url": "https://www.venex.com.ar/perifericos/webcams/webcam-logitech-c922-usb-amr.html"
-        },
-        {
-            "titulo": "Webcam Raptor Vision 4K Con Microfono Y Tapa",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1768588034_webcamraptor.jpg",
-            "url": "https://www.venex.com.ar/perifericos/webcams/webcam-raptor-vision-4k-con-microfono-y-tapa.html"
-        },
-        {
-            "titulo": "Webcam Redragon GW600 Fobos 720p Usb",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1666014905_camra.jpg",
-            "url": "https://www.venex.com.ar/perifericos/webcams/webcam-redragon-gw600-fobos-720p-usb.html"
-        },
-        {
-            "titulo": "Webcam Genius Widecam F100 V2 FHD",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1762785143_76.jpg",
-            "url": "https://www.venex.com.ar/perifericos/webcams/webcam-genius-widecam-f100-v2-fhd.html"
-        },
-        {
-            "titulo": "Web Cam Logitech Brio 100 FHD USB Graphite",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1734706341_11.jpg",
-            "url": "https://www.venex.com.ar/perifericos/webcams/web-cam-logitech-brio-100-fhd-usb-graphite.html"
         }
     ],
     "perifericos/joysticks-volantes-y-simuladores": [
@@ -1848,66 +1794,6 @@
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1667318532_mo-r88bt-1.jpg",
             "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-moonki-sound-bluetooth-mo-r88bt-negro.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Lenovo K3 Plus",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1739540595_1.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-lenovo-k3-plus.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Xiaomi Sound Pocket Black",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1729946753_3cd1505d2942fc4587a23c8816a4c247.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-xiaomi-sound-pocket-black.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Xiaomi Sound Pocket Grey Blue",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1767707790_xiaomi_sound_pocket_gris-1.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-xiaomi-sound-pocket-grey.html"
-        },
-        {
-            "titulo": "Parlante Portatil Moonki Sound Bluetooth MO-L208BT Negro",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1667318419_mo-l208bt-3.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-moonki-sound-bluetooth-mo-l208bt-negro.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Xiaomi Sound Outdoor Blue",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1739454507_4.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-xiaomi-sound-outdoor-blue.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Xiaomi Sound Outdoor Red",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1739455174_2.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-xiaomi-sound-outdoor-red.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Xiaomi Mi Portable Speaker 16w...",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1729867783_sdefgsgsg.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-xiaomi-mi-portable-speaker-16w-black.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Xiaomi Portable Speaker 16w Blue",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1729865729_qbh4197gl_2.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-xiaomi-portable-speaker-16w-blue.html"
-        },
-        {
-            "titulo": "Parlante Portatil Bluetooth Xiaomi Sound Outdoor Black",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1729869443_1594-xiaomi-sound-outdoor-altavoz-portatil-bluetooth-30w-negro.jpg",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-portatil-bluetooth-xiaomi-sound-outdoor-black.html"
-        },
-        {
-            "titulo": "Parlante Inalambrico Nakamichi Punch Bluetooth",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/mods/html/fil/Model/ProductGrouper/147/thumb_63d2c28fadc75-grupo-punch.png",
-            "url": "https://www.venex.com.ar/perifericos/audio/portatiles/parlante-inalambrico-nakamichi-punch-azul-bluetooth.html"
         }
     ],
     "perifericos/placas-de-sonido": [
@@ -2110,12 +1996,6 @@
             "precio_final": 235749,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1728478013_2.jpg",
             "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-laser-monocromatica-hpm111w-lj-21ppm-7md68a.html"
-        },
-        {
-            "titulo": "Impresora Laser Brother Hl-1212w 21ppm 2400 X 600 Dpi Wifi",
-            "precio_final": 275999,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1464960237_1212brother.jpg",
-            "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-laser-brother-hl-1212w-21ppm-2400-x-600-dpi-wifi.html"
         },
         {
             "titulo": "Impresora Multifuncional HP M141W LJ 21PPM 7MD74A",
@@ -2372,30 +2252,6 @@
             "precio_final": 193199,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1747916062_2.jpg",
             "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-tp-link-archer-ax55-pro-ax300-wifi-6.html"
-        },
-        {
-            "titulo": "Router Mercusys MW302R Wifi 300 MBPS 2 ANT",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1689163103_df3561hdfh.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-mercusys-mw302r-wifi-300-mbps-2-ant.html"
-        },
-        {
-            "titulo": "Router Tenda F3 300Mbps",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1727446648_tenda-1.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-tenda-f3-300mbps.html"
-        },
-        {
-            "titulo": "Router TP-Link TL WR820N 300Mbps 2 Antenas",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1689082236_820-3.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-tp-link-tl-wr820n-300mbps-2-antenas.html"
-        },
-        {
-            "titulo": "Router Mercusys MW305R WiFi 300Mbs 3 Antenas",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1608236165_mw305r_un_v2_20_normal_1.00_20180208090113.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-mercusys-mw305r-wifi-300mbs-3-antenas.html"
         }
     ],
     "redes/switchs": [
@@ -2440,36 +2296,6 @@
             "precio_final": 193199,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787945796_switch_tp-link_tl-sg1024_24p_101001000_giga_rackjpg",
             "url": "https://www.venex.com.ar/conectividad-y-redes/switchs/switch-tp-link-tl-sg1024-24p-10-100-1000-giga-rack.html"
-        },
-        {
-            "titulo": "Switch Tenda SG105M 5 Puertos Gigabit",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1753885688_1.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/switchs/switch-tenda-sg105m-5-puertos-gigabit.html"
-        },
-        {
-            "titulo": "Switch TP-Link DS105G 5P Gigabit Omada",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1754912599_5.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/switchs/switch-tp-link-ds105g-5p-gigabit-omada.html"
-        },
-        {
-            "titulo": "Switch Tenda SG108M 8 Puertos Gigabit",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1753886041_1.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/switchs/switch-tenda-sg108m-8-puertos-gigabit.html"
-        },
-        {
-            "titulo": "Switch TP-Link TL-SG105 5P Gigabit Metalico",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784748698_switch_tp-link_tl-sg105_5p_gigabit_metalicojpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/switchs/switch-tp-link-tl-sg105-5p-gigabit-metalico.html"
-        },
-        {
-            "titulo": "Switch TP-Link DS108G 8 Puertos Gigabit Omada",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1756812295_1.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/switchs/switch-tp-link-tl-sg108-8-puertos10-100-1000mbps.html"
         }
     ],
     "redes/access-point": [
@@ -2526,24 +2352,6 @@
             "precio_final": 313949,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1654791823_access-point-mesh-indoor-tp-link-deco-x50-2-pack-gigabit-wifi_42882_1.jpeg",
             "url": "https://www.venex.com.ar/conectividad-y-redes/access-point/access-point-tp-link-deco-x50-pack-2mesh-ax300-wifi-giga.html"
-        },
-        {
-            "titulo": "Extensor De Rango Tp-Link RE305 Dual Band AC1200",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1768589664_ext.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/access-point/extensor-de-rango-tp-link-re305-dual-band-ac1200.html"
-        },
-        {
-            "titulo": "Access Point Tenda Nova MW5C/G Pack De 2 Mesh AC1200",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1702578779_1.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/access-point/access-point-tenda-nova-mw5c-g-pack-de-2-mesh-ac1200.html"
-        },
-        {
-            "titulo": "Access Point Nanostation Loco AC S/fuente POE",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1615406825_1516714668_1382616.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/access-point/access-point-nanostation-loco-ac-s-fuente-poe.html"
         }
     ],
     "redes/modem-router": [],
@@ -2627,204 +2435,18 @@
             "precio_final": 379488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1678197190_w11.jpg",
             "url": "https://www.venex.com.ar/software/windows-11-prof-64b-oem-sistema-nuevo-fisico.html"
-        },
-        {
-            "titulo": "Windows 11 Profesional 64b Oem Digital",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1673281012_w11.jpg",
-            "url": "https://www.venex.com.ar/software/windows-11-profesional-64b-oem.html"
         }
     ],
     "televisores": [
         {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775051533_notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-156-fhd-freejpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775050985_notebook-lenovo-thinkbook-g7-ryzen-5jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-thinkbook-g7-ryzen-5-7535hs-8gb-ssd-512gb-16-wuxga-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1778685116_notebook-victusjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-victus-fa2082wm-intel-core-i5-13420h-16gb-ssd512gb-rtx4050-15-6-fhd-144hz-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786630139_notebook_gigabyte_gaming_a16_ryzen_7_260_16gb_512gb_rtx_5060_16_w11jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-gigabyte-gaming-a16-ryzen-7-260-16gb-512gb-rtx-5060-16-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786733260_notebook_hp_255r_g10_ryzen_3_7335u_16gb_256gb_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-255r-g10-ryzen-3-7335u-16gb-256gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Notebook HP 245 G10 Ryzen 5...",
+            "precio_final": 1345488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1781108403_notebook-hp-245-g10-ryzen-5jpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-245-g10-ryzen-5-7530u-8gb-ssd512gb-14-free.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Notebook HP 250R G10 Core 5...",
+            "precio_final": 1437488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1785861168_notebook_hp_250r_g10_core_5_120u_16gb_512gb_156jpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-250-g10-core-5-120u-16gb-512gb-15-6.html"
         },
@@ -2835,98 +2457,14 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
         },
         {
-            "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
-            "precio_final": 1460488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "Notebook Lenovo V15 G5 Core i7...",
-            "precio_final": 1707738,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775051533_notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-156-fhd-freejpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775050985_notebook-lenovo-thinkbook-g7-ryzen-5jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-thinkbook-g7-ryzen-5-7535hs-8gb-ssd-512gb-16-wuxga-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1778685116_notebook-victusjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-victus-fa2082wm-intel-core-i5-13420h-16gb-ssd512gb-rtx4050-15-6-fhd-144hz-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786630139_notebook_gigabyte_gaming_a16_ryzen_7_260_16gb_512gb_rtx_5060_16_w11jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-gigabyte-gaming-a16-ryzen-7-260-16gb-512gb-rtx-5060-16-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786733260_notebook_hp_255r_g10_ryzen_3_7335u_16gb_256gb_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-255r-g10-ryzen-3-7335u-16gb-256gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781108403_notebook-hp-245-g10-ryzen-5jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-245-g10-ryzen-5-7530u-8gb-ssd512gb-14-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785861168_notebook_hp_250r_g10_core_5_120u_16gb_512gb_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-250-g10-core-5-120u-16gb-512gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784897042_notebook_hp_255_g10_ryzen_5_7535u_16gb_512gb_156_3jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789128623_pc_ia_kairos_amd_ryzen_5_9600x_32gb_1tb_nvme_nvidia_geforce_rtx_5070_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/ia-local/pc-ia-kairos-amd-ryzen-5-9600x-32gb-1tb-nvme-nvidia-geforce-rtx-5070.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789560825_pc_gamer_powered_by_msi_ultimate_intel_core_ultra_7_265k_32gb_1tb_nvme_b860_rtx_5070_watercooler_750w_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-intel-powered-by-msi-ultimate-ultra-7-265k-32gb-1tb-nvme-b860-750w-geforce-5070-watercooler.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "PC Intel Core i3 12100 16GB...",
+            "precio_final": 1057988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1748432811_5.jpg",
             "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-intel-i3-12100-8gb-ssd-240gb-monitor-22.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "PC Gamer Kairos AMD Ryzen 7...",
+            "precio_final": 1719870,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
             "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
         },
@@ -2937,62 +2475,8 @@
             "url": "https://www.venex.com.ar/pc-de-escritorio/ia-local/pc-ia-kairos-amd-ryzen-5-9600x-32gb-1tb-nvme-nvidia-geforce-rtx-5070.html"
         },
         {
-            "titulo": "PC Gamer Powered by MSI...",
-            "precio_final": 4406143,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789560825_pc_gamer_powered_by_msi_ultimate_intel_core_ultra_7_265k_32gb_1tb_nvme_b860_rtx_5070_watercooler_750w_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-intel-powered-by-msi-ultimate-ultra-7-265k-32gb-1tb-nvme-b860-750w-geforce-5070-watercooler.html"
-        },
-        {
-            "titulo": "PC AMD Slim Ryzen 5 5600GT...",
-            "precio_final": 885488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1748432811_5.jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-intel-i3-12100-8gb-ssd-240gb-monitor-22.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785350296_disco_solido_ssd_copious_1tb_m2_nvme_pcie_30_3500mbsjpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788977548_memoria_ram_notebook_sodimm_samsung_ddr5_8gb_5600mhz_cl46_bulkpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-samsung-ddr5-8gb-5600mhz-cl46-bulk.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788543806_memoria_ram_kingdian_ddr3_4gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-4gb-1600mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788544680_memoria_ram_kingdian_ddr3_8gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-8gb-1600mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Memoria RAM Notebook SODIMM...",
+            "precio_final": 143738,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788203373_memoria_ram_notebook_sodimm_kimota_ddr4_8gb_3200mhzpng",
             "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-kimota-ddr4-8gb-3200mhz.html"
         },
@@ -3009,92 +2493,8 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
         },
         {
-            "titulo": "Memoria RAM Notebook SODIMM...",
-            "precio_final": 310488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788977548_memoria_ram_notebook_sodimm_samsung_ddr5_8gb_5600mhz_cl46_bulkpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-samsung-ddr5-8gb-5600mhz-cl46-bulk.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788543806_memoria_ram_kingdian_ddr3_4gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-4gb-1600mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788544680_memoria_ram_kingdian_ddr3_8gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-8gb-1600mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788203373_memoria_ram_notebook_sodimm_kimota_ddr4_8gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-kimota-ddr4-8gb-3200mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785179069_gabinete_asus_rog_hyperion_gr701_tg_rgb_1png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-asus-rog-hyperion-gr701-tg-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786129857_combo_de_actualizacion_asus_prime_amd_radeon_rx_9060_xt_8gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786130310_combo_de_actualizacion_asus_dual__amd_radeon_rx_9060_xt_16gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-dual-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1780586713_id_21643png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-nvidia-5070-12gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787238635_cockpit_thermaltake_sim_gr500_premium_rgb_racing_simulator_1png",
-            "url": "https://www.venex.com.ar/perifericos/joysticks-volantes-y-simuladores/cockpit-thermaltake-sim-gr500-premium-rgb-racing-simulator.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783428890_notebook_msi_thin_b13ve_core_i5_13420h_16gb_512gb_w11_rtx_4050_156_cosmos_greyjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-thin-b13ve-core-i5-13420h-16gb-512gb-w11-rtx-4050-15-6-cosmos-grey.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783009015_notebook_msi_katana_core_i7_14650hx_16gb_1tb_w11_rtx5070_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-katana-core-i7-14650hx-16gb-1tb-w11-rtx5070-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783014319_cocarda-de-caracteristicas---notebooks-2-[recuperado]jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-vector-ryzen-9-8940hz-16gb-1tb-w11-rtx-5070-ti-16-gray.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786457555_mouse_fantech_crypto_ii_wg7v2rd_wireless_negro_argb_1png",
-            "url": "https://www.venex.com.ar/perifericos/mouse/mouse-fantech-crypto-ii-wg7v2rd-wireless-negro-argb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1770832840_auricularfantechpng",
-            "url": "https://www.venex.com.ar/auriculares/gamer/auricular-fantech-mh90-sonata-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Teclado Mecánico Fantech...",
+            "precio_final": 105788,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1770645836_maxfitpng",
             "url": "https://www.venex.com.ar/perifericos/teclados/teclado-inalambrico-fantech-maxfit8-mk921-black-brown-switch-rgb.html"
         },
@@ -3111,152 +2511,14 @@
             "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-gamer-gigabyte-gs25f14-25-fhd-ips-144hz.html"
         },
         {
-            "titulo": "Micrófono Razer Seiren V3...",
-            "precio_final": 233449,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785163072_microfono_razer_seiren_v3_chroma_usb_rgb_1png",
-            "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-razer-seiren-v3-chroma-usb-rgb.html"
-        },
-        {
-            "titulo": "Monitor Gamer Arkham...",
-            "precio_final": 333488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785863184_monitor_gamer_arkham_ark25320f18_25_1png",
-            "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-25-arkham-ark25320f18-ips-fhd-1ms-hdmi-dp-320hz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785179069_gabinete_asus_rog_hyperion_gr701_tg_rgb_1png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-asus-rog-hyperion-gr701-tg-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786129857_combo_de_actualizacion_asus_prime_amd_radeon_rx_9060_xt_8gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786130310_combo_de_actualizacion_asus_dual__amd_radeon_rx_9060_xt_16gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-dual-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1780586713_id_21643png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-nvidia-5070-12gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787238635_cockpit_thermaltake_sim_gr500_premium_rgb_racing_simulator_1png",
-            "url": "https://www.venex.com.ar/perifericos/joysticks-volantes-y-simuladores/cockpit-thermaltake-sim-gr500-premium-rgb-racing-simulator.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783428890_notebook_msi_thin_b13ve_core_i5_13420h_16gb_512gb_w11_rtx_4050_156_cosmos_greyjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-thin-b13ve-core-i5-13420h-16gb-512gb-w11-rtx-4050-15-6-cosmos-grey.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783009015_notebook_msi_katana_core_i7_14650hx_16gb_1tb_w11_rtx5070_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-katana-core-i7-14650hx-16gb-1tb-w11-rtx5070-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783014319_cocarda-de-caracteristicas---notebooks-2-[recuperado]jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-vector-ryzen-9-8940hz-16gb-1tb-w11-rtx-5070-ti-16-gray.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786457555_mouse_fantech_crypto_ii_wg7v2rd_wireless_negro_argb_1png",
-            "url": "https://www.venex.com.ar/perifericos/mouse/mouse-fantech-crypto-ii-wg7v2rd-wireless-negro-argb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1770832840_auricularfantechpng",
-            "url": "https://www.venex.com.ar/auriculares/gamer/auricular-fantech-mh90-sonata-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1770645836_maxfitpng",
-            "url": "https://www.venex.com.ar/perifericos/teclados/teclado-inalambrico-fantech-maxfit8-mk921-black-brown-switch-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788967846_joystick_redragon_g831_wargrip_pcps5___base_de_carga_1png",
-            "url": "https://www.venex.com.ar/perifericos/joysticks-volantes-y-simuladores/joystick-redragon-g831-wargrip-pc-ps5-base-de-carga.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788200130_monitor_gamer_gigabyte_gs25f14_25_fhd_ips_144hz_1png",
-            "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-gamer-gigabyte-gs25f14-25-fhd-ips-144hz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785163072_microfono_razer_seiren_v3_chroma_usb_rgb_1png",
-            "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-razer-seiren-v3-chroma-usb-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785863184_monitor_gamer_arkham_ark25320f18_25_1png",
-            "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-25-arkham-ark25320f18-ips-fhd-1ms-hdmi-dp-320hz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785179069_gabinete_asus_rog_hyperion_gr701_tg_rgb_1png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-asus-rog-hyperion-gr701-tg-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787575207_cerradura_inteligente_ezviz_dl03_con_huella_1png",
-            "url": "https://www.venex.com.ar/camaras-ip/cerradura-inteligente-ezviz-dl03-con-huella.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788461058_scanner_epson_perfection_v39ii_cama_plana_a4_usb_1png",
-            "url": "https://www.venex.com.ar/impresion-y-scanners/scanner-epson-perfection-v39ii-cama-plana-a4-usb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788450024_proyector_epson_powerlite_e24_3600_ansi_xga_1png",
-            "url": "https://www.venex.com.ar/monitores/proyectores-y-pantallas/proyector-epson-powerlite-e24-3600-ansi-xga.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784742079_reloj_xiaomi_smartwatch_mi_smart_band_10_midnight_black_1png",
-            "url": "https://www.venex.com.ar/relojes-smartwatch/reloj-xiaomi-smartwatch-mi-smart-band-10-midnight-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784924062_soporte_ajustable_notebook_razer_aluminio_color_mercury_1png",
-            "url": "https://www.venex.com.ar/soportes/soporte-ajustable-notebook-razer-aluminio-color-mercury.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Camara IP Ezviz H9C Dual Lens...",
+            "precio_final": 137999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787574017_camara_ip_ezviz_h9c_dual_lens_cam_2k_3emp_exterior_1png",
             "url": "https://www.venex.com.ar/camaras-ip/camara-ip-ezviz-h9c-dual-lens-cam-2k-3emp-exterior.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Cerradura Inteligente Ezviz...",
+            "precio_final": 183999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787575207_cerradura_inteligente_ezviz_dl03_con_huella_1png",
             "url": "https://www.venex.com.ar/camaras-ip/cerradura-inteligente-ezviz-dl03-con-huella.html"
         },
@@ -3265,30 +2527,6 @@
             "precio_final": 201249,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788461058_scanner_epson_perfection_v39ii_cama_plana_a4_usb_1png",
             "url": "https://www.venex.com.ar/impresion-y-scanners/scanner-epson-perfection-v39ii-cama-plana-a4-usb.html"
-        },
-        {
-            "titulo": "Proyector Epson Powerlite E24...",
-            "precio_final": 1092499,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788450024_proyector_epson_powerlite_e24_3600_ansi_xga_1png",
-            "url": "https://www.venex.com.ar/monitores/proyectores-y-pantallas/proyector-epson-powerlite-e24-3600-ansi-xga.html"
-        },
-        {
-            "titulo": "Reloj Xiaomi Smartwatch Mi...",
-            "precio_final": 85088,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784742079_reloj_xiaomi_smartwatch_mi_smart_band_10_midnight_black_1png",
-            "url": "https://www.venex.com.ar/relojes-smartwatch/reloj-xiaomi-smartwatch-mi-smart-band-10-midnight-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784924062_soporte_ajustable_notebook_razer_aluminio_color_mercury_1png",
-            "url": "https://www.venex.com.ar/soportes/soporte-ajustable-notebook-razer-aluminio-color-mercury.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787574017_camara_ip_ezviz_h9c_dual_lens_cam_2k_3emp_exterior_1png",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-ezviz-h9c-dual-lens-cam-2k-3emp-exterior.html"
         }
     ],
     "tablets": [
@@ -3339,222 +2577,18 @@
             "precio_final": 747488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1784917178_tablet_lenovo_idea_tab_k11_tb336fu_128gb_8gb_11png",
             "url": "https://www.venex.com.ar/tablets/tablet-lenovo-idea-tab-k11-tb336fu-128gb-8gb-11-teclado-tab-plus-lapiz-auri-tab.html"
-        },
-        {
-            "titulo": "Tablet 9 Lenovo Tab M9 TB310FU Helio G80 64Gb/4Gb HD Folio Case...",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1724338771_5.jpg",
-            "url": "https://www.venex.com.ar/tablets/tablet-9-lenovo-tab-m9-tb310fu-helio-g80-64gb-4gb-hd-folio-case-film.html"
-        },
-        {
-            "titulo": "Tablet 8.7 Samsung Galaxy Tab A9 SM-X110 64Gb 4GB Silver",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1738760338_11.jpg",
-            "url": "https://www.venex.com.ar/tablets/tablet-8-7-samsung-galaxy-tab-a9-sm-x110-64gb-4gb-silver.html"
-        },
-        {
-            "titulo": "Tablet 8.7 Samsung Galaxy A9 SM-X110 64Gb 4Gb Graphite",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1734704413_11.jpg",
-            "url": "https://www.venex.com.ar/tablets/tablet-8-7-samsung-galaxy-a9-sm-x110-64gb-4gb-graphite.html"
-        },
-        {
-            "titulo": "E-Reader Kindle Amazon 16GB WiFi 6pul Ebook 11va Gen",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1737659605_11.jpg",
-            "url": "https://www.venex.com.ar/tablets/e-reader-kindle-amazon-paperwhite-16gb-wifi-7pul-ebook-12va-gen.html"
         }
     ],
     "smartwatch": [
         {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": null,
-            "precio_final": null,
-            "imagen": null,
-            "url": null
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775051533_notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-156-fhd-freejpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775050985_notebook-lenovo-thinkbook-g7-ryzen-5jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-thinkbook-g7-ryzen-5-7535hs-8gb-ssd-512gb-16-wuxga-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1778685116_notebook-victusjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-victus-fa2082wm-intel-core-i5-13420h-16gb-ssd512gb-rtx4050-15-6-fhd-144hz-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786630139_notebook_gigabyte_gaming_a16_ryzen_7_260_16gb_512gb_rtx_5060_16_w11jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-gigabyte-gaming-a16-ryzen-7-260-16gb-512gb-rtx-5060-16-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786733260_notebook_hp_255r_g10_ryzen_3_7335u_16gb_256gb_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-255r-g10-ryzen-3-7335u-16gb-256gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Notebook HP 245 G10 Ryzen 5...",
+            "precio_final": 1345488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1781108403_notebook-hp-245-g10-ryzen-5jpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-245-g10-ryzen-5-7530u-8gb-ssd512gb-14-free.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Notebook HP 250R G10 Core 5...",
+            "precio_final": 1437488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1785861168_notebook_hp_250r_g10_core_5_120u_16gb_512gb_156jpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-250-g10-core-5-120u-16gb-512gb-15-6.html"
         },
@@ -3565,98 +2599,14 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
         },
         {
-            "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
-            "precio_final": 1460488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "Notebook Lenovo V15 G5 Core i7...",
-            "precio_final": 1707738,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775051533_notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-156-fhd-freejpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g5-i7-13620h-8gb-ssd512-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775050985_notebook-lenovo-thinkbook-g7-ryzen-5jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-thinkbook-g7-ryzen-5-7535hs-8gb-ssd-512gb-16-wuxga-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1778685116_notebook-victusjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-victus-fa2082wm-intel-core-i5-13420h-16gb-ssd512gb-rtx4050-15-6-fhd-144hz-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786630139_notebook_gigabyte_gaming_a16_ryzen_7_260_16gb_512gb_rtx_5060_16_w11jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-gigabyte-gaming-a16-ryzen-7-260-16gb-512gb-rtx-5060-16-w11.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786733260_notebook_hp_255r_g10_ryzen_3_7335u_16gb_256gb_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-255r-g10-ryzen-3-7335u-16gb-256gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781108403_notebook-hp-245-g10-ryzen-5jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-245-g10-ryzen-5-7530u-8gb-ssd512gb-14-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785861168_notebook_hp_250r_g10_core_5_120u_16gb_512gb_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-250-g10-core-5-120u-16gb-512gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784897042_notebook_hp_255_g10_ryzen_5_7535u_16gb_512gb_156_3jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789128623_pc_ia_kairos_amd_ryzen_5_9600x_32gb_1tb_nvme_nvidia_geforce_rtx_5070_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/ia-local/pc-ia-kairos-amd-ryzen-5-9600x-32gb-1tb-nvme-nvidia-geforce-rtx-5070.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789560825_pc_gamer_powered_by_msi_ultimate_intel_core_ultra_7_265k_32gb_1tb_nvme_b860_rtx_5070_watercooler_750w_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-intel-powered-by-msi-ultimate-ultra-7-265k-32gb-1tb-nvme-b860-750w-geforce-5070-watercooler.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "PC Intel Core i3 12100 16GB...",
+            "precio_final": 1057988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1748432811_5.jpg",
             "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-intel-i3-12100-8gb-ssd-240gb-monitor-22.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "PC Gamer Kairos AMD Ryzen 7...",
+            "precio_final": 1719870,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
             "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
         },
@@ -3667,62 +2617,14 @@
             "url": "https://www.venex.com.ar/pc-de-escritorio/ia-local/pc-ia-kairos-amd-ryzen-5-9600x-32gb-1tb-nvme-nvidia-geforce-rtx-5070.html"
         },
         {
-            "titulo": "PC Gamer Powered by MSI...",
-            "precio_final": 4406143,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789560825_pc_gamer_powered_by_msi_ultimate_intel_core_ultra_7_265k_32gb_1tb_nvme_b860_rtx_5070_watercooler_750w_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-intel-powered-by-msi-ultimate-ultra-7-265k-32gb-1tb-nvme-b860-750w-geforce-5070-watercooler.html"
-        },
-        {
-            "titulo": "PC AMD Slim Ryzen 5 5600GT...",
-            "precio_final": 885488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1748432811_5.jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-intel-i3-12100-8gb-ssd-240gb-monitor-22.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785350296_disco_solido_ssd_copious_1tb_m2_nvme_pcie_30_3500mbsjpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788977548_memoria_ram_notebook_sodimm_samsung_ddr5_8gb_5600mhz_cl46_bulkpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-samsung-ddr5-8gb-5600mhz-cl46-bulk.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788543806_memoria_ram_kingdian_ddr3_4gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-4gb-1600mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Memoria RAM Kingdian DDR3 8GB...",
+            "precio_final": 37938,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788544680_memoria_ram_kingdian_ddr3_8gb_1600mhzpng",
             "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-8gb-1600mhz.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Memoria RAM Notebook SODIMM...",
+            "precio_final": 143738,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788203373_memoria_ram_notebook_sodimm_kimota_ddr4_8gb_3200mhzpng",
             "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-kimota-ddr4-8gb-3200mhz.html"
         },
@@ -3739,92 +2641,8 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
         },
         {
-            "titulo": "Memoria RAM Notebook SODIMM...",
-            "precio_final": 310488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788977548_memoria_ram_notebook_sodimm_samsung_ddr5_8gb_5600mhz_cl46_bulkpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-samsung-ddr5-8gb-5600mhz-cl46-bulk.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788543806_memoria_ram_kingdian_ddr3_4gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-4gb-1600mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788544680_memoria_ram_kingdian_ddr3_8gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-8gb-1600mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788203373_memoria_ram_notebook_sodimm_kimota_ddr4_8gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-kimota-ddr4-8gb-3200mhz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785179069_gabinete_asus_rog_hyperion_gr701_tg_rgb_1png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-asus-rog-hyperion-gr701-tg-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786129857_combo_de_actualizacion_asus_prime_amd_radeon_rx_9060_xt_8gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786130310_combo_de_actualizacion_asus_dual__amd_radeon_rx_9060_xt_16gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-dual-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1780586713_id_21643png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-nvidia-5070-12gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787238635_cockpit_thermaltake_sim_gr500_premium_rgb_racing_simulator_1png",
-            "url": "https://www.venex.com.ar/perifericos/joysticks-volantes-y-simuladores/cockpit-thermaltake-sim-gr500-premium-rgb-racing-simulator.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783428890_notebook_msi_thin_b13ve_core_i5_13420h_16gb_512gb_w11_rtx_4050_156_cosmos_greyjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-thin-b13ve-core-i5-13420h-16gb-512gb-w11-rtx-4050-15-6-cosmos-grey.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783009015_notebook_msi_katana_core_i7_14650hx_16gb_1tb_w11_rtx5070_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-katana-core-i7-14650hx-16gb-1tb-w11-rtx5070-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783014319_cocarda-de-caracteristicas---notebooks-2-[recuperado]jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-vector-ryzen-9-8940hz-16gb-1tb-w11-rtx-5070-ti-16-gray.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786457555_mouse_fantech_crypto_ii_wg7v2rd_wireless_negro_argb_1png",
-            "url": "https://www.venex.com.ar/perifericos/mouse/mouse-fantech-crypto-ii-wg7v2rd-wireless-negro-argb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1770832840_auricularfantechpng",
-            "url": "https://www.venex.com.ar/auriculares/gamer/auricular-fantech-mh90-sonata-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Teclado Mecánico Fantech...",
+            "precio_final": 105788,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1770645836_maxfitpng",
             "url": "https://www.venex.com.ar/perifericos/teclados/teclado-inalambrico-fantech-maxfit8-mk921-black-brown-switch-rgb.html"
         },
@@ -3841,152 +2659,14 @@
             "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-gamer-gigabyte-gs25f14-25-fhd-ips-144hz.html"
         },
         {
-            "titulo": "Micrófono Razer Seiren V3...",
-            "precio_final": 233449,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785163072_microfono_razer_seiren_v3_chroma_usb_rgb_1png",
-            "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-razer-seiren-v3-chroma-usb-rgb.html"
-        },
-        {
-            "titulo": "Monitor Gamer Arkham...",
-            "precio_final": 333488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785863184_monitor_gamer_arkham_ark25320f18_25_1png",
-            "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-25-arkham-ark25320f18-ips-fhd-1ms-hdmi-dp-320hz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785179069_gabinete_asus_rog_hyperion_gr701_tg_rgb_1png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-asus-rog-hyperion-gr701-tg-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786129857_combo_de_actualizacion_asus_prime_amd_radeon_rx_9060_xt_8gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786130310_combo_de_actualizacion_asus_dual__amd_radeon_rx_9060_xt_16gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-dual-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1780586713_id_21643png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-nvidia-5070-12gb-prime-fuente-750w.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787238635_cockpit_thermaltake_sim_gr500_premium_rgb_racing_simulator_1png",
-            "url": "https://www.venex.com.ar/perifericos/joysticks-volantes-y-simuladores/cockpit-thermaltake-sim-gr500-premium-rgb-racing-simulator.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783428890_notebook_msi_thin_b13ve_core_i5_13420h_16gb_512gb_w11_rtx_4050_156_cosmos_greyjpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-thin-b13ve-core-i5-13420h-16gb-512gb-w11-rtx-4050-15-6-cosmos-grey.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783009015_notebook_msi_katana_core_i7_14650hx_16gb_1tb_w11_rtx5070_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-katana-core-i7-14650hx-16gb-1tb-w11-rtx5070-15-6.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783014319_cocarda-de-caracteristicas---notebooks-2-[recuperado]jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-msi-vector-ryzen-9-8940hz-16gb-1tb-w11-rtx-5070-ti-16-gray.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786457555_mouse_fantech_crypto_ii_wg7v2rd_wireless_negro_argb_1png",
-            "url": "https://www.venex.com.ar/perifericos/mouse/mouse-fantech-crypto-ii-wg7v2rd-wireless-negro-argb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1770832840_auricularfantechpng",
-            "url": "https://www.venex.com.ar/auriculares/gamer/auricular-fantech-mh90-sonata-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1770645836_maxfitpng",
-            "url": "https://www.venex.com.ar/perifericos/teclados/teclado-inalambrico-fantech-maxfit8-mk921-black-brown-switch-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788967846_joystick_redragon_g831_wargrip_pcps5___base_de_carga_1png",
-            "url": "https://www.venex.com.ar/perifericos/joysticks-volantes-y-simuladores/joystick-redragon-g831-wargrip-pc-ps5-base-de-carga.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788200130_monitor_gamer_gigabyte_gs25f14_25_fhd_ips_144hz_1png",
-            "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-gamer-gigabyte-gs25f14-25-fhd-ips-144hz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785163072_microfono_razer_seiren_v3_chroma_usb_rgb_1png",
-            "url": "https://www.venex.com.ar/perifericos/microfonos/microfono-razer-seiren-v3-chroma-usb-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785863184_monitor_gamer_arkham_ark25320f18_25_1png",
-            "url": "https://www.venex.com.ar/monitores/19-a-26-pulgadas/monitor-25-arkham-ark25320f18-ips-fhd-1ms-hdmi-dp-320hz.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785179069_gabinete_asus_rog_hyperion_gr701_tg_rgb_1png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-asus-rog-hyperion-gr701-tg-rgb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787575207_cerradura_inteligente_ezviz_dl03_con_huella_1png",
-            "url": "https://www.venex.com.ar/camaras-ip/cerradura-inteligente-ezviz-dl03-con-huella.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788461058_scanner_epson_perfection_v39ii_cama_plana_a4_usb_1png",
-            "url": "https://www.venex.com.ar/impresion-y-scanners/scanner-epson-perfection-v39ii-cama-plana-a4-usb.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788450024_proyector_epson_powerlite_e24_3600_ansi_xga_1png",
-            "url": "https://www.venex.com.ar/monitores/proyectores-y-pantallas/proyector-epson-powerlite-e24-3600-ansi-xga.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784742079_reloj_xiaomi_smartwatch_mi_smart_band_10_midnight_black_1png",
-            "url": "https://www.venex.com.ar/relojes-smartwatch/reloj-xiaomi-smartwatch-mi-smart-band-10-midnight-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784924062_soporte_ajustable_notebook_razer_aluminio_color_mercury_1png",
-            "url": "https://www.venex.com.ar/soportes/soporte-ajustable-notebook-razer-aluminio-color-mercury.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Camara IP Ezviz H9C Dual Lens...",
+            "precio_final": 137999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787574017_camara_ip_ezviz_h9c_dual_lens_cam_2k_3emp_exterior_1png",
             "url": "https://www.venex.com.ar/camaras-ip/camara-ip-ezviz-h9c-dual-lens-cam-2k-3emp-exterior.html"
         },
         {
-            "titulo": "",
-            "precio_final": null,
+            "titulo": "Cerradura Inteligente Ezviz...",
+            "precio_final": 183999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787575207_cerradura_inteligente_ezviz_dl03_con_huella_1png",
             "url": "https://www.venex.com.ar/camaras-ip/cerradura-inteligente-ezviz-dl03-con-huella.html"
         },
@@ -3995,30 +2675,6 @@
             "precio_final": 201249,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788461058_scanner_epson_perfection_v39ii_cama_plana_a4_usb_1png",
             "url": "https://www.venex.com.ar/impresion-y-scanners/scanner-epson-perfection-v39ii-cama-plana-a4-usb.html"
-        },
-        {
-            "titulo": "Proyector Epson Powerlite E24...",
-            "precio_final": 1092499,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788450024_proyector_epson_powerlite_e24_3600_ansi_xga_1png",
-            "url": "https://www.venex.com.ar/monitores/proyectores-y-pantallas/proyector-epson-powerlite-e24-3600-ansi-xga.html"
-        },
-        {
-            "titulo": "Reloj Xiaomi Smartwatch Mi...",
-            "precio_final": 85088,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784742079_reloj_xiaomi_smartwatch_mi_smart_band_10_midnight_black_1png",
-            "url": "https://www.venex.com.ar/relojes-smartwatch/reloj-xiaomi-smartwatch-mi-smart-band-10-midnight-black.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784924062_soporte_ajustable_notebook_razer_aluminio_color_mercury_1png",
-            "url": "https://www.venex.com.ar/soportes/soporte-ajustable-notebook-razer-aluminio-color-mercury.html"
-        },
-        {
-            "titulo": "",
-            "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1787574017_camara_ip_ezviz_h9c_dual_lens_cam_2k_3emp_exterior_1png",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-ezviz-h9c-dual-lens-cam-2k-3emp-exterior.html"
         }
     ],
     "camaras-ip": [
