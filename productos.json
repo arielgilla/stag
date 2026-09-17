@@ -327,6 +327,12 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-hiksemi-ddr3-8gb-1600mhz.html"
         },
         {
+            "titulo": "Memoria RAM Kingdian DDR4 8GB 2666MHz",
+            "precio_final": 100038,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1788809684_memoria_ram_kingdian_ddr4_8gb_2666mhzpng",
+            "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-kingdian-ddr4-8gb-2666mhz.html"
+        },
+        {
             "titulo": "Memoria RAM Kingdian DDR4 8GB 3200MHz",
             "precio_final": 114988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788809961_memoria_ram_kingdian_ddr4_8gb_3200mhz_2png",
@@ -361,12 +367,6 @@
             "precio_final": 166624,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1633032324_sdfghdsf.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-ddr4-8gb-3200mhz-corsair-vengeance-lpx-1x8.html"
-        },
-        {
-            "titulo": "Memoria RAM Kingston Fury Beast DDR4 8GB 3200MHz Black CL16",
-            "precio_final": 189738,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1627329889_sdfgsdfgsdfg.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-ddr4-8gb-3200mhz-kingston-fury-beast.html"
         }
     ],
     "componentes-de-pc/memorias-ram/notebook": [
@@ -481,12 +481,6 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-gigabyte-ati-radeon-rx-7600-gaming-oc-8gb.html"
         },
         {
-            "titulo": "Placa de Video ASRock Intel Arc B580 12GB Challenger OC",
-            "precio_final": 689999,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1780681034_diseno_sin_titulo_-_2026-06-05t143657570png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-asrock-intel-arc-b580-challenger-12gb-oc.html"
-        },
-        {
             "titulo": "Placa de Video Gigabyte AMD Radeon RX 9050 8GB Gaming OC",
             "precio_final": 701499,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787934052_placa_de_video_gigabyte_amd_radeon_rx_9050_8gb_gaming_oc_1png",
@@ -515,6 +509,12 @@
             "precio_final": 764738,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1764681084_440.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-asus-nvidia-geforce-rtx-5050-dual-oc-8gb-gddr6.html"
+        },
+        {
+            "titulo": "Placa de Video ASRock AMD Radeon RX 9060 8GB Challenger",
+            "precio_final": 769338,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1786719391_placa_de_video_asrock_amd_radeon_rx_9060_challenger_8gb_1png",
+            "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-asrock-amd-radeon-rx-9060-challenger-8gb.html"
         }
     ],
     "componentes-de-pc/placas-de-sonido": [],
@@ -890,12 +890,6 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/refrigeracion/fan-coolers/fan-cooler-gamdias-aeolus-m2-1203-lite-120mm-x3-rgb.html"
         },
         {
-            "titulo": "Fan Cooler Cooler Master SickleFlow Edge 120 ARGB",
-            "precio_final": 32188,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1752233163_1.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/refrigeracion/fan-coolers/fan-cooler-cooler-master-sickleflow-edge-120-argb.html"
-        },
-        {
             "titulo": "Fan Cooler Master Sickleflow EDGE 120 ARGB White",
             "precio_final": 34488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1764088516_307.jpg",
@@ -924,6 +918,12 @@
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1777925060_fan_cooler_cpu_msi_corefrozr_aa13_argb_whitejpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/refrigeracion/fan-coolers/fan-cooler-cpu-msi-corefrozr-aa13-argb-white.html"
+        },
+        {
+            "titulo": "Controladora Cooler Master A1 Gen 2 ARGB P/Fan Coolers",
+            "precio_final": 49438,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1716995528_cm-controladora-1.jpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/refrigeracion/fan-coolers/controladora-cooler-master-a1-gen-2-argb-p-fan-coolers.html"
         }
     ],
     "componentes-de-pc/pastas-termicas": [
@@ -1076,6 +1076,12 @@
     ],
     "notebooks": [
         {
+            "titulo": "Notebook Lenovo IdeaPad Slim 3 15IAN8 Intel N100 8GB 128GB...",
+            "precio_final": 770488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785420335_notebook_lenovo_ideapad_slim_3_15ian8_intel_n100_8gb_128gb_156jpg",
+            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-ideapad-slim-3-15ian8-8gb-128gb-15-6-w11-artic-grey.html"
+        },
+        {
             "titulo": "Notebook ASUS Vivobook X1404VA Core i3 1315U 8GB 128GB 14\" W11...",
             "precio_final": 873988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1782745188_notebook_asus_vivobook_x1404va_core_i3-1315u_8gb_128gb_w11_14_quiet_bluejpg",
@@ -1089,7 +1095,7 @@
         },
         {
             "titulo": "Notebook HP 255R G10 Ryzen 3 7335U 16GB 256GB 15.6\"",
-            "precio_final": 1034988,
+            "precio_final": 1069488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786733260_notebook_hp_255r_g10_ryzen_3_7335u_16gb_256gb_156jpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255r-g10-ryzen-3-7335u-16gb-256gb-15-6.html"
         },
@@ -1140,12 +1146,6 @@
             "precio_final": 1310988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1784734551_notebook_asus_vivobook_x1404va_core_i5_1334u_12gb_256gb_14_w11_quiet_bluejpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-asus-vivobook-x1404va-core-i5-1334u-12gb-256gb-14-w11-quiet-blue.html"
-        },
-        {
-            "titulo": "Notebook HP 15-FC0251LA Ryzen 5 7520U 8GB SSD 512GB 15.6\" W11 +...",
-            "precio_final": 1322488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781894832_notebook_hp_15-fc0251la_ryzen_5_7520u_8gb_ssd_512gb_156jpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-hp-15-fc0251la-ryzen-5-7520u-8gb-ssd-512gb-15-6.html"
         }
     ],
     "monitores/19-a-28-pulgadas": [
@@ -2963,14 +2963,14 @@
         {
             "titulo": "",
             "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788203373_memoria_ram_notebook_sodimm_kimota_ddr4_8gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-kimota-ddr4-8gb-3200mhz.html"
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
+            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
         },
         {
             "titulo": "",
             "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785350296_disco_solido_ssd_copious_1tb_m2_nvme_pcie_30_3500mbsjpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
         },
         {
             "titulo": "",
@@ -2998,9 +2998,15 @@
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM...",
-            "precio_final": 275988,
+            "precio_final": null,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
             "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
+        },
+        {
+            "titulo": "Disco Solido SSD Copious 1TB...",
+            "precio_final": 275988,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785350296_disco_solido_ssd_copious_1tb_m2_nvme_pcie_30_3500mbsjpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM...",
@@ -3687,14 +3693,14 @@
         {
             "titulo": "",
             "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788203373_memoria_ram_notebook_sodimm_kimota_ddr4_8gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-kimota-ddr4-8gb-3200mhz.html"
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
+            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
         },
         {
             "titulo": "",
             "precio_final": null,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785350296_disco_solido_ssd_copious_1tb_m2_nvme_pcie_30_3500mbsjpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
         },
         {
             "titulo": "",
@@ -3721,10 +3727,16 @@
             "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-kimota-ddr4-8gb-3200mhz.html"
         },
         {
-            "titulo": "Memoria RAM Notebook SODIMM...",
-            "precio_final": 275988,
+            "titulo": "",
+            "precio_final": null,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1783083642_memoria_ram_notebook_sodimm_hiksemi_single_tray_ddr4_16gb_3200mhzpng",
             "url": "https://www.venex.com.ar/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr4-16gb-3200mhz-hiksemi-single-tray.html"
+        },
+        {
+            "titulo": "Disco Solido SSD Copious 1TB...",
+            "precio_final": 275988,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785350296_disco_solido_ssd_copious_1tb_m2_nvme_pcie_30_3500mbsjpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-copious-1tb-m-2-nvme-pcie-3-0-3500mb-s.html"
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM...",
@@ -4085,6 +4097,12 @@
     ],
     "accesorios": [
         {
+            "titulo": "Cable Cooler Master 24 Pines",
+            "precio_final": 1229,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1710507459_cable.jpg",
+            "url": "https://www.venex.com.ar/accesorios/cables/cable-cooler-master-24-pines.html"
+        },
+        {
             "titulo": "Cable Riser 80Cm V0011 Pro 6 Pines Molex Mineria",
             "precio_final": 1149,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1646325485_asas.jpg",
@@ -4131,12 +4149,6 @@
             "precio_final": 5289,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1703860396_cable.jpg",
             "url": "https://www.venex.com.ar/accesorios/cables/cable-dvi-dvi-m-m-comun-1-8m.html"
-        },
-        {
-            "titulo": "Adaptador Display Port M a HDMI H",
-            "precio_final": 5749,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1664895023_adaptador3.jpg",
-            "url": "https://www.venex.com.ar/accesorios/cables/adaptador-display-port-m-a-hdmi-m.html"
         },
         {
             "titulo": "Adaptador Genius ACC-C2A USB-A a Tipo C",
