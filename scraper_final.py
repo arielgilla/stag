@@ -16,7 +16,7 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-# Lista completa de categorías y subcategorías (como ya definimos antes)
+# 🔹 Lista completa de categorías y subcategorías
 CATEGORIAS = [
     "componentes-de-pc/motherboards/intel",
     "componentes-de-pc/motherboards/amd",
@@ -77,7 +77,7 @@ for cat in CATEGORIAS:
 
     while True:
         driver.get(url)
-        time.sleep(10)
+        time.sleep(5)
 
         productos = driver.find_elements("css selector", "div.product-box")
         print(f"Procesando categoría: {cat} - encontrados {len(productos)} productos en esta página")
@@ -116,12 +116,14 @@ for cat in CATEGORIAS:
             except:
                 pass
 
-            productos_lista.append({
-                "titulo": titulo,
-                "precio_final": precio_final,
-                "imagen": imagen,
-                "url": link
-            })
+            # 🔹 Filtrar: solo guardar si hay precio e imagen
+            if precio_final and imagen:
+                productos_lista.append({
+                    "titulo": titulo,
+                    "precio_final": precio_final,
+                    "imagen": imagen,
+                    "url": link
+                })
 
         # Paginación: buscar botón "siguiente"
         try:
