@@ -105,12 +105,6 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/motherboards/amd/motherboard-msi-pro-a620am-b-evo-ddr5-am5.html"
         },
         {
-            "titulo": "Motherboard Gigabyte A620M H AM5 DDR5",
-            "precio_final": 140874,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1721836825_a620m_h-01.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/motherboards/amd/motherboard-gigabyte-a650m-h-am5-box-am5.html"
-        },
-        {
             "titulo": "Motherboard ASUS Prime A620M-K AM5 DDR5",
             "precio_final": 142599,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1707499017_asus-1.jpg",
@@ -145,6 +139,12 @@
             "precio_final": 146049,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1781813731_motherboard_msi_pro_b550m-b_am4_ddr4png",
             "url": "https://www.venex.com.ar/componentes-de-pc/motherboards/amd/motherboard-msi-pro-b550m-b-am4-ddr4.html"
+        },
+        {
+            "titulo": "Motherboard MSI PRO B840M-B AM5 DDR5",
+            "precio_final": 151799,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1757680446_1.jpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/motherboards/amd/motherboard-msi-pro-b840m-b-ddr5-am5.html"
         }
     ],
     "componentes-de-pc/microprocesadores/intel": [
@@ -167,12 +167,6 @@
             "url": "https://www.venex.com.ar/soportes/soporte-ajustable-para-microfono-fantech-ac902s.html"
         },
         {
-            "titulo": "Camara IP Tp-Link Cloud Tapo C110",
-            "precio_final": 37949,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710156587_tapo.jpg",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-tp-link-cloud-tapo-c110.html"
-        },
-        {
             "titulo": "Base para Notebook Fantech NC21 C/Cooler USB A-C RGB Negro",
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786718810_base_para_notebook_fantech_nc21_c_1png",
@@ -219,6 +213,12 @@
             "precio_final": 60938,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1753710688_3.jpg",
             "url": "https://www.venex.com.ar/soportes/soporte-redragon-zenith-para-monitor-con-cargador-inalambrico.html"
+        },
+        {
+            "titulo": "Camara IP Cloud TP-Link Tapo C220 2K QHD",
+            "precio_final": 63824,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1748435272_1.jpg",
+            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c220-2k-qhd.html"
         }
     ],
     "componentes-de-pc/microprocesadores/amd": [
@@ -241,12 +241,6 @@
             "url": "https://www.venex.com.ar/soportes/soporte-ajustable-para-microfono-fantech-ac902s.html"
         },
         {
-            "titulo": "Camara IP Tp-Link Cloud Tapo C110",
-            "precio_final": 37949,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710156587_tapo.jpg",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-tp-link-cloud-tapo-c110.html"
-        },
-        {
             "titulo": "Base para Notebook Fantech NC21 C/Cooler USB A-C RGB Negro",
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786718810_base_para_notebook_fantech_nc21_c_1png",
@@ -293,6 +287,12 @@
             "precio_final": 60938,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1753710688_3.jpg",
             "url": "https://www.venex.com.ar/soportes/soporte-redragon-zenith-para-monitor-con-cargador-inalambrico.html"
+        },
+        {
+            "titulo": "Camara IP Cloud TP-Link Tapo C220 2K QHD",
+            "precio_final": 63824,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1748435272_1.jpg",
+            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c220-2k-qhd.html"
         }
     ],
     "componentes-de-pc/memorias-ram/desktop": [
@@ -325,12 +325,6 @@
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1783084226_memoria_ram_hiksemi_ddr3_8gb_1600mhzpng",
             "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-hiksemi-ddr3-8gb-1600mhz.html"
-        },
-        {
-            "titulo": "Memoria RAM Kingdian DDR4 8GB 2666MHz",
-            "precio_final": 100038,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788809684_memoria_ram_kingdian_ddr4_8gb_2666mhzpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-kingdian-ddr4-8gb-2666mhz.html"
         },
         {
             "titulo": "Memoria RAM Kingdian DDR4 8GB 3200MHz",
@@ -367,6 +361,12 @@
             "precio_final": 166624,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1633032324_sdfghdsf.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-ddr4-8gb-3200mhz-corsair-vengeance-lpx-1x8.html"
+        },
+        {
+            "titulo": "Memoria RAM Corsair Vengance RS DDR4 8GB 3200MHz RGB CL16",
+            "precio_final": 174225,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1655140207_fere.jpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/desktop/memoria-ram-corsair-vengance-rs-ddr4-8gb-3200mhz.html"
         }
     ],
     "componentes-de-pc/memorias-ram/notebook": [
@@ -420,7 +420,7 @@
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM ADATA DDR5 8GB 5600MHz CL46",
-            "precio_final": 298988,
+            "precio_final": 310488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1784642185_memoria_ram_notebook_sodimm_adata_ddr5_8gb_5600mhz_cl46_2png",
             "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/notebook/memoria-ram-notebook-sodimm-adata-ddr5-8gb-5600mhz-cl46.html"
         },
@@ -748,12 +748,6 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/fuentes/fuente-sentey-600w-epp600-gt-80-bronze.html"
         },
         {
-            "titulo": "Fuente Thermaltake 500W 80 Plus White Smart",
-            "precio_final": 75888,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1585762848_fuente_thermaltake_smart_white_500w_80.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/fuentes/fuente-thermaltake-smart-white-500w-80-plus.html"
-        },
-        {
             "titulo": "Fuente Gamdias 550W 80 Plus Bronze Helios M1-550B",
             "precio_final": 78188,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1761743765_378.jpg",
@@ -764,6 +758,12 @@
             "precio_final": 79338,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1777062460_fuente_sentey_650w_mbp650-gx_80__bronze_atx_31png",
             "url": "https://www.venex.com.ar/componentes-de-pc/fuentes/fuente-sentey-650w-mbp650-gx-80-bronze-atx-3-1.html"
+        },
+        {
+            "titulo": "Fuente Aerocool 500W 80 Plus Bronze Cylon RGB",
+            "precio_final": 80488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1585765618_fuente_aerocool_cylon_500w_rgb_80_bronze.jpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/fuentes/fuente-aerocool-cylon-500w-rgb-80--white.html"
         }
     ],
     "componentes-de-pc/gabinetes": [
@@ -958,7 +958,7 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/pastas-termicas/grasa-termica-gamdias-xc7-thermal.html"
         },
         {
-            "titulo": "Pasta Térmica Cooler Master Cryonamics",
+            "titulo": "Pad Térmico Cooler Master Cryonamics",
             "precio_final": 20688,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788284412_pasta_termica_cooler_master_cryonamics_1png",
             "url": "https://www.venex.com.ar/componentes-de-pc/pastas-termicas/pasta-termica-cooler-master-cryonamics.html"
@@ -1026,12 +1026,6 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-intel-core-i5-14400-16gb.html"
         },
         {
-            "titulo": "Combo ASUS Placa de video RX 9060 XT 8GB PRIME + Fuente ASUS...",
-            "precio_final": 1034999,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786129857_combo_de_actualizacion_asus_prime_amd_radeon_rx_9060_xt_8gb___fuente_asus_prime_650wpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9060-xt-16gb-prime-fuente-750w.html"
-        },
-        {
             "titulo": "Combo Actualización Intel Core i7 12700 16GB",
             "precio_final": 1047626,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1747746943_7.jpg",
@@ -1060,6 +1054,12 @@
             "precio_final": 1283387,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1712772075_combo-7800g.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-amd-ryzen-7-8700g-16gb.html"
+        },
+        {
+            "titulo": "Combo Actualizacion ASUS AMD Radeon RX 9070 GRE 12GB Prime +...",
+            "precio_final": 1546749,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1789562519_combo_actualizacion_asus_amd_radeon_rx_9070_gre_12gb_prime___fuente_asus_750w_4png",
+            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9070-gre-12gb-prime-fuente-asus-750w.html"
         }
     ],
     "notebooks": [
@@ -1156,12 +1156,6 @@
             "url": "https://www.venex.com.ar/soportes/soporte-ajustable-para-microfono-fantech-ac902s.html"
         },
         {
-            "titulo": "Camara IP Tp-Link Cloud Tapo C110",
-            "precio_final": 37949,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710156587_tapo.jpg",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-tp-link-cloud-tapo-c110.html"
-        },
-        {
             "titulo": "Base para Notebook Fantech NC21 C/Cooler USB A-C RGB Negro",
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786718810_base_para_notebook_fantech_nc21_c_1png",
@@ -1208,6 +1202,12 @@
             "precio_final": 60938,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1753710688_3.jpg",
             "url": "https://www.venex.com.ar/soportes/soporte-redragon-zenith-para-monitor-con-cargador-inalambrico.html"
+        },
+        {
+            "titulo": "Camara IP Cloud TP-Link Tapo C220 2K QHD",
+            "precio_final": 63824,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1748435272_1.jpg",
+            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c220-2k-qhd.html"
         }
     ],
     "monitores/27-a-32-pulgadas": [
@@ -1216,12 +1216,6 @@
             "precio_final": 218488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1632859032_272v8la_00-ims-es_es.jpg",
             "url": "https://www.venex.com.ar/monitores/27-a-32-pulgadas/monitor-27-philips-272v8la-5-hdmi-va-fhd-75hz.html"
-        },
-        {
-            "titulo": "Monitor ViewSonic 27\" Full HD IPS VA270A-H",
-            "precio_final": 229999,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788279592_monitor_viewsonic_27_full_hd_ips_va270a-h_1png",
-            "url": "https://www.venex.com.ar/monitores/27-a-32-pulgadas/monitor-viewsonic-fhd-ips-va270a-h.html"
         },
         {
             "titulo": "Monitor Asus 27\" Full HD 100Hz IPS VA27EHF-J 'Eye Care'",
@@ -1254,12 +1248,6 @@
             "url": "https://www.venex.com.ar/monitores/27-a-32-pulgadas/monitor-27-viewsonic-va2714-h-fhd-ips-4ms-100hz.html"
         },
         {
-            "titulo": "Monitor Gamer Asrock Phantom PG27FFT1A 27\" FHD IPS 180Hz",
-            "precio_final": 280588,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1785353330_monitor_gamer_asrock_phantom_pg27fft1a_1png",
-            "url": "https://www.venex.com.ar/monitores/27-a-32-pulgadas/monitor-gamer-asrock-phantom-pg27fft1a-27-fhd-180hz.html"
-        },
-        {
             "titulo": "Monitor LG 27\" Full HD 100Hz IPS 27MS500-B",
             "precio_final": 282899,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1724243812_5.jpg",
@@ -1282,6 +1270,18 @@
             "precio_final": 303588,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1780505047_moni-raptor-1png",
             "url": "https://www.venex.com.ar/monitores/27-a-32-pulgadas/monitor-27-raptor-hawk-eye-frameless-fhd-hdmi-dp-1ms-ips-200hz.html"
+        },
+        {
+            "titulo": "Monitor Gamer Gigabyte GS27FC-SA 27\" Full HD VA 180Hz Curvo",
+            "precio_final": 304738,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1741789127_4.jpg",
+            "url": "https://www.venex.com.ar/monitores/27-a-32-pulgadas/monitor-27-gigabyte-gs27fc-sa-edge-va-hdr-fhd-curvo-1ms-180hz.html"
+        },
+        {
+            "titulo": "Monitor Gamer Gigabyte GS27FA 27\" Full HD IPS 180Hz",
+            "precio_final": 313938,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1771508150_monitorgigabytepng",
+            "url": "https://www.venex.com.ar/monitores/27-a-32-pulgadas/monitor-27-gigabyte-gs27fa-sa-fhd-ips-1ms-180hz.html"
         }
     ],
     "monitores/33-pulgadas-y-superior": [
@@ -1522,10 +1522,10 @@
             "url": "https://www.venex.com.ar/perifericos/auriculares/gamer/auricular-inalambrico-hyperx-cloud-mini-p-ni-os-white.html"
         },
         {
-            "titulo": "Auricular Aula S6 Wireless Blue/White",
+            "titulo": "Auriculares Aula S6 Wireless",
             "precio_final": 58638,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783701056_auricular_aula_s6_wireless_bluewhite_1png",
-            "url": "https://www.venex.com.ar/perifericos/auriculares/gamer/auricular-aula-s6-wireless-blue-white.html"
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1783109463_auriculares_aula_s6_wireless1png",
+            "url": "https://www.venex.com.ar/perifericos/auriculares/gamer/auriculares-aula-s6-wireless.html"
         }
     ],
     "perifericos/auriculares/oficina-y-urbano": [
@@ -1816,12 +1816,6 @@
             "url": "https://www.venex.com.ar/soportes/soporte-ajustable-para-microfono-fantech-ac902s.html"
         },
         {
-            "titulo": "Camara IP Tp-Link Cloud Tapo C110",
-            "precio_final": 37949,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710156587_tapo.jpg",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-tp-link-cloud-tapo-c110.html"
-        },
-        {
             "titulo": "Base para Notebook Fantech NC21 C/Cooler USB A-C RGB Negro",
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786718810_base_para_notebook_fantech_nc21_c_1png",
@@ -1868,6 +1862,12 @@
             "precio_final": 60938,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1753710688_3.jpg",
             "url": "https://www.venex.com.ar/soportes/soporte-redragon-zenith-para-monitor-con-cargador-inalambrico.html"
+        },
+        {
+            "titulo": "Camara IP Cloud TP-Link Tapo C220 2K QHD",
+            "precio_final": 63824,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1748435272_1.jpg",
+            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c220-2k-qhd.html"
         }
     ],
     "almacenamiento-portatil/pendrives": [
@@ -1998,10 +1998,28 @@
             "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-laser-monocromatica-hpm111w-lj-21ppm-7md68a.html"
         },
         {
+            "titulo": "Impresora Laser Brother Hl-l1222",
+            "precio_final": 264499,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1779215426_impresora_laser_brother_hl-l1222jpg",
+            "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-laser-brother-hl-l1222.html"
+        },
+        {
+            "titulo": "Impresora Laser Brother Hl-1212w 21ppm 2400 X 600 Dpi Wifi",
+            "precio_final": 275999,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1464960237_1212brother.jpg",
+            "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-laser-brother-hl-1212w-21ppm-2400-x-600-dpi-wifi.html"
+        },
+        {
             "titulo": "Impresora Multifuncional HP M141W LJ 21PPM 7MD74A",
             "precio_final": 321999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1752150549_1.jpg",
             "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-multifuncional-hp-m141w-lj-21ppm-7md74a.html"
+        },
+        {
+            "titulo": "Impresora Laser Brother Hl-l1232W",
+            "precio_final": 316249,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1779217896_impresora_laser_brother_hl-l1232wjpg",
+            "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-laser-brother-hl-l1232w.html"
         },
         {
             "titulo": "Impresora Multifuncion Laser HP M137FNW 21P/m 4ZB84A",
@@ -2032,12 +2050,6 @@
             "precio_final": 928049,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1751373306_1.jpg",
             "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-multifuncion-hp-4103fdw.html"
-        },
-        {
-            "titulo": "Impresora Multifuncion Brother MFC-L8900CDW 33PPM Wifi Duplex",
-            "precio_final": 2299999,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786123517_impresora_multifuncion_brother_mfc-l8900cdw_33ppm_wifi_duplex_1png",
-            "url": "https://www.venex.com.ar/impresion-y-scanners/impresoras-laser/impresora-multifuncion-brother-mfc-l8900cdw-33ppm-wifi-duplex.html"
         }
     ],
     "impresion/inyeccion-de-tinta": [
@@ -2060,12 +2072,6 @@
             "url": "https://www.venex.com.ar/soportes/soporte-ajustable-para-microfono-fantech-ac902s.html"
         },
         {
-            "titulo": "Camara IP Tp-Link Cloud Tapo C110",
-            "precio_final": 37949,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710156587_tapo.jpg",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-tp-link-cloud-tapo-c110.html"
-        },
-        {
             "titulo": "Base para Notebook Fantech NC21 C/Cooler USB A-C RGB Negro",
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786718810_base_para_notebook_fantech_nc21_c_1png",
@@ -2112,6 +2118,12 @@
             "precio_final": 60938,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1753710688_3.jpg",
             "url": "https://www.venex.com.ar/soportes/soporte-redragon-zenith-para-monitor-con-cargador-inalambrico.html"
+        },
+        {
+            "titulo": "Camara IP Cloud TP-Link Tapo C220 2K QHD",
+            "precio_final": 63824,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1748435272_1.jpg",
+            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c220-2k-qhd.html"
         }
     ],
     "impresion/termicas": [
@@ -2134,12 +2146,6 @@
             "url": "https://www.venex.com.ar/soportes/soporte-ajustable-para-microfono-fantech-ac902s.html"
         },
         {
-            "titulo": "Camara IP Tp-Link Cloud Tapo C110",
-            "precio_final": 37949,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710156587_tapo.jpg",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-tp-link-cloud-tapo-c110.html"
-        },
-        {
             "titulo": "Base para Notebook Fantech NC21 C/Cooler USB A-C RGB Negro",
             "precio_final": 45988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786718810_base_para_notebook_fantech_nc21_c_1png",
@@ -2186,6 +2192,12 @@
             "precio_final": 60938,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1753710688_3.jpg",
             "url": "https://www.venex.com.ar/soportes/soporte-redragon-zenith-para-monitor-con-cargador-inalambrico.html"
+        },
+        {
+            "titulo": "Camara IP Cloud TP-Link Tapo C220 2K QHD",
+            "precio_final": 63824,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1748435272_1.jpg",
+            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c220-2k-qhd.html"
         }
     ],
     "impresion/impresion-3d": [
@@ -2213,7 +2225,7 @@
         },
         {
             "titulo": "Router Tp Link TL WR840n 300Mbps Wireless 2 Ant",
-            "precio_final": 33338,
+            "precio_final": 31624,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1689083791_840-3.jpg",
             "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-tp-link-tl-wr840n-300mbps-wireless-2-ant.html"
         },
@@ -2243,13 +2255,13 @@
         },
         {
             "titulo": "Router TP-LINK Archer AX53HP AX3000 High Power Gigabit Wifi6",
-            "precio_final": 114999,
+            "precio_final": 112699,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1783950972_router_tp-link_archer_ax53hp_ax3000_high_power_gigabit_wifi6_1png",
             "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-tp-link-archer-ax53hp-ax3000-high-power-gigabit-wifi6.html"
         },
         {
             "titulo": "Router TP-Link Archer AX55 Pro AX3000 Wifi 6",
-            "precio_final": 193199,
+            "precio_final": 190899,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1747916062_2.jpg",
             "url": "https://www.venex.com.ar/conectividad-y-redes/routers/router-tp-link-archer-ax55-pro-ax300-wifi-6.html"
         }
@@ -2457,6 +2469,12 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
         },
         {
+            "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
+            "precio_final": 1460488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
+            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
+        },
+        {
             "titulo": "PC Intel Core i3 12100 16GB...",
             "precio_final": 1057988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1748432811_5.jpg",
@@ -2617,12 +2635,6 @@
             "url": "https://www.venex.com.ar/pc-de-escritorio/ia-local/pc-ia-kairos-amd-ryzen-5-9600x-32gb-1tb-nvme-nvidia-geforce-rtx-5070.html"
         },
         {
-            "titulo": "Memoria RAM Kingdian DDR3 8GB...",
-            "precio_final": 37938,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788544680_memoria_ram_kingdian_ddr3_8gb_1600mhzpng",
-            "url": "https://www.venex.com.ar/memorias-ram/desktop/memoria-ram-kingdian-ddr3-8gb-1600mhz.html"
-        },
-        {
             "titulo": "Memoria RAM Notebook SODIMM...",
             "precio_final": 143738,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788203373_memoria_ram_notebook_sodimm_kimota_ddr4_8gb_3200mhzpng",
@@ -2679,12 +2691,6 @@
     ],
     "camaras-ip": [
         {
-            "titulo": "Camara IP Tp-Link Cloud Tapo C110",
-            "precio_final": 37949,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710156587_tapo.jpg",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-tp-link-cloud-tapo-c110.html"
-        },
-        {
             "titulo": "Camara IP Cloud Tp-Link TAPO C210",
             "precio_final": 49449,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1713885803_cam1.jpg",
@@ -2733,22 +2739,28 @@
             "url": "https://www.venex.com.ar/camaras-ip/camara-ip-ezviz-bm1-2mp-rabbit-baby-call-monitor.html"
         },
         {
+            "titulo": "Camara Ip Cloud TP-LINK Tapo C425 2K QHD",
+            "precio_final": 137999,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1786134119_camara_ip_cloud_tp-link_tapo_c425_2k_qhd_1png",
+            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c425-2k-qhd.html"
+        },
+        {
             "titulo": "Camara IP Ezviz H9C Dual Lens Cam 2K 3EMP Exterior",
             "precio_final": 137999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787574017_camara_ip_ezviz_h9c_dual_lens_cam_2k_3emp_exterior_1png",
             "url": "https://www.venex.com.ar/camaras-ip/camara-ip-ezviz-h9c-dual-lens-cam-2k-3emp-exterior.html"
         },
         {
-            "titulo": "Camara Ip Cloud TP-LINK Tapo C425 2K QHD",
-            "precio_final": 142599,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1786134119_camara_ip_cloud_tp-link_tapo_c425_2k_qhd_1png",
-            "url": "https://www.venex.com.ar/camaras-ip/camara-ip-cloud-tp-link-tapo-c425-2k-qhd.html"
-        },
-        {
             "titulo": "Cerradura Inteligente Ezviz DL03 Con Huella",
             "precio_final": 183999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1787575207_cerradura_inteligente_ezviz_dl03_con_huella_1png",
             "url": "https://www.venex.com.ar/camaras-ip/cerradura-inteligente-ezviz-dl03-con-huella.html"
+        },
+        {
+            "titulo": "Cerradura Ezviz Inteligente DL05 Con Huella Multilock",
+            "precio_final": 293249,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785246855_cerradura_ezviz_inteligente_dl05_con_huella_multilock_1png",
+            "url": "https://www.venex.com.ar/camaras-ip/cerradura-ezviz-inteligente-dl05-con-huella-multilock.html"
         }
     ],
     "accesorios": [
