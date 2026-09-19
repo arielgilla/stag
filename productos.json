@@ -395,6 +395,12 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/notebook/memoria-ram-hiksemi-hiker-sodimm-ddr4-3200mhz.html"
         },
         {
+            "titulo": "Memoria RAM Notebook SODIMM Memox DDR4 8GB 3200MHz OEM Bulk",
+            "precio_final": 160988,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083239_memoria_ram_notebook_sodimm_memox_ddr4_8gb_3200mhz_oem_bulkpng",
+            "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/notebook/memoria-ram-ddr4-sodimm-8gb-3200mhz-memox-oem-bulk.html"
+        },
+        {
             "titulo": "Memoria Ram Notebook Sodimm DDR4 8GB 3200Mhz Kingston 1.2v",
             "precio_final": 206988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788204351_memoria_ram_notebook_sodimm_ddr4_8gb_3200mhz_kingston_12vpng",
@@ -435,12 +441,6 @@
             "precio_final": 321988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1783083707_memoria_ram_notebook_sodimm_kingston_ddr5_8gb_5600mhz_cl46png",
             "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/notebook/memoria-ram-sodimm-ddr5-8gb-5600mhz-kingston-cl46.html"
-        },
-        {
-            "titulo": "Memoria RAM Notebook SODIMM Hiksemi Hiker DDR5 16GB 5600MHz",
-            "precio_final": 551988,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1783083817_memoria_ram_notebook_sodimm_hiksemi_hiker_ddr5_16gb_5600mhzpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/memorias-ram/notebook/memoria-ram-notebook-sodimm-ddr5-16gb-5600mhz-hiksemi-hiker.html"
         }
     ],
     "componentes-de-pc/placas-de-video": [
@@ -473,12 +473,6 @@
             "precio_final": 603738,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1756310628_18.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-asrock-intel-arc-b570-challenger-10gb-oc.html"
-        },
-        {
-            "titulo": "Placa de Video Gigabyte AMD Radeon RX 7600 8GB Gaming OC",
-            "precio_final": 655488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1721652793_1.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-gigabyte-ati-radeon-rx-7600-gaming-oc-8gb.html"
         },
         {
             "titulo": "Placa de Video Gigabyte AMD Radeon RX 9050 8GB Gaming OC",
@@ -515,6 +509,12 @@
             "precio_final": 769338,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786719391_placa_de_video_asrock_amd_radeon_rx_9060_challenger_8gb_1png",
             "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-asrock-amd-radeon-rx-9060-challenger-8gb.html"
+        },
+        {
+            "titulo": "Placa de Video MSI NVIDIA GeForce RTX 5050 8GB Gaming OC",
+            "precio_final": 787738,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1780680956_diseno_sin_titulo_-_2026-06-05t143536527png",
+            "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-video/placa-de-video-msi-nvidia-geforce-rtx-5050-gaming-oc-8gb.html"
         }
     ],
     "componentes-de-pc/placas-de-sonido": [],
@@ -568,6 +568,12 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-red/adaptador-tp-link-ua430c-usb-c-3-0-a-sd-micro-sd.html"
         },
         {
+            "titulo": "Placa De Red USB TP-Link Archer T2UB AC600 Nano Wifi Bluetooth",
+            "precio_final": 22999,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1680265338_ac600-2.jpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-red/placa-de-red-usb-tp-link-archer-t2ub-ac600-nano-wifi-bluetooth.html"
+        },
+        {
             "titulo": "Placa De Red Tp-Link Usb 3.0 A Ethernet Rj45 Ue300",
             "precio_final": 29899,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1504292036_ue300_un_v1_892_large_4_20150908180450.jpg",
@@ -584,12 +590,6 @@
             "precio_final": 31049,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1671795523_ue306-2.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-red/placa-de-red-tp-link-usb-3-0-a-ethernet-rj45-ue306.html"
-        },
-        {
-            "titulo": "Placa De Red Tp-Link USB-C A Ethernet UE300C",
-            "precio_final": 34499,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1658165977_01_large_1594179427146p.jpg",
-            "url": "https://www.venex.com.ar/componentes-de-pc/placas-de-red/placa-de-red-tp-link-usb-c-a-ethernet-ue300c.html"
         }
     ],
     "componentes-de-pc/discos-solidos-ssd": [
@@ -630,6 +630,12 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-duro-ssd-240gb-kingston-a400-sata-iii-25.html"
         },
         {
+            "titulo": "Disco sólido SSD Adata SU630 480GB SATA III 2.5\" 520MB/s",
+            "precio_final": 137988,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785875154_disco_solido_ssd_adata_su630_480gb_sata_iii_25png",
+            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-480gb-su630-adata-25.html"
+        },
+        {
             "titulo": "Disco solido SSD Adata SU650 480GB SATA III 2.5\" 520MB/s",
             "precio_final": 137988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1646248406_1639156187_ssd.jpg",
@@ -658,12 +664,6 @@
             "precio_final": 170188,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1780066771_diseno_sin_titulo_-_2026-05-29t115905612png",
             "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-solido-ssd-512gb-hiksemi-m-2-nvme-wave-25000mb-s.html"
-        },
-        {
-            "titulo": "Disco sólido SSD Kingston A400 480GB SATA III 2.5\"...",
-            "precio_final": 183988,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1780068215_diseno_sin_titulo_-_2026-05-29t122154695png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/discos-solidos-ssd/disco-duro-ssd-480gb-kingston-a400-sata-iii-25.html"
         }
     ],
     "componentes-de-pc/discos-duros-mecanicos": [
@@ -822,6 +822,12 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-gamemax-nova-n6-mid-tower-atx-argb.html"
         },
         {
+            "titulo": "Kit Herramientas Corsair Diy Pc",
+            "precio_final": 60938,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1778518854_kit_herramientas_corsair_diy_pcjpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/kit-herramientas-corsair-diy-pc.html"
+        },
+        {
             "titulo": "Gabinete Sentey T5 TG C/Coolers x3 ARGB Vidrio Templado",
             "precio_final": 56338,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1775744013_gabinete_sentey_t5_glass_tg_ccoolers_x3_argb_blackpng",
@@ -832,12 +838,6 @@
             "precio_final": 57488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1703693520_ar-bl-1.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-gamdias-argus-e4-elite-c-coolers-x1-tg.html"
-        },
-        {
-            "titulo": "Gabinete Sentey M12 Coyote Mesh TG C/Coolers x3 ARGB Vidrio...",
-            "precio_final": 57488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1775827627_gabinete_sentey_m12_coyote_mesh_tg_ccoolers_x3_argb_blackpng",
-            "url": "https://www.venex.com.ar/componentes-de-pc/gabinetes/gabinete-sentey-m12-coyote-mesh-tg-c-coolers-x3-argb-black.html"
         }
     ],
     "componentes-de-pc/refrigeracion": [
@@ -964,6 +964,12 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/pastas-termicas/pasta-termica-cooler-master-cryonamics.html"
         },
         {
+            "titulo": "Pasta Termica Corsair XTM60 Alto Rendimiento 3G",
+            "precio_final": 28738,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1755878306_29.jpg",
+            "url": "https://www.venex.com.ar/componentes-de-pc/pastas-termicas/pasta-termica-corsair-xtm-60.html"
+        },
+        {
             "titulo": "Pasta Termica Cooler Master Cryofuze 7 4G Gray",
             "precio_final": 32188,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788893836_diseno_sin_titulo_-_2026-09-08t155454191png",
@@ -980,12 +986,6 @@
             "precio_final": 55188,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1714753658_pasta_termina-corsair.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/pastas-termicas/grasa-termica-corsair-xtm70-alto-rendimiento.html"
-        },
-        {
-            "titulo": "Gabinete Cooler Master Elite 681 C/Cooler x4 Black",
-            "precio_final": 120738,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1788284936_gabinete_cooler_master_elite_681_ccooler_x4_argb_black_1png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/pastas-termicas/gabinete-cooler-master-elite-681-c-cooler-x4.html"
         }
     ],
     "componentes-de-pc/combos-de-actualizacion": [
@@ -1050,16 +1050,16 @@
             "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-actualizacion-amd-ryzen-5-7600-16gb.html"
         },
         {
+            "titulo": "Combo de Actualizacion ASUS Prime NVIDIA GeForce RTX 5060 Ti...",
+            "precio_final": 1253487,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1786110113_combo_de_actualizacion_asus_prime_nvidia_geforce_rtx_5060_ti_8gb___fuente_asus_prime_650w_2png",
+            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-prime-nvidia-geforce-rtx-5060-ti-8gb-fuente-asus-prime-650w.html"
+        },
+        {
             "titulo": "Combo Actualización AMD Ryzen 7 8700G 16GB",
             "precio_final": 1283387,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1712772075_combo-7800g.jpg",
             "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-amd-ryzen-7-8700g-16gb.html"
-        },
-        {
-            "titulo": "Combo Actualizacion ASUS AMD Radeon RX 9070 GRE 12GB Prime +...",
-            "precio_final": 1546749,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789562519_combo_actualizacion_asus_amd_radeon_rx_9070_gre_12gb_prime___fuente_asus_750w_4png",
-            "url": "https://www.venex.com.ar/componentes-de-pc/combos-de-actualizacion/combo-de-actualizacion-asus-amd-radeon-rx-9070-gre-12gb-prime-fuente-asus-750w.html"
         }
     ],
     "notebooks": [
@@ -1094,16 +1094,22 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-ideapad-slim-3-15amn8-ryzen-5-7520u-8gb-256gb-15-6-w11-abyss-blue.html"
         },
         {
+            "titulo": "Notebook HP 245 G10 Ryzen 3 7330U 8GB 512GB 14\"",
+            "precio_final": 1115488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1785787764_notebook_hp_245_g10_ryzen_3_7330u_8gb_512gb_14jpg",
+            "url": "https://www.venex.com.ar/notebooks/notebook-hp-245-g10-ryzen-3-7330u-8gb-512gb-14.html"
+        },
+        {
             "titulo": "Notebook CX CX30682 Core i5 12450H 8GB 256GB 15.6\"",
             "precio_final": 1126988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1774973497_notebook-cx-cx30682-intel-core-i5-12450h-8gb-ssd-256gb-156-freejpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-cx-cx30682-intel-core-i5-12450h-8gb-ssd-256gb-15-6-free.html"
         },
         {
-            "titulo": "Notebook Lenovo IdeaPad Slim 3 15AMN8 Ryzen 3 7320U 16GB 256GB...",
+            "titulo": "Notebook HP 245 G10 Ryzen 3 7330U 16GB 512GB 14\"",
             "precio_final": 1207488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1782492711_notebook_lenovo_ideapad_slim_3_15amn8_ryzen_3_7320u_16gb_256gb_156___maletin_de_regalojpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-ideapad-slim-3-15amn8-ryzen-3-7320u-16gb-256gb-15-6.html"
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1786042178_notebook_hp_245_g10_ryzen_3_7330u_16gb_512gb_14jpg",
+            "url": "https://www.venex.com.ar/notebooks/notebook-hp-245-g10-ryzen-3-7330u-16gb-512gb-14.html"
         },
         {
             "titulo": "Notebook Lenovo V15 G4 Ryzen 5 7520U 8Gb SSD 512Gb 15.6 Free",
@@ -1128,12 +1134,6 @@
             "precio_final": 1264988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1774978871_notebook-lenovo-v15-g4-ryzen-3-7320u-16gb-ssd-512gb-156-fhd-freejpg",
             "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-3-7320u-16gb-ssd-512gb-15-6-fhd-free.html"
-        },
-        {
-            "titulo": "Notebook ASUS Vivobook X1404VA Core i5 1334U 12GB 256GB 14\" W11...",
-            "precio_final": 1310988,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1784734551_notebook_asus_vivobook_x1404va_core_i5_1334u_12gb_256gb_14_w11_quiet_bluejpg",
-            "url": "https://www.venex.com.ar/notebooks/notebook-asus-vivobook-x1404va-core-i5-1334u-12gb-256gb-14-w11-quiet-blue.html"
         }
     ],
     "monitores/19-a-28-pulgadas": [
@@ -1301,7 +1301,7 @@
     "monitores/proyectores-y-pantallas": [
         {
             "titulo": "Proyector Epson Powerlite E24 3600 ANSI XGA",
-            "precio_final": 1092499,
+            "precio_final": 1034999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1788450024_proyector_epson_powerlite_e24_3600_ansi_xga_1png",
             "url": "https://www.venex.com.ar/monitores/proyectores-y-pantallas/proyector-epson-powerlite-e24-3600-ansi-xga.html"
         }
@@ -1406,12 +1406,6 @@
             "url": "https://www.venex.com.ar/perifericos/mousepads/mousepad-raptor-ultra-glide-l-450x400x3mm.html"
         },
         {
-            "titulo": "Mouse Pad Redragon Flick M",
-            "precio_final": 11499,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1755700949_1.jpg",
-            "url": "https://www.venex.com.ar/perifericos/mousepads/mouse-pad-redragon-flick-m.html"
-        },
-        {
             "titulo": "Mouse Pad Venex Con Gel Cristal",
             "precio_final": 13097,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1762778615_66.jpg",
@@ -1452,6 +1446,12 @@
             "precio_final": 17238,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1786392832_mousepad_fantech_mp70_xl_700x300x3mm_blue_1png",
             "url": "https://www.venex.com.ar/perifericos/mousepads/mousepad-fantech-mp70-xl-700x300x3mm.html"
+        },
+        {
+            "titulo": "Mousepad Fantech MP70 XL 700x300x3mm Pink",
+            "precio_final": 17238,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1786393165_mousepad_fantech_mp70_xl_700x300x3mm_pinkpng",
+            "url": "https://www.venex.com.ar/perifericos/mousepads/mousepad-fantech-mp70-xl-700x300x3mm-1.html"
         }
     ],
     "perifericos/auriculares/gamer": [
@@ -1976,6 +1976,12 @@
             "precio_final": 252999,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1785258558_disco_duro_externo_1tb_seagate_portable_drive_1png",
             "url": "https://www.venex.com.ar/almacenamiento-portatil/discos-externos/disco-duro-hd-2tb-seagate-usb-30-expansion.html"
+        },
+        {
+            "titulo": "SSD Externo Kingston XS2000 2TB USB-C 2000MB/s",
+            "precio_final": 632488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1755179169_2.jpg",
+            "url": "https://www.venex.com.ar/almacenamiento-portatil/discos-externos/disco-solido-ssd-externo-usb-2tb-kingston-xs2000-tipo-c.html"
         }
     ],
     "impresion/impresoras-laser": [
@@ -2312,12 +2318,6 @@
     ],
     "redes/access-point": [
         {
-            "titulo": "Extensor De Rango Tp-Link Tl-Wa850re Wireless Re 300mbps",
-            "precio_final": 34499,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1711108571_6.jpg",
-            "url": "https://www.venex.com.ar/conectividad-y-redes/access-point/extensor-de-rango-tp-link-tl-wa850re-wireless-re-300mbps.html"
-        },
-        {
             "titulo": "Extensor de Rango Tp-Link Ac750 Re200 Dual Band 750mbps",
             "precio_final": 41399,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1689081767_1585747820_1510950896_extensor_accespoint_tplink_ac750_re200_dualband_750mbps_venex_3.jpg",
@@ -2381,6 +2381,12 @@
             "url": "https://www.venex.com.ar/sillas-gamers/sillas-gamer/mesa-de-tv-redragon-tipo-rack-tectonic-rgb-carbono.html"
         },
         {
+            "titulo": "Silla Gamer Raptor Throne R1 Tela Gris",
+            "precio_final": 310488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1752845084_1.jpg",
+            "url": "https://www.venex.com.ar/sillas-gamers/sillas-gamer/silla-gamer-raptor-throne-r1-tela-gris.html"
+        },
+        {
             "titulo": "Silla Gamer Raptor Throne R1 Tela Negra",
             "precio_final": 310488,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1752845280_1.jpg",
@@ -2433,12 +2439,6 @@
             "precio_final": 689988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1750947932_1.jpg",
             "url": "https://www.venex.com.ar/sillas-gamers/sillas-gamer/silla-gamer-corsair-t3-black--white.html"
-        },
-        {
-            "titulo": "Silla Gamer Corsair T3 Rush Carbon V2 2024",
-            "precio_final": 712988,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1685726090_t3-1.jpg",
-            "url": "https://www.venex.com.ar/sillas-gamers/sillas-gamer/silla-gamer-corsair-t3-rush-carbon-v2-2023.html"
         }
     ],
     "software": [
@@ -2469,10 +2469,10 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
         },
         {
-            "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
-            "precio_final": 1460488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
-            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
+            "titulo": "PC AMD Slim Ryzen 5 5600GT...",
+            "precio_final": 885488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
+            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
         },
         {
             "titulo": "PC Intel Core i3 12100 16GB...",
@@ -2481,16 +2481,10 @@
             "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-intel-i3-12100-8gb-ssd-240gb-monitor-22.html"
         },
         {
-            "titulo": "PC Gamer Kairos AMD Ryzen 7...",
-            "precio_final": 1719870,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
-        },
-        {
-            "titulo": "PC IA Kairos AMD Ryzen 5 9600X...",
-            "precio_final": 4269397,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789128623_pc_ia_kairos_amd_ryzen_5_9600x_32gb_1tb_nvme_nvidia_geforce_rtx_5070_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/ia-local/pc-ia-kairos-amd-ryzen-5-9600x-32gb-1tb-nvme-nvidia-geforce-rtx-5070.html"
+            "titulo": "PC Gamer Powered by MSI...",
+            "precio_final": 1542206,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1782392157_pc_gamer_powered_by_msi_advanced_amd_ryzen_5_8600g_16gb_512gb_nvme_b840_watercooler_750wjpg",
+            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-amd-power-by-msi-advanced-ryzen-5-8600g-16gb-512gb-nvme-b840-750w-watercooler.html"
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM...",
@@ -2617,22 +2611,22 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
         },
         {
+            "titulo": "PC AMD Slim Ryzen 5 5600GT...",
+            "precio_final": 885488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
+            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
+        },
+        {
             "titulo": "PC Intel Core i3 12100 16GB...",
             "precio_final": 1057988,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1748432811_5.jpg",
             "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-intel-i3-12100-8gb-ssd-240gb-monitor-22.html"
         },
         {
-            "titulo": "PC Gamer Kairos AMD Ryzen 7...",
-            "precio_final": 1719870,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1781021980_ryzen-7-5700gjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/gamer/pc-amd-gamer-kairos-ryzen-7-5700x-16gb-ssd-240gb-gtx-1660ti.html"
-        },
-        {
-            "titulo": "PC IA Kairos AMD Ryzen 5 9600X...",
-            "precio_final": 4269397,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1789128623_pc_ia_kairos_amd_ryzen_5_9600x_32gb_1tb_nvme_nvidia_geforce_rtx_5070_2jpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/ia-local/pc-ia-kairos-amd-ryzen-5-9600x-32gb-1tb-nvme-nvidia-geforce-rtx-5070.html"
+            "titulo": "PC Gamer Powered by MSI...",
+            "precio_final": 1542206,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1782392157_pc_gamer_powered_by_msi_advanced_amd_ryzen_5_8600g_16gb_512gb_nvme_b840_watercooler_750wjpg",
+            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-amd-power-by-msi-advanced-ryzen-5-8600g-16gb-512gb-nvme-b840-750w-watercooler.html"
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM...",
