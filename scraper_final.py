@@ -1,6 +1,7 @@
 import time
 import json
 import re
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -69,12 +70,10 @@ CATEGORIAS = [
     "accesorios"
 ]
 
-productos_por_categoria = {}
+rows = []
 
 for cat in CATEGORIAS:
     url = f"{URL_HOME}{cat}"
-    productos_lista = []
-
     while True:
         driver.get(url)
         time.sleep(5)
@@ -118,11 +117,12 @@ for cat in CATEGORIAS:
 
             # 🔹 Filtrar: solo guardar si hay precio e imagen
             if precio_final and imagen:
-                productos_lista.append({
-                    "titulo": titulo,
-                    "precio_final": precio_final,
-                    "imagen": imagen,
-                    "url": link
+                rows.append({
+                    "Nombre": titulo,
+                    "Precio": precio_final,
+                    "Imagen": imagen,
+                    "Categoría": cat,
+                    "URL": link
                 })
 
         # Paginación: buscar botón "siguiente"
@@ -136,11 +136,10 @@ for cat in CATEGORIAS:
             pass
         break
 
-    productos_por_categoria[cat] = productos_lista
-
 driver.quit()
 
-with open("productos.json", "w", encoding="utf-8") as f:
-    json.dump(productos_por_categoria, f, ensure_ascii=False, indent=4)
+# 🔹 Guardar directamente en CSV
+df = pd.DataFrame(rows)
+df.to_csv("productos.csv", index=False, encoding="utf-8-sig")
 
-print(f"✅ Archivo 'productos.json' generado con {sum(len(v) for v in productos_por_categoria.values())} productos.")
+print(f"✅ Archivo 'productos.csv' generado con {len(rows)} productos.")
