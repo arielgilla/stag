@@ -3,7 +3,7 @@ name: Actualizar productos
 on:
   schedule:
     - cron: '0 8 * * *'   # 8:00 UTC = 5:00 AM Argentina
-  workflow_dispatch:       # Permite ejecutarlo manualmente también
+  workflow_dispatch:
 
 jobs:
   scrape:
@@ -26,14 +26,11 @@ jobs:
         run: |
           python scraper_final.py
 
-      - name: Subir productos.csv a DonWeb por FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Subir productos.csv a DonWeb por SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: c2871523.ferozo.com
+          host: c2871523.ferozo.com
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./        # 🔹 ahora es un directorio válido
-          server-dir: /public_html/
-          exclude: |
-            **/*
-            !productos.csv
+          source: "productos.csv"
+          target: "/public_html/"
