@@ -1,5 +1,4 @@
 import time
-import json
 import re
 import pandas as pd
 from selenium import webdriver
@@ -70,21 +69,22 @@ CATEGORIAS = [
     "accesorios"
 ]
 
-# 🔧 Función para corregir URLs de imágenes
+# 🔧 Función para corregir solo URLs raras
 def fix_image_url(url: str) -> str:
     if not url:
         return url
     url = url.strip()
-    # Si ya termina en .jpg/.jpeg/.png, no lo toca
+
+    # Si ya termina en .jpg/.jpeg/.png → dejar igual
     if url.lower().endswith(('.jpg', '.jpeg', '.png')):
         return url
-    # Si termina en 'jpg' o 'png' sin punto, lo corrige
-    if url.lower().endswith('jpg'):
-        return url[:-3] + '.jpg'
-    if url.lower().endswith('png'):
-        return url[:-3] + '.png'
-    # Si no tiene extensión reconocida, forzamos .png
-    return url + '.png'
+
+    # Si termina en 'jpg' o 'png' sin punto → mandar al proxy
+    if url.lower().endswith('jpg') or url.lower().endswith('png'):
+        return f"https://stag-soluciones.com.ar/imagen.php?src={url}"
+
+    # Si no coincide → dejar igual
+    return url
 
 rows = []
 
