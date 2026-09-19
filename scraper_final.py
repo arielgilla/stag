@@ -70,6 +70,22 @@ CATEGORIAS = [
     "accesorios"
 ]
 
+# 🔧 Función para corregir URLs de imágenes
+def fix_image_url(url: str) -> str:
+    if not url:
+        return url
+    url = url.strip()
+    # Si ya termina en .jpg/.jpeg/.png, no lo toca
+    if url.lower().endswith(('.jpg', '.jpeg', '.png')):
+        return url
+    # Si termina en 'jpg' o 'png' sin punto, lo corrige
+    if url.lower().endswith('jpg'):
+        return url[:-3] + '.jpg'
+    if url.lower().endswith('png'):
+        return url[:-3] + '.png'
+    # Si no tiene extensión reconocida, forzamos .png
+    return url + '.png'
+
 rows = []
 
 for cat in CATEGORIAS:
@@ -112,6 +128,7 @@ for cat in CATEGORIAS:
             # Imagen
             try:
                 imagen = p.find_element("css selector", "img").get_attribute("src")
+                imagen = fix_image_url(imagen)  # 🔹 Corrección aplicada aquí
             except:
                 pass
 
