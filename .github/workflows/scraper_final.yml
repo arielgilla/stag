@@ -2,7 +2,7 @@ name: Actualizar productos
 
 on:
   schedule:
-    - cron: '0 8 * * *'   # Ejecuta todos los días a las 5 AM hora Argentina (UTC+0 +3h)
+    - cron: '0 8 * * *'   # 8:00 UTC = 5:00 AM Argentina
   workflow_dispatch:       # Permite ejecutarlo manualmente también
 
 jobs:
@@ -26,17 +26,14 @@ jobs:
         run: |
           python scraper_final.py
 
-      - name: Commit y push productos.csv
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add productos.csv
-          git commit -m "Actualización automática de productos [skip ci]" || echo "No hay cambios"
-          git pull origin main --rebase
-          git push origin main
-
-      - name: Guardar productos_sitiosimple.xlsx como artifact
-        uses: actions/upload-artifact@v4
+      - name: Subir productos.csv a DonWeb por FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          name: productos-sitiosimple
-          path: productos_sitiosimple.xlsx
+          server: c2871523.ferozo.com
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: .
+          server-dir: /public_html/
+          exclude: |
+            **/*
+            !productos.csv
