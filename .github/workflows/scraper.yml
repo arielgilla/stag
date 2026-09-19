@@ -26,11 +26,16 @@ jobs:
         run: |
           python scraper_final.py
 
-      - name: Subir productos.csv a DonWeb por SFTP
-        uses: appleboy/scp-action@v0.1.7
+      - name: Subir productos.csv a DonWeb por FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: c2871523.ferozo.com
+          server: c2871523.ferozo.com
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          source: "productos.csv"
-          target: "/public_html/"
+          protocol: ftps          # 🔹 fuerza FTPS (TLS)
+          port: 21                # 🔹 puerto estándar de FTP/FTPS
+          local-dir: ./           # 🔹 carpeta local
+          server-dir: /public_html/
+          exclude: |
+            **/*
+            !productos.csv
