@@ -32,7 +32,7 @@ jobs:
           server: c2871523.ferozo.com
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: .
+          local-dir: ./        # 🔹 ahora es un directorio válido
           server-dir: /public_html/
           exclude: |
             **/*
