@@ -69,23 +69,6 @@ CATEGORIAS = [
     "accesorios"
 ]
 
-# 🔧 Función para corregir solo URLs raras
-def fix_image_url(url: str) -> str:
-    if not url:
-        return url
-    url = url.strip()
-
-    # Si ya termina en .jpg/.jpeg/.png → dejar igual
-    if url.lower().endswith(('.jpg', '.jpeg', '.png')):
-        return url
-
-    # Si termina en 'jpg' o 'png' sin punto → mandar al proxy
-    if url.lower().endswith('jpg') or url.lower().endswith('png'):
-        return f"https://stag-soluciones.com.ar/imagen.php?src={url}"
-
-    # Si no coincide → dejar igual
-    return url
-
 rows = []
 
 for cat in CATEGORIAS:
@@ -125,10 +108,9 @@ for cat in CATEGORIAS:
             except:
                 pass
 
-            # Imagen
+            # Imagen (se guarda tal cual viene, sin modificar)
             try:
                 imagen = p.find_element("css selector", "img").get_attribute("src")
-                imagen = fix_image_url(imagen)  # 🔹 Corrección aplicada aquí
             except:
                 pass
 
