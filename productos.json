@@ -2469,10 +2469,10 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
         },
         {
-            "titulo": "PC AMD Slim Ryzen 5 5600GT...",
-            "precio_final": 885488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
+            "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
+            "precio_final": 1460488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
+            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
         },
         {
             "titulo": "PC Intel Core i3 12100 16GB...",
@@ -2485,6 +2485,12 @@
             "precio_final": 1542206,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1782392157_pc_gamer_powered_by_msi_advanced_amd_ryzen_5_8600g_16gb_512gb_nvme_b840_watercooler_750wjpg",
             "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-amd-power-by-msi-advanced-ryzen-5-8600g-16gb-512gb-nvme-b840-750w-watercooler.html"
+        },
+        {
+            "titulo": "PC Gamer Powered by MSI...",
+            "precio_final": 2742208,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1789154329_diseno_sin_titulo_-_2026-09-11t161839765png",
+            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-ams-power-by-msi-advanced-pro-ryzen-5-9600x-16gb-1tb-nvme-b840-750w-geforce-5060.html"
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM...",
@@ -2611,10 +2617,10 @@
             "url": "https://www.venex.com.ar/notebooks/notebook-hp-255-g10-ryzen-5-7535u-16gb-512gb-15-6.html"
         },
         {
-            "titulo": "PC AMD Slim Ryzen 5 5600GT...",
-            "precio_final": 885488,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1771426261_pcjpg",
-            "url": "https://www.venex.com.ar/pc-de-escritorio/hogar-y-oficina/pc-amd-slim-ryzen-5-5600gt-16gb-ssd-480gb.html"
+            "titulo": "Notebook Lenovo V15 G4 Ryzen 5...",
+            "precio_final": 1460488,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1776261552_notebook_lenovo_v15_g4_ryzen_5_7520u_16gb_ssd_512gb_156_fhd_free_2png",
+            "url": "https://www.venex.com.ar/notebooks/notebook-lenovo-v15-g4-ryzen-5-7520u-16gb-ssd-512gb-15-6-fhd-free.html"
         },
         {
             "titulo": "PC Intel Core i3 12100 16GB...",
@@ -2627,6 +2633,12 @@
             "precio_final": 1542206,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1782392157_pc_gamer_powered_by_msi_advanced_amd_ryzen_5_8600g_16gb_512gb_nvme_b840_watercooler_750wjpg",
             "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-amd-power-by-msi-advanced-ryzen-5-8600g-16gb-512gb-nvme-b840-750w-watercooler.html"
+        },
+        {
+            "titulo": "PC Gamer Powered by MSI...",
+            "precio_final": 2742208,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1789154329_diseno_sin_titulo_-_2026-09-11t161839765png",
+            "url": "https://www.venex.com.ar/pc-de-escritorio/powered-by-msi/pc-ams-power-by-msi-advanced-pro-ryzen-5-9600x-16gb-1tb-nvme-b840-750w-geforce-5060.html"
         },
         {
             "titulo": "Memoria RAM Notebook SODIMM...",
@@ -2759,12 +2771,6 @@
     ],
     "accesorios": [
         {
-            "titulo": "Cable Cooler Master 24 Pines",
-            "precio_final": 1229,
-            "imagen": "https://www.venex.com.ar/products_images/thumb/1710507459_cable.jpg",
-            "url": "https://www.venex.com.ar/accesorios/cables/cable-cooler-master-24-pines.html"
-        },
-        {
             "titulo": "Cable Riser 80Cm V0011 Pro 6 Pines Molex Mineria",
             "precio_final": 1149,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1646325485_asas.jpg",
@@ -2829,6 +2835,12 @@
             "precio_final": 6899,
             "imagen": "https://www.venex.com.ar/products_images/thumb/1587752258_4da52c7b8e8c4f4db369cdfba5826ef6.jpg",
             "url": "https://www.venex.com.ar/accesorios/cables/cable-de-red-rj-45-3m.html"
+        },
+        {
+            "titulo": "Funda Tablet 7 Con Teclado Azul",
+            "precio_final": 6531,
+            "imagen": "https://www.venex.com.ar/products_images/thumb/1764257260_235.jpg",
+            "url": "https://www.venex.com.ar/accesorios/fundas-y-mochilas/funda-tablet-7-con-teclado-azul.html"
         }
     ]
 }
