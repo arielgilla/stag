@@ -16,7 +16,7 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-# 🔹 Lista completa de categorías y subcategorías
+# 🔹 Lista completa de categorías
 CATEGORIAS = [
     "componentes-de-pc/motherboards/intel",
     "componentes-de-pc/motherboards/amd",
