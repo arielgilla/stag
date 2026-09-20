@@ -71,28 +71,39 @@ CATEGORIAS = [
 
 rows = []
 
-for cat in CATEGORIAS:
-    url = f"{URL_HOME}{cat}"
-    while True:
+def scrape_categoria(cat_url, cat_name):
+    driver.get(cat_url)
+    time.sleep(5)
+
+    # 🔹 Obtener todas las páginas de la categoría
+    paginas = [cat_url]
+    try:
+        enlaces = driver.find_elements("css selector", ".pagination a")
+        for e in enlaces:
+            href = e.get_attribute("href")
+            if href and href not in paginas:
+                paginas.append(href)
+    except:
+        pass
+
+    # 🔹 Recorrer todas las páginas
+    for url in paginas:
         driver.get(url)
         time.sleep(5)
-
         productos = driver.find_elements("css selector", "div.product-box")
-        print(f"Procesando categoría: {cat} - encontrados {len(productos)} productos en esta página")
+        print(f"Procesando {cat_name} - {len(productos)} productos en {url}")
 
         for p in productos:
             titulo = None
             precio_final = None
             imagen = None
 
-            # Título
             try:
                 enlace = p.find_element("css selector", ".product-box-name a, .product-box-body a")
                 titulo = enlace.text.strip()
             except:
                 pass
 
-            # Precio
             try:
                 precio_elementos = p.find_elements("css selector", ".product-box-price span, .price")
                 for elem in precio_elementos:
@@ -106,36 +117,25 @@ for cat in CATEGORIAS:
             except:
                 pass
 
-            # Imagen
             try:
                 imagen = p.find_element("css selector", "img").get_attribute("src")
             except:
                 pass
 
-            # 🔹 Filtrar: solo guardar si hay título, precio e imagen
             if titulo and precio_final and imagen:
                 rows.append({
                     "SKU": titulo,  # SKU = Nombre del producto
                     "Name": titulo,
                     "Regular price": precio_final,
-                    "Categories": cat,
+                    "Categories": cat_name,
                     "Images": imagen
                 })
 
-        # Paginación enumerada
-        try:
-            current_page = driver.find_element("css selector", ".pagination li.active a")
-            next_page = current_page.find_element("xpath", "../following-sibling::li/a")
-            next_url = next_page.get_attribute("href")
-            if next_url and next_url != url:
-                url = next_url
-                continue
-        except:
-            break
+for cat in CATEGORIAS:
+    scrape_categoria(f"{URL_HOME}{cat}", cat)
 
 driver.quit()
 
-# 🔹 Guardar directamente en CSV con encabezados WooCommerce
 df = pd.DataFrame(rows, columns=["SKU", "Name", "Regular price", "Categories", "Images"])
 df.to_csv("productos.csv", index=False, encoding="utf-8-sig")
 
