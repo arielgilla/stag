@@ -112,27 +112,26 @@ for cat in CATEGORIAS:
             except:
                 pass
 
-            # 🔹 Filtrar: solo guardar si hay precio e imagen
+            # 🔹 Filtrar: solo guardar si hay título, precio e imagen
             if titulo and precio_final and imagen:
-                # Usar el nombre como SKU (único y estable)
                 rows.append({
-                    "SKU": titulo,
+                    "SKU": titulo,  # SKU = Nombre del producto
                     "Name": titulo,
                     "Regular price": precio_final,
                     "Categories": cat,
                     "Images": imagen
                 })
 
-        # Paginación
+        # Paginación enumerada
         try:
-            next_btn = driver.find_element("css selector", ".pagination a.next")
-            next_url = next_btn.get_attribute("href")
+            current_page = driver.find_element("css selector", ".pagination li.active a")
+            next_page = current_page.find_element("xpath", "../following-sibling::li/a")
+            next_url = next_page.get_attribute("href")
             if next_url and next_url != url:
                 url = next_url
                 continue
         except:
-            pass
-        break
+            break
 
 driver.quit()
 
