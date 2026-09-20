@@ -117,6 +117,7 @@ for cat in CATEGORIAS:
             # 🔹 Filtrar: solo guardar si hay precio e imagen
             if precio_final and imagen:
                 rows.append({
+                    "SKU": f"VENEX-{len(rows)+1}",  # Genera un SKU único
                     "Name": titulo,
                     "Regular price": precio_final,
                     "Categories": cat,
@@ -137,7 +138,7 @@ for cat in CATEGORIAS:
 driver.quit()
 
 # 🔹 Guardar directamente en CSV con encabezados WooCommerce
-df = pd.DataFrame(rows, columns=["Name", "Regular price", "Categories", "Images"])
+df = pd.DataFrame(rows, columns=["SKU", "Name", "Regular price", "Categories", "Images"])
 df.to_csv("productos.csv", index=False, encoding="utf-8-sig")
 
 print(f"✅ Archivo 'productos.csv' generado con {len(rows)} productos.")
