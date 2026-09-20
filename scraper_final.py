@@ -70,7 +70,6 @@ CATEGORIAS = [
 ]
 
 rows = []
-sku_counter = 1
 
 for cat in CATEGORIAS:
     url = f"{URL_HOME}{cat}"
@@ -114,15 +113,15 @@ for cat in CATEGORIAS:
                 pass
 
             # 🔹 Filtrar: solo guardar si hay precio e imagen
-            if precio_final and imagen:
+            if titulo and precio_final and imagen:
+                # Usar el nombre como SKU (único y estable)
                 rows.append({
-                    "SKU": f"VENEX-{sku_counter}",
+                    "SKU": titulo,
                     "Name": titulo,
                     "Regular price": precio_final,
                     "Categories": cat,
                     "Images": imagen
                 })
-                sku_counter += 1
 
         # Paginación
         try:
