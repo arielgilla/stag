@@ -108,7 +108,7 @@ for cat in CATEGORIAS:
             except:
                 pass
 
-            # Imagen (se guarda tal cual viene, sin modificar)
+            # Imagen
             try:
                 imagen = p.find_element("css selector", "img").get_attribute("src")
             except:
@@ -117,14 +117,13 @@ for cat in CATEGORIAS:
             # 🔹 Filtrar: solo guardar si hay precio e imagen
             if precio_final and imagen:
                 rows.append({
-                    "Nombre": titulo,
-                    "Precio": precio_final,
-                    "Imagen": imagen,
-                    "Categoría": cat,
-                    "URL": link
+                    "Name": titulo,
+                    "Regular price": precio_final,
+                    "Categories": cat,
+                    "Images": imagen
                 })
 
-        # Paginación: buscar botón "siguiente"
+        # Paginación
         try:
             next_btn = driver.find_element("css selector", ".pagination a.next")
             next_url = next_btn.get_attribute("href")
@@ -137,8 +136,8 @@ for cat in CATEGORIAS:
 
 driver.quit()
 
-# 🔹 Guardar directamente en CSV
-df = pd.DataFrame(rows)
+# 🔹 Guardar directamente en CSV con encabezados WooCommerce
+df = pd.DataFrame(rows, columns=["Name", "Regular price", "Categories", "Images"])
 df.to_csv("productos.csv", index=False, encoding="utf-8-sig")
 
 print(f"✅ Archivo 'productos.csv' generado con {len(rows)} productos.")
