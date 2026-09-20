@@ -70,6 +70,7 @@ CATEGORIAS = [
 ]
 
 rows = []
+sku_counter = 1
 
 for cat in CATEGORIAS:
     url = f"{URL_HOME}{cat}"
@@ -84,13 +85,11 @@ for cat in CATEGORIAS:
             titulo = None
             precio_final = None
             imagen = None
-            link = None
 
-            # Título y URL
+            # Título
             try:
                 enlace = p.find_element("css selector", ".product-box-name a, .product-box-body a")
                 titulo = enlace.text.strip()
-                link = enlace.get_attribute("href")
             except:
                 pass
 
@@ -117,12 +116,13 @@ for cat in CATEGORIAS:
             # 🔹 Filtrar: solo guardar si hay precio e imagen
             if precio_final and imagen:
                 rows.append({
-                    "SKU": f"VENEX-{len(rows)+1}",  # Genera un SKU único
+                    "SKU": f"VENEX-{sku_counter}",
                     "Name": titulo,
                     "Regular price": precio_final,
                     "Categories": cat,
                     "Images": imagen
                 })
+                sku_counter += 1
 
         # Paginación
         try:
