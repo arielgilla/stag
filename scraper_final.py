@@ -71,6 +71,13 @@ CATEGORIAS = [
 
 rows = []
 
+def format_category(cat_name):
+    # Reemplazar "/" por ">" para jerarquía
+    # Reemplazar "-" por espacio para legibilidad
+    parts = cat_name.split("/")
+    formatted = " > ".join([p.replace("-", " ").title() for p in parts])
+    return formatted
+
 def scrape_categoria(cat_url, cat_name):
     driver.get(cat_url)
     time.sleep(5)
@@ -127,7 +134,7 @@ def scrape_categoria(cat_url, cat_name):
                     "SKU": titulo,  # SKU = Nombre del producto
                     "Name": titulo,
                     "Regular price": precio_final,
-                    "Categories": cat_name,
+                    "Categories": format_category(cat_name),
                     "Images": imagen
                 })
 
