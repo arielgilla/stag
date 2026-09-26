@@ -103,7 +103,7 @@ def scrape_categoria(cat_url, cat_name):
         for p in productos:
             titulo = None
             precio_final = None
-            imagen = None
+            imagenes_str = None
 
             try:
                 enlace = p.find_element("css selector", ".product-box-name a, .product-box-body a")
@@ -125,17 +125,20 @@ def scrape_categoria(cat_url, cat_name):
                 pass
 
             try:
-                imagen = p.find_element("css selector", "img").get_attribute("src")
+                imagenes = [img.get_attribute("src") for img in p.find_elements("css selector", "img")]
+                if "notebooks" in cat_name:
+                    imagenes = imagenes[1:]  # ignorar la primera
+                imagenes_str = ",".join(imagenes)
             except:
                 pass
 
-            if titulo and precio_final and imagen:
+            if titulo and precio_final and imagenes_str:
                 rows.append({
                     "SKU": titulo,  # SKU = Nombre del producto
                     "Name": titulo,
                     "Regular price": precio_final,
                     "Categories": format_category(cat_name),
-                    "Images": imagen
+                    "Images": imagenes_str
                 })
 
 for cat in CATEGORIAS:
