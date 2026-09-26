@@ -16,64 +16,88 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-# 🔹 Lista completa de categorías
+# 🔹 Lista completa de categorías y subcategorías
 CATEGORIAS = [
-    "componentes-de-pc/motherboards/intel",
-    "componentes-de-pc/motherboards/amd",
-    "componentes-de-pc/microprocesadores/intel",
-    "componentes-de-pc/microprocesadores/amd",
+    "componentes-de-pc/combos-de-actualizacion",
+    "componentes-de-pc/discos-duros-mecanicos",
+    "componentes-de-pc/discos-solidos-ssd",
     "componentes-de-pc/memorias-ram/desktop",
     "componentes-de-pc/memorias-ram/notebook",
+    "componentes-de-pc/microprocesadores",
+    "componentes-de-pc/motherboards/amd",
+    "componentes-de-pc/motherboards/intel",
     "componentes-de-pc/placas-de-video",
-    "componentes-de-pc/placas-de-sonido",
-    "componentes-de-pc/placas-de-red",
-    "componentes-de-pc/discos-solidos-ssd",
-    "componentes-de-pc/discos-duros-mecanicos",
-    "componentes-de-pc/fuentes",
     "componentes-de-pc/gabinetes",
-    "componentes-de-pc/refrigeracion",
+    "componentes-de-pc/placas-de-sonido",
+    "componentes-de-pc/fuentes",
     "componentes-de-pc/pastas-termicas",
-    "componentes-de-pc/combos-de-actualizacion",
+    "componentes-de-pc/placas-de-red",
+    "componentes-de-pc/refrigeracion/coolers-y-watercoolers",
+    "componentes-de-pc/refrigeracion/fan-coolers",
+    "pc-de-escritorio/hogar-y-oficina",
+    "pc-de-escritorio/gamer",
+    "pc-de-escritorio/ia-local",
+    "pc-de-escritorio/mini-pcs",
+    "pc-de-escritorio/combos-de-actualizacion",
+    "pc-de-escritorio/powered-by-msi",
     "notebooks",
-    "monitores/19-a-28-pulgadas",
+    "monitores/19-a-26-pulgadas",
     "monitores/27-a-32-pulgadas",
     "monitores/33-pulgadas-y-superior",
     "monitores/proyectores-y-pantallas",
     "perifericos/teclados",
+    "perifericos/gaming-kit",
+    "perifericos/teclado-mouse",
     "perifericos/mousepads",
+    "perifericos/mouse",
     "perifericos/auriculares/gamer",
     "perifericos/auriculares/oficina-y-urbano",
-    "perifericos/microfonos",
-    "perifericos/webcams",
-    "perifericos/joysticks-volantes-y-simuladores",
+    "perifericos/audio/barras-de-sonido",
+    "perifericos/audio/parlantes",
     "perifericos/audio/portatiles",
-    "perifericos/placas-de-sonido",
-    "almacenamiento-portatil/pendrives",
+    "perifericos/joysticks",
+    "perifericos/webcams",
+    "perifericos/lectores-codigo-de-barras",
+    "perifericos/microfonos",
+    "perifericos/simuladores",
+    "conectividad-y-redes/access-point",
+    "conectividad-y-redes/modem-router",
+    "conectividad-y-redes/routers",
+    "conectividad-y-redes/switchs",
+    "impresion-y-scanners/impresoras-laser",
+    "impresion-y-scanners/impresoras-sistema-continuo",
+    "impresion-y-scanners/impresoras-inyeccion-tinta",
+    "impresion-y-scanners/impresoras-termicas",
+    "impresion-y-scanners/impresion-3d/impresoras-3d",
+    "impresion-y-scanners/impresion-3d/consumibles",
+    "impresion-y-scanners/toners",
+    "impresion-y-scanners/cartuchos-de-tinta",
+    "relojes-smartwatch",
     "almacenamiento-portatil/microsd",
+    "almacenamiento-portatil/pendrives",
     "almacenamiento-portatil/discos-externos",
-    "impresion/impresoras-laser",
-    "impresion/inyeccion-de-tinta",
-    "impresion/termicas",
-    "impresion/impresion-3d",
-    "impresion/consumibles",
-    "redes/routers",
-    "redes/switchs",
-    "redes/access-point",
-    "redes/modem-router",
-    "sillas-gamers",
-    "software",
-    "televisores",
     "tablets",
-    "smartwatch",
+    "tabletas-digitalizadoras",
+    "televisores-y-tv-box/smart-tvs",
+    "televisores-y-tv-box/tv-box",
+    "streaming",
+    "software",
     "camaras-ip",
-    "accesorios"
+    "accesorios/fundas-y-mochilas",
+    "accesorios/bases-refrigerantes",
+    "accesorios/cargadores",
+    "accesorios/cables",
+    "accesorios/merchandising",
+    "soportes",
+    "sillas-gamers/sillas-gamers",
+    "estabilizadores-ups-y-zapatillas/estabilizadores",
+    "estabilizadores-ups-y-zapatillas/ups",
+    "estabilizadores-ups-y-zapatillas/zapatillas"
 ]
 
 rows = []
 
 def format_category(cat_name):
-    # Reemplazar "/" por ">" para jerarquía
-    # Reemplazar "-" por espacio para legibilidad
     parts = cat_name.split("/")
     formatted = " > ".join([p.replace("-", " ").title() for p in parts])
     return formatted
@@ -82,7 +106,6 @@ def scrape_categoria(cat_url, cat_name):
     driver.get(cat_url)
     time.sleep(5)
 
-    # 🔹 Obtener todas las páginas de la categoría
     paginas = [cat_url]
     try:
         enlaces = driver.find_elements("css selector", ".pagination a")
@@ -93,7 +116,6 @@ def scrape_categoria(cat_url, cat_name):
     except:
         pass
 
-    # 🔹 Recorrer todas las páginas
     for url in paginas:
         driver.get(url)
         time.sleep(5)
@@ -107,9 +129,10 @@ def scrape_categoria(cat_url, cat_name):
 
             try:
                 enlace = p.find_element("css selector", ".product-box-name a, .product-box-body a")
-                titulo = enlace.text.strip()
+                titulo = enlace.text
+                url_producto = enlace.get_attribute("href")
             except:
-                pass
+                continue
 
             try:
                 precio_elementos = p.find_elements("css selector", ".product-box-price span, .price")
@@ -124,18 +147,20 @@ def scrape_categoria(cat_url, cat_name):
             except:
                 pass
 
-            try:
-                imagenes = [img.get_attribute("src") for img in p.find_elements("css selector", "img")]
-                if "notebooks" in cat_name:
-                    imagenes = imagenes[1:]  # ignorar la primera
-                imagenes_str = ",".join(imagenes)
-            except:
-                pass
+            # Entrar al detalle del producto para scrapear imágenes
+            driver.get(url_producto)
+            time.sleep(3)
+            imagenes = [img.get_attribute("src") for img in driver.find_elements("css selector", ".product-gallery img")]
+
+            if "notebooks" in cat_name and len(imagenes) > 1:
+                imagenes = imagenes[1:]
+
+            imagenes_str = ",".join([i for i in imagenes if i])
 
             if titulo and precio_final and imagenes_str:
                 rows.append({
-                    "SKU": titulo,  # SKU = Nombre del producto
-                    "Name": titulo,
+                    "SKU": titulo.strip(),   # SKU = nombre normalizado
+                    "Name": titulo,          # Nombre tal cual aparece en la web
                     "Regular price": precio_final,
                     "Categories": format_category(cat_name),
                     "Images": imagenes_str
