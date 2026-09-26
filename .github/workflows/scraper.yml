@@ -24,7 +24,7 @@ jobs:
 
       - name: Ejecutar scraper
         run: |
-          python scraper_final.py   # 🔹 asegúrate que el archivo se llame así
+          python scraper_final.py   # 🔹 usa el nombre del script actualizado
 
       - name: Subir productos.csv a DonWeb por FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -39,4 +39,3 @@ jobs:
           exclude: |
             **/*
             !productos.csv         # 🔹 solo sube productos.csv
-
