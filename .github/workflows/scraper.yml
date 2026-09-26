@@ -24,7 +24,7 @@ jobs:
 
       - name: Ejecutar scraper
         run: |
-          python scraper_final.py
+          python scraper_final.py   # 🔹 asegúrate que el archivo se llame así
 
       - name: Subir productos.csv a DonWeb por FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -34,8 +34,9 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           protocol: ftps          # 🔹 fuerza FTPS (TLS)
           port: 21                # 🔹 puerto estándar de FTP/FTPS
-          local-dir: ./           # 🔹 carpeta local
+          local-dir: ./           # 🔹 carpeta local del repo
           server-dir: /public_html/
           exclude: |
             **/*
-            !productos.csv
+            !productos.csv         # 🔹 solo sube productos.csv
+
