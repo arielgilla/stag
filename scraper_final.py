@@ -1,5 +1,6 @@
 import time
 import re
+import os
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -16,7 +17,7 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-# 🔹 Lista completa de categorías y subcategorías (según categorias.txt)
+# Lista completa de categorías y subcategorías (según categorias.txt)
 CATEGORIAS = [
     "componentes-de-pc/combos-de-actualizacion",
     "componentes-de-pc/discos-duros-mecanicos",
@@ -99,8 +100,7 @@ rows = []
 
 def format_category(cat_name):
     parts = cat_name.split("/")
-    formatted = " > ".join([p.replace("-", " ").title() for p in parts])
-    return formatted
+    return " > ".join([p.replace("-", " ").title() for p in parts])
 
 def scrape_categoria(cat_url, cat_name):
     driver.get(cat_url)
@@ -113,8 +113,8 @@ def scrape_categoria(cat_url, cat_name):
             href = e.get_attribute("href")
             if href and href not in paginas:
                 paginas.append(href)
-    except:
-        pass
+    except Exception as exc:
+        print(f"No se pudieron leer las páginas de {cat_name}: {exc}")
 
     for url in paginas:
         driver.get(url)
@@ -129,8 +129,8 @@ def scrape_categoria(cat_url, cat_name):
 
             try:
                 enlace = p.find_element("css selector", ".product-box-name a, .product-box-body a")
-                titulo = enlace.text
-            except:
+                titulo = enlace.text.strip()
+            except Exception:
                 pass
 
             try:
@@ -143,30 +143,39 @@ def scrape_categoria(cat_url, cat_name):
                             precio_num = int(numeros)
                             precio_final = round(precio_num * MARGEN)
                             break
-            except:
+            except Exception:
                 pass
 
             try:
                 imagen = p.find_element("css selector", "img").get_attribute("src")
-            except:
+            except Exception:
                 pass
 
             if titulo and precio_final and imagen:
                 rows.append({
-                    "SKU": titulo.strip(),  # 🔹 SKU = nombre normalizado
-                    "Name": titulo,         # Nombre tal cual aparece en la web
+                    "SKU": titulo,
+                    "Name": titulo,
                     "Regular price": precio_final,
                     "Categories": format_category(cat_name),
                     "Images": imagen
                 })
 
-for cat in CATEGORIAS:
-    scrape_categoria(f"{URL_HOME}{cat}", cat)
+try:
+    for cat in CATEGORIAS:
+        scrape_categoria(f"{URL_HOME}{cat}", cat)
+finally:
+    driver.quit()
 
-driver.quit()
+if not rows:
+    raise RuntimeError(
+        "El scraper no encontró productos. No se generará ni publicará un CSV vacío; "
+        "revisá los selectores y la respuesta del sitio."
+    )
 
+output_dir = "dist"
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, "productos.csv")
 df = pd.DataFrame(rows, columns=["SKU", "Name", "Regular price", "Categories", "Images"])
-df.to_csv("productos.csv", index=False, encoding="utf-8-sig")
+df.to_csv(output_path, index=False, encoding="utf-8-sig")
 
-print(f"✅ Archivo 'productos.csv' generado con {len(rows)} productos.")
-
+print(f"✅ Archivo '{output_path}' generado con {len(rows)} productos.")
