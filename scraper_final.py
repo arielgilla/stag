@@ -1,23 +1,15 @@
-import time
-import re
 import os
+import re
+import time
+
 import pandas as pd
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 URL_HOME = "https://www.venex.com.ar/"
 MARGEN = 1.15
+ARCHIVO_CSV = os.path.join("dist", "productos.csv")
 
-options = Options()
-options.add_argument("--headless=new")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")
-
-service = Service("/usr/bin/chromedriver")
-driver = webdriver.Chrome(service=service, options=options)
-
-# Lista completa de categorías y subcategorías (según categorias.txt)
 CATEGORIAS = [
     "componentes-de-pc/combos-de-actualizacion",
     "componentes-de-pc/discos-duros-mecanicos",
@@ -93,89 +85,135 @@ CATEGORIAS = [
     "sillas-gamers/sillas-gamers",
     "estabilizadores-ups-y-zapatillas/estabilizadores",
     "estabilizadores-ups-y-zapatillas/ups",
-    "estabilizadores-ups-y-zapatillas/zapatillas"
+    "estabilizadores-ups-y-zapatillas/zapatillas",
 ]
 
-rows = []
-
 def format_category(cat_name):
-    parts = cat_name.split("/")
-    return " > ".join([p.replace("-", " ").title() for p in parts])
+    return " > ".join(
+        parte.replace("-", " ").title()
+        for parte in cat_name.split("/")
+    )
 
-def scrape_categoria(cat_url, cat_name):
+def crear_driver():
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    return webdriver.Chrome(options=options)
+
+def obtener_paginas(driver, cat_url):
     driver.get(cat_url)
     time.sleep(5)
 
     paginas = [cat_url]
+    enlaces = driver.find_elements("css selector", ".pagination a")
+
+    for enlace in enlaces:
+        href = enlace.get_attribute("href")
+        if href and href not in paginas:
+            paginas.append(href)
+
+    return paginas
+
+def extraer_producto(producto, categoria):
+    titulo = None
+    precio_final = None
+    imagen = None
+
     try:
-        enlaces = driver.find_elements("css selector", ".pagination a")
-        for e in enlaces:
-            href = e.get_attribute("href")
-            if href and href not in paginas:
-                paginas.append(href)
-    except Exception as exc:
-        print(f"No se pudieron leer las páginas de {cat_name}: {exc}")
+        enlace = producto.find_element(
+            "css selector",
+            ".product-box-name a, .product-box-body a",
+        )
+        titulo = enlace.text.strip()
+    except Exception:
+        pass
 
-    for url in paginas:
-        driver.get(url)
-        time.sleep(5)
-        productos = driver.find_elements("css selector", "div.product-box")
-        print(f"Procesando {cat_name} - {len(productos)} productos en {url}")
+    try:
+        elementos_precio = producto.find_elements(
+            "css selector",
+            ".product-box-price span, .price",
+        )
+        for elemento in elementos_precio:
+            texto = elemento.text.strip()
+            numeros = re.sub(r"[^\d]", "", texto)
+            if numeros:
+                precio_final = round(int(numeros) * MARGEN)
+                break
+    except Exception:
+        pass
 
-        for p in productos:
-            titulo = None
-            precio_final = None
-            imagen = None
+    try:
+        imagen = producto.find_element(
+            "css selector",
+            "img",
+        ).get_attribute("src")
+    except Exception:
+        pass
+
+    if not titulo or not precio_final or not imagen:
+        return None
+
+    return {
+        # Se conserva el comportamiento anterior: el título se usa como SKU.
+        "SKU": titulo,
+        "Name": titulo,
+        "Regular price": precio_final,
+        "Categories": format_category(categoria),
+        "Images": imagen,
+    }
+
+def main():
+    driver = crear_driver()
+    filas = []
+
+    try:
+        for categoria in CATEGORIAS:
+            url_categoria = f"{URL_HOME}{categoria}"
 
             try:
-                enlace = p.find_element("css selector", ".product-box-name a, .product-box-body a")
-                titulo = enlace.text.strip()
-            except Exception:
-                pass
+                paginas = obtener_paginas(driver, url_categoria)
+            except Exception as exc:
+                print(f"Error al abrir la categoría {categoria}: {exc}")
+                continue
 
-            try:
-                precio_elementos = p.find_elements("css selector", ".product-box-price span, .price")
-                for elem in precio_elementos:
-                    texto = elem.text.strip()
-                    if any(c.isdigit() for c in texto):
-                        numeros = re.sub(r"[^\d]", "", texto)
-                        if numeros:
-                            precio_num = int(numeros)
-                            precio_final = round(precio_num * MARGEN)
-                            break
-            except Exception:
-                pass
+            for url in paginas:
+                try:
+                    driver.get(url)
+                    time.sleep(5)
+                    productos = driver.find_elements(
+                        "css selector",
+                        "div.product-box",
+                    )
+                    print(
+                        f"Procesando {categoria}: "
+                        f"{len(productos)} productos en {url}"
+                    )
 
-            try:
-                imagen = p.find_element("css selector", "img").get_attribute("src")
-            except Exception:
-                pass
+                    for producto in productos:
+                        fila = extraer_producto(producto, categoria)
+                        if fila:
+                            filas.append(fila)
 
-            if titulo and precio_final and imagen:
-                rows.append({
-                    "SKU": titulo,
-                    "Name": titulo,
-                    "Regular price": precio_final,
-                    "Categories": format_category(cat_name),
-                    "Images": imagen
-                })
+                except Exception as exc:
+                    print(f"Error procesando {url}: {exc}")
 
-try:
-    for cat in CATEGORIAS:
-        scrape_categoria(f"{URL_HOME}{cat}", cat)
-finally:
-    driver.quit()
+    finally:
+        driver.quit()
 
-if not rows:
-    raise RuntimeError(
-        "El scraper no encontró productos. No se generará ni publicará un CSV vacío; "
-        "revisá los selectores y la respuesta del sitio."
-    )
+    if not filas:
+        raise RuntimeError(
+            "No se encontraron productos. No se generó el CSV; "
+            "revisa la respuesta de Venex y los selectores CSS."
+        )
 
-output_dir = "dist"
-os.makedirs(output_dir, exist_ok=True)
-output_path = os.path.join(output_dir, "productos.csv")
-df = pd.DataFrame(rows, columns=["SKU", "Name", "Regular price", "Categories", "Images"])
-df.to_csv(output_path, index=False, encoding="utf-8-sig")
+    os.makedirs(os.path.dirname(ARCHIVO_CSV), exist_ok=True)
 
-print(f"✅ Archivo '{output_path}' generado con {len(rows)} productos.")
+    columnas = ["SKU", "Name", "Regular price", "Categories", "Images"]
+    df = pd.DataFrame(filas, columns=columnas)
+    df.to_csv(ARCHIVO_CSV, index=False, encoding="utf-8-sig")
+
+    print(f"CSV generado: {ARCHIVO_CSV} ({len(filas)} productos)")
+
+if __name__ == "__main__":
+    main()
